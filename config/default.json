@@ -1,0 +1,66 @@
+{
+  "zuix": {
+    "build": {
+      "input": "source",
+      "output": "docs",
+      "copy": [
+        "css",
+        "images",
+        ".nojekyll",
+        "browserconfig.xml",
+        "manifest.json",
+        "humans.txt",
+        "favicon.ico",
+        "robots.txt"
+      ],
+      "ignore": [
+        "_filters"
+      ],
+      "dataFolder": "_data",
+      "includesFolder": "_inc",
+      "componentsFolders": [ "app", "lib" ],
+      "bundle": {
+        "js": false,
+        "css": false,
+        "zuix": false
+      },
+      "serviceWorker": false,
+      "minify": {
+        "disable": true,
+        "collapseWhitespace": true,
+        "removeOptionalTags": true,
+        "removeRedundantAttributes": true,
+        "removeScriptTypeAttributes": true,
+        "removeTagWhitespace": false,
+        "useShortDoctype": false,
+        "collapseBooleanAttributes": true,
+        "removeAttributeQuotes": false,
+        "removeEmptyAttributes": true,
+        "minifyCSS": true,
+        "minifyJS": true
+      }
+    },
+    "app": {
+      "title": "<code>zuix.js</code> Web Starter",
+      "subtitle": "Simple, yet powerful!",
+      "baseUrl": "/",
+      "resourcePath": "{{ app.baseUrl }}app/",
+      "libraryPath": {
+        "@lib": "{{ app.baseUrl }}lib/1.1/",
+        "@hgui": "https://genielabs.github.io/homegenie-web-ui/app/",
+        "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
+      },
+      "zuixjs.github.io": {
+        "baseUrl": "/zuix-web-starter/",
+        "resourcePath": "{{ app['zuixjs.github.io'].baseUrl }}app/",
+        "libraryPath": {
+          "@lib": "{{ app['zuixjs.github.io'].baseUrl }}lib/1.1/",
+          "@hgui": "https://genielabs.github.io/homegenie-web-ui/app/",
+          "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
+        }
+      },
+      "siteMapUrl": "https://zuixjs.github.io/zuix-web-starter/",
+      "googleSiteId": "UA-123-456"
+    }
+  }
+}
