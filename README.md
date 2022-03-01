@@ -64,3 +64,19 @@ This will create a new post page named `my-cruise-to-maldive.md` inside the `pag
 So, the `-s` option is used to specify the section under which the post page will be grouped, the `-n` options is used to
 specify the name of the page, and the `-l` option to specify the layout template to be used.  
 Custom page layouts can be added in the `_inc/layouts` folder.
+
+### Building for production
+
+```shell
+rm -rf docs # clean up build folder
+NODE_ENV=production npm start
+```
+
+Also see [zuix.js Web Starter](https://github.com/zuixjs/zuix-web-starter) for all configuration and build options.
+
+
+## References and Docs
+
+- **zuix.js** https://zuixjs.org
+- **zKit** https://zuixjs.github.io/zkit/
+- **11ty** https://11ty.dev

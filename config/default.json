@@ -41,7 +41,7 @@
       }
     },
     "app": {
-      "title": "<code>zuix.js</code> Web Starter",
+      "title": "<code>zuix.js</code> News Blog",
       "subtitle": "Simple, yet powerful!",
       "baseUrl": "/",
       "resourcePath": "{{ app.baseUrl }}app/",
@@ -51,7 +51,7 @@
         "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
       },
       "zuixjs.github.io": {
-        "baseUrl": "/zuix-web-starter/",
+        "baseUrl": "/news-blog/",
         "resourcePath": "{{ app['zuixjs.github.io'].baseUrl }}app/",
         "libraryPath": {
           "@lib": "{{ app['zuixjs.github.io'].baseUrl }}lib/1.1/",
@@ -59,7 +59,7 @@
           "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
         }
       },
-      "siteMapUrl": "https://zuixjs.github.io/zuix-web-starter/",
+      "siteMapUrl": "https://zuixjs.github.io/news-blog/",
       "googleSiteId": "UA-123-456"
     }
   }
