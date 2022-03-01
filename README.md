@@ -11,6 +11,10 @@ The app is implemented as a static site with [11ty](https://11ty.dev) engine, an
 
 ### https://zuixjs.github.io/news-blog/
 
+
+https://user-images.githubusercontent.com/6654265/156253042-7dc2dfbd-6e51-4f9a-a6f2-5ec9b2fd884b.mp4
+
+
 This template is based on [zuix.js Web Starter](https://zuixjs.github.io/zuix-web-starter/) and
 [zuix.js HTML-PWA](#).
 
