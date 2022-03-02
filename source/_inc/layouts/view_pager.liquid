@@ -5,13 +5,14 @@ date: Last Modified
 <style>
     {% include "layouts/view_pager/style.css" %}
 </style>
-<script>
-    {% include "layouts/view_pager/script.js" %}
-</script>
 {% include "head_close.html" %}
 
 <!-- load the 'header_auto_hide' on the body -->
 <body>
+
+<noscript>
+    Turn on JavaScript to access this site content.
+</noscript>
 
 <!-- The header with profile icon button for opening the drawer layout (side menu panel) -->
 {% include './view_pager/header-bar.liquid' %}
@@ -19,6 +20,20 @@ date: Last Modified
 <main z-field="pages">
 {{ content }}
 </main>
+
+<!-- The footer with toolbar buttons -->
+{% include './view_pager/footer-bar.liquid' %}
+
+
+<!-- The DrawerLayout for side menu panel -->
+<div ctrl z-load="@lib/controllers/drawer-layout"
+     z-options="options.drawerLayout" z-lazy="false"
+     class="drawer visible-on-ready"
+     draggable="false">
+
+    {% include './view_pager/drawer-menu.liquid' %}
+
+</div>
 
 <div z-load="@lib/components/context-menu" class="visible-on-ready" z-lazy="false"
      z-context="news-options-menu" z-options="options.contextMenu">
@@ -50,25 +65,14 @@ date: Last Modified
     </div>
 </div>
 
-<!-- The DrawerLayout for side menu panel -->
-<div ctrl z-load="@lib/controllers/drawer-layout"
-     z-options="options.drawerLayout" z-lazy="false"
-     class="drawer visible-on-ready"
-     draggable="false">
-
-    {% include './view_pager/drawer-menu.liquid' %}
-
-</div>
-
-<!-- The footer with toolbar buttons -->
-{% include './view_pager/footer-bar.liquid' %}
-
-<noscript>
-    Turn on JavaScript to access this site content.
-</noscript>
 
 {% include "body_end.liquid" %}
 
+
 </body>
+
+<script>
+    {% include "layouts/view_pager/script.js" %}
+</script>
 
 {% include "html_close.html" %}

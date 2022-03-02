@@ -19,7 +19,7 @@
         "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
       }
     },
-    "siteMapUrl": "https://zuixjs.github.io/news-blog/",
+    "siteMapUrl": "https://zuixjs.github.io/news-blog",
     "googleSiteId": "UA-123-456"
   });
   // Check that service workers are registered

@@ -2,18 +2,27 @@
 
     <div class="header">
         <div class="profile pulse">
-            <img alt="Profile Icon" src="{{ '/images/profile-icon.png' | url }}">
+            <img alt="Profile Icon" src="{{ '/images/profile-icon.png' | url }}" width="44" height="44">
         </div>
         <div z-field="header-box" layout="row center-center">
+            <!-- Home page header -->
             <div class="title">
                 Home
             </div>
-            <div z-load="shared/input_box"></div>
+            <!-- Search page header -->
+            <div class="search-box">
+                <span class="input">
+                <input type="text" placeholder="Enter search terms">
+                <span></span>
+                </span>
+            </div>
+            <!-- Notification page header -->
             <div class="title">
                 Notifications
             </div>
+            <!-- About page header -->
             <div class="title">
-                Messages
+                About
             </div>
         </div>
     </div>

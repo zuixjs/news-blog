@@ -15,6 +15,28 @@ body {
     overscroll-behavior-y: contain;
 }
 
+a, a:visited, a:hover {
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.section-content {
+    padding-top: 56px;
+}
+
+.message {
+    color: darkgrey;
+    min-height: 100vh;
+    width: 100vw;
+    font-size: 200%;
+}
+.message i {
+    margin-left: 16px;
+    color: darkgrey;
+    font-size: 150%;
+}
+
 .drawer {
     background: white;
 }
@@ -29,115 +51,11 @@ body {
 
 .feed-pager {
     height: 100vh;
-    z-index: 0;
 }
 
 .list {
     margin-top: 96px;
     margin-bottom: 24px;
-}
-
-.card-wrapper {
-    position: relative;
-    margin: 0;
-    padding: 8px;
-    max-width: 100%;
-    /* min-height: 100px; this is causing strange behavior on mobile, like delayed loading?!? */
-    overflow: hidden;
-    font-family: Helvetica, sans-serif !important;
-}
-
-.info {
-    margin-left:4px;
-    margin-right:4px;
-}
-
-.card {
-    width: 100%;
-    position: relative;
-    max-width: 640px;
-    min-height: 200px;
-    padding: 12px;
-    padding-bottom: 24px;
-}
-.card i {
-    margin-top: 2px;
-    color: var(--primary-color);
-    font-size: 200%;
-}
-.cover-wrapper {
-    cursor: pointer;
-    width: 100%;
-    border-radius: 12px;
-    padding-top: 75%;
-    position: relative;
-    overflow: hidden;
-    background-size: cover!important;
-    background-color: #f2f2f2;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-.cover-wrapper:not(.scroll-helper-visible) {
-    background-image: none!important;
-}
-
-.summary {
-    width: 100%;
-}
-.options {
-    color: dimgrey;
-}
-.options span {
-    font-size: 80%;
-}
-.options button {
-    width: 48px;
-    height: 48px;
-    margin-top: 2px;
-    padding-top: 4px;
-    background: rgba(50,50,50,0.01);
-    border: none;
-    border-radius: 24px;
-}
-.options button:hover {
-    background: rgba(0,0,0,0.1);
-}
-
-
-.card-wrapper.default h1 {
-    font-size: 140%;
-    font-weight: 500;
-    margin: 0 4px;
-}
-
-.card-wrapper.default .summary {
-    position: absolute;
-    padding: 4px;
-    left:0; bottom:8px; right: 0;
-}
-.card-wrapper.default .summary {
-    color: white;
-    background-color: rgba(0,0,0,0.6);
-}
-.card-wrapper.default [self*="size-1of3"]  h1 {
-    font-size: 120% !important;
-}
-
-
-.card-wrapper.mini .card h1 {
-    font-size: 120%;
-    font-weight: 500;
-    margin: 0;
-}
-
-.card-wrapper.mini .card .cover-wrapper {
-    margin: 4px;
-    padding-top: 56.25%;
-}
-
-.card-wrapper.mini .card .summary {
-    cursor: pointer;
-    margin-top: 16px;
 }
 
 
@@ -240,4 +158,263 @@ iframe[z-field=content-frame] {
     overflow-x: hidden;
     z-index: 100;
     background: white;
+}
+
+
+
+
+
+
+.header-bar {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:auto;
+    background: rgba(240,240,240,0.97);
+    border-bottom: solid 1px rgba(0,0,0,0.25);
+    box-shadow: 0 6px 2px -2px rgba(100,100,100,0.25);
+    z-index: 2!important;
+}
+
+.header-bar .header {
+    height: 56px;
+    max-height: 56px;
+}
+
+.header-bar .title {
+    position: absolute;
+    top: 12px;
+    left: 80px;
+    font-size: 180%;
+}
+
+.header-bar .profile {
+    position: absolute;
+    left: 20px; top: 8px;
+    width: 42px;
+    height: 42px;
+    background: #f5f8fa;
+    border-radius: 50%;
+    border: solid 1px #00aced;
+    overflow: hidden;
+    cursor: pointer;
+}
+.header-bar .profile img {
+    margin-left: -2px;
+    height: 44px;
+}
+
+.header-bar .topics {
+    width: 100%;
+    height:40px;
+}
+.header-bar .topics div {
+    font-size: 16px;
+    height:36px;
+    min-width: 96px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    border-bottom: solid 4px transparent;
+    cursor: pointer;
+}
+
+.header-bar .active {
+    color: initial;
+    font-weight: bold;
+    border-bottom: solid 4px #00aced !important;
+}
+
+.header-bar [z-field="header-box"] {
+    padding-left: 72px;
+    padding-right: 16px;
+    height: 100%;
+}
+
+/* Pulse Animation from https://codepen.io/olam/pen/zcqea */
+
+.pulse {
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 2s infinite;
+}
+.pulse:hover {
+    animation: none;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-bar {
+    position: fixed;
+    left:0; bottom:0; right: 0;
+    height: 56px;
+    background: rgba(240,240,240,0.97);
+    border-top: solid 1px rgba(0,0,0,0.25);
+    box-shadow: 0 -6px 2px -2px rgba(100,100,100,0.25);
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-bar button {
+    padding: 12px;
+    max-height: 56px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: rgba(0,0,0,0.5);
+    /*transition: all .3s;*/
+}
+.footer-bar button:hover {
+    background: rgba(255,255,255,0.25);
+}
+.footer-bar button:focus {outline:0;}
+.footer-bar button i {font-size: 32px !important;}
+
+.footer-bar .active {
+    transform: scale(1.2);
+    color: #0085b6;
+    text-shadow:
+            1px 1px 0 #e1e8ed,
+            -1px -1px 0 #e1e8ed,
+            1px -1px 0 #e1e8ed,
+            -1px 1px 0 #e1e8ed,
+            1px 1px 0 #e1e8ed;
+}
+
+
+
+
+
+.search-box {
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 100%;
+    font-size: 130%;
+    font-family: inherit;
+    line-height: inherit;
+    color: #2e3750;
+    min-width: 12em;
+}
+
+.search-box .input {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 1px;
+    display: inline-block;
+    border-radius: 9999em;
+    margin: 8px;
+}
+.search-box .input *:not(span) {
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 3px 8px;
+    z-index: 1;
+}
+.search-box .input *:not(span):focus + span {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.search-box .input span {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: opacity .25s, -webkit-transform .5s;
+    transition: transform .5s, opacity .25s;
+    transition: transform .5s, opacity .25s, -webkit-transform .5s;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    margin: 4px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #fff, 2px -2px 11px #1beabd,  -2px 2px 11px #10abff;
+}
+
+.search-box ::-webkit-input-placeholder {
+    color: #cbd0d5;
+}
+
+.search-box :-ms-input-placeholder {
+    color: #cbd0d5;
+}
+
+.search-box ::-ms-input-placeholder {
+    color: #cbd0d5;
+}
+
+.search-box ::placeholder {
+    color: #cbd0d5;
 }
