@@ -51,7 +51,7 @@
   padding-top: 4px;
   background: rgba(50,50,50,0.01);
   border: none;
-  border-radius: 20px;
+  border-radius: 42px;
 }
 .options button:hover {
   background: rgba(0,0,0,0.1);

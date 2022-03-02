@@ -1,6 +1,6 @@
 /* CSS files add styling rules to your content */
 :root {
-    --primary-color: #00aced;
+    --primary-color: #0077ff;
 }
 
 body {
@@ -171,9 +171,9 @@ iframe[z-field=content-frame] {
     left:0;
     right:0;
     height:auto;
-    background: rgba(240,240,240,0.97);
+    background: rgba(248,248,248,1);
     border-bottom: solid 1px rgba(0,0,0,0.25);
-    box-shadow: 0 6px 2px -2px rgba(100,100,100,0.25);
+    box-shadow: 0 5px 2px -2px rgba(100,100,100,0.15);
     z-index: 2!important;
 }
 
@@ -196,7 +196,7 @@ iframe[z-field=content-frame] {
     height: 42px;
     background: #f5f8fa;
     border-radius: 50%;
-    border: solid 1px #00aced;
+    border: solid 1px var(--primary-color);
     overflow: hidden;
     cursor: pointer;
 }
@@ -223,7 +223,7 @@ iframe[z-field=content-frame] {
 .header-bar .active {
     color: initial;
     font-weight: bold;
-    border-bottom: solid 4px #00aced !important;
+    border-bottom: solid 4px var(--primary-color) !important;
 }
 
 .header-bar [z-field="header-box"] {
@@ -302,9 +302,9 @@ iframe[z-field=content-frame] {
     position: fixed;
     left:0; bottom:0; right: 0;
     height: 56px;
-    background: rgba(240,240,240,0.97);
+    background: rgba(248,248,248,1);
     border-top: solid 1px rgba(0,0,0,0.25);
-    box-shadow: 0 -6px 2px -2px rgba(100,100,100,0.25);
+    box-shadow: 0 -5px 2px -2px rgba(100,100,100,0.15);
     text-align: center;
     overflow: hidden;
 }
@@ -328,7 +328,7 @@ iframe[z-field=content-frame] {
 
 .footer-bar .active {
     transform: scale(1.2);
-    color: #0085b6;
+    color: var(--primary-color);
     text-shadow:
             1px 1px 0 #e1e8ed,
             -1px -1px 0 #e1e8ed,
