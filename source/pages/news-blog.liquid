@@ -25,7 +25,7 @@ keywords:
              z-options="options.autoHidingBars"
              class="content visible-on-ready" layout="column top-center" z-lazy="true">
 
-        <div z-load="items_list" z-options="{ section: '{{ section.url }}' }" z-lazy="true" style="min-height: 100vh"></div>
+        <div z-load="items_list" z-options="{ section: '{{ section.url | url }}' }" z-lazy="true" style="min-height: 100vh"></div>
 
     </article>
 {% endfor %}
