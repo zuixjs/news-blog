@@ -1,6 +1,5 @@
 .list {
   margin-top: 96px;
-  margin-bottom: 206px;
 }
 
 .card-wrapper {
@@ -8,7 +7,6 @@
   padding:8px;
   max-width: 100%;
   min-height: 300px;
-  /* min-height: 100px; this is causing strange behavior on mobile, like delayed loading?!? */
   overflow: hidden;
   font-family: Helvetica, sans-serif !important;
 }
@@ -23,8 +21,7 @@
   position: relative;
   max-width: 640px;
   min-height: 300px;
-  padding: 12px;
-  padding-bottom: 24px;
+  padding: 12px 12px 24px;
 }
 .card i {
   color: var(--primary-color);

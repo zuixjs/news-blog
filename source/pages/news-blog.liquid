@@ -15,20 +15,20 @@ keywords:
 
 <section>
     <div ctrl z-load="@lib/controllers/view-pager"
-         z-options="options.viewPager" z-lazy="false"
-         class="feed-pager visible-on-ready"
+         z-options="options.viewPager"
+         class="feed-pager"
          draggable="false">
 
-{% assign sectionList = collections.news_section | sort: 'data.order' %}
-{% for section in sectionList %}
+    {% assign sectionList = collections.news_section | sort: 'data.order' -%}
+    {%- for section in sectionList -%}
     <article ctrl z-load="@lib/controllers/header-auto-hide"
              z-options="options.autoHidingBars"
-             class="content visible-on-ready" layout="column top-center" z-lazy="true">
+             class="content" layout="column top-center">
 
-        <div z-load="items_list" z-options="{ section: '{{ section.url | url }}' }" z-lazy="true" style="min-height: 100vh"></div>
+        <div z-load="items_list" z-options="{ section: '{{ section.url | url }}' }" class="visible-on-ready"></div>
 
     </article>
-{% endfor %}
+    {%- endfor -%}
 
     </div>
 </section>
