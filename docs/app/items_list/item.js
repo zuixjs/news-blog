@@ -8,7 +8,7 @@ function ListItem(cp) {
     cp.field('container')
         .css('background-image', 'url(' + cp.model().imagePreview + ')')
         .on('click', function() {
-          window.open(cp.model().link);
+          openContentFrame(cp.model().link);
         });
     cp.field('more').on('click', function() {
       // show context menu

@@ -8,11 +8,11 @@ function ListIteMini(cp) {
     cp.field('container')
         .css('background-image', 'url('+cp.model().imagePreviewMini+')')
         .on('click', function() {
-          window.open(cp.model().link);
+          openContentFrame(cp.model().link);
         });
     cp.view('.summary')
         .on('click', function() {
-          window.open(cp.model().link);
+          openContentFrame(cp.model().link);
         });
     cp.field('more').on('click', function() {
       // show context menu

@@ -6,17 +6,4 @@ order: 1
 permalink: pages/news-blog/europe.json
 ---
 {% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
-[
-{%- for post in itemsList %}
-  {
-    "icon": "{{ post.data.icon }}",
-    "title": "{{ post.data.title }}",
-    "description": "{{ post.data.description }}",
-    "imageCover": "{{ post.data.imageCover }}",
-    "imagePreview": "{{ post.data.imagePreview }}",
-    "imagePreviewMini": "{{ post.data.imagePreviewMini }}",
-    "date": "{{ post.data.pubDate }}",
-    "link": "{{ post.url | url }}"
-  }{% if post != itemsList.last %},{% endif %}
-{%- endfor %}
-]
+{% include 'layouts/view_pager/items-list.liquid' %}

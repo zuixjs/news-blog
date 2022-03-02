@@ -1,13 +1,14 @@
-{%- for post in itemsList -%}
-    {%- if forloop.index < 6 -%}
-        {%- if forloop.index < 3  -%}
-            {%- assign selfLayout = 'size-1of2 lg-full md-full sm-full' -%}
-        {%- else -%}
-            {%- assign selfLayout = 'size-1of3 lg-half md-half sm-full' -%}
-        {%- endif -%}
-        {%- include './item.liquid' -%}
-    {%- else -%}
-        {%- assign selfLayout = 'size-1of4 lg-half md-half sm-full' -%}
-        {%- include './item-mini.liquid' -%}
-    {%- endif -%}
-{%- endfor -%}
+[
+{%- for post in itemsList %}
+    {
+    "icon": "{{ post.data.icon }}",
+    "title": "{{ post.data.title }}",
+    "description": "{{ post.data.description }}",
+    "imageCover": "{{ post.data.imageCover }}",
+    "imagePreview": "{{ post.data.imagePreview }}",
+    "imagePreviewMini": "{{ post.data.imagePreviewMini }}",
+    "date": "{{ post.data.pubDate | date: 'yyyy-MM-DD HH:mm' }}",
+    "link": "{{ post.url | url }}"
+    }{% if post != itemsList.last %},{% endif %}
+{%- endfor %}
+]
