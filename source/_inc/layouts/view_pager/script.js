@@ -112,16 +112,16 @@ function showPage(i) {
   // show header top-box
   zuix.field('header-box')
       .children().hide()
-      .eq(i).show();
+      .eq(i).animateCss('fadeIn', {duration: '300ms'}).show();
   // show header bottom-box
   zuix.field('header-tools')
       .children().hide()
-      .eq(i).show();
+      .eq(i).animateCss('fadeIn', {duration: '300ms'}).show();
   // show page
   const page = zuix.field('pages')
       .children().hide()
       .eq(i);
-  page.show();
+  page.animateCss('fadeIn', {duration: '300ms'}).show();
   if (viewPager) {
     viewPager.layout();
   }
@@ -129,9 +129,10 @@ function showPage(i) {
 
 function onItemClicked(e, $el) {
   if ($el.attr('data-url')) {
-    //location.href = $el.attr('data-url');
-    //window.open($el.attr('data-url'));
-    openContentFrame($el.attr('data-url'));
+    const targetUrl = $el.attr('data-url');
+    //location.href = targetUrl;
+    //window.open(targetUrl);
+    openContentFrame(targetUrl);
   }
 }
 function onItemShowMenu(e, $el) {

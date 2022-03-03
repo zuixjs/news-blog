@@ -13,15 +13,18 @@ function ItemsList(cp) {
   function refreshList() {
     const list = cp.field('list');
     if (itemsList != null) {
+      let itemsHtml = '';
+      window.__cardOptions = window.__cardOptions || {};
+      window.__cardOptions[cp.context.contextId] = window.__cardOptions[cp.context.contextId] || [];
       itemsList.forEach(function(item, i) {
         const options = {
           lazyLoad: true,
           model: item
         };
-        let el;
+        const el = document.createElement('div');
         if (i < 5) {
           // different layout for first 4 items (bigger)
-          el = zuix.createComponent('items_list/item', options).container();
+          el.setAttribute('z-load', 'items_list/item');
           // 2 columns layout
           if (i < 2) {
             el.setAttribute('self', 'size-1of2 lg-full md-full sm-full');
@@ -31,16 +34,18 @@ function ItemsList(cp) {
           el.setAttribute('class', 'card-wrapper visible-on-ready');
         } else {
           // "mini" layout for subsequent items
-          el = zuix.createComponent('items_list/item_mini', options).container();
+          el.setAttribute('z-load', 'items_list/item_mini');
           // 4 columns layout
           el.setAttribute('self', 'size-1of4 lg-half md-half sm-full');
           el.setAttribute('class', 'card-wrapper mini visible-on-ready');
         }
         // center the list on wide screens
         el.setAttribute('layout', 'column stretch-center');
-        list.append(el);
+        el.setAttribute('z-options', '__cardOptions[' + cp.context.contextId + '][' + i + ']');
+        window.__cardOptions[cp.context.contextId][i] = options;
+        itemsHtml += el.outerHTML;
       });
-      zuix.componentize();
+      list.html(itemsHtml);
     }
   }
 

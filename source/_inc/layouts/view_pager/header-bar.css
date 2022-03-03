@@ -16,11 +16,10 @@
 }
 
 .header-bar .title {
-    color: var(--primary-color);
     font-size: 180%;
-    font-weight: 500;
+    font-weight: 550;
 }
-.header-bar .title img {
+.header-bar .logo {
     margin-right: 12px;
 }
 

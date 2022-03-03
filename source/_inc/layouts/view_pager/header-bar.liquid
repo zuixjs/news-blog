@@ -2,30 +2,34 @@
 
     <div class="header" layout="row center-justify">
         <div z-field="header-box" layout="row center-left">
+
             <!-- Home page header -->
             <div class="title" layout="row center-left">
-                <img src="{{ '/images/zuix-logo.svg' | url }}" width="36" height="36" alt="Logo">
                 {{ app.title }}
             </div>
+
             <!-- Search page header -->
-            <div class="search-box" layout="row center-center">
+            <div layout="row center-center">
+                <div class="search-box">
                 <span class="input">
-                <input type="text" placeholder="Enter search terms">
-                <span></span>
+                    <input type="text" placeholder="Enter search terms">
+                    <span></span>
                 </span>
+                </div>
             </div>
+
             <!-- Notification page header -->
             <div class="title">
                 Notifications
             </div>
+
             <!-- About page header -->
             <div class="title">
                 About
             </div>
+
         </div>
-        <button class="header-button" data-page="1">
-            <i class="material-icons">search</i>
-        </button>
+        <img src="{{ '/images/zuix-logo.svg' | url }}" width="32" height="32" alt="Logo" class="logo">
     </div>
     <div z-field="header-tools">
         <div ctrl z-load="@lib/controllers/view-pager"
