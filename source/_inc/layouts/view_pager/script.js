@@ -117,12 +117,13 @@ function showPage(i) {
   const page = zuix.field('pages')
       .children().hide()
       .eq(i);
-  page.animateCss('fadeIn', {duration: '300ms'}, () => {
-    zuix.componentize(page);
-    if (viewPager) {
-      viewPager.layout();
-    }
-  }).show();
+  page.animateCss('fadeIn', {duration: '300ms'}).show();
+  if (viewPager) {
+    viewPager.layout();
+    setTimeout(function() {
+      zuix.componentize(page);
+    }, 500);
+  }
 }
 
 function onItemClicked(e, $el) {
