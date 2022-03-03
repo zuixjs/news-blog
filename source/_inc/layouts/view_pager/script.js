@@ -11,6 +11,7 @@ zuix.lazyLoad(true, 48);
 options = {
 
   viewPager: {
+    lazyLoad: false,
     enablePaging: true,
     startGap: 40,
     on: {
