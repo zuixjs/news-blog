@@ -21,29 +21,29 @@ function ItemsList(cp) {
           lazyLoad: true,
           model: item
         };
-        const el = document.createElement('div');
+        const $el = zuix.$(document.createElement('div'));
         if (i < 5) {
           // different layout for first 4 items (bigger)
-          el.setAttribute('z-load', 'items_list/item');
-          // 2 columns layout
-          if (i < 2) {
-            el.setAttribute('self', 'size-1of2 lg-full md-full sm-full');
-          } else {
-            el.setAttribute('self', 'size-1of3 lg-half md-half sm-full');
-          }
-          el.setAttribute('class', 'card-wrapper visible-on-ready');
+          $el.attr({
+            'z-load': 'items_list/item',
+            'self': i < 2 ? 'size-1of2 lg-full md-full sm-full' : 'size-1of3 lg-half md-half sm-full',
+            'class': 'card-wrapper visible-on-ready'
+          });
         } else {
           // "mini" layout for subsequent items
-          el.setAttribute('z-load', 'items_list/item_mini');
-          // 4 columns layout
-          el.setAttribute('self', 'size-1of4 lg-half md-half sm-full');
-          el.setAttribute('class', 'card-wrapper mini visible-on-ready');
+          $el.attr({
+            'z-load': 'items_list/item_mini',
+            'self': 'size-1of4 lg-half md-half sm-full',
+            'class': 'card-wrapper mini visible-on-ready'
+          });
         }
         // center the list on wide screens
-        el.setAttribute('layout', 'column stretch-center');
-        el.setAttribute('z-options', '__cardOptions[' + cp.context.contextId + '][' + i + ']');
+        $el.attr({
+          'layout': 'column stretch-center',
+          'z-options': '__cardOptions[' + cp.context.contextId + '][' + i + ']'
+        });
         window.__cardOptions[cp.context.contextId][i] = options;
-        itemsHtml += el.outerHTML;
+        itemsHtml += $el.get().outerHTML;
       });
       list.html(itemsHtml);
     }

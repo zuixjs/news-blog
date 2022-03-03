@@ -105,24 +105,22 @@ function syncPageIndicator(page) {
 }
 
 function showPage(i) {
+  const animOptions = {duration: '200ms'};
   // show header top-box
   zuix.field('header-box')
       .children().hide()
-      .eq(i).animateCss('fadeIn', {duration: '300ms'}).show();
+      .eq(i).animateCss('fadeIn', animOptions).show();
   // show header bottom-box
   zuix.field('header-tools')
       .children().hide()
-      .eq(i).animateCss('fadeIn', {duration: '300ms'}).show();
+      .eq(i).animateCss('fadeIn', animOptions).show();
   // show page
   const page = zuix.field('pages')
       .children().hide()
       .eq(i);
-  page.animateCss('fadeIn', {duration: '300ms'}).show();
+  page.animateCss('fadeIn', animOptions).show();
   if (viewPager) {
     viewPager.layout();
-    setTimeout(function() {
-      zuix.componentize(page);
-    }, 500);
   }
 }
 
