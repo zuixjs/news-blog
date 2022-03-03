@@ -63,7 +63,6 @@ options = {
       'scroll:ready': function(e, scroll) {
         // lazy-load cards background cover
         const itemsList = scroll.$.find('div').get();
-        //console.log(itemsList)
         zuix.context(itemsList, function(ctx) {
           scroll.watch('.cover-wrapper', function(el, data) {
             //console.log(el, data);
@@ -78,10 +77,6 @@ options = {
     ready: function(ctx) {
       contextMenu = ctx;
     }
-  },
-
-  content: {
-    css: false
   }
 
 };
@@ -122,10 +117,12 @@ function showPage(i) {
   const page = zuix.field('pages')
       .children().hide()
       .eq(i);
-  page.animateCss('fadeIn', {duration: '300ms'}).show();
-  if (viewPager) {
-    viewPager.layout();
-  }
+  page.animateCss('fadeIn', {duration: '300ms'}, () => {
+    zuix.componentize(page);
+    if (viewPager) {
+      viewPager.layout();
+    }
+  }).show();
 }
 
 function onItemClicked(e, $el) {
