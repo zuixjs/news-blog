@@ -29,7 +29,6 @@
 }
 
 .footer-bar .active, .header-button.active {
-    transform: scale(1.2);
     color: var(--primary-color);
     text-shadow:
             1px 1px 0 #e1e8ed,

@@ -3,8 +3,8 @@ layout: basic.liquid
 headerButtonIcon: close
 headerButtonUrl: javascript:closeContent()
 options: mdl
-tags: [ "news", "blog", "demo", "news_travel" ]
-group: news_travel
+tags: [ "news", "blog", "demo", "travel" ]
+group: travel
 icon: news
 order: 1
 title: "Unu sugef attib ep."

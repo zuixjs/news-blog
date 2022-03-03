@@ -3,8 +3,8 @@ layout: basic.liquid
 headerButtonIcon: close
 headerButtonUrl: javascript:closeContent()
 options: mdl
-tags: [ "news", "blog", "demo", "news_europe" ]
-group: news_europe
+tags: [ "news", "blog", "demo", "europe" ]
+group: europe
 icon: news
 order: 1
 title: "Eke vabme tip."

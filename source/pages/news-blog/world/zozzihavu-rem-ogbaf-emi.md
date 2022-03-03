@@ -3,8 +3,8 @@ layout: basic.liquid
 headerButtonIcon: close
 headerButtonUrl: javascript:closeContent()
 options: mdl
-tags: [ "news", "blog", "demo", "news_world" ]
-group: news_world
+tags: [ "news", "blog", "demo", "world" ]
+group: world
 icon: news
 order: 1
 title: "Zozzihavu rem ogbaf emi."

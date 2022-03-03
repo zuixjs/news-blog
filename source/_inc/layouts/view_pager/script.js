@@ -74,6 +74,7 @@ options = {
   },
 
   contextMenu: {
+    lazyLoad: false,
     ready: function(ctx) {
       contextMenu = ctx;
     }
@@ -122,6 +123,7 @@ function showPage(i) {
   if (viewPager) {
     viewPager.layout();
   }
+  zuix.componentize();
 }
 
 function onItemClicked(e, $el) {

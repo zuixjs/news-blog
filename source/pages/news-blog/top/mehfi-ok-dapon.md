@@ -3,8 +3,8 @@ layout: basic.liquid
 headerButtonIcon: close
 headerButtonUrl: javascript:closeContent()
 options: mdl
-tags: [ "news", "blog", "demo", "news_top" ]
-group: news_top
+tags: [ "news", "blog", "demo", "top" ]
+group: top
 icon: news
 order: 1
 title: "Mehfi ok dapon."
