@@ -46,6 +46,7 @@ function ItemsList(cp) {
         itemsHtml += el.outerHTML;
       });
       list.html(itemsHtml);
+      zuix.componentize(list);
     }
   }
 
