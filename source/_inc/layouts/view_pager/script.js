@@ -1,6 +1,5 @@
 /* global zuix */
 
-let drawerLayout;
 let viewPager;
 let pageIndicator;
 let pageButtons;
@@ -8,19 +7,8 @@ let contextMenu;
 
 //__zuix__debug = true;
 zuix.lazyLoad(true, 48);
-zuix.$.find('.profile').on('click', function() {
-  if (drawerLayout) drawerLayout.open();
-});
 
 options = {
-
-  drawerLayout: {
-    autoHideWidth: -1,
-    drawerWidth: 280,
-    ready: function(ctx) {
-      drawerLayout = ctx;
-    }
-  },
 
   viewPager: {
     enablePaging: true,
@@ -99,18 +87,14 @@ options = {
 
 
 function initialize() {
-  // open drawer when the profile icon is clicked
-  zuix.field('header-bar').find('.profile').on('click', function() {
-    if (drawerLayout) drawerLayout.open();
-  });
   // change page clicking buttons on the footer bar
-  const buttons = zuix.field('footer-bar').find('button');
+  const buttons = zuix.$.find('[data-page]');
   buttons.each(function(i, el, $el) {
     // TODO:
     $el.on('click', function() {
       buttons.removeClass('active');
       this.addClass('active');
-      showPage(i);
+      showPage($el.attr('data-page'));
     });
   });
   showPage(0);
@@ -158,11 +142,13 @@ function onItemShowMenu(e, $el) {
 function openContentFrame(url) {
   const contentFrame = zuix.field('content-frame');
   contentFrame.get().src = url;
-  contentFrame.animateCss('zoomIn', {duration: '500ms'}).show();
+  viewPager.$.animateCss('fadeOut', {duration: '500ms'});
+  contentFrame.animateCss('slideInRight', {duration: '500ms'}).show();
 }
 function closeContentFrame() {
   const contentFrame = zuix.field('content-frame');
-  contentFrame.animateCss('zoomOut', {duration: '300ms'}, ()=> {
+  viewPager.$.animateCss('fadeIn', {duration: '300ms'});
+  contentFrame.animateCss('slideOutRight', {duration: '300ms'}, ()=> {
     contentFrame.hide();
     contentFrame.get().src = 'about:blank';
   });

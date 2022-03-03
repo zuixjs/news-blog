@@ -14,11 +14,11 @@ date: Last Modified
       ctrl z-load="@lib/controllers/header-auto-hide"
       data-o-header="header-bar">
 
-<header #header-bar class="header-cover animate__animated animate__fadeIn">
+<header #header-bar class="header-cover animate__animated animate__fadeInDown animate__faster">
     <div self="size-large center" layout="row center-left">
-        <div><h1 z-field="page_title" class="title animate__animated animate__fadeInLeft">{{title}}</h1></div>
+        <div><h1 z-field="page_title" class="title animate__animated animate__fadeIn">{{title}}</h1></div>
         {% if headerButtonUrl != null %}
-        <div self="center-right"><a href="{{headerButtonUrl}}"><i class="material-icons animate__animated animate__fadeInRight">{{ headerButtonIcon }}</i></a></div>
+        <div self="center-right"><a href="{{headerButtonUrl}}"><i class="material-icons animate__animated animate__fadeIn">{{ headerButtonIcon }}</i></a></div>
         {% endif %}
     </div>
 </header>
@@ -31,9 +31,11 @@ date: Last Modified
 
     {{ content | safe }}
 
-    {% include "published_date.liquid" %}
+    {% include "./basic/published_date.liquid" %}
 
-    {% include "page_navigation.liquid" %}
+    {% include "./basic/page_navigation.liquid" %}
+
+    {% include "./basic/page_related.liquid" %}
 
 </main>
 

@@ -1,0 +1,64 @@
+.header-bar {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:auto;
+    background: rgba(248,248,248,1);
+    border-bottom: solid 1px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 2px -2px rgba(100,100,100,0.15);
+    z-index: 2!important;
+}
+
+.header-bar .header {
+    height: 56px;
+    max-height: 56px;
+}
+
+.header-bar .title {
+    color: var(--primary-color);
+    font-size: 180%;
+    font-weight: 500;
+}
+.header-bar .title img {
+    margin-right: 12px;
+}
+
+.header-bar .topics {
+    width: 100%;
+    height:40px;
+}
+.header-bar .topics div {
+    font-size: 16px;
+    height:36px;
+    min-width: 96px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    border-bottom: solid 4px transparent;
+    cursor: pointer;
+}
+
+.header-bar [z-field="header-box"] {
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+}
+
+.header-button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: rgba(0,0,0,0.5);
+}
+.header-button i {
+    font-size: 200%;
+    padding: 12px;
+}
+
+[z-field="header-tools"] .active {
+    color: initial;
+    font-weight: bold;
+    border-bottom: solid 4px var(--primary-color) !important;
+}

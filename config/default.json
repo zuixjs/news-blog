@@ -41,8 +41,7 @@
       }
     },
     "app": {
-      "title": "<code>zuix.js</code> News Blog",
-      "subtitle": "Simple, yet powerful!",
+      "title": "News Blog",
       "baseUrl": "/",
       "resourcePath": "{{ app.baseUrl }}app/",
       "libraryPath": {

@@ -1,16 +1,14 @@
 <div z-field="header-bar" class="header-bar">
 
-    <div class="header">
-        <div class="profile pulse">
-            <img alt="Profile Icon" src="{{ '/images/profile-icon.png' | url }}" width="44" height="44">
-        </div>
-        <div z-field="header-box" layout="row center-center">
+    <div class="header" layout="row center-justify">
+        <div z-field="header-box" layout="row center-left">
             <!-- Home page header -->
-            <div class="title">
-                Home
+            <div class="title" layout="row center-left">
+                <img src="{{ '/images/zuix-logo.svg' | url }}" width="36" height="36" alt="Logo">
+                {{ app.title }}
             </div>
             <!-- Search page header -->
-            <div class="search-box">
+            <div class="search-box" layout="row center-center">
                 <span class="input">
                 <input type="text" placeholder="Enter search terms">
                 <span></span>
@@ -25,6 +23,9 @@
                 About
             </div>
         </div>
+        <button class="header-button" data-page="1">
+            <i class="material-icons">search</i>
+        </button>
     </div>
     <div z-field="header-tools">
         <div ctrl z-load="@lib/controllers/view-pager"

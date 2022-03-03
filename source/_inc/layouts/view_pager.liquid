@@ -24,19 +24,8 @@ date: Last Modified
 <!-- The footer with toolbar buttons -->
 {% include './view_pager/footer-bar.liquid' %}
 
-
 {% include "body_end.liquid" %}
 
-
-<!-- The DrawerLayout for side menu panel -->
-<div ctrl z-load="@lib/controllers/drawer-layout"
-     z-options="options.drawerLayout"
-     class="drawer visible-on-ready" z-lazy="false"
-     draggable="false">
-
-    {% include './view_pager/drawer-menu.liquid' %}
-
-</div>
 
 <div z-load="@lib/components/context-menu" class="visible-on-ready" z-lazy="false"
      z-context="news-options-menu" z-options="options.contextMenu">

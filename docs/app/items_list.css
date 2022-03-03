@@ -25,7 +25,7 @@
 }
 .card i {
   color: var(--primary-color);
-  font-size: 200%;
+  font-size: 160%;
 }
 .cover-wrapper {
   cursor: pointer;
@@ -47,8 +47,9 @@
   font-size: 80%;
 }
 .options button {
-  height: 42px;
+  height: 36px;
   padding-top: 4px;
+  transform: translate(14px, 3px);
   background: rgba(50,50,50,0.01);
   border: none;
   border-radius: 42px;
