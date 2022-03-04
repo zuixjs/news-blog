@@ -157,10 +157,13 @@ button:hover, button:active, button.active {
 }
 
 .title {
+    padding: 8px;
+    /*
     max-width: calc(100vw - 72px);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+     */
 }
 .image-cover {
     width: 100%;

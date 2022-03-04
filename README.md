@@ -1,24 +1,16 @@
 # News-Blog template
 
-A G-News alike web application template, featuring view pager with gesture, side drawer, and popup context menu.  
+A G-News alike web application template, featuring view pager with gesture, popup context menu, search page, bookmarks.  
 Implemented as Progressive Web App, with background service worker and other optimizations.  
 Suitable both for desktop and mobile.
 
-The app is implemented as a static site with [11ty](https://11ty.dev) engine, and using `markdown` and `liquid` templates.
+Based on [zuix.js Web Starter](https://zuixjs.github.io/zuix-web-starter/) and [zuix.js HTML-PWA](#), this web application
+is implemented as a static site with `markdown` and `liquid` templates using [11ty](https://11ty.dev) engine.
 
 
 ## Live demo
 
 ### https://zuixjs.github.io/news-blog/
-
-
-https://user-images.githubusercontent.com/6654265/156253042-7dc2dfbd-6e51-4f9a-a6f2-5ec9b2fd884b.mp4
-
-
-This template is based on [zuix.js Web Starter](https://zuixjs.github.io/zuix-web-starter/) and
-[zuix.js HTML-PWA](#).
-
-![Lighthouse score screenshot](https://camo.githubusercontent.com/c65de26d27f9b35f03f3ddf66714971a33e8f0a2d60104e7093aac7c7228b356/68747470733a2f2f7a7569786a732e6769746875622e696f2f7a7569782d68746d6c2d7077612f696d616765732f6c69676874686f7573652d7265706f72742e706e67)
 
 
 ## Requirements
@@ -28,7 +20,7 @@ This template is based on [zuix.js Web Starter](https://zuixjs.github.io/zuix-we
 
 ## Installation
 
-Checkout this repository, and open a terminal in the project folder then enter the command `npm i` to install required
+Clone this repository, and open a terminal in the project folder then enter the command `npm i` to install required
 dependencies.
 
 
