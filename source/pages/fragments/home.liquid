@@ -7,7 +7,7 @@
     {%- for section in sectionList -%}
         <article ctrl z-load="@lib/controllers/header-auto-hide"
                  z-options="options.autoHidingBars"
-                 class="content" layout="column top-center">
+                 class="content" layout="column top-stretch">
 
             <div z-load="items_list" z-options="{ section: '{{ section.url | url }}', lazyLoad: true }"
                  class="visible-on-ready" style="min-height: 100vh"></div>
