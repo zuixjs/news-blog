@@ -56,12 +56,12 @@ are listed in the form of *cards*, with a preview image, the title, the date and
 options.
 
 For example, to add a new post page in the `travels` section  :
-- `zx add -s travels -n my-cruise-to-maldive -l basic`
+- `zx add -s travels -n my-cruise-to-maldive -l article`
 
 This will create a new post page named `my-cruise-to-maldive.md` inside the `pages/news-blog/travels/` folder. 
 
 So, the `-s` option is used to specify the section under which the post page will be grouped, the `-n` options is used to
-specify the name of the page, and the `-l` option to specify the layout template to be used.  
+specify the name of the page, and the `-l` option to specify the layout template to be used (from the `./templates/pages/` folder).  
 Custom page layouts can be added in the `_inc/layouts` folder.
 
 ### Building for production

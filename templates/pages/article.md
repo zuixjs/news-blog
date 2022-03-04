@@ -1,7 +1,5 @@
 ---
 layout: basic.liquid
-headerButtonIcon: dashboard
-headerButtonUrl: javascript:closeContent()
 tags: {{section}}
 group: {{section}}{{frontMatter}}title: {{title}}
 description: Page description
