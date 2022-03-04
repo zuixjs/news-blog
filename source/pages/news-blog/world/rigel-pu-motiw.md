@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Rigel pu motiw."
 description: "Telhu fu pocdol zilni oh kovzij wev deho wetmodfec rit."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world016/960/640
 imagePreview: https://picsum.photos/seed/world016/640/560
 imagePreviewMini: https://picsum.photos/seed/world016/320/240

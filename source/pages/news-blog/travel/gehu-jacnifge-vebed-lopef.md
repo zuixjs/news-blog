@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Gehu jacnifge vebed lopef."
 description: "Pojok zoan rujhip guazo hokpe dudu jiic noeru kikja kokziw."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel03/960/640
 imagePreview: https://picsum.photos/seed/travel03/640/560
 imagePreviewMini: https://picsum.photos/seed/travel03/320/240

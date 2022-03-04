@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Wioti zijobu aswigozi keczewgoj."
 description: "Giho zite zoik ge li pahdap fob vecvi uktid fonpil."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world00/960/640
 imagePreview: https://picsum.photos/seed/world00/640/560
 imagePreviewMini: https://picsum.photos/seed/world00/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Avpa bedowno kasu fofgiihe."
 description: "Dudwe vorgis sut owu duf nozif bici horet pigmoko nedlijipo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world024/960/640
 imagePreview: https://picsum.photos/seed/world024/640/560
 imagePreviewMini: https://picsum.photos/seed/world024/320/240

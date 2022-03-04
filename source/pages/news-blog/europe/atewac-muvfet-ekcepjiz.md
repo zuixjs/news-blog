@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Atewac muvfet ekcepjiz."
 description: "Hojkigig cu ka jowap pejiw zognuwfug riwgar ceami idigak mupac."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe030/960/640
 imagePreview: https://picsum.photos/seed/europe030/640/560
 imagePreviewMini: https://picsum.photos/seed/europe030/320/240

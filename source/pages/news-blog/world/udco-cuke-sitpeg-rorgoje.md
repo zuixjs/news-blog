@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Udco cuke sitpeg rorgoje."
 description: "Mel soruwwi dupdebkod pi hiawaak memujhi ze neup dovu kuosjog."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world010/960/640
 imagePreview: https://picsum.photos/seed/world010/640/560
 imagePreviewMini: https://picsum.photos/seed/world010/320/240

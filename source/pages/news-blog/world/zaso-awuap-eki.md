@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zaso awuap eki."
 description: "Donhekjo ham ugasobis gitopu fu rool moefbi are finehli zib."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world027/960/640
 imagePreview: https://picsum.photos/seed/world027/640/560
 imagePreviewMini: https://picsum.photos/seed/world027/320/240

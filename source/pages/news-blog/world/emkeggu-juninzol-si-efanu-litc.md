@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Emkeggu juninzol si efanu litci."
 description: "Vowi ag sikotmal fiili ug befih wokzo jotvoj hunaw nenmignum."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world011/960/640
 imagePreview: https://picsum.photos/seed/world011/640/560
 imagePreviewMini: https://picsum.photos/seed/world011/320/240

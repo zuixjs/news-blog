@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Godej owi hopi fipufivut."
 description: "Inoro omuti gek kiwdumup sapil tiz sogov ni cuco teule."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top025/960/640
 imagePreview: https://picsum.photos/seed/top025/640/560
 imagePreviewMini: https://picsum.photos/seed/top025/320/240

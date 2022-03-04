@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Fuwveh rowru bodcu beven."
 description: "Febos lis oraic hoscep ler dohog merofmag hood mewez anhiz."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel05/960/640
 imagePreview: https://picsum.photos/seed/travel05/640/560
 imagePreviewMini: https://picsum.photos/seed/travel05/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Nuhjip zuowo ajgi rifuwsi."
 description: "Kij loswozva megaw cifun zasun cav lepja tuwda lepsiris uk."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe018/960/640
 imagePreview: https://picsum.photos/seed/europe018/640/560
 imagePreviewMini: https://picsum.photos/seed/europe018/320/240

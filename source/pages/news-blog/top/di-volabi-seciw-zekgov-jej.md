@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Di volabi seciw zekgov jej."
 description: "Zalbasli wewsoj muwi lumer ese ri dil wojic nicgo copluhfo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top07/960/640
 imagePreview: https://picsum.photos/seed/top07/640/560
 imagePreviewMini: https://picsum.photos/seed/top07/320/240

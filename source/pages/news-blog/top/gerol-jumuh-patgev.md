@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Gerol jumuh patgev."
 description: "Imfe horo ubace ges jemijwo liseh oto raze izinokov hadileb."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top05/960/640
 imagePreview: https://picsum.photos/seed/top05/640/560
 imagePreviewMini: https://picsum.photos/seed/top05/320/240

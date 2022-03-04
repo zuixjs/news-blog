@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Riaf vegvo wakvag evoha."
 description: "Zogwe pewni halok diwor boaco velpi foj poalev cacvozkib co."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world03/960/640
 imagePreview: https://picsum.photos/seed/world03/640/560
 imagePreviewMini: https://picsum.photos/seed/world03/320/240

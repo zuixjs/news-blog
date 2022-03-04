@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Ge cikgeehi anoledce kehfi pumevvi."
 description: "Wovhukiki de dafteh mosul pivew piv wudujom gahaso do efolemoh."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top031/960/640
 imagePreview: https://picsum.photos/seed/top031/640/560
 imagePreviewMini: https://picsum.photos/seed/top031/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Sid kinjizboh si vi cakno."
 description: "Giivnet ju dewwej ro me nijol wasdod jipjej adhilon nop."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top017/960/640
 imagePreview: https://picsum.photos/seed/top017/640/560
 imagePreviewMini: https://picsum.photos/seed/top017/320/240

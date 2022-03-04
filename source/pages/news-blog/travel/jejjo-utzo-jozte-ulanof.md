@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Jejjo utzo jozte ulanof."
 description: "Havoipe redcow cujig sihe wa ran wudto onoevo te car."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel027/960/640
 imagePreview: https://picsum.photos/seed/travel027/640/560
 imagePreviewMini: https://picsum.photos/seed/travel027/320/240

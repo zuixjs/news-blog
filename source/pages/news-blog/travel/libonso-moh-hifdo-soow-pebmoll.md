@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Libonso moh hifdo soow pebmollim."
 description: "Vibi namcog ofuimi girugni vip akdohwe digjije lozod podse albof."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel09/960/640
 imagePreview: https://picsum.photos/seed/travel09/640/560
 imagePreviewMini: https://picsum.photos/seed/travel09/320/240

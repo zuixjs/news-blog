@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Idewet gelidohet wevce."
 description: "Fobkateku bu dop siki wudis tejiso jeg cemarmos feton dinso."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world04/960/640
 imagePreview: https://picsum.photos/seed/world04/640/560
 imagePreviewMini: https://picsum.photos/seed/world04/320/240

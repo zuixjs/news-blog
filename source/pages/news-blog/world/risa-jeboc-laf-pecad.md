@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Risa jeboc laf pecad."
 description: "Boto zusibcut kelnidi fijjar mepzij orke did fi muataluh ofwintev."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world028/960/640
 imagePreview: https://picsum.photos/seed/world028/640/560
 imagePreviewMini: https://picsum.photos/seed/world028/320/240

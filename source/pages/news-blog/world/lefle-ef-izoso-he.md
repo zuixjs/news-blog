@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Lefle ef izoso he."
 description: "Me niceji dok wuvi lewimon omeuku habdomul omimu zimkav sipata."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world02/960/640
 imagePreview: https://picsum.photos/seed/world02/640/560
 imagePreviewMini: https://picsum.photos/seed/world02/320/240

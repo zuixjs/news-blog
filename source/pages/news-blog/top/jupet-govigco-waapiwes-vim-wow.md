@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Jupet govigco waapiwes vim wowcifji."
 description: "Ruvjac mek til uwlok atehuv kotige liprison aclat ji do."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top012/960/640
 imagePreview: https://picsum.photos/seed/top012/640/560
 imagePreviewMini: https://picsum.photos/seed/top012/320/240

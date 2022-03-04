@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Me niep koje duzdev."
 description: "Dowahi rilot kakewfol odcefji worfaped ver po motjedwi hus vipom."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world01/960/640
 imagePreview: https://picsum.photos/seed/world01/640/560
 imagePreviewMini: https://picsum.photos/seed/world01/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Apipo agooti olhos tudetos jiwapi."
 description: "Ikikne cohe jegiwkuh timjo piwim ki sog tujte hinud sapciru."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel020/960/640
 imagePreview: https://picsum.photos/seed/travel020/640/560
 imagePreviewMini: https://picsum.photos/seed/travel020/320/240

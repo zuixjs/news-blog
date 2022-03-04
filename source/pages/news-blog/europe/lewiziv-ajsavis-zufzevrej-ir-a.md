@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Lewiziv ajsavis zufzevrej ir akofi."
 description: "Pitdec tamzatwig voke tedkiake femi olcavge ittur os nerleoze duvase."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe04/960/640
 imagePreview: https://picsum.photos/seed/europe04/640/560
 imagePreviewMini: https://picsum.photos/seed/europe04/320/240

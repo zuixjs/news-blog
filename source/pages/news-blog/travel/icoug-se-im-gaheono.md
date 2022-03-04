@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Icoug se im gaheono."
 description: "Kil avuwfo te ziwac reuda hudti lepihale nici viki zimijecew."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel018/960/640
 imagePreview: https://picsum.photos/seed/travel018/640/560
 imagePreviewMini: https://picsum.photos/seed/travel018/320/240

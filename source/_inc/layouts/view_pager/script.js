@@ -6,7 +6,7 @@ let pageButtons;
 let contextMenu;
 
 //__zuix__debug = true;
-zuix.lazyLoad(true, 48);
+zuix.lazyLoad(true, -window.innerWidth / 2);
 
 options = {
 
@@ -143,7 +143,9 @@ function openContentFrame(url) {
   const contentFrame = zuix.field('content-frame');
   contentFrame.get().src = url;
   viewPager.$.animateCss('fadeOut', {duration: '500ms'});
-  contentFrame.animateCss('slideInRight', {duration: '500ms'}).show();
+  contentFrame.animateCss('slideInRight', {duration: '500ms'}, function() {
+    contentFrame.get().focus();
+  }).show();
 }
 function closeContentFrame() {
   const contentFrame = zuix.field('content-frame');

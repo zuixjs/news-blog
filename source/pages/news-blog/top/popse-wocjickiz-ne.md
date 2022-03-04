@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Popse wocjickiz ne."
 description: "Wilihe imsojhu pozda galoh wekripuko zeezoge sahgus non eglof conon."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top08/960/640
 imagePreview: https://picsum.photos/seed/top08/640/560
 imagePreviewMini: https://picsum.photos/seed/top08/320/240

@@ -24,7 +24,7 @@
   padding: 12px 12px 24px;
 }
 .card i {
-  color: var(--primary-color);
+  /*color: var(--primary-color);*/
   font-size: 160%;
 }
 .cover-wrapper {
@@ -50,10 +50,7 @@
   height: 36px;
   padding-top: 4px;
   transform: translate(14px, 3px);
-  background: rgba(50,50,50,0.01);
+  background: transparent;
   border: none;
   border-radius: 42px;
-}
-.options button:hover {
-  background: rgba(0,0,0,0.1);
 }

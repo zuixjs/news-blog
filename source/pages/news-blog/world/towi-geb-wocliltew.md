@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Towi geb wocliltew."
 description: "Gooc mola sejpeze tisogu molhigcih adwogub kitzi kudaz so nafehre."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world019/960/640
 imagePreview: https://picsum.photos/seed/world019/640/560
 imagePreviewMini: https://picsum.photos/seed/world019/320/240

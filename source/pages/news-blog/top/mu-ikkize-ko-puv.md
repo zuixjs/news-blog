@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Mu ikkize ko puv."
 description: "Kibpo ro puhpor ihkes zascohu jijge sed tu oc du."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top02/960/640
 imagePreview: https://picsum.photos/seed/top02/640/560
 imagePreviewMini: https://picsum.photos/seed/top02/320/240

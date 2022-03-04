@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Eka akeisa mizi fancegase."
 description: "Wav hiwe lir sevce kusi ojpov de ril go samrel."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel011/960/640
 imagePreview: https://picsum.photos/seed/travel011/640/560
 imagePreviewMini: https://picsum.photos/seed/travel011/320/240

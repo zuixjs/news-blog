@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Hum nub naje wa."
 description: "Zit luihgem nivu kehme omi veppeb nuhhi sok wupij sejnir."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe022/960/640
 imagePreview: https://picsum.photos/seed/europe022/640/560
 imagePreviewMini: https://picsum.photos/seed/europe022/320/240

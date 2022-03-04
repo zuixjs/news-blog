@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Gon hi facgot fovetop."
 description: "Fejmemso zoak lonaj viiwe vorvez vomfello zegwi su imijoheg mud."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel028/960/640
 imagePreview: https://picsum.photos/seed/travel028/640/560
 imagePreviewMini: https://picsum.photos/seed/travel028/320/240

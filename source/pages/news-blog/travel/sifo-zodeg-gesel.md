@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Sifo zodeg gesel."
 description: "Tecumi ojze za sohwo kukmug afeca kinpe vaggoj seppejoc jakvo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel029/960/640
 imagePreview: https://picsum.photos/seed/travel029/640/560
 imagePreviewMini: https://picsum.photos/seed/travel029/320/240

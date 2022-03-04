@@ -11,10 +11,11 @@ date: Last Modified
 
 <!-- scroll helper is used to show/hide the header when scrolling -->
 <body layout="column top-center" data-theme="{{ theme }}"
-      ctrl z-load="@lib/controllers/header-auto-hide"
-      data-o-header="header-bar">
+      -ctrl -z-load="@lib/controllers/header-auto-hide"
+      -data-o-header="header-bar">
 
-<header #header-bar class="header-cover animate__animated animate__fadeInDown animate__faster">
+<!--
+<header #header-bar class="header-cover animate__animated animate__fadeInDown animate__faster" style="display:none">
     <div self="size-large center" layout="row center-left">
         <div><h1 z-field="page_title" class="title animate__animated animate__fadeIn">{{title}}</h1></div>
         {% if headerButtonUrl != null %}
@@ -22,22 +23,37 @@ date: Last Modified
         {% endif %}
     </div>
 </header>
+-->
 
 {% if imageCover %}
     <img class="image-cover" src="{{ imageCover }}">
+{% endif %}
+
+<h1 z-field="page_title" class="title animate__animated animate__fadeIn">{{title}}</h1>
+{% if pubDate or author %}
+    <div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px">
+        {% if author -%}
+            <strong>BY {{ author | upcase }}</strong>
+        {%- endif -%}
+        <small>{{ pubDate | date: 'D MMM yyyy' }}</small>
+    </div>
 {% endif %}
 
 <main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch">
 
     {{ content | safe }}
 
-    {% include "./basic/published_date.liquid" %}
-
     {% include "./basic/page_navigation.liquid" %}
 
     {% include "./basic/page_related.liquid" %}
 
 </main>
+
+{% zx 'menu-overlay' 'actions-menu' %}
+- [Close](closeContent()) close
+- [Print](#print) print
+- [Share](#share) share
+{% endzx %}
 
 {% include "footer.liquid" %}
 

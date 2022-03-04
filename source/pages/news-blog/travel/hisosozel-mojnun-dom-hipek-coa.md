@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Hisosozel mojnun dom hipek coas."
 description: "Sehu godijiv tik fo ri udwunho ol bonparza we octahug."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel022/960/640
 imagePreview: https://picsum.photos/seed/travel022/640/560
 imagePreviewMini: https://picsum.photos/seed/travel022/320/240

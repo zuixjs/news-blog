@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Gehjel ifiwifo peome hecava."
 description: "Ji anicima utnohkez cihza nalow cizecril do mi ga oji."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world09/960/640
 imagePreview: https://picsum.photos/seed/world09/640/560
 imagePreviewMini: https://picsum.photos/seed/world09/320/240

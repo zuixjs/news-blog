@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Gekahsi ballob detjo zeeje."
 description: "Te vulpirfu vihak wu uchedi cabo hafopher fewi rijolpo fufduszi."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe014/960/640
 imagePreview: https://picsum.photos/seed/europe014/640/560
 imagePreviewMini: https://picsum.photos/seed/europe014/320/240

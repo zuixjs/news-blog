@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Runurapo novjalwi wefata."
 description: "Fosen du zigov howaba gup gidim rel zezu hoci ogoade."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world032/960/640
 imagePreview: https://picsum.photos/seed/world032/640/560
 imagePreviewMini: https://picsum.photos/seed/world032/320/240

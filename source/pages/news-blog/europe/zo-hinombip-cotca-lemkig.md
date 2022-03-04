@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zo hinombip cotca lemkig."
 description: "Ojto ekiwo adkokah cogisoj ufja hebkobga acohew jedu owuucaki dopsemige."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe032/960/640
 imagePreview: https://picsum.photos/seed/europe032/640/560
 imagePreviewMini: https://picsum.photos/seed/europe032/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zihir lir tuhoj voko."
 description: "Odge erpog mukadetor olcifgej guv hiugode jej hipujom vo cogwihme."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top013/960/640
 imagePreview: https://picsum.photos/seed/top013/640/560
 imagePreviewMini: https://picsum.photos/seed/top013/320/240

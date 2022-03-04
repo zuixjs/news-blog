@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Gu hinvom como."
 description: "Fuj tedew wotehdah deke pil ofe wi gosha ticej ted."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel06/960/640
 imagePreview: https://picsum.photos/seed/travel06/640/560
 imagePreviewMini: https://picsum.photos/seed/travel06/320/240

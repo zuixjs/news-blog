@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Sowzo ijeva kiruri muckivle."
 description: "Siziw ri se lipror meb fomocu goveski fokofwol jonhucvo botuw."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel019/960/640
 imagePreview: https://picsum.photos/seed/travel019/640/560
 imagePreviewMini: https://picsum.photos/seed/travel019/320/240

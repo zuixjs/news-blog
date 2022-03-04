@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Oso jo ke jiki."
 description: "Cirlif roelerov vugop ediele voja jothes wirkeg newbusihi wazol azjorha."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe01/960/640
 imagePreview: https://picsum.photos/seed/europe01/640/560
 imagePreviewMini: https://picsum.photos/seed/europe01/320/240

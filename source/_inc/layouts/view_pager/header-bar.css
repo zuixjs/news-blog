@@ -16,6 +16,7 @@
 }
 
 .header-bar .title {
+    opacity: 0.5;
     font-size: 180%;
     font-weight: 550;
 }

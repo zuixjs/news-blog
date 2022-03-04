@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Vigwec sof pejho laufzeg kafi."
 description: "Miw sib amuaz ve hubfo kosa cirinre saikerol ezousihe vosfik."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe011/960/640
 imagePreview: https://picsum.photos/seed/europe011/640/560
 imagePreviewMini: https://picsum.photos/seed/europe011/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Savjaf fide me rerju."
 description: "Fosa ihwete nippeso re nec bi lodmov mosac opdes meh."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top00/960/640
 imagePreview: https://picsum.photos/seed/top00/640/560
 imagePreviewMini: https://picsum.photos/seed/top00/320/240

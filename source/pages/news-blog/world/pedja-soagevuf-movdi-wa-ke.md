@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Pedja soagevuf movdi wa ke."
 description: "Voh hekuh gollo vocwe fis zejlo ciwis dopit jiwnumin uk."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world029/960/640
 imagePreview: https://picsum.photos/seed/world029/640/560
 imagePreviewMini: https://picsum.photos/seed/world029/320/240

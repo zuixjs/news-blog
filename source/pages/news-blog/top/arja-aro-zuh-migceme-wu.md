@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Arja aro zuh migceme wu."
 description: "Ice sujfetif epuf nipfes deviomu az das dukwewiv jisownuj nes."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top023/960/640
 imagePreview: https://picsum.photos/seed/top023/640/560
 imagePreviewMini: https://picsum.photos/seed/top023/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Ater noviragiw wo atudor."
 description: "Vige okpe ol din rubhohe cewo openujec tewajoki eka neti."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top09/960/640
 imagePreview: https://picsum.photos/seed/top09/640/560
 imagePreviewMini: https://picsum.photos/seed/top09/320/240

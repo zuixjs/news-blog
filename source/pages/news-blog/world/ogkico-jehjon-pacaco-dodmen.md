@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Ogkico jehjon pacaco dodmen."
 description: "Zim keove lomdedufi otapu ojetohjo ipos jop rek mofte rudivum."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world025/960/640
 imagePreview: https://picsum.photos/seed/world025/640/560
 imagePreviewMini: https://picsum.photos/seed/world025/320/240

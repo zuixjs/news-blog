@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Soreghi johehho foari."
 description: "If epe cilaji rujgakseb zegwef soekewo hucu jeeh lojo ehi."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top030/960/640
 imagePreview: https://picsum.photos/seed/top030/640/560
 imagePreviewMini: https://picsum.photos/seed/top030/320/240

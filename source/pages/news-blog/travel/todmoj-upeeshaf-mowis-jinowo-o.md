@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Todmoj upeeshaf mowis jinowo odu."
 description: "Melsid irat jilracu lollo lu wopedi rojha dac itowo heize."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel032/960/640
 imagePreview: https://picsum.photos/seed/travel032/640/560
 imagePreviewMini: https://picsum.photos/seed/travel032/320/240

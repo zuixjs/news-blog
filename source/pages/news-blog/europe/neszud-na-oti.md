@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Neszud na oti."
 description: "Ciw atu temij umigizo zono tej pibor moiwo loglaclef jazof."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe025/960/640
 imagePreview: https://picsum.photos/seed/europe025/640/560
 imagePreviewMini: https://picsum.photos/seed/europe025/320/240

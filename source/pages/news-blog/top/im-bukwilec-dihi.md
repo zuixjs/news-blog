@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Im bukwilec dihi."
 description: "Moadno vagvotze ojofob pu oforedur rude kep cobnezsov lihwu cewgudrom."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top019/960/640
 imagePreview: https://picsum.photos/seed/top019/640/560
 imagePreviewMini: https://picsum.photos/seed/top019/320/240

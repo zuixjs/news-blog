@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Nu enisedihi lozi."
 description: "Asimi cugjo mi disuv aro emu wiipaewi lul peem pohe."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe029/960/640
 imagePreview: https://picsum.photos/seed/europe029/640/560
 imagePreviewMini: https://picsum.photos/seed/europe029/320/240

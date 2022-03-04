@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Wif jogjo nurlus wodhip."
 description: "Mepfet rev cicgoco ojefor koepu utoaf giflorhi inemo reedepi lipim."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel04/960/640
 imagePreview: https://picsum.photos/seed/travel04/640/560
 imagePreviewMini: https://picsum.photos/seed/travel04/320/240

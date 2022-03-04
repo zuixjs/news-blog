@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Wifewec kicgakev le odual."
 description: "Hafhe alzisa asoifo delzug sagfijdif fe zidi eze zo zimdafcic."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel024/960/640
 imagePreview: https://picsum.photos/seed/travel024/640/560
 imagePreviewMini: https://picsum.photos/seed/travel024/320/240

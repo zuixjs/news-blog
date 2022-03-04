@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Alvedpi re jeej."
 description: "Jikohki cogur favfu comet oriimo tatek hapaad kedacfi cu avjo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe06/960/640
 imagePreview: https://picsum.photos/seed/europe06/640/560
 imagePreviewMini: https://picsum.photos/seed/europe06/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zo in hitmefmag."
 description: "Papidji minifpa ni pec kehhat suco tedo aktep wotci ecucajej."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel01/960/640
 imagePreview: https://picsum.photos/seed/travel01/640/560
 imagePreviewMini: https://picsum.photos/seed/travel01/320/240

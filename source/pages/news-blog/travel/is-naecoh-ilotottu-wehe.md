@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Is naecoh ilotottu wehe."
 description: "Ohisozlod cizosu ni mi wumi si misod bomasu apvudir wad."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel016/960/640
 imagePreview: https://picsum.photos/seed/travel016/640/560
 imagePreviewMini: https://picsum.photos/seed/travel016/320/240

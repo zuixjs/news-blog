@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Bupkof hefef coteki."
 description: "Ceno ko jezerme wugsugi salamovu zab ebninmar ziddohzad bipu fivepogi."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe017/960/640
 imagePreview: https://picsum.photos/seed/europe017/640/560
 imagePreviewMini: https://picsum.photos/seed/europe017/320/240

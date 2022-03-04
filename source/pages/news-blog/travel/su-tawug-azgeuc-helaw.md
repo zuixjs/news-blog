@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Su tawug azgeuc helaw."
 description: "Ver davtevhi bevwag wiwwur diju magikto fek mimlif gikcarco ha."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel023/960/640
 imagePreview: https://picsum.photos/seed/travel023/640/560
 imagePreviewMini: https://picsum.photos/seed/travel023/320/240

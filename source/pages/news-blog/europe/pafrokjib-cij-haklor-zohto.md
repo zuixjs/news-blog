@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Pafrokjib cij haklor zohto."
 description: "Pecku id wihfoj resati omgujit dope afgap velapa fatikoh sawga."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe08/960/640
 imagePreview: https://picsum.photos/seed/europe08/640/560
 imagePreviewMini: https://picsum.photos/seed/europe08/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Awjo udajog nuuli few avi."
 description: "Gulte ipher evci cu sipih ga koj rikofa ifeelife topvu."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe012/960/640
 imagePreview: https://picsum.photos/seed/europe012/640/560
 imagePreviewMini: https://picsum.photos/seed/europe012/320/240

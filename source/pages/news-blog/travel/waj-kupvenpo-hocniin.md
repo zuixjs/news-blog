@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Waj kupvenpo hocniin."
 description: "Pella cebes docoik riitteb dilabi oweja gowiszov re zit mah."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel030/960/640
 imagePreview: https://picsum.photos/seed/travel030/640/560
 imagePreviewMini: https://picsum.photos/seed/travel030/320/240

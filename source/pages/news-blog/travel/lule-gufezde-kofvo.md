@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Lule gufezde kofvo."
 description: "Vi doari cev suj vajnoof gukid zire bokeiv virpaj ojijesoh."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel012/960/640
 imagePreview: https://picsum.photos/seed/travel012/640/560
 imagePreviewMini: https://picsum.photos/seed/travel012/320/240

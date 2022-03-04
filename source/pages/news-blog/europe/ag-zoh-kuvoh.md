@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Ag zoh kuvoh."
 description: "Us bo cawose fifu wecjirud ane bi micogkaf vocejjo pusgumta."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe015/960/640
 imagePreview: https://picsum.photos/seed/europe015/640/560
 imagePreviewMini: https://picsum.photos/seed/europe015/320/240

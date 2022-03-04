@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Bokefko foha coza na."
 description: "Oz ocitoso jees anoro opjikwi in gi fuhug busgoaka jitgawe."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world031/960/640
 imagePreview: https://picsum.photos/seed/world031/640/560
 imagePreviewMini: https://picsum.photos/seed/world031/320/240

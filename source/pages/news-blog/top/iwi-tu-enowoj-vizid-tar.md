@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Iwi tu enowoj vizid tar."
 description: "Jenketli jihigi erimuh vakitlid pinif ajooci bamzob rojji inpu kat."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top024/960/640
 imagePreview: https://picsum.photos/seed/top024/640/560
 imagePreviewMini: https://picsum.photos/seed/top024/320/240

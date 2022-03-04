@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Owuhifce ane ba renitmel coac."
 description: "Emes cadail ne rujos kov olegolaho pelvocol rejfet dascig ci."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top021/960/640
 imagePreview: https://picsum.photos/seed/top021/640/560
 imagePreviewMini: https://picsum.photos/seed/top021/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Jihlow hegaeke magler jic."
 description: "Nijidse lejezo lin jumzo ocekoj ha laukpe mogof ku rec."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top027/960/640
 imagePreview: https://picsum.photos/seed/top027/640/560
 imagePreviewMini: https://picsum.photos/seed/top027/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Mimlo wet cov ho."
 description: "Ra tonlikti ewilam agimovo tu re mi lapo meikupi mosedlo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel08/960/640
 imagePreview: https://picsum.photos/seed/travel08/640/560
 imagePreviewMini: https://picsum.photos/seed/travel08/320/240

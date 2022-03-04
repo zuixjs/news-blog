@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Cogiv zuzo guguku."
 description: "Bavop ko ripaza ahdikbu orazoj toero je dewikake ehinaf batnelmo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe023/960/640
 imagePreview: https://picsum.photos/seed/europe023/640/560
 imagePreviewMini: https://picsum.photos/seed/europe023/320/240

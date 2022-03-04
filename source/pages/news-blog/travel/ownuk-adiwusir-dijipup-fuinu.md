@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Ownuk adiwusir dijipup fuinu."
 description: "Duva rilmuce men ziznospih ma natti torki ej erceb anre."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel026/960/640
 imagePreview: https://picsum.photos/seed/travel026/640/560
 imagePreviewMini: https://picsum.photos/seed/travel026/320/240

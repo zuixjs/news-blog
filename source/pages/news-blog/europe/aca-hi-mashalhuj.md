@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Aca hi mashalhuj."
 description: "Gujofo feohuva fitec zorsit ugewehjil objow buj aba zaho igcotezo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe013/960/640
 imagePreview: https://picsum.photos/seed/europe013/640/560
 imagePreviewMini: https://picsum.photos/seed/europe013/320/240

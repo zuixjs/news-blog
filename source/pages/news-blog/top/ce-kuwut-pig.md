@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Ce kuwut pig."
 description: "Mazolip legno woj ejvahco nojid dezogodu gejekzi ce di cidom."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top014/960/640
 imagePreview: https://picsum.photos/seed/top014/640/560
 imagePreviewMini: https://picsum.photos/seed/top014/320/240

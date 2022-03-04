@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Pe poso meturuko favlu."
 description: "Kepi tiw okboj oseci ik cer gozgo ecsoap moeki masoja."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world05/960/640
 imagePreview: https://picsum.photos/seed/world05/640/560
 imagePreviewMini: https://picsum.photos/seed/world05/320/240

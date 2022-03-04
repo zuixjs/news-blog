@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zofu fu pocje."
 description: "Realioko ilgik golci jukwoj pomhir kenego migow aveikoris covi ivriw."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top010/960/640
 imagePreview: https://picsum.photos/seed/top010/640/560
 imagePreviewMini: https://picsum.photos/seed/top010/320/240

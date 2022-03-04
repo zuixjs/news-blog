@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zisek kaghitis mepdu luwen ohfimha."
 description: "Ejki litoci kofofug ohpit visuk ad rin po sa bomzis."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world013/960/640
 imagePreview: https://picsum.photos/seed/world013/640/560
 imagePreviewMini: https://picsum.photos/seed/world013/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Nifu dovhi fecal."
 description: "Uc roho op fotve hezzokac mepu sikebip rejmed lew elihon."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world08/960/640
 imagePreview: https://picsum.photos/seed/world08/640/560
 imagePreviewMini: https://picsum.photos/seed/world08/320/240

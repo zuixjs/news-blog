@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Veud fud picuwpe."
 description: "Tole getmojjis ji ben la tun umozizud gace niite buiv."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe07/960/640
 imagePreview: https://picsum.photos/seed/europe07/640/560
 imagePreviewMini: https://picsum.photos/seed/europe07/320/240

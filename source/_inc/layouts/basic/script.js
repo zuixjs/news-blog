@@ -5,3 +5,14 @@ function closeContent() {
     location.href += '../../../index.html';
   }
 }
+
+document.body.addEventListener('keyup', function(e) {
+  if (e.key === 'Escape') {
+    const actionMenu = zuix.context('actions-menu');
+    if (actionMenu && actionMenu.showing()) {
+      actionMenu.close();
+    } else {
+      closeContent();
+    }
+  }
+});

@@ -1,6 +1,6 @@
 /* CSS files add styling rules to your content */
 :root {
-    --primary-color: #0077ff;
+    --primary-color: #0096ff;
 }
 
 body {
@@ -19,6 +19,20 @@ a, a:visited, a:hover {
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
+}
+
+button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    background-image: linear-gradient(180deg,#fff,#f5f5fa);
+    transition: all .2s ease-out;
+}
+button:hover, button:active, button.active {
+    box-shadow: inset 0 -4px 11px 7px rgb(37 44 97 / 9%), 0 4px 6px 0 rgb(93 100 148 / 7%);
 }
 
 .section-content {

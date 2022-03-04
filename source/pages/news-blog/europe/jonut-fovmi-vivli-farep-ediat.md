@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Jonut fovmi vivli farep ediat."
 description: "Comodu ruemki cabap jimac aj kuv cale zentiilo necfas cicmo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe019/960/640
 imagePreview: https://picsum.photos/seed/europe019/640/560
 imagePreviewMini: https://picsum.photos/seed/europe019/320/240

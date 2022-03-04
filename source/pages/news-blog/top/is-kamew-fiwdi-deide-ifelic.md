@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Is kamew fiwdi deide ifelic."
 description: "Hawzaogi tekhop banwosim ojopa moeli re zaweiw egke hahiswi facek."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top04/960/640
 imagePreview: https://picsum.photos/seed/top04/640/560
 imagePreviewMini: https://picsum.photos/seed/top04/320/240

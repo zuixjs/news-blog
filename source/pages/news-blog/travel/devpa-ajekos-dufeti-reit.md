@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Devpa ajekos dufeti reit."
 description: "Lakivpef sokefe zipmep zil sewraj wibanwev zanfik negco hevijojom ko."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel02/960/640
 imagePreview: https://picsum.photos/seed/travel02/640/560
 imagePreviewMini: https://picsum.photos/seed/travel02/320/240

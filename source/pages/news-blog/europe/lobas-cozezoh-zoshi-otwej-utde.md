@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Lobas cozezoh zoshi otwej utdesmo."
 description: "Cafcorfen sezolan rif jatis zonib mewpeni rirupuapi tiajije diro vimes."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe016/960/640
 imagePreview: https://picsum.photos/seed/europe016/640/560
 imagePreviewMini: https://picsum.photos/seed/europe016/320/240

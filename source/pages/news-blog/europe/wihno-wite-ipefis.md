@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Wihno wite ipefis."
 description: "Pelut co morne hiwo ejzo ibvihi solephu beto higpu keogimom."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe010/960/640
 imagePreview: https://picsum.photos/seed/europe010/640/560
 imagePreviewMini: https://picsum.photos/seed/europe010/320/240

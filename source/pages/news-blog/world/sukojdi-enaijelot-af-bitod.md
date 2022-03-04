@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Sukojdi enaijelot af bitod."
 description: "Tuomit tezi jizaz wir filril ire toipu nesi buwi pajij."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world07/960/640
 imagePreview: https://picsum.photos/seed/world07/640/560
 imagePreviewMini: https://picsum.photos/seed/world07/320/240

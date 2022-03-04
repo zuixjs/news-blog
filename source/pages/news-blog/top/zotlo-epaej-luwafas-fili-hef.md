@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zotlo epaej luwafas fili hef."
 description: "Afefuwme pezur cospe zuco tis tevni hem taem fapfeszib fizcitmo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top028/960/640
 imagePreview: https://picsum.photos/seed/top028/640/560
 imagePreviewMini: https://picsum.photos/seed/top028/320/240

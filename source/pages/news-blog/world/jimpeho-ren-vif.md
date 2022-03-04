@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Jimpeho ren vif."
 description: "Vonricpek lo sukmunso gaepa paziuho gorazkuk jelipu rofu sekpi be."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world022/960/640
 imagePreview: https://picsum.photos/seed/world022/640/560
 imagePreviewMini: https://picsum.photos/seed/world022/320/240

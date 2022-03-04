@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Kisso jozodcu zurnec."
 description: "Deh ed vafmonfo vo anode cezire vesne ilini ephemila zino."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel025/960/640
 imagePreview: https://picsum.photos/seed/travel025/640/560
 imagePreviewMini: https://picsum.photos/seed/travel025/320/240

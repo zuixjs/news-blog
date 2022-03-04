@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Fekemuz lano leb sebin."
 description: "Va peuw we ra ku kordo virok vodina ma ohkuf."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top029/960/640
 imagePreview: https://picsum.photos/seed/top029/640/560
 imagePreviewMini: https://picsum.photos/seed/top029/320/240

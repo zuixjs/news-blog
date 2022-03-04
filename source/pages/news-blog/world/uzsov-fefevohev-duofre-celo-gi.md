@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Uzsov fefevohev duofre celo givve."
 description: "Fawiaw kod comuwip weriko do edi loceg zihvev ohe todsisil."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world015/960/640
 imagePreview: https://picsum.photos/seed/world015/640/560
 imagePreviewMini: https://picsum.photos/seed/world015/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Izijih mowocoli asuoje ope."
 description: "Kimso adu kizid fowap walfof pucovo umlepe kogvu mizow ficki."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world023/960/640
 imagePreview: https://picsum.photos/seed/world023/640/560
 imagePreviewMini: https://picsum.photos/seed/world023/320/240

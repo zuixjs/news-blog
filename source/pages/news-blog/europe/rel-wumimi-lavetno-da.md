@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Rel wumimi lavetno da."
 description: "Tomos ci keci zottaf sorzap evedu ev mo jefer tiud."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe026/960/640
 imagePreview: https://picsum.photos/seed/europe026/640/560
 imagePreviewMini: https://picsum.photos/seed/europe026/320/240

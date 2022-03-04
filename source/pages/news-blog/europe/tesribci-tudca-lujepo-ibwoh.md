@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Tesribci tudca lujepo ibwoh."
 description: "Beronvon jep pa tuva noshinvo dalfi horewid kevzo sow soh."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe00/960/640
 imagePreview: https://picsum.photos/seed/europe00/640/560
 imagePreviewMini: https://picsum.photos/seed/europe00/320/240

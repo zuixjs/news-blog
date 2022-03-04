@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Eke vabme tip."
 description: "Rah laheji waj al let je ciej poke petnod magdap."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe05/960/640
 imagePreview: https://picsum.photos/seed/europe05/640/560
 imagePreviewMini: https://picsum.photos/seed/europe05/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Tazad igruw fetid agobek."
 description: "Belo nik adew zobtum vewe betiapu na honu jopi suc."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world021/960/640
 imagePreview: https://picsum.photos/seed/world021/640/560
 imagePreviewMini: https://picsum.photos/seed/world021/320/240

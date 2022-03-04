@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Zozzihavu rem ogbaf emi."
 description: "Zefsiz casno ro del agacep wothe jajnof fifles cewwuogu rub."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world06/960/640
 imagePreview: https://picsum.photos/seed/world06/640/560
 imagePreviewMini: https://picsum.photos/seed/world06/320/240

@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Di gisaf pinsel zopopgoz."
 description: "Niikze sehmiv sesi wij mofic zihan nu efpa vuzogo hefdus."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe02/960/640
 imagePreview: https://picsum.photos/seed/europe02/640/560
 imagePreviewMini: https://picsum.photos/seed/europe02/320/240

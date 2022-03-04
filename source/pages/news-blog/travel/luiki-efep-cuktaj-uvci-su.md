@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Luiki efep cuktaj uvci su."
 description: "Difhec ovhe vulpipwi ku aw celtok egwu widsi lojak irojosjul."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel014/960/640
 imagePreview: https://picsum.photos/seed/travel014/640/560
 imagePreviewMini: https://picsum.photos/seed/travel014/320/240

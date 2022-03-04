@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Os kujom poke tuobi."
 description: "Za awo ne al nuvet aleh hacfaj viki wola zer."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world014/960/640
 imagePreview: https://picsum.photos/seed/world014/640/560
 imagePreviewMini: https://picsum.photos/seed/world014/320/240

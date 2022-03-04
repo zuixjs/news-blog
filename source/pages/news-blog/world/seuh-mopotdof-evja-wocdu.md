@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Seuh mopotdof evja wocdu."
 description: "Siktev ref immerkos ugoso ve ogohed esa osaolfi ac nolfir."
+author: J. Doe
 imageCover: https://picsum.photos/seed/world018/960/640
 imagePreview: https://picsum.photos/seed/world018/640/560
 imagePreviewMini: https://picsum.photos/seed/world018/320/240

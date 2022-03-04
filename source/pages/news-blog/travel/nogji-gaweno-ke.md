@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Nogji gaweno ke."
 description: "Oh ve nuvfop niru koodene sedeges guktor wuwe leefe weg."
+author: J. Doe
 imageCover: https://picsum.photos/seed/travel013/960/640
 imagePreview: https://picsum.photos/seed/travel013/640/560
 imagePreviewMini: https://picsum.photos/seed/travel013/320/240

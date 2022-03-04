@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Ekitogwev gizarjur le pa."
 description: "Purroj ukehoin ziwtin govtif so one ogakef bukerav inefu melo."
+author: J. Doe
 imageCover: https://picsum.photos/seed/top011/960/640
 imagePreview: https://picsum.photos/seed/top011/640/560
 imagePreviewMini: https://picsum.photos/seed/top011/320/240

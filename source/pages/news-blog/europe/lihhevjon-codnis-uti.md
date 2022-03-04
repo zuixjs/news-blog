@@ -9,6 +9,7 @@ icon: news
 order: 1
 title: "Lihhevjon codnis uti."
 description: "Wigoddat repaidi borlo goaru raiko hipzif sikic enze nikof dabhi."
+author: J. Doe
 imageCover: https://picsum.photos/seed/europe03/960/640
 imagePreview: https://picsum.photos/seed/europe03/640/560
 imagePreviewMini: https://picsum.photos/seed/europe03/320/240
