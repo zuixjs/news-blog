@@ -5,9 +5,13 @@ function closeContent() {
     location.href += '../../../index.html';
   }
 }
-function shareContent(url) {
+function shareContent() {
   if (navigator.share) {
-    navigator.share(url);
+    navigator.share({
+      title: '{{ app.title }}',
+      text: document.title,
+      url: document.location.href
+    });
   }
 }
 function printContent() {
@@ -17,9 +21,7 @@ function printContent() {
 document.body.addEventListener('keyup', function(e) {
   if (e.key === 'Escape') {
     const actionMenu = zuix.context('actions-menu');
-    if (actionMenu && actionMenu.showing()) {
-      actionMenu.close();
-    } else {
+    if (!actionMenu || !actionMenu.showing()) {
       closeContent();
     }
   }

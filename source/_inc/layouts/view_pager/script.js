@@ -6,7 +6,7 @@ let pageButtons;
 let contextMenu;
 
 //__zuix__debug = true;
-//zuix.lazyLoad(true, -window.innerWidth / 4);
+zuix.lazyLoad(true, -window.innerWidth / 4);
 
 options = {
 
