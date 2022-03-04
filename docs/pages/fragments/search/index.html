@@ -1,4 +1,4 @@
-<!-- definition of inline zuix.js component --><div z-load="default" self="size-medium" layout="column top-stretch"><ol #results></ol><div #results-none style="display:none"><strong>No results matching search terms.</strong></div><!-- zUIx list_view component --><div #results-list ctrl z-load="@lib/controllers/list_view"></div><script type="jscript">// get the search index
+<!-- definition of inline zuix.js component --><div z-load="default" self="size-medium" layout="column top-stretch"><ol #results></ol><div #results-none style="display:none"><strong>No results matching search terms.</strong></div><!-- zUIx list_view component --><div #results-list ctrl z-load="@lib/controllers/list_view" z-lazy="false"></div><script type="jscript">// get the search index
         let searchIndex = null;
         /** @type {elasticlunr.Index} searchIndex */
         fetch('/news-blog/search-index.json').then((response) =>
@@ -10,6 +10,7 @@
         // update results list on 'keyup'
         const searchInput = zuix.field('search-input');
         searchInput.on('search', (e, v) => {
+            console.log(e, _resultsList)
             if (!_resultsList) return;
             const term = searchInput.value();
             const results = searchIndex.search(term, {

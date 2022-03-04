@@ -8,10 +8,11 @@ function closeContent() {
 function shareContent() {
   if (navigator.share) {
     navigator.share({
-      title: '{{ app.title }}',
-      text: document.title,
+      title: document.title,
       url: document.location.href
-    });
+    }).then(() => {
+      console.log('Document url shared.');
+    }).catch(console.error);
   }
 }
 function printContent() {
@@ -26,3 +27,11 @@ document.body.addEventListener('keyup', function(e) {
     }
   }
 });
+
+const history = window.history;
+if (history && history.pushState) {
+  history.pushState('back-detect', null, '#open');
+  window.addEventListener('popstate', function() {
+    closeContent();
+  });
+}
