@@ -6,7 +6,7 @@ let pageButtons;
 let contextMenu;
 
 //__zuix__debug = true;
-zuix.lazyLoad(true, -window.innerWidth / 2);
+//zuix.lazyLoad(true, -window.innerWidth / 4);
 
 options = {
 
@@ -123,7 +123,7 @@ function showPage(i) {
   if (viewPager) {
     viewPager.layout();
   }
-  zuix.componentize();
+  //zuix.componentize();
 }
 
 function onItemClicked(e, $el) {

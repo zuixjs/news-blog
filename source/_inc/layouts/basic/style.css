@@ -3,9 +3,6 @@
     --background-color: #ffffff;
     --header-color: #1765bd;
     --header-background-color: rgba(248,248,248,1);
-    --magic-number: 0.09719; /* tan(11°)/2 */
-    --content-width: 100vw;
-    --skew-padding: calc(var(--content-width) * var(--magic-number));
 }
 body {
     min-height: 100vh;

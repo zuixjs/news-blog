@@ -27,7 +27,7 @@ div[z-field="menu_overlay"] {
     padding-top: 80px;
     padding-bottom: 88px;
     padding-left: 32px;
-    background: linear-gradient(140deg, transparent, #ffffffbb, white);
+    background: linear-gradient(140deg, transparent, #ffffff55, #ffffffdd, white);
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;

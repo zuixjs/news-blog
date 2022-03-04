@@ -5,6 +5,14 @@ function closeContent() {
     location.href += '../../../index.html';
   }
 }
+function shareContent(url) {
+  if (navigator.share) {
+    navigator.share(url);
+  }
+}
+function printContent() {
+  window.print();
+}
 
 document.body.addEventListener('keyup', function(e) {
   if (e.key === 'Escape') {
