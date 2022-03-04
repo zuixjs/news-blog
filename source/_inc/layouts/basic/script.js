@@ -1,6 +1,6 @@
 function closeContent() {
   if (window.parent.closeContentFrame) {
-    window.parent.closeContentFrame();
+    window.parent.closeContentFrame(location);
   } else {
     location.href += '../../../index.html';
   }
@@ -31,7 +31,7 @@ document.body.addEventListener('keyup', function(e) {
 const history = window.history;
 if (history && history.pushState) {
   history.pushState('back-detect', null, '#open');
-  window.addEventListener('popstate', function() {
+  window.onpopstate = function() {
     closeContent();
-  });
+  };
 }

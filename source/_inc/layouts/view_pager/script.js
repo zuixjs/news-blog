@@ -147,11 +147,11 @@ function openContentFrame(url) {
     contentFrame.get().focus();
   }).show();
 }
-function closeContentFrame() {
+function closeContentFrame(loc) {
   const contentFrame = zuix.field('content-frame');
   viewPager.$.animateCss('fadeIn', {duration: '300ms'});
   contentFrame.animateCss('slideOutRight', {duration: '300ms'}, ()=> {
     contentFrame.hide();
-    contentFrame.get().src = 'about:blank';
+    loc && loc.replace('about:blank');
   });
 }
