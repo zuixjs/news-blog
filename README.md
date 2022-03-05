@@ -15,9 +15,7 @@ is implemented as a static site with `markdown` and `liquid` templates using [11
 
 https://user-images.githubusercontent.com/6654265/156775456-c7a420c2-bb99-4b32-9040-4f0bcca0de82.mp4
 
-
-https://user-images.githubusercontent.com/6654265/156776137-7448b67e-9c6d-4d0f-abf7-4167adf0f504.mp4
-
+[![Youtube Video](https://user-images.githubusercontent.com/6654265/156862698-f16ea45c-205b-421f-989b-490958fd3a5a.png)](https://youtu.be/GE-046o1hLc)
 
 
 ## Requirements
