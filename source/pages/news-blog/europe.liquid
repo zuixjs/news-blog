@@ -1,9 +1,0 @@
----
-title: Europe
-folder: europe
-tags: news_section
-order: 1
-permalink: pages/news-blog/europe.json
----
-{% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
-{% include 'layouts/view_pager/items-list.liquid' %}

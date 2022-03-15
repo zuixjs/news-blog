@@ -35,7 +35,7 @@
         <div ctrl z-load="@lib/controllers/view-pager"
              z-options="options.pageIndicator"
              class="topics visible-on-ready">
-{% assign sectionList = collections.news_section | sort: 'data.order' %}
+{% assign sectionList = collections.sections | sort: 'data.order' %}
 {% for section in sectionList %}
             <div data-section="{{ section.data.folder }}" data-order="{{ section.data.order }}">
                 {{ section.data.title }}

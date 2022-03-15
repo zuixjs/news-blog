@@ -1,9 +1,0 @@
----
-title: Top Stories
-folder: top
-tags: news_section
-order: 0
-permalink: pages/news-blog/top.json
----
-{% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
-{% include 'layouts/view_pager/items-list.liquid' %}
