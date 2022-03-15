@@ -1,14 +1,47 @@
+/*
+ * Copyright 2020-2022 G-Labs. All Rights Reserved.
+ *         https://zuixjs.github.io/zuix
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+ *
+ *  This file is part of
+ *  zUIx, Javascript library for component-based development.
+ *        https://zuixjs.github.io/zuix
+ *
+ * @author Generoso Martello <generoso@martello.com>
+ * @version 1.0
+ *
+ */
+
 const fs = require('fs');
 const path = require('path');
 const {chalk, render, mkdirp, highlight, classNameFromHyphens} = require('zuix-cli/common/utils');
 const config = require('config');
 const moment = require('moment');
+const yesno = require('yesno');
+const child_process = require('child_process');
+
+const destinationFolder = 'pages';
 
 const zuixConfig = config.get('zuix');
 const sourceFolder = zuixConfig.get('build.input');
 const buildFolder = zuixConfig.get('build.output');
 
-const newsBlogFolder = 'pages/news-blog';
+const contentSourceFolder = path.join(sourceFolder, destinationFolder);
+const contentBuildFolder = path.join(buildFolder, destinationFolder)
 
 function addPage(args) {
   const pageTemplatesPath = './templates/pages/';
@@ -29,7 +62,7 @@ function addPage(args) {
     componentTemplate = `${pageTemplatesPath}${template}${extension}`;
   }
   if (fs.existsSync(componentTemplate)) {
-    let sectionFolder = path.join(sourceFolder, newsBlogFolder);
+    let sectionFolder = path.join(sourceFolder, destinationFolder);
     if (args.section) {
       args.section = args.section.toLowerCase();
       sectionFolder = path.join(sectionFolder, args.section);
@@ -44,17 +77,20 @@ function addPage(args) {
       frontMatter,
       date
     });
-    const outputPath = path.join(sectionFolder, outputFile, '..');
-    outputFile = path.join(sectionFolder, outputFile + extension);
+    const outputPath = path.join(sectionFolder, outputFile);
+    outputFile = path.join(outputPath, 'index' + extension);
     if (!fs.existsSync(outputFile)) {
       mkdirp.sync(outputPath);
       fs.writeFileSync(outputFile, pageTemplate);
       console.log(chalk.cyanBright('*') + ' NEW page:', chalk.green.bold(outputFile));
       // Create section if it does not exist
       if (args.section) {
-        const sectionFile = path.join(sectionFolder, '..', args.section + '.liquid');
+        const sectionFile = path.join(sectionFolder, 'index.liquid');
         if (!fs.existsSync(sectionFile)) {
-          addPage({layout: 'section', name: args.section});
+          addPage({layout: 'section', name: args.section, frontMatter: [
+              `group: ${args.section}`,
+              `title: ${classNameFromHyphens(args.section)}`,
+            ]});
         } else {
           touch(sectionFile);
         }
@@ -71,20 +107,44 @@ function addPage(args) {
   }
 }
 
-function cleanDemo() {
-  const demoSourceFolder = path.join(sourceFolder, newsBlogFolder);
-  const demoBuildFolder = path.join(buildFolder, newsBlogFolder)
-  if (fs.existsSync(demoSourceFolder)) {
-    console.log(chalk.cyanBright('*') + ' Removing', chalk.green.bold(demoSourceFolder));
-    fs.rmSync(demoSourceFolder, { recursive: true });
+async function wipeDocs() {
+  const docsFolder = path.join(contentSourceFolder, 'docs');
+  const confirm = await yesno({
+    question: `All content in "${docsFolder}" will be deleted.\nThis action cannot be undone!\nAre you sure to proceed?`
+  });
+  if (confirm) {
+    if (fs.existsSync(docsFolder)) {
+      console.log(chalk.cyanBright('*') + ' Removing', chalk.green.bold(docsFolder));
+      fs.rmSync(docsFolder, {recursive: true});
+    }
+    const docsBuildFolder = path.join(contentBuildFolder, 'docs');
+    if (fs.existsSync(docsBuildFolder)) {
+      console.log(chalk.cyanBright('*') + ' Removing', chalk.green.bold(docsBuildFolder));
+      fs.rmSync(docsBuildFolder, {recursive: true});
+    }
+    // "touch" index file to force reload
+    const filename = path.join(sourceFolder, 'index.liquid');
+    touch(filename);
   }
-  if (fs.existsSync(demoBuildFolder)) {
-    console.log(chalk.cyanBright('*') + ' Removing', chalk.green.bold(demoBuildFolder));
-    fs.rmSync(demoBuildFolder, { recursive: true });
+}
+
+async function wipeContent() {
+  const confirm = await yesno({
+    question: `All content in "${contentSourceFolder}" will be deleted.\nThis action cannot be undone!\nAre you sure to proceed?`
+  });
+  if (confirm) {
+    if (fs.existsSync(contentSourceFolder)) {
+      console.log(chalk.cyanBright('*') + ' Removing', chalk.green.bold(contentSourceFolder));
+      fs.rmSync(contentSourceFolder, {recursive: true});
+    }
+    if (fs.existsSync(contentBuildFolder)) {
+      console.log(chalk.cyanBright('*') + ' Removing', chalk.green.bold(contentBuildFolder));
+      fs.rmSync(contentBuildFolder, {recursive: true});
+    }
+    // "touch" index file to force reload
+    const filename = path.join(sourceFolder, 'index.liquid');
+    touch(filename);
   }
-  // "touch" index file to force reload
-  const filename = path.join(sourceFolder, 'news-blog.liquid');
-  touch(filename);
 }
 
 function touch(filename) {
@@ -102,17 +162,32 @@ function collect(value, previous) {
 
 module.exports = (program) => {
   program
+    .command('build')
+    .alias('b')
+    .description('Build web application')
+    .action(() => {
+      // todo: should check if it's a zuix.js project
+      child_process.execSync('npm run build',{
+        stdio:[0, 1, 2]
+      });
+    });
+  program
     .command('add')
     .alias('a')
     .description('Add new page')
     .requiredOption('-s, --section <section_name>', 'Page section')
     .requiredOption('-n, --name <page_name>', 'Page name')
-    .requiredOption('-l, --layout <layout_template>', 'Layout template name')
+    .option('-l, --layout <layout_template>', 'Layout template name', 'article')
     .option('-fm, --front-matter "<field>: <value>"', 'Set a front matter field value', collect, [])
     .action(addPage);
   program
-      .command('cleanDemo')
-      //.alias('cd')
-      .description('Delete all site content.')
-      .action(cleanDemo);
+      .command('wipe-content')
+      .alias('wc')
+      .description(`Delete all content in "${contentSourceFolder}" and "${contentBuildFolder}" folders.`)
+      .action(wipeContent);
+  program
+    .command('wipe-docs')
+    .alias('wc')
+    .description(`Delete all content in "${contentSourceFolder}/docs" and "${contentBuildFolder}/docs" folders.`)
+    .action(wipeDocs);
 };

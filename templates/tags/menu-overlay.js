@@ -1,19 +1,19 @@
 const {JSDOM} = require('jsdom');
 
 const template = `
-<div z-load="@lib/components/menu-overlay" z-context="{{ contextId }}" -z-lazy="false" class="visible-on-ready">
+<div z-load="@lib/components/menu-overlay" z-context="{{ contextId }}" z-lazy="false" class="visible-on-ready">
 
 {{ content }}
 
   <!-- custom open/close menu button -->
   <div #menu_button>
-    <a class="circle-button">
+    <a class="circle-button" href="javascript:;" title="Open menu" >
       <i class="material-icons">toc</i>
     </a>
   </div>
 
   <div #menu_button_close>
-    <a class="circle-button">
+    <a class="circle-button" href="javascript:;" title="Close menu" >
       <i class="material-icons">close</i>
     </a>
   </div>
@@ -53,8 +53,5 @@ module.exports = (render, content, contextId) => {
     }
   });
   content = `<div #items>${content}</div>`;
-//  console.log(content)
-//      .replace('<ul>', '<ul #items>')
-//      .replaceAll('li>', 'div>');
   return render(template, {content, contextId});
 };

@@ -1,4 +1,4 @@
-/* zUIx v1.0.22 22.02.27 01:25:18 */
+/* zUIx v1.0.24 22.03.14 16:01:06 */
 
 var zuix;
 /******/ (() => { // webpackBootstrap
@@ -5928,7 +5928,7 @@ function initController(c) {
 
 
   // Setup main component's 'refresh' handler
-  const viewRefreshScript = $view.children('[type="jscript"]');
+  const viewRefreshScript = $view.find(':scope > [type="jscript"]');
   ctx.handlers.refresh = function($view, $el, contextData, refreshCallback) {
     //const ctx = zuix.context($view);
     if (!ctx._disposed) {
@@ -6801,7 +6801,8 @@ Zuix.prototype.parseAttributeArgs = function(attributeName, $el, $view, contextD
  */
 module.exports = function(root) {
   const zuix = new Zuix();
-  zuix.$.appendCss('[z-view]{display:none;}[type="jscript"],[media*="#"]{display:none;}', null, 'zuix-global');
+  const globalStyle = '[z-view]{display:none;}[type="jscript"],[media*="#"]{display:none;}[z-include][z-ready=true].visible-on-ready,[z-load][z-ready=true].visible-on-ready{opacity:1;transition:opacity 150ms ease-in-out}[z-include]:not([z-ready=true]).visible-on-ready,[z-load]:not([z-ready=true]).visible-on-ready{opacity:0;visibility:hidden}';
+  zuix.$.appendCss(globalStyle, null, 'zuix-global');
   if (document.readyState != 'loading') {
     zuix.componentize();
   } else {

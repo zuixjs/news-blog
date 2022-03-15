@@ -54,13 +54,13 @@ are listed in the form of *cards*, with a preview image, the title, the date and
 options.
 
 For example, to add a new post page in the `travel` section  :
-- `zx add -s travel -n my-cruise-to-maldive -l article`
+- `zx add -s travel -n my-cruise-to-maldive`
 
 This will create a new post page named `my-cruise-to-maldive.md` inside the `pages/news-blog/travel/` folder. 
 
-So, the `-s` option is used to specify the section under which the post page will be grouped, the `-n` options is used to
-specify the name of the page, and the `-l` option to specify the layout template to be used (from the `./templates/pages/` folder).  
-Custom page layouts can be added in the `_inc/layouts` folder.
+So, the `-s` option is used to specify the section under which the page will be included, while the `-n` options is used to
+specify the name of the page.  
+
 
 ### Building for production
 
@@ -76,4 +76,5 @@ Also see [zuix.js Web Starter](https://github.com/zuixjs/zuix-web-starter) for a
 
 - **zuix.js** https://zuixjs.org
 - **zKit** https://zuixjs.github.io/zkit/
+- **zuix.js Web Starter** https://zuixjs.github.io/zuix-web-starter/
 - **11ty** https://11ty.dev

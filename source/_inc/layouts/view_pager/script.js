@@ -13,7 +13,7 @@ options = {
   viewPager: {
     lazyLoad: false,
     enablePaging: true,
-    startGap: 40,
+    //startGap: 40,
     on: {
       'page:change': function(e, page) {
         syncPageIndicator(page);
