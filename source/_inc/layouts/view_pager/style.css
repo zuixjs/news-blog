@@ -1,7 +1,4 @@
 /* CSS files add styling rules to your content */
-:root {
-    --primary-color: #0096ff;
-}
 
 body {
     font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -17,7 +14,7 @@ body {
 
 a, a:visited, a:hover {
     font-weight: 700;
-    color: var(--primary-color);
+    color: deeppink;
     text-decoration: none;
 }
 

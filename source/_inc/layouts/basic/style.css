@@ -1,5 +1,6 @@
 :root {
     --primary-color: #000;
+    --accent-color: deeppink;
     --background-color: #ffffff;
     --header-color: #1765bd;
     --header-background-color: rgba(248,248,248,1);
@@ -18,6 +19,7 @@ main {
 }
 a {
     text-decoration: none!important;
+    color: var(--accent-color);
 }
 
 p {
