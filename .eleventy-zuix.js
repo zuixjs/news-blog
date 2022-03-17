@@ -21,7 +21,7 @@
  *  zUIx, Javascript library for component-based development.
  *        https://zuixjs.github.io/zuix
  *
- * @author Generoso Martello - G-Labs https://github.com/genielabs
+ * @author Generoso Martello - https://github.com/genielabs
  * @version 1.0
  *
  */
@@ -169,9 +169,9 @@ function initEleventyZuix(eleventyConfig) {
     });
     postProcessFiles.length = 0;
     if (zuixConfig.build.serviceWorker) {
-      console.log('\nUpdating Service Worker... ');
+      console.log('Updating Service Worker... ');
       await generateServiceWorker().then(function () {
-        console.log('... Service Worker updated.');
+        console.log('... done.');
       });
     } else {
       console.log();

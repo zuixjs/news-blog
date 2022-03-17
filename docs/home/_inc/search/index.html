@@ -1,4 +1,4 @@
-<!-- definition of inline zuix.js component --><div z-load="default" self="size-medium" layout="column top-stretch"><ol #results></ol><div #results-none style="display:none"><strong>No results matching search terms.</strong></div><!-- zUIx list-view component --><div #results-list ctrl z-load="@lib/controllers/list-view" z-lazy="false"></div><script type="jscript">// get the search index
+<div z-load="default" self="size-medium" layout="column top-stretch"><ol #results=""></ol><div #results-none="" style="display: none"><strong>No results matching search terms.</strong></div><!-- zUIx list-view component --><div #results-list="" ctrl="" z-load="@lib/controllers/list-view" z-lazy="false"></div><script type="jscript">// get the search index
         let searchIndex = null;
         /** @type {elasticlunr.Index} searchIndex */
         fetch('/news-blog/search-index.json').then((response) =>
@@ -44,4 +44,25 @@
             } else if (term.length > 0) {
                 $resultsNone.show();
             }
-        });</script></div><!--Inline list item template --><div z-view="inline/result-item-view"><div class="item-wrapper animate__animated animate__fadeIn" layout="row top-justify"><div style="width:calc(100% - 120px)"><a #ref href="#"><h3 #doc.title>Item title</h3></a><div #doc.description self="size-x1">Description</div><small #doc.date></small></div><a #ref href="#"><img #doc.image width="108" height="80" alt="Cover image"></a></div></div><style media="#inline/result-item-view">.item-wrapper{padding:12px}h3{margin:0;font-size:150%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}[z-field="doc.description"]{margin-top:4px;margin-bottom:4px;font-size:110%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}small{opacity:.5}img{margin-left:12px;border-radius:12px}</style><!--elasticlunr JS --><script src="/news-blog/js/elasticlunr/elasticlunr.min.js" defer async></script>
+        });</script></div><!--Inline list item template --><div z-view="inline/result-item-view"><div class="item-wrapper animate__animated animate__fadeIn" layout="row top-justify"><div style="width: calc(100% - 120px);"><a #ref="" href="#"><h3 #doc.title="">Item title</h3></a><div #doc.description="" self="size-x1">Description</div><small #doc.date=""></small></div><a #ref="" href="#"><img #doc.image="" width="108" height="80" alt="Cover image"></a></div></div><style media="#inline/result-item-view">.item-wrapper { padding: 12px; }
+    h3 {
+        margin: 0; font-size: 150%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    [z-field="doc.description"] {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        font-size: 110%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    small {
+        opacity: 0.5;
+    }
+    img {
+        margin-left: 12px;
+        border-radius: 12px;
+    }</style><!--elasticlunr JS --><script src="/news-blog/js/elasticlunr/elasticlunr.min.js" defer async></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script>

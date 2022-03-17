@@ -3,7 +3,7 @@
   zuix.store('config', {
     "title": "News Blog",
     "baseUrl": "/news-blog/",
-    "resourcePath": "/news-blog/app/",
+    "resourcePath": "/app/",
     "libraryPath": {
       "@lib": "/news-blog/lib/1.1/",
       "@hgui": "https://genielabs.github.io/homegenie-web-ui/app/",
