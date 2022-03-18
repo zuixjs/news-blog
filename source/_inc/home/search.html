@@ -1,16 +1,8 @@
 <!-- definition of inline zuix.js component -->
 <div self="size-medium" layout="column top-stretch">
-
-    <ol #results></ol>
-
     <div #results-none style="display: none">
         <strong>No results matching search terms.</strong>
     </div>
-
     <!-- zUIx list-view component -->
     <div z-context="results-list" ctrl z-load="@lib/controllers/list-view" z-lazy="false"></div>
-
 </div>
-
-<!--elasticlunr JS -->
-<script src="{{ '/js/elasticlunr/elasticlunr.min.js' | url }}" defer async></script>

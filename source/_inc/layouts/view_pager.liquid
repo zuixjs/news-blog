@@ -1,5 +1,6 @@
 ---
 date: Last Modified
+elasticlunr: true
 ---
 {% include "head_open.liquid" %}
 <style>
@@ -20,6 +21,7 @@ date: Last Modified
 <main z-field="pages">
 {{ content }}
 </main>
+{% include './view_pager/items-menu.html' %}
 
 <!-- The footer with toolbar buttons -->
 {% include './view_pager/footer-bar.liquid' %}
