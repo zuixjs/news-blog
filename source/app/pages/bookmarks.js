@@ -66,7 +66,7 @@ function BookmarksPage(cp) {
     try {
       bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
     } catch (e) {}
-    return bookmarks;
+    return bookmarks || [];
   }
   function setBookmarks(bookmarks) {
     refreshList(bookmarks);
