@@ -8,15 +8,14 @@ function ListIteMini(cp) {
     cp.field('container')
         .css('background-image', 'url('+cp.model().imagePreviewMini+')')
         .on('click', function() {
-          openContentFrame(cp.model().link);
+          cp.trigger('item:click', cp.model());
         });
     cp.view('.summary')
         .on('click', function() {
-          openContentFrame(cp.model().link);
+          cp.trigger('item:click', cp.model());
         });
     cp.field('more').on('click', function() {
-      // show context menu
-      zuix.context('news-options-menu').show();
+      cp.trigger('item:menu', cp.model());
     });
   }
 }

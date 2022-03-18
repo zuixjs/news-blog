@@ -3,7 +3,6 @@
 let viewPager;
 let pageIndicator;
 let pageButtons;
-let contextMenu;
 
 //__zuix__debug = true;
 zuix.lazyLoad(true, -window.innerWidth / 4);
@@ -71,17 +70,9 @@ options = {
         });
       }
     }
-  },
-
-  contextMenu: {
-    lazyLoad: false,
-    ready: function(ctx) {
-      contextMenu = ctx;
-    }
   }
 
 };
-
 
 function initialize() {
   // change page clicking buttons on the footer bar
@@ -123,20 +114,7 @@ function showPage(i) {
   if (viewPager) {
     viewPager.layout();
   }
-  //zuix.componentize();
-}
-
-function onItemClicked(e, $el) {
-  if ($el.attr('data-url')) {
-    const targetUrl = $el.attr('data-url');
-    //location.href = targetUrl;
-    //window.open(targetUrl);
-    openContentFrame(targetUrl);
-  }
-}
-function onItemShowMenu(e, $el) {
-  contextMenu.show();
-  e.cancelBubble = true;
+  zuix.componentize(page);
 }
 
 function openContentFrame(url) {

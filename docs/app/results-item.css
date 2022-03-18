@@ -1,0 +1,25 @@
+.item-wrapper {
+    cursor: pointer;
+    padding: 12px;
+}
+h3 {
+    margin: 0; font-size: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+[z-field="doc.description"] {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-size: 110%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+small {
+    opacity: 0.5;
+}
+img {
+    margin-left: 12px;
+    border-radius: 12px;
+}

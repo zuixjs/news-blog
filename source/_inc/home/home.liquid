@@ -9,7 +9,8 @@
                  z-options="options.autoHidingBars"
                  class="content" layout="column top-stretch">
 
-            <div z-load="items_list" z-options="{ section: '{{ section.url | url }}', lazyLoad: true }"
+            <div z-load="items_list" #items-list
+                 z-options="{ section: '{{ section.url | url }}', lazyLoad: true }"
                  class="visible-on-ready" style="min-height: 100vh"></div>
 
         </article>

@@ -19,7 +19,15 @@ function ItemsList(cp) {
       itemsList.forEach(function(item, i) {
         const options = {
           lazyLoad: true,
-          model: item
+          model: item,
+          on: {
+            'item:click': function(e, item) {
+              cp.trigger('item:click', item);
+            },
+            'item:menu': function(e, item) {
+              cp.trigger('item:menu', item);
+            }
+          }
         };
         const $el = zuix.$(document.createElement('div'));
         if (i < 5) {

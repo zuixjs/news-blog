@@ -26,38 +26,6 @@ date: Last Modified
 
 {% include "body_end.liquid" %}
 
-
-<div z-load="@lib/components/context-menu" class="visible-on-ready"
-     z-context="news-options-menu" z-options="options.contextMenu">
-    <div z-field="menu">
-        <button layout="row center-left">
-            <i class="material-icons">bookmark_border</i>
-            <span>Save for later</span>
-        </button>
-        <button layout="row center-left">
-            <i class="material-icons">file_open</i>
-            <span>Open</span>
-        </button>
-        <button layout="row center-left" disabled>
-            <i class="material-icons">not_interested</i>
-            <span>Hide items from this source</span>
-        </button>
-        <button layout="row center-left" disabled>
-            <i class="material-icons">thumb_up</i>
-            <span>More like this</span>
-        </button>
-        <button layout="row center-left" disabled>
-            <i class="material-icons">thumb_down</i>
-            <span>Less like this</span>
-        </button>
-        <button layout="row center-left">
-            <i class="material-icons">share</i>
-            <span>Share</span>
-        </button>
-    </div>
-</div>
-
-
 </body>
 
 <script>

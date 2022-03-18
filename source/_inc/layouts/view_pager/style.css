@@ -178,3 +178,12 @@ iframe[z-field=content-frame] {
 .search-box ::placeholder {
     color: #cbd0d5;
 }
+
+.page-scroll {
+    position:absolute;
+    top:56px;
+    bottom:56px;
+    left:0;
+    right:0;
+    overflow-y: auto;
+}
