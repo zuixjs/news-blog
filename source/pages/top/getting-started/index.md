@@ -7,7 +7,7 @@ group: top
 icon: news
 order: 1
 options: highlight
-title: Getting started with this template.
+title: Getting started with this template
 description: A brief overview of this template structure, content management and publishing.  
 author: Gene
 imageCover: https://picsum.photos/seed/top027/960/640

@@ -2,7 +2,7 @@
 <div z-field="footer-bar" layout="row center-center">
 
     {% assign link = '/home/' | url %}
-    {% assign match = page.url | split:link %}
+    {% assign match = page.url | url | split:link %}
     <a href="{{ link }}" layout="column center-center"
        class="button{% if match[0] == blank %} active{% endif %}">
         <i class="material-icons">home</i>
@@ -10,7 +10,7 @@
     </a>
 
     {% assign link = '/search/' | url %}
-    {% assign match = page.url | split:link %}
+    {% assign match = page.url | url | split:link %}
     <a href="{{ link }}" layout="column center-center"
        class="button{% if match[0] == blank %} active{% endif %}">
         <i class="material-icons">search</i>
@@ -18,7 +18,7 @@
     </a>
 
     {% assign link = '/saved/' | url %}
-    {% assign match = page.url | split:link %}
+    {% assign match = page.url | url | split:link %}
     <a href="{{ link }}" layout="column center-center" z-field="saved-button"
        class="button{% if match[0] == blank %} active{% endif %}">
         <i class="material-icons">bookmarks</i>
@@ -26,7 +26,7 @@
     </a>
 
     {% assign link = '/about/' | url %}
-    {% assign match = page.url | split:link %}
+    {% assign match = page.url | url | split:link %}
     <a href="{{ link }}" layout="column center-center"
        class="button{% if match[0] == blank %} active{% endif %}">
         <i class="material-icons">info</i>

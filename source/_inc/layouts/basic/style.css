@@ -34,6 +34,10 @@ p code {
     font-size: 85%!important;
 }
 
+img {
+    max-width: 100%;
+}
+
 li {
     line-height: 160%;
     margin-bottom: 8px;
