@@ -24,16 +24,16 @@ keywords:
     {% include 'home/search.html' %}
 </section>
 
-<!-- NOTIFICATIONS -->
-<section class="page-scroll" z-context="bookmarks"
+<!-- BOOKMARKS -->
+<section class="page-scroll" z-context="bookmarks" layout="column top-center"
          ctrl z-load="pages/bookmarks" z-lazy="scroll">
-    {% include 'home/bookmarks.html' %}
+    {% include 'home/saved.html' %}
 </section>
 
 <!-- ABOUT -->
-<section layout="column top-center">
+<section layout="column center-center">
     {% include 'home/about.html' %}
 </section>
 
-<!-- iframe for displaying posts -->
+<!-- iframe for displaying pages -->
 <iframe z-field="content-frame" style="position: fixed; top: 0; bottom: 0; left:0; right: 0"></iframe>

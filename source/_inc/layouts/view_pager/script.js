@@ -97,7 +97,7 @@ function syncPageIndicator(page) {
 }
 
 function showPage(i) {
-  const animOptions = {duration: '200ms'};
+  const animOptions = {duration: '150ms'};
   // show header top-box
   zuix.field('header-box')
       .children().hide()

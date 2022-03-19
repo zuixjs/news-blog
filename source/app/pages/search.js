@@ -1,10 +1,20 @@
 function SearchPage(cp) {
   let searchIndex = null;
   let resultsList = null;
+  let noResultsMessage = null;
+  let coverMessage = null;
 
   this.create = onCreate;
 
   function onCreate() {
+    coverMessage = cp.field('cover');
+    noResultsMessage = cp.field('no-results').hide();
+
+    // get reference to the list view component
+    zuix.context('results-list', function(list) {
+      resultsList = list;
+    });
+
     // download the search index
     /** @type {elasticlunr.Index} searchIndex */
     fetch('../search-index.json').then((response) =>
@@ -14,17 +24,12 @@ function SearchPage(cp) {
       })
     );
 
-    // get reference to the list view component
-    zuix.context('results-list', function(list) {
-      resultsList = list;
-    });
-
     // update results list on 'keyup'
     const searchInput = zuix.field('search-input');
     searchInput.on('search', (e, v) => {
       if (!resultsList) return;
-      const term = searchInput.value();
-      const results = searchIndex.search(term, {
+      const terms = searchInput.value();
+      const results = searchIndex.search(terms, {
         bool: 'OR',
         expand: true
       }).map((r) => {
@@ -42,7 +47,8 @@ function SearchPage(cp) {
       });
       resultsList.clear();
       if (results.length > 0) {
-        cp.field('results-none').hide();
+        noResultsMessage.hide();
+        coverMessage.hide();
         resultsList.model({
           itemList: results,
           getItem: function(index, item) {
@@ -64,8 +70,12 @@ function SearchPage(cp) {
             };
           }
         });
-      } else if (term.length > 0) {
-        cp.field('results-none').show();
+      } else if (terms.length > 0) {
+        noResultsMessage.show();
+        coverMessage.hide();
+      } else {
+        noResultsMessage.hide();
+        coverMessage.show();
       }
     });
   }

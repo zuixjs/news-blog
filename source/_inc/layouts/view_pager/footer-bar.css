@@ -1,4 +1,4 @@
-.footer-bar {
+:host {
     position: fixed;
     left:0; bottom:0; right: 0;
     height: 56px;
@@ -9,31 +9,30 @@
     overflow: hidden;
 }
 
-.footer-bar button {
-    padding: 12px;
+button {
+    padding: 6px;
+    min-width: 56px;
     max-height: 56px;
     margin-left: 8px;
     margin-right: 8px;
     background: transparent;
     border: none;
     border-radius: 8px;
-    color: rgba(0,0,0,0.5);
-}
-.footer-bar button:hover {
-    background: rgba(255,255,255,0.25);
-}
-.footer-bar button:focus, .header-bar button:focus {outline:0;}
-.footer-bar button i
-{
-    font-size: 32px !important;
+    text-align: center;
 }
 
-.footer-bar .active, .header-button.active {
-    color: var(--primary-color);
-    text-shadow:
-            1px 1px 0 #e1e8ed,
-            -1px -1px 0 #e1e8ed,
-            1px -1px 0 #e1e8ed,
-            -1px 1px 0 #e1e8ed,
-            1px 1px 0 #e1e8ed;
+button:focus {outline:0;}
+
+button i
+{
+    color: rgba(0,0,0,0.5);
+    font-size: 24px !important;
+}
+button span {
+    font-size: 12px;
+    display: block;
+}
+
+.active, .active i {
+    color: blue;
 }

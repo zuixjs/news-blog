@@ -9,27 +9,13 @@ date: Last Modified
 
 {% if headerButtonIcon == null %}{% assign headerButtonIcon = 'menu' %}{% endif %}
 
-<!-- scroll helper is used to show/hide the header when scrolling -->
-<body layout="column top-center" data-theme="{{ theme }}"
-      -ctrl -z-load="@lib/controllers/header-auto-hide"
-      -data-o-header="header-bar">
-
-<!--
-<header #header-bar class="header-cover animate__animated animate__fadeInDown animate__faster" style="display:none">
-    <div self="size-large center" layout="row center-left">
-        <div><h1 z-field="page_title" class="title animate__animated animate__fadeIn">{{title}}</h1></div>
-        {% if headerButtonUrl != null %}
-        <div self="center-right"><a href="{{headerButtonUrl}}"><i class="material-icons animate__animated animate__fadeIn">{{ headerButtonIcon }}</i></a></div>
-        {% endif %}
-    </div>
-</header>
--->
+<body layout="column top-center">
 
 {% if imageCover %}
     <img class="image-cover" src="{{ imageCover }}">
 {% endif %}
 
-<h1 z-field="page_title" class="title animate__animated animate__fadeIn">{{title}}</h1>
+<h1 class="title animate__animated animate__fadeIn">{{title}}</h1>
 {% if pubDate or author %}
     <div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px">
         {% if author -%}

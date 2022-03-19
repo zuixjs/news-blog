@@ -8,22 +8,23 @@ elasticlunr: true
 </style>
 {% include "head_close.html" %}
 
-<!-- load the 'header_auto_hide' on the body -->
 <body>
 
 <noscript>
-    Turn on JavaScript to access this site content.
+Turn on JavaScript to access this site content.
 </noscript>
 
-<!-- The header with profile icon button for opening the drawer layout (side menu panel) -->
+<!-- The header bars (for each page) -->
 {% include './view_pager/header-bar.liquid' %}
 
-<main z-field="pages">
+<main z-field="pages" layout="column stretch-stretch">
 {{ content }}
 </main>
+
+<!-- the pop-up context menu -->
 {% include './view_pager/items-menu.html' %}
 
-<!-- The footer with toolbar buttons -->
+<!-- The footer with page select buttons -->
 {% include './view_pager/footer-bar.liquid' %}
 
 {% include "body_end.liquid" %}
@@ -31,7 +32,7 @@ elasticlunr: true
 </body>
 
 <script>
-    {% include "layouts/view_pager/script.js" %}
+{% include "layouts/view_pager/script.js" %}
 </script>
 
 {% include "html_close.html" %}

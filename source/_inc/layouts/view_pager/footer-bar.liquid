@@ -1,19 +1,30 @@
-<div class="footer-bar" z-field="footer-bar">
+{% wrapDom 'footer-bar' %}
+<div z-field="footer-bar">
 
-    <button class="active" data-page="0">
+    <button data-page="0" class="active">
         <i class="material-icons">home</i>
+        <span>Home</span>
     </button>
 
     <button data-page="1">
         <i class="material-icons">search</i>
+        <span>Search</span>
     </button>
 
     <button data-page="2">
-        <i class="material-icons">bookmark_border</i>
+        <i class="material-icons">bookmarks</i>
+        <span>Saved</span>
     </button>
 
     <button data-page="3">
         <i class="material-icons">info</i>
+        <span>About</span>
     </button>
 
 </div>
+{% endwrapDom %}
+<style>
+{% wrapCss 'footer-bar' false %}
+{% include './footer-bar.css' %}
+{% endwrapCss %}
+</style>

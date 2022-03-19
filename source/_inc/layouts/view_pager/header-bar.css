@@ -1,4 +1,4 @@
-.header-bar {
+:host {
     position: fixed;
     top:0;
     left:0;
@@ -10,25 +10,25 @@
     z-index: 2!important;
 }
 
-.header-bar .header {
+.header {
     height: 56px;
     max-height: 56px;
 }
 
-.header-bar .title {
+.title {
     opacity: 0.5;
     font-size: 180%;
     font-weight: 550;
 }
-.header-bar .logo {
+.logo {
     margin-right: 12px;
 }
 
-.header-bar .topics {
+.topics {
     width: 100%;
     height:40px;
 }
-.header-bar .topics div {
+.topics div {
     font-size: 16px;
     height:36px;
     min-width: 96px;
@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-.header-bar [z-field="header-box"] {
+[z-field="header-box"] {
     padding-left: 12px;
     padding-right: 12px;
     height: 100%;
@@ -60,5 +60,84 @@
 [z-field="header-tools"] .active {
     color: initial;
     font-weight: bold;
-    border-bottom: solid 4px var(--primary-color) !important;
+    border-bottom: solid 4px blue !important;
+}
+
+
+.search-box {
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 100%;
+    font-size: 130%;
+    font-family: inherit;
+    line-height: inherit;
+    color: #2e3750;
+    min-width: 12em;
+}
+
+.search-box .input {
+    width: 100%;
+    position: relative;
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    padding: 1px;
+    display: inline-block;
+    border-radius: 9999em;
+    margin: 8px;
+}
+.search-box .input *:not(span) {
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 3px 8px;
+    z-index: 1;
+}
+.search-box .input *:not(span):focus + span {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.search-box .input span {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: opacity .25s, -webkit-transform .5s;
+    transition: transform .5s, opacity .25s;
+    transition: transform .5s, opacity .25s, -webkit-transform .5s;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    margin: 4px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #fff, 2px -2px 11px #1beabd,  -2px 2px 11px #10abff;
+}
+
+.search-box ::-webkit-input-placeholder {
+    color: #cbd0d5;
+}
+
+.search-box :-ms-input-placeholder {
+    color: #cbd0d5;
+}
+
+.search-box ::-ms-input-placeholder {
+    color: #cbd0d5;
+}
+
+.search-box ::placeholder {
+    color: #cbd0d5;
 }

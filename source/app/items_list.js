@@ -58,9 +58,9 @@ function ItemsList(cp) {
   }
 
   // Download RSS feed
-  function fetchList(rssUrl) {
+  function fetchList(jsonUrl) {
     zuix.$.ajax({
-      url: rssUrl,
+      url: jsonUrl,
       success: function(res) {
         itemsList = JSON.parse(res);
         refreshList();
