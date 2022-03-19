@@ -1,0 +1,95 @@
+---
+layout: immersive.liquid
+permalink: /home/index.html
+header: home
+tags: templates
+group: templates
+options: none
+icon: newspaper
+order: 0
+theme: none
+title: News Blog
+description: A news blog template inspired by G.News
+keywords:
+- blog
+- lifestyle
+---
+
+<section ctrl z-load="pages/home" z-context="home">
+
+    <div ctrl z-load="@lib/controllers/view-pager"
+         z-options="home.viewPager"
+         class="feed-pager"
+         draggable="false">
+
+        {% assign sectionList = collections.sections | sort: 'data.order' -%}
+        {%- for section in sectionList -%}
+            <article ctrl z-load="@lib/controllers/header-auto-hide"
+                     z-options="home.autoHidingBars"
+                     class="content" layout="column top-stretch">
+
+                <div z-load="listview/items-list" #items-list
+                     z-options="{ section: '{{ section.url | url }}', lazyLoad: true }"
+                     class="visible-on-ready" style="min-height: 100vh"></div>
+
+            </article>
+        {%- endfor -%}
+
+    </div>
+
+</section>
+
+<!-- iframe for displaying pages -->
+<iframe z-field="content-frame" class="hidden"></iframe>
+<script>
+let viewPager;
+
+home = {
+
+    viewPager: {
+        lazyLoad: false,
+        enablePaging: true,
+        //startGap: 40,
+        on: {
+            'page:change': function(e, page) {
+                syncPageIndicator(page);
+                // show header/footer
+                if (viewPager) {
+                    const currentPage = viewPager.get(page.in);
+                    if (currentPage) {
+                        // load the 'header-auto-hide' component that is loaded on each page
+                        zuix.context(currentPage, (headerAutoHide) => {
+                            headerAutoHide.show && headerAutoHide.show();
+                        });
+                    }
+                }
+            }
+        },
+        ready: function() {
+            viewPager = this;
+        }
+    },
+
+    autoHidingBars: {
+        header: 'header-bar',
+        footer: 'footer-bar',
+        height: 56,
+        on: {
+            'page:scroll': function(e, data) {
+                zuix.componentize();
+            },
+            'scroll:ready': function(e, scroll) {
+                // lazy-load cards background cover
+                const itemsList = scroll.$.find('div').get();
+                zuix.context(itemsList, function(ctx) {
+                    scroll.watch('.cover-wrapper', function(el, data) {
+                        //console.log(el, data);
+                    });
+                    scroll.check();
+                });
+            }
+        }
+    }
+
+}
+</script>

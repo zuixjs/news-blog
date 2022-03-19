@@ -1,0 +1,42 @@
+{% wrapDom 'footer-bar' %}
+<div z-field="footer-bar" layout="row center-center">
+
+    {% assign link = '/home/' | url %}
+    {% assign match = page.url | split:link %}
+    <a href="{{ link }}" layout="column center-center"
+       class="button{% if match[0] == blank %} active{% endif %}">
+        <i class="material-icons">home</i>
+        <span>Home</span>
+    </a>
+
+    {% assign link = '/search/' | url %}
+    {% assign match = page.url | split:link %}
+    <a href="{{ link }}" layout="column center-center"
+       class="button{% if match[0] == blank %} active{% endif %}">
+        <i class="material-icons">search</i>
+        <span>Search</span>
+    </a>
+
+    {% assign link = '/saved/' | url %}
+    {% assign match = page.url | split:link %}
+    <a href="{{ link }}" layout="column center-center" z-field="saved-button"
+       class="button{% if match[0] == blank %} active{% endif %}">
+        <i class="material-icons">bookmarks</i>
+        <span>Saved</span>
+    </a>
+
+    {% assign link = '/about/' | url %}
+    {% assign match = page.url | split:link %}
+    <a href="{{ link }}" layout="column center-center"
+       class="button{% if match[0] == blank %} active{% endif %}">
+        <i class="material-icons">info</i>
+        <span>About</span>
+    </a>
+
+</div>
+{% endwrapDom %}
+<style>
+{% wrapCss 'footer-bar' false %}
+{% include './footer-bar.css' %}
+{% endwrapCss %}
+</style>

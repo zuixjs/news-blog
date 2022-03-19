@@ -2,7 +2,7 @@
 layout: basic.liquid
 headerButtonIcon: close
 headerButtonUrl: javascript:closeContent()
-tags: [ "news", "blog", "demo", "top" ]
+tags: [ "news", "demo", "top" ]
 group: top
 icon: news
 order: 1

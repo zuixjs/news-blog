@@ -1,0 +1,42 @@
+---
+layout: immersive.liquid
+permalink: /search/index.html
+header: search
+tags: templates
+group: templates
+options: none
+icon: newspaper
+order: 0
+theme: none
+title: Search
+description: A news blog template inspired by G.News
+keywords:
+- blog
+- lifestyle
+---
+
+<section class="page-scroll" layout="column top-center"
+         ctrl z-load="pages/search" z-lazy="scroll">
+
+    <div #cover class="message" self="size-x1 stretch-stretch" layout="column center-center">
+        <div class="animate__animated animate__pulse animate__faster" layout="row center-center">
+            <div>Search</div>
+            <i class="material-icons">search</i>
+        </div>
+    </div>
+    <div #no-results class="message hidden" self="size-x1 stretch-stretch" layout="column center-center">
+        <div class="animate__animated animate__rubberBand animate__faster" layout="row center-center">
+            <div>No results</div>
+            <i class="material-icons">search_off</i>
+        </div>
+    </div>
+
+    <div self="size-medium" layout="column top-stretch">
+        <!-- zuix.js list-view component -->
+        <div z-context="results-list" ctrl z-load="@lib/controllers/list-view" z-lazy="false"></div>
+    </div>
+
+</section>
+
+<!-- iframe for displaying pages -->
+<iframe z-field="content-frame" class="hidden"></iframe>

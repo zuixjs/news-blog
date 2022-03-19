@@ -1,0 +1,39 @@
+:host {
+    position: fixed;
+    left:0; bottom:0; right: 0;
+    height: 56px;
+    background: rgba(248,248,248,1);
+    border-top: solid 1px rgba(0,0,0,0.25);
+    box-shadow: 0 -5px 2px -2px rgba(100,100,100,0.15);
+    text-align: center;
+    overflow: hidden;
+}
+
+a.button {
+    font-weight: 400;
+    color: black;
+    width: 56px;
+    max-height: 56px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+}
+
+a.button:focus {outline:0;}
+
+a.button i
+{
+    color: rgba(0,0,0,0.5);
+    font-size: 24px !important;
+    padding: 2px;
+}
+a.button span {
+    font-size: 12px;
+}
+
+a.active, a.active i, a:hover, a:hover i  {
+    color: blue!important;
+}

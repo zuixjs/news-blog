@@ -1,0 +1,53 @@
+{% wrapDom 'header-bar' %}
+<div z-field="header-bar">
+
+    <div class="header" layout="row center-justify">
+        <div z-field="header-box" layout="row center-left">
+
+          {% case header %}
+
+            {% when "search" %}
+            <!-- Search toolbar -->
+            <div layout="row center-center" style="padding-left: 32px">
+                <div class="search-box">
+                <span class="input">
+                    <input z-field="search-input" type="search" placeholder="Enter search terms">
+                    <span></span>
+                </span>
+                </div>
+            </div>
+
+            {% else %}
+             <div class="title" layout="row center-left">
+                {{ title }}
+             </div>
+
+        {% endcase %}
+
+        </div>
+        <img src="{{ '/images/zuix-logo.svg' | url }}" width="32" height="32" alt="Logo" class="logo">
+    </div>
+    <div z-field="header-tools">
+
+        {% if header == "home" %}
+        <div ctrl z-load="@lib/controllers/view-pager"
+             z-options="options.pageIndicator"
+             class="topics visible-on-ready">
+{% assign sectionList = collections.sections | sort: 'data.order' %}
+{% for section in sectionList %}
+            <div data-section="{{ section.data.folder }}" data-order="{{ section.data.order }}">
+                {{ section.data.title }}
+            </div>
+{%- endfor %}
+        </div>
+        {% endif %}
+
+    </div>
+
+</div>
+{% endwrapDom %}
+<style>
+{% wrapCss 'header-bar' false %}
+{% include './header-bar.css' %}
+{% endwrapCss %}
+</style>

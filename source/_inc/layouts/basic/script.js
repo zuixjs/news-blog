@@ -2,7 +2,7 @@ function closeContent() {
   if (window.parent.closeContentFrame) {
     window.parent.closeContentFrame(location);
   } else {
-    location.href += '../../../index.html';
+    location.href = '../../../home';
   }
 }
 function shareContent() {

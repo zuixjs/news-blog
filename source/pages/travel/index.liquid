@@ -6,4 +6,4 @@ order: 3
 permalink: pages/travel/index.json
 ---
 {% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
-{% include 'layouts/view_pager/items-list.liquid' %}
+{% include 'pages-list.json.liquid' %}

@@ -1,0 +1,84 @@
+/* CSS files add styling rules to your content */
+
+body {
+    font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+    font-size: 16px;
+    margin: 0; padding: 0;
+    background: white;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    overscroll-behavior-y: contain;
+    overflow-y: hidden;
+}
+
+a, a:visited, a:hover {
+    font-weight: 700;
+    color: deeppink;
+    text-decoration: none;
+}
+
+button:hover, button:active, a.button:hover, a.button:active {
+    background: rgba(180,180,180,0.1)!important;
+}
+
+.content {
+    font-family: serif;
+    font-size: 110%;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.feed-pager {
+    height: 100vh;
+}
+
+.list {
+    margin-top: 96px;
+    margin-bottom: 24px;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.message {
+    color: darkgrey;
+    width: 100vw;
+    font-size: 200%;
+    overflow: hidden;
+}
+.message i {
+    margin-left: 16px;
+    color: darkgrey;
+    font-size: 150%;
+}
+
+
+.page-scroll {
+    position:absolute;
+    top:56px;
+    bottom:56px;
+    left:0;
+    right:0;
+    overflow-y: auto;
+}
+
+
+iframe[z-field=content-frame] {
+    position: fixed;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 100;
+    background: white;
+}

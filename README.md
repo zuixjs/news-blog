@@ -13,10 +13,17 @@ is implemented as a static site with `markdown` and `liquid` templates using [11
 
 https://user-images.githubusercontent.com/6654265/156775456-c7a420c2-bb99-4b32-9040-4f0bcca0de82.mp4
 
+## Prerequisites
+
+Node.js version 14 or higher is required to use this template.
+
 ## Getting started
 
-Clone this repository, and open a terminal in the project folder then enter the command `npm i` to install required
-dependencies.
+To create a new project using this template, enter the following command:
+
+```shell
+npx zuix new my-site-name -t news-blog
+```
 
 ## Commands
 

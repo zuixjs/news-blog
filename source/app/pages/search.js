@@ -8,16 +8,20 @@ function SearchPage(cp) {
 
   function onCreate() {
     coverMessage = cp.field('cover');
-    noResultsMessage = cp.field('no-results').hide();
+    noResultsMessage = cp.field('no-results');
 
     // get reference to the list view component
-    zuix.context('results-list', function(list) {
-      resultsList = list;
+    setTimeout(() => {
+      zuix.context('results-list', function(list) {
+        resultsList = list;
+      });
     });
+    // ^^^ not sure why it's not working without the setTimeout
+    // TODO: ^^^ investigate this issue
 
     // download the search index
     /** @type {elasticlunr.Index} searchIndex */
-    fetch('../search-index.json').then((response) =>
+    fetch('../../search-index.json').then((response) =>
       response.json().then((rawIndex) => {
         searchIndex = elasticlunr.Index.load(rawIndex);
         elasticlunr.clearStopWords(); // the word 'About' is still ignored
@@ -27,7 +31,10 @@ function SearchPage(cp) {
     // update results list on 'keyup'
     const searchInput = zuix.field('search-input');
     searchInput.on('search', (e, v) => {
+      console.log(e, v)
       if (!resultsList) return;
+      coverMessage.addClass('hidden');
+      noResultsMessage.addClass('hidden');
       const terms = searchInput.value();
       const results = searchIndex.search(terms, {
         bool: 'OR',
@@ -47,14 +54,12 @@ function SearchPage(cp) {
       });
       resultsList.clear();
       if (results.length > 0) {
-        noResultsMessage.hide();
-        coverMessage.hide();
         resultsList.model({
           itemList: results,
           getItem: function(index, item) {
             return {
               itemId: index,
-              componentId: 'results-item',
+              componentId: 'listview/results-item',
               options: {
                 lazyLoad: true,
                 /* fixed height is required for best lazy-load and scroll performances */
@@ -71,11 +76,13 @@ function SearchPage(cp) {
           }
         });
       } else if (terms.length > 0) {
-        noResultsMessage.show();
-        coverMessage.hide();
+        setTimeout(function() {
+          noResultsMessage.removeClass('hidden');
+        });
       } else {
-        noResultsMessage.hide();
-        coverMessage.show();
+        setTimeout(function() {
+          coverMessage.removeClass('hidden');
+        });
       }
     });
   }

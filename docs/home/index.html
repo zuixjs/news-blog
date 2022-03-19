@@ -49,6 +49,7 @@ body {
     -ms-user-select:none;
     user-select:none;
     overscroll-behavior-y: contain;
+    overflow-y: hidden;
 }
 
 a, a:visited, a:hover {
@@ -57,32 +58,9 @@ a, a:visited, a:hover {
     text-decoration: none;
 }
 
-button {
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 14px;
-    background-image: linear-gradient(180deg,#fff,#f5f5fa);
-    transition: all .2s ease-out;
+button:hover, button:active, a.button:hover, a.button:active {
+    background: rgba(180,180,180,0.1)!important;
 }
-button:hover, button:active, button.active {
-    box-shadow: inset 0 -4px 11px 7px rgb(37 44 97 / 9%), 0 4px 6px 0 rgb(93 100 148 / 7%);
-}
-
-.message {
-    color: darkgrey;
-    min-height: 100vh;
-    width: 100vw;
-    font-size: 200%;
-}
-.message i {
-    margin-left: 16px;
-    color: darkgrey;
-    font-size: 150%;
-}
-
 
 .content {
     font-family: serif;
@@ -101,9 +79,31 @@ button:hover, button:active, button.active {
     margin-bottom: 24px;
 }
 
+.hidden {
+    display: none!important;
+}
+
+.message {
+    color: darkgrey;
+    width: 100vw;
+    font-size: 200%;
+    overflow: hidden;
+}
+.message i {
+    margin-left: 16px;
+    color: darkgrey;
+    font-size: 150%;
+}
 
 
-
+.page-scroll {
+    position:absolute;
+    top:56px;
+    bottom:56px;
+    left:0;
+    right:0;
+    overflow-y: auto;
+}
 
 
 iframe[z-field=content-frame] {
@@ -120,221 +120,108 @@ iframe[z-field=content-frame] {
     overflow-x: hidden;
     z-index: 100;
     background: white;
-}
+}</style><body><noscript>Turn on JavaScript to access this site content.</noscript><!-- The header bars (for each page) --><div z-field="header-bar" z-component="fragment" header-bar=""><div class="header" layout="row center-justify" header-bar=""><div z-field="header-box" layout="row center-left" header-bar=""><div class="title" layout="row center-left" header-bar="">News Blog</div></div><img src="/news-blog/images/zuix-logo.svg" width="32" height="32" alt="Logo" class="logo" header-bar=""></div><div z-field="header-tools" header-bar=""><div ctrl="" z-load="@lib/controllers/view-pager" z-options="options.pageIndicator" class="topics visible-on-ready"><div data-section="top" data-order="0" header-bar="">Top Stories</div><div data-section="europe" data-order="1" header-bar="">Europe</div><div data-section="world" data-order="2" header-bar="">World</div><div data-section="travel" data-order="3" header-bar="">Travel</div></div></div></div><style>[z-component][header-bar] {
+    position: fixed;    top:0;    left:0;    right:0;    height:auto;    background: rgba(248,248,248,1);    border-bottom: solid 1px rgba(0,0,0,0.25);    box-shadow: 0 5px 2px -2px rgba(100,100,100,0.15);    z-index: 2!important;}
 
+[z-component][header-bar]
+.header {
+    height: 56px;    max-height: 56px;}
 
+[z-component][header-bar]
+.title {
+    opacity: 0.5;    font-size: 180%;    font-weight: 550;}
 
+[z-component][header-bar]
+.logo {
+    margin-right: 12px;}
 
-/* Header bar */
-.header-bar {
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    height:auto;
-    background: rgba(248,248,248,1);
-    border-bottom: solid 1px rgba(0,0,0,0.25);
-    box-shadow: 0 5px 2px -2px rgba(100,100,100,0.15);
-    z-index: 2!important;
-}
+[z-component][header-bar]
+.topics {
+    width: 100%;    height:40px;}
 
-.header-bar .header {
-    height: 56px;
-    max-height: 56px;
-}
+[z-component][header-bar]
+.topics div {
+    font-size: 16px;    height:36px;    min-width: 96px;    text-align: center;    vertical-align: middle;    line-height: 36px;    border-bottom: solid 4px transparent;    cursor: pointer;}
 
-.header-bar .title {
-    opacity: 0.5;
-    font-size: 180%;
-    font-weight: 550;
-}
-.header-bar .logo {
-    margin-right: 12px;
-}
+[z-component][header-bar]
+[z-field="header-box"] {
+    padding-left: 12px;    padding-right: 12px;    height: 100%;}
 
-.header-bar .topics {
-    width: 100%;
-    height:40px;
-}
-.header-bar .topics div {
-    font-size: 16px;
-    height:36px;
-    min-width: 96px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 36px;
-    border-bottom: solid 4px transparent;
-    cursor: pointer;
-}
-
-.header-bar [z-field="header-box"] {
-    padding-left: 12px;
-    padding-right: 12px;
-    height: 100%;
-}
-
+[z-component][header-bar]
 .header-button {
-    padding: 0;
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    color: rgba(0,0,0,0.5);
-}
+    padding: 0;    background: transparent;    border: none;    border-radius: 8px;    color: rgba(0,0,0,0.5);}
+
+[z-component][header-bar]
 .header-button i {
-    font-size: 200%;
-    padding: 12px;
-}
+    font-size: 200%;    padding: 12px;}
 
+[z-component][header-bar]
 [z-field="header-tools"] .active {
-    color: initial;
-    font-weight: bold;
-    border-bottom: solid 4px var(--primary-color) !important;
-}
+    color: initial;    font-weight: bold;    border-bottom: solid 4px blue !important;}
 
-
-/* Footer bar */
-.footer-bar {
-    position: fixed;
-    left:0; bottom:0; right: 0;
-    height: 56px;
-    background: rgba(248,248,248,1);
-    border-top: solid 1px rgba(0,0,0,0.25);
-    box-shadow: 0 -5px 2px -2px rgba(100,100,100,0.15);
-    text-align: center;
-    overflow: hidden;
-}
-
-.footer-bar button {
-    padding: 12px;
-    max-height: 56px;
-    margin-left: 8px;
-    margin-right: 8px;
-    background: transparent;
-    border: none;
-    border-radius: 8px;
-    color: rgba(0,0,0,0.5);
-}
-.footer-bar button:hover {
-    background: rgba(255,255,255,0.25);
-}
-.footer-bar button:focus, .header-bar button:focus {outline:0;}
-.footer-bar button i
-{
-    font-size: 32px !important;
-}
-
-.footer-bar .active, .header-button.active {
-    color: var(--primary-color);
-    text-shadow:
-            1px 1px 0 #e1e8ed,
-            -1px -1px 0 #e1e8ed,
-            1px -1px 0 #e1e8ed,
-            -1px 1px 0 #e1e8ed,
-            1px 1px 0 #e1e8ed;
-}
-
-
-
-
-
-
-
+[z-component][header-bar]
 .search-box {
-    width: 100%;
-    max-width: 640px;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    width: 100%;    max-width: 640px;    height: 100%;    text-align: center;    display: flex;    align-items: center;    justify-content: center;}
 
+[z-component][header-bar]
 .search-box input {
-    width: 100%;
-    font-size: 130%;
-    font-family: inherit;
-    line-height: inherit;
-    color: #2e3750;
-    min-width: 12em;
-}
+    width: 100%;    font-size: 130%;    font-family: inherit;    line-height: inherit;    color: #2e3750;    min-width: 12em;}
 
+[z-component][header-bar]
 .search-box .input {
-    width: 100%;
-    position: relative;
-    background: linear-gradient(21deg, #10abff, #1beabd);
-    padding: 1px;
-    display: inline-block;
-    border-radius: 9999em;
-    margin: 8px;
-}
+    width: 100%;    position: relative;    background: linear-gradient(21deg, #10abff, #1beabd);    padding: 1px;    display: inline-block;    border-radius: 9999em;    margin: 8px;}
+
+[z-component][header-bar]
 .search-box .input *:not(span) {
-    position: relative;
-    display: inherit;
-    border-radius: inherit;
-    margin: 0;
-    border: none;
-    outline: none;
-    padding: 3px 8px;
-    z-index: 1;
-}
+    position: relative;    display: inherit;    border-radius: inherit;    margin: 0;    border: none;    outline: none;    padding: 3px 8px;    z-index: 1;}
+
+[z-component][header-bar]
 .search-box .input *:not(span):focus + span {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
+    opacity: 1;    -webkit-transform: scale(1);    transform: scale(1);}
+
+[z-component][header-bar]
 .search-box .input span {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    transition: opacity .25s, -webkit-transform .5s;
-    transition: transform .5s, opacity .25s;
-    transition: transform .5s, opacity .25s, -webkit-transform .5s;
-    opacity: 0;
-    position: absolute;
-    z-index: 0;
-    margin: 4px;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #fff, 2px -2px 11px #1beabd,  -2px 2px 11px #10abff;
-}
+    -webkit-transform: scale(1);    transform: scale(1);    transition: opacity .25s, -webkit-transform .5s;    transition: transform .5s, opacity .25s;    transition: transform .5s, opacity .25s, -webkit-transform .5s;    opacity: 0;    position: absolute;    z-index: 0;    margin: 4px;    left: 0;    top: 0;    right: 0;    bottom: 0;    border-radius: inherit;    pointer-events: none;    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #fff, 2px -2px 11px #1beabd,  -2px 2px 11px #10abff;}
 
+[z-component][header-bar]
 .search-box ::-webkit-input-placeholder {
-    color: #cbd0d5;
-}
+    color: #cbd0d5;}
 
+[z-component][header-bar]
 .search-box :-ms-input-placeholder {
-    color: #cbd0d5;
-}
+    color: #cbd0d5;}
 
+[z-component][header-bar]
 .search-box ::-ms-input-placeholder {
-    color: #cbd0d5;
-}
+    color: #cbd0d5;}
 
+[z-component][header-bar]
 .search-box ::placeholder {
-    color: #cbd0d5;
-}
+    color: #cbd0d5;}</style><main z-field="pages" layout="column stretch-stretch"><section ctrl="" z-load="pages/home" z-context="home"><div ctrl="" z-load="@lib/controllers/view-pager" z-options="home.viewPager" class="feed-pager" draggable="false"><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="home.autoHidingBars" class="content" layout="column top-stretch"><div z-load="listview/items-list" #items-list="" z-options="{ section: '/news-blog/pages/top/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="home.autoHidingBars" class="content" layout="column top-stretch"><div z-load="listview/items-list" #items-list="" z-options="{ section: '/news-blog/pages/europe/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="home.autoHidingBars" class="content" layout="column top-stretch"><div z-load="listview/items-list" #items-list="" z-options="{ section: '/news-blog/pages/world/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="home.autoHidingBars" class="content" layout="column top-stretch"><div z-load="listview/items-list" #items-list="" z-options="{ section: '/news-blog/pages/travel/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article></div></section><!-- iframe for displaying pages --><iframe z-field="content-frame" class="hidden"></iframe><script>let viewPager;home={viewPager:{lazyLoad:!1,enablePaging:!0,on:{"page:change":function(e,n){syncPageIndicator(n),viewPager&&(n=viewPager.get(n.in))&&zuix.context(n,e=>{e.show&&e.show()})}},ready:function(){viewPager=this}},autoHidingBars:{header:"header-bar",footer:"footer-bar",height:56,on:{"page:scroll":function(e,n){zuix.componentize()},"scroll:ready":function(e,n){var a=n.$.find("div").get();zuix.context(a,function(e){n.watch(".cover-wrapper",function(e,n){}),n.check()})}}}}</script></main><!-- the pop-up context menu --><div z-load="@lib/components/context-menu" class="visible-on-ready" z-field="item-options-menu" z-lazy="false"><div #menu=""><button #open-btn="" layout="row center-left"><i class="material-icons">file_open</i> <span>Open</span></button> <button #bookmark-add-btn="" layout="row center-left"><i class="material-icons">bookmark_add</i> <span>Save for later</span></button> <button #bookmark-remove-btn="" layout="row center-left"><i class="material-icons" style="color: blue;">bookmark_remove</i> <span>Remove from saved</span></button> <button #share-btn="" layout="row center-left"><i class="material-icons">share</i> <span>Share</span></button> <button layout="row center-left" disabled><i class="material-icons">not_interested</i> <span>Hide items from this source</span></button> <button layout="row center-left" disabled><i class="material-icons">thumb_up</i> <span>More like this</span></button> <button layout="row center-left" disabled><i class="material-icons">thumb_down</i> <span>Less like this</span></button></div></div><!-- The footer with page select buttons --><div z-field="footer-bar" layout="row center-center" z-component="fragment" footer-bar=""><a href="/news-blog/home/" layout="column center-center" class="button" footer-bar=""><i class="material-icons" footer-bar="">home</i> <span footer-bar="">Home</span> </a><a href="/news-blog/search/" layout="column center-center" class="button" footer-bar=""><i class="material-icons" footer-bar="">search</i> <span footer-bar="">Search</span> </a><a href="/news-blog/saved/" layout="column center-center" z-field="saved-button" class="button" footer-bar=""><i class="material-icons" footer-bar="">bookmarks</i> <span footer-bar="">Saved</span> </a><a href="/news-blog/about/" layout="column center-center" class="button" footer-bar=""><i class="material-icons" footer-bar="">info</i> <span footer-bar="">About</span></a></div><style>[z-component][footer-bar] {
+    position: fixed;    left:0; bottom:0; right: 0;    height: 56px;    background: rgba(248,248,248,1);    border-top: solid 1px rgba(0,0,0,0.25);    box-shadow: 0 -5px 2px -2px rgba(100,100,100,0.15);    text-align: center;    overflow: hidden;}
 
-.page-scroll {
-    position:absolute;
-    top:56px;
-    bottom:56px;
-    left:0;
-    right:0;
-    overflow-y: auto;
-}</style></head><!-- load the 'header_auto_hide' on the body --><body><noscript>Turn on JavaScript to access this site content.</noscript><!-- The header with profile icon button for opening the drawer layout (side menu panel) --><div z-field="header-bar" class="header-bar"><div class="header" layout="row center-justify"><div z-field="header-box" layout="row center-left"><!-- Home page header --><div class="title" layout="row center-left">News Blog</div><!-- Search page header --><div layout="row center-center" style="padding-left: 32px"><div class="search-box"><span class="input"><input z-field="search-input" type="search" placeholder="Enter search terms"> <span></span></span></div></div><!-- Bookmarks page header --><div class="title">Bookmarks</div><!-- About page header --><div class="title">About</div></div><img src="/news-blog/images/zuix-logo.svg" width="32" height="32" alt="Logo" class="logo"></div><div z-field="header-tools"><div ctrl="" z-load="@lib/controllers/view-pager" z-options="options.pageIndicator" class="topics visible-on-ready"><div data-section="top" data-order="0">Top Stories</div><div data-section="europe" data-order="1">Europe</div><div data-section="world" data-order="2">World</div><div data-section="travel" data-order="3">Travel</div></div></div></div><main z-field="pages"><!-- HOME --><section ctrl="" z-load="pages/home" z-context="home"><div ctrl="" z-load="@lib/controllers/view-pager" z-options="options.viewPager" class="feed-pager" draggable="false"><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="options.autoHidingBars" class="content" layout="column top-stretch"><div z-load="items_list" #items-list="" z-options="{ section: '/news-blog/pages/top/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="options.autoHidingBars" class="content" layout="column top-stretch"><div z-load="items_list" #items-list="" z-options="{ section: '/news-blog/pages/europe/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="options.autoHidingBars" class="content" layout="column top-stretch"><div z-load="items_list" #items-list="" z-options="{ section: '/news-blog/pages/world/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article><article ctrl="" z-load="@lib/controllers/header-auto-hide" z-options="options.autoHidingBars" class="content" layout="column top-stretch"><div z-load="items_list" #items-list="" z-options="{ section: '/news-blog/pages/travel/index.json', lazyLoad: true }" class="visible-on-ready" style="min-height: 100vh"></div></article></div></section><!-- SEARCH --><section class="page-scroll" layout="column top-center" ctrl="" z-load="pages/search" z-lazy="scroll"><!-- definition of inline zuix.js component --><div self="size-medium" layout="column top-stretch"><div #results-none="" style="display: none"><strong>No results matching search terms.</strong></div><!-- zUIx list-view component --><div z-context="results-list" ctrl="" z-load="@lib/controllers/list-view" z-lazy="false"></div></div></section><!-- NOTIFICATIONS --><section class="page-scroll" z-context="bookmarks" ctrl="" z-load="pages/bookmarks" z-lazy="scroll"><div #no-bookmarks="" class="message" self="stretch-stretch" layout="row center-center"><div>Bookmarks</div><i class="material-icons">bookmark_border</i></div><div self="size-medium stretch-center" layout="column top-stretch"><div ctrl="" z-load="@lib/controllers/list-view" z-context="bookmarks-list" z-lazy="false"></div></div></section><!-- ABOUT --><section layout="column top-center"><div self="size-small center-center" style="padding-top: 56px; padding-left: 12px;padding-right: 12px; line-height: 150%"><p>This template is based on <a href="https://github.com/zuixjs/zuix-web-starter">zuix-web-starter</a> and on the static HTML template <a href="https://github.com/zuixjs/zuix-html-pwa">HTML-PWA</a>.</p><a href="https://github.com/zuixjs/news-blog" layout="row center-center" style="gap: 8px"><img src="../images/github-mark.png" width="32" height="32"><div>news-blog on GitHub</div></a><h2>Other resources</h2><ul><li><a href="https://zuixjs.github.io/zkit">zKit</a><br>Collection of components for modern web.<li><a href="https://github.com/zuixjs/zuix-web-flix">WebFlix</a><br>NetFlix alike template implemented as static HTML.<li><a href="https://zuixjs.org">zuix.js</a><br>zuix.js presentation and documentation site.<li><a href="https://11ty.dev">11ty.dev</a><br>Static site generator that powers <em>zuix-web-starter</em>.</ul></div></section><!-- iframe for displaying posts --><iframe z-field="content-frame" style="position: fixed; top: 0; bottom: 0; left:0; right: 0"></iframe></main><div z-load="@lib/components/context-menu" class="visible-on-ready" z-context="item-options-menu" z-lazy="false"><div z-field="menu"><button #bookmark-add-btn="" layout="row center-left"><i class="material-icons">bookmark_border</i> <span>Save for later</span></button> <button #bookmark-remove-btn="" layout="row center-left"><i class="material-icons" style="color: blue;">bookmark_remove</i> <span>Remove from saved</span></button> <button #open-btn="" layout="row center-left"><i class="material-icons">file_open</i> <span>Open</span></button><!--
-        <button layout="row center-left" disabled>
-            <i class="material-icons">not_interested</i>
-            <span>Hide items from this source</span>
-        </button>
-        <button layout="row center-left" disabled>
-            <i class="material-icons">thumb_up</i>
-            <span>More like this</span>
-        </button>
-        <button layout="row center-left" disabled>
-            <i class="material-icons">thumb_down</i>
-            <span>Less like this</span>
-        </button>
-        --> <button #share-btn="" layout="row center-left"><i class="material-icons">share</i> <span>Share</span></button></div></div><!-- The footer with toolbar buttons --><div class="footer-bar" z-field="footer-bar"><button class="active" data-page="0"><i class="material-icons">home</i></button> <button data-page="1"><i class="material-icons">search</i></button> <button data-page="2"><i class="material-icons">bookmark_border</i></button> <button data-page="3"><i class="material-icons">info</i></button></div><!-- Built with love using zUIx Web Starter --><script>let viewPager,pageIndicator,pageButtons;function initialize(){const i=zuix.$.find("[data-page]");i.each(function(e,a,n){n.on("click",function(){i.removeClass("active"),this.addClass("active"),showPage(n.attr("data-page"))})}),showPage(0)}function syncPageIndicator(e){pageButtons&&(pageButtons.eq(e.out).removeClass("active"),pageButtons.eq(e.in).addClass("active")),pageIndicator&&pageIndicator.page(e.in)}function showPage(e){var a={duration:"200ms"};zuix.field("header-box").children().hide().eq(e).animateCss("fadeIn",a).show(),zuix.field("header-tools").children().hide().eq(e).animateCss("fadeIn",a).show();const n=zuix.field("pages").children().hide().eq(e);n.animateCss("fadeIn",a).show(),viewPager&&viewPager.layout(),zuix.componentize(n)}function openContentFrame(e){const a=zuix.field("content-frame");a.get().src=e,viewPager.$.animateCss("fadeOut",{duration:"500ms"}),a.animateCss("slideInRight",{duration:"500ms"},function(){a.get().focus()}).show()}function closeContentFrame(e){const a=zuix.field("content-frame");viewPager.$.animateCss("fadeIn",{duration:"300ms"}),a.animateCss("slideOutRight",{duration:"300ms"},()=>{a.hide(),e&&e.replace("about:blank")})}zuix.lazyLoad(!0,-window.innerWidth/4),options={viewPager:{lazyLoad:!1,enablePaging:!0,on:{"page:change":function(e,a){syncPageIndicator(a),viewPager&&(a=viewPager.get(a.in))&&zuix.context(a,e=>{e.show&&e.show()})}},ready:function(){viewPager=this,initialize()}},pageIndicator:{contextId:"page-indicator",enablePaging:!0,startGap:40,ready:function(e){pageIndicator=e,0<(pageButtons=pageIndicator.$.find("div")).length()&&pageButtons.each(function(a,e,n){n.on("click",function(e){viewPager&&viewPager.page(a)})})}},autoHidingBars:{header:"header-bar",footer:"footer-bar",height:56,on:{"page:scroll":function(e,a){zuix.componentize()},"scroll:ready":function(e,a){var n=a.$.find("div").get();zuix.context(n,function(e){a.watch(".cover-wrapper",function(e,a){}),a.check()})}}}}</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script>
+[z-component][footer-bar]
+a.button {
+    font-weight: 400;    color: black;    width: 56px;    max-height: 56px;    margin-left: 8px;    margin-right: 8px;    background: transparent;    border: none;    border-radius: 8px;    text-align: center;}
+
+[z-component][footer-bar]
+a.button:focus {
+outline:0;}
+
+[z-component][footer-bar]
+a.button i {
+    color: rgba(0,0,0,0.5);    font-size: 24px !important;    padding: 2px;}
+
+[z-component][footer-bar]
+a.button span {
+    font-size: 12px;}
+
+[z-component][footer-bar]
+a.active, 
+[z-component][footer-bar]
+a.active i, 
+[z-component][footer-bar]
+a:hover, 
+[z-component][footer-bar]
+a:hover i {
+    color: blue!important;}</style><!-- Built with love using zUIx Web Starter --><script>let pageIndicator,pageButtons;function syncPageIndicator(n){pageButtons&&(pageButtons.eq(n.out).removeClass("active"),pageButtons.eq(n.in).addClass("active")),pageIndicator&&pageIndicator.page(n.in)}function openContentFrame(n){const e=zuix.field("content-frame");e.get().src=n,e.animateCss("slideInRight",{duration:"500ms"},function(){e.get().focus()}).removeClass("hidden")}function closeContentFrame(n){const e=zuix.field("content-frame");e.animateCss("slideOutRight",{duration:"300ms"},()=>{e.addClass("hidden"),n&&n.replace("about:blank")})}zuix.lazyLoad(!0,-window.innerWidth/4),options={pageIndicator:{contextId:"page-indicator",enablePaging:!0,startGap:40,ready:function(n){pageIndicator=n,0<(pageButtons=pageIndicator.$.find("div")).length()&&pageButtons.each(function(e,n,t){t.on("click",function(n){viewPager&&viewPager.page(e)})})}}}</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script>

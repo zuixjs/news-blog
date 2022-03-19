@@ -23,12 +23,17 @@ a {
 }
 
 p {
-    font-size: 140%;
+    font-size: 150%;
     line-height: 140%;
     font-family: serif;
     margin-top: 8px;
     margin-bottom: 8px;
 }
+p code {
+    opacity: 0.8;
+    font-size: 85%!important;
+}
+
 li {
     line-height: 160%;
     margin-bottom: 8px;
@@ -109,17 +114,21 @@ li small {
     opacity: 0.5;
 }
 pre {
-    margin-top: 32px!important;
-    margin-bottom: 32px!important;
+    margin-top: 24px!important;
+    margin-bottom: 24px!important;
     max-width: 100%;
 }
 code {
-    font-size: 80%;
     margin-left: 4px;
     margin-right: 4px;
 }
 
+pre[class*="language-"] {
+    font-size: 120%;
+}
+
 pre code {
+    color: darkgreen;
     font-size: 100%;
     line-height: 140%;
 }

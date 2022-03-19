@@ -62,12 +62,17 @@ a {
 }
 
 p {
-    font-size: 140%;
+    font-size: 150%;
     line-height: 140%;
     font-family: serif;
     margin-top: 8px;
     margin-bottom: 8px;
 }
+p code {
+    opacity: 0.8;
+    font-size: 85%!important;
+}
+
 li {
     line-height: 160%;
     margin-bottom: 8px;
@@ -148,17 +153,21 @@ li small {
     opacity: 0.5;
 }
 pre {
-    margin-top: 32px!important;
-    margin-bottom: 32px!important;
+    margin-top: 24px!important;
+    margin-bottom: 24px!important;
     max-width: 100%;
 }
 code {
-    font-size: 80%;
     margin-left: 4px;
     margin-right: 4px;
 }
 
+pre[class*="language-"] {
+    font-size: 120%;
+}
+
 pre code {
+    color: darkgreen;
     font-size: 100%;
     line-height: 140%;
 }
@@ -181,8 +190,9 @@ button {
     background-image: linear-gradient(180deg,#fff,#f5f5fa);
     transition: all .2s ease-out;
 }
-button:hover, button:active, button.active {
-    box-shadow: inset 0 -4px 11px 7px rgb(37 44 97 / 9%), 0 4px 6px 0 rgb(93 100 148 / 7%);
+button:hover, button:active {
+    background: rgba(180,180,180,0.1)!important;
+    box-shadow: inset 0 0 0 2px rgb(37 44 97 / 9%), 0 0 0 0 rgb(93 100 148 / 7%);
 }
 
 .header-cover {
@@ -218,16 +228,7 @@ button:hover, button:active, button.active {
     body {
         font-size: 16px;
     }
-}</style></head><!-- scroll helper is used to show/hide the header when scrolling --><body layout="column top-center" data-theme="" -ctrl="" -z-load="@lib/controllers/header-auto-hide" -data-o-header="header-bar"><!--
-<header #header-bar class="header-cover animate__animated animate__fadeInDown animate__faster" style="display:none">
-    <div self="size-large center" layout="row center-left">
-        <div><h1 z-field="page_title" class="title animate__animated animate__fadeIn">Nuhjip zuowo ajgi rifuwsi.</h1></div>
-        
-        <div self="center-right"><a href="javascript:closeContent()"><i class="material-icons animate__animated animate__fadeIn">close</i></a></div>
-        
-    </div>
-</header>
---> <img class="image-cover" src="https://picsum.photos/seed/europe018/960/640"><h1 z-field="page_title" class="title animate__animated animate__fadeIn">Nuhjip zuowo ajgi rifuwsi.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>8 Apr 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Sij cetvizof orolog fikcieg gejif giate digi hole zoto awmaz bu gob fiw pevi nipu mapmi ewaho sipcog. Ejapu zidano fa ovaje tel sijhimum poni vifzejon lilviove dugir woto siemgat ajemiohi kowfiamo rohfis dojpanini pidem doeg.<br>Jiw nofre kokho jisot nogtug mul tifihez pom oj kilobo si kif ror tuizikir vipmog zefdo ha teb.<h2>Rugav fuwite fif acri vadapoib nokredik ajajow dotamu pahzigap waw.</h2><p>Zotifco enre agima tahe egse di zejenlik gikew tasmim lewakkew igiaku pomfe efedolhes woz ascuwa ajeos reotici hej. Gandieg bowor vagsirtem coluwi telgikfav oreca nupi bozlis tuzsud cew riorinaw cuzowo ven hali fof kohe iwjeti epi. Pit lidlu ro vuor movaveij ilori gec jezu onmak rofpopef semewa se emipuc wosnemmo av jad gogu wig.<blockquote><p>Zoewewi olezofli ifa dedvow vatpohvo lonla jozawfil kono herlu kutog.</blockquote><h3>Zaliro keag ar ne irena.</h3><ul><li>Dozu id iresowa nolip.<li>Coliho otevomgid isite.<li>Jugit liso igop.<li>Leze nimewi idunowdow si pag to.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/pages/europe/alvedpi-re-jeej/" style="text-align: center"><img src="https://picsum.photos/seed/europe06/320/240" class="navigation-image" width="128" height="72"><div class="navigation-title">Alvedpi re jeej.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/pages/europe/eke-vabme-tip/" style="text-align: center"><img src="https://picsum.photos/seed/europe05/320/240" class="navigation-image" width="128" height="72"><div class="navigation-title">Eke vabme tip.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
+}</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/europe018/960/640"><h1 class="title animate__animated animate__fadeIn">Nuhjip zuowo ajgi rifuwsi.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>8 Apr 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Sij cetvizof orolog fikcieg gejif giate digi hole zoto awmaz bu gob fiw pevi nipu mapmi ewaho sipcog. Ejapu zidano fa ovaje tel sijhimum poni vifzejon lilviove dugir woto siemgat ajemiohi kowfiamo rohfis dojpanini pidem doeg.<br>Jiw nofre kokho jisot nogtug mul tifihez pom oj kilobo si kif ror tuizikir vipmog zefdo ha teb.<h2>Rugav fuwite fif acri vadapoib nokredik ajajow dotamu pahzigap waw.</h2><p>Zotifco enre agima tahe egse di zejenlik gikew tasmim lewakkew igiaku pomfe efedolhes woz ascuwa ajeos reotici hej. Gandieg bowor vagsirtem coluwi telgikfav oreca nupi bozlis tuzsud cew riorinaw cuzowo ven hali fof kohe iwjeti epi. Pit lidlu ro vuor movaveij ilori gec jezu onmak rofpopef semewa se emipuc wosnemmo av jad gogu wig.<blockquote><p>Zoewewi olezofli ifa dedvow vatpohvo lonla jozawfil kono herlu kutog.</blockquote><h3>Zaliro keag ar ne irena.</h3><ul><li>Dozu id iresowa nolip.<li>Coliho otevomgid isite.<li>Jugit liso igop.<li>Leze nimewi idunowdow si pag to.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/pages/europe/alvedpi-re-jeej/" style="text-align: center"><img src="https://picsum.photos/seed/europe06/320/240" class="navigation-image" width="128" height="72"><div class="navigation-title">Alvedpi re jeej.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/pages/europe/eke-vabme-tip/" style="text-align: center"><img src="https://picsum.photos/seed/europe05/320/240" class="navigation-image" width="128" height="72"><div class="navigation-title">Eke vabme tip.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(100,200,200,0.5);
     }
@@ -240,4 +241,6 @@ button:hover, button:active, button.active {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }</style>// TODO: List of related pages</main><div z-load="@lib/components/menu-overlay" z-context="actions-menu" z-lazy="false" class="visible-on-ready"><div #items=""><button onclick="closeContent()" style="height:42px;"><span>Close</span><i class="material-icons"> close</i></button> <button onclick="printContent()" style="height:42px;"><span>Print</span><i class="material-icons"> print</i></button> <button onclick="shareContent()" style="height:42px;"><span>Share</span><i class="material-icons"> share</i></button></div><!-- custom open/close menu button --><div #menu_button=""><a class="circle-button" href="javascript:;" title="Open menu"><i class="material-icons">toc</i></a></div><div #menu_button_close=""><a class="circle-button" href="javascript:;" title="Close menu"><i class="material-icons">close</i></a></div></div><script>function navigateTo(l){l=zuix.$.find('a[name="'+l+'"]');scrollHelper.scrollTo(l,300)}</script><footer self="size-large" layout="columns center-center" style="min-height: 320px"><div self="size-large" layout="rows center-justify" style="padding: 48px; opacity: 0.75"><a href="https://pagespeed.web.dev/report?url=https://zuixjs.github.io/news-blog/pages/europe/nuhjip-zuowo-ajgi-rifuwsi/"><div layout="row center-center" style="gap: 8px"><img width="24" height="24" alt="PageSpeed Insight logo" src="/news-blog/images/page-speed-insight-icon.png"> <span>Test on PageSpeed Insight</span></div></a><div>powered by <a href="https://zuixjs.org"><strong>zuix.js</strong></a></div></div></footer><!-- Built with love using zUIx Web Starter --><script>function closeContent(){window.parent.closeContentFrame?window.parent.closeContentFrame(location):location.href+="../../../index.html"}function shareContent(){var t={title:document.title,text:document.querySelector('meta[name="description"]').content,url:document.location.href};navigator.share?navigator.share(t).then(()=>{console.log("Document url shared.")}).catch(console.error):(console.log(t),console.log("Sharing is not available in the current context"))}function printContent(){window.print()}document.body.addEventListener("keyup",function(t){if("Escape"===t.key){const n=zuix.context("actions-menu");n&&n.showing()||closeContent()}});const history=window.history;history&&history.pushState&&(history.pushState("back-detect",null,"#open"),window.onpopstate=function(){closeContent()})</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script></body><!-- page script -->
+    }</style><!--
+// TODO: List of related pages
+--></main><div z-load="@lib/components/menu-overlay" z-context="actions-menu" z-lazy="false" class="visible-on-ready"><div #items=""><button onclick="closeContent()" style="height:42px;"><span>Close</span><i class="material-icons"> close</i></button> <button onclick="printContent()" style="height:42px;"><span>Print</span><i class="material-icons"> print</i></button> <button onclick="shareContent()" style="height:42px;"><span>Share</span><i class="material-icons"> share</i></button></div><!-- custom open/close menu button --><div #menu_button=""><a class="circle-button" href="javascript:;" title="Open menu"><i class="material-icons">toc</i></a></div><div #menu_button_close=""><a class="circle-button" href="javascript:;" title="Close menu"><i class="material-icons">close</i></a></div></div><script>function navigateTo(l){l=zuix.$.find('a[name="'+l+'"]');scrollHelper.scrollTo(l,300)}</script><footer self="size-large" layout="columns center-center" style="min-height: 80px"><div self="size-large" layout="rows center-justify" style="padding: 12px; opacity: 0.75"><a href="https://pagespeed.web.dev/report?url=https://zuixjs.github.io/news-blog/pages/europe/nuhjip-zuowo-ajgi-rifuwsi/"><div layout="row center-center" style="gap: 8px"><img width="24" height="24" alt="PageSpeed Insight logo" src="/news-blog/images/page-speed-insight-icon.png"> <span>PageSpeed Insight</span></div></a><div>powered by <a href="https://zuixjs.org"><strong>zuix.js</strong></a></div></div></footer><!-- Built with love using zUIx Web Starter --><script>function closeContent(){window.parent.closeContentFrame?window.parent.closeContentFrame(location):location.href="../../../home"}function shareContent(){var t={title:document.title,text:document.querySelector('meta[name="description"]').content,url:document.location.href};navigator.share?navigator.share(t).then(()=>{console.log("Document url shared.")}).catch(console.error):(console.log(t),console.log("Sharing is not available in the current context"))}function printContent(){window.print()}document.body.addEventListener("keyup",function(t){if("Escape"===t.key){const n=zuix.context("actions-menu");n&&n.showing()||closeContent()}});const history=window.history;history&&history.pushState&&(history.pushState("back-detect",null,"#open"),window.onpopstate=function(){closeContent()})</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script></body><!-- page script -->

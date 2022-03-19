@@ -1,0 +1,38 @@
+---
+date: Last Modified
+elasticlunr: true
+---
+{% include "head_open.liquid" %}
+<style>
+    {% include "layouts/immersive/style.css" %}
+</style>
+{% include "head_close.html" %}
+
+<body>
+
+<noscript>
+Turn on JavaScript to access this site content.
+</noscript>
+
+<!-- The header bars (for each page) -->
+{% include './immersive/header-bar.liquid' %}
+
+<main z-field="pages" layout="column stretch-stretch">
+{{ content }}
+</main>
+
+<!-- the pop-up context menu -->
+{% include './immersive/item-options-menu.html' %}
+
+<!-- The footer with page select buttons -->
+{% include './immersive/footer-bar.liquid' %}
+
+{% include "body_end.liquid" %}
+
+</body>
+
+<script>
+{% include "layouts/immersive/script.js" %}
+</script>
+
+{% include "html_close.html" %}

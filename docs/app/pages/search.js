@@ -1,30 +1,42 @@
 function SearchPage(cp) {
   let searchIndex = null;
   let resultsList = null;
+  let noResultsMessage = null;
+  let coverMessage = null;
 
   this.create = onCreate;
 
   function onCreate() {
+    coverMessage = cp.field('cover');
+    noResultsMessage = cp.field('no-results');
+
+    // get reference to the list view component
+    setTimeout(() => {
+      zuix.context('results-list', function(list) {
+        resultsList = list;
+      });
+    });
+    // ^^^ not sure why it's not working without the setTimeout
+    // TODO: ^^^ investigate this issue
+
     // download the search index
     /** @type {elasticlunr.Index} searchIndex */
-    fetch('../search-index.json').then((response) =>
+    fetch('../../search-index.json').then((response) =>
       response.json().then((rawIndex) => {
         searchIndex = elasticlunr.Index.load(rawIndex);
         elasticlunr.clearStopWords(); // the word 'About' is still ignored
       })
     );
 
-    // get reference to the list view component
-    zuix.context('results-list', function(list) {
-      resultsList = list;
-    });
-
     // update results list on 'keyup'
     const searchInput = zuix.field('search-input');
     searchInput.on('search', (e, v) => {
+      console.log(e, v)
       if (!resultsList) return;
-      const term = searchInput.value();
-      const results = searchIndex.search(term, {
+      coverMessage.addClass('hidden');
+      noResultsMessage.addClass('hidden');
+      const terms = searchInput.value();
+      const results = searchIndex.search(terms, {
         bool: 'OR',
         expand: true
       }).map((r) => {
@@ -42,13 +54,12 @@ function SearchPage(cp) {
       });
       resultsList.clear();
       if (results.length > 0) {
-        cp.field('results-none').hide();
         resultsList.model({
           itemList: results,
           getItem: function(index, item) {
             return {
               itemId: index,
-              componentId: 'results-item',
+              componentId: 'listview/results-item',
               options: {
                 lazyLoad: true,
                 /* fixed height is required for best lazy-load and scroll performances */
@@ -64,8 +75,14 @@ function SearchPage(cp) {
             };
           }
         });
-      } else if (term.length > 0) {
-        cp.field('results-none').show();
+      } else if (terms.length > 0) {
+        setTimeout(function() {
+          noResultsMessage.removeClass('hidden');
+        });
+      } else {
+        setTimeout(function() {
+          coverMessage.removeClass('hidden');
+        });
       }
     });
   }
