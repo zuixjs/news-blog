@@ -11,7 +11,6 @@ is implemented as a static site with `markdown` and `liquid` templates using [11
 
 ### https://zuixjs.github.io/news-blog/
 
-https://user-images.githubusercontent.com/6654265/156775456-c7a420c2-bb99-4b32-9040-4f0bcca0de82.mp4
 
 ## Prerequisites
 
