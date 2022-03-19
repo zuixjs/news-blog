@@ -3,7 +3,7 @@
   zuix.store('config', {
     "title": "News Blog",
     "baseUrl": "/news-blog/",
-    "resourcePath": "/app/",
+    "resourcePath": "/news-blog/app/",
     "libraryPath": {
       "@lib": "/news-blog/lib/1.1/",
       "@hgui": "https://genielabs.github.io/homegenie-web-ui/app/",
@@ -18,8 +18,7 @@
         "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
       }
     },
-    "siteMapUrl": "https://zuixjs.github.io/news-blog",
-    "googleSiteId": "UA-123-456"
+    "siteMapUrl": "https://zuixjs.github.io/news-blog"
   });
   // Check that service workers are registered
   if ('serviceWorker' in navigator) {

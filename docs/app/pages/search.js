@@ -21,7 +21,7 @@ function SearchPage(cp) {
 
     // download the search index
     /** @type {elasticlunr.Index} searchIndex */
-    fetch('../../search-index.json').then((response) =>
+    fetch('../search-index.json').then((response) =>
       response.json().then((rawIndex) => {
         searchIndex = elasticlunr.Index.load(rawIndex);
         elasticlunr.clearStopWords(); // the word 'About' is still ignored
@@ -43,7 +43,6 @@ function SearchPage(cp) {
         if (!r.doc) {
           r.doc = searchIndex.documentStore.docs[r.ref];
         }
-        // r.ref = 'javascript:openContentFrame("../' + r.ref.substring(1) + '")';
         return {
           date: r.doc.date,
           title: r.doc.title,
