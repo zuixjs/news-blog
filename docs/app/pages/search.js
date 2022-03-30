@@ -30,8 +30,7 @@ function SearchPage(cp) {
 
     // update results list on 'keyup'
     const searchInput = zuix.field('search-input');
-    searchInput.on('search', (e, v) => {
-      console.log(e, v)
+    searchInput.on('input', (e, v) => {
       if (!resultsList) return;
       coverMessage.addClass('hidden');
       noResultsMessage.addClass('hidden');
