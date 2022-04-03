@@ -16,14 +16,10 @@ imagePreviewMini: https://picsum.photos/seed/top027/320/240
 pubDate: 2022-03-19T13:36:37.105Z
 ---
 
-## Prerequisites
+## Getting started
 
-- [Install Node.js](https://nodejs.org/en/download/) version 14 or higher
-- Install `zuix`, command-line tool:
-```shell
-npx zuix
-```
-
+This template is based on `zuix-web-starer`. It is recommended to read its [documentation](https://zuixjs.github.io/zuix-web-starter)
+to get started using this template.
 
 ## Creating a new project using this template
 
@@ -196,66 +192,3 @@ In the same folder can be placed other sub-folders for page-local assets, such a
 ./source/pages/travel/images/picture1.png
 ./source/pages/travel/my-first-cruise.md
 ```
-
-same applies also if a different format is used for the `index` file that will then have a different extension (`.liquid`, `.njk`, `.11ty.js`, `.html`, ...).  
-The special sub-folder `_inc` can be used for page-local includes.
-
-
-## Building for production
-
-The build process will read the default configuration of the web application, from the JSON file `./config/default.json`.  
-This file contains, among the other options, the base url of the application that by default is `/`:
-
-./config/**default.json**
-```json
-{
-  "zuix": {
-    ...
-    ...
-    "app": {
-      "title": "My web application",
-      "baseUrl": "/",
-      ...
-    }
-  }
-}
-```
-
-Depending on the hosting service where the application will be published, the base url might not be the root of the website,
-like it happens for *GitHub* hosted pages, where the base url is the name of the project, unless custom domain is used:
-```
-https://<account_name>.github.io/<project_name>/
-```
-For this purpose, when building for production, a different configuration file is used with the proper base url set:
-
-./config/**production.json**
-```json
-{
-  "zuix": {
-    ...
-    ...
-    "app": {
-      "title": "My web application",
-      "baseUrl": "/my-web-app/",
-      ...
-    }
-  }
-}
-```
-
-also, the `{% raw %}{{ app.baseUrl }}{% endraw %}` variable, if used in a template, will be replaced with the proper value depending on the selected
-configuration.
-
-So, to select the *production* configuration when building the web application, the environment variable `NODE_ENV` must be set to `production`:
-
-```shell
-NODE_ENV=production npx zuix build
-```
-
-it's also possible to simulate the production hosting when running the development server:
-
-```shell
-NODE_ENV=production npx zuix start
-```
-
-in which case, the application will be served at the url specified by `baseUrl` in the production configuration file.
