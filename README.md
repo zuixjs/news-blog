@@ -36,7 +36,7 @@ The `zuix` CLI tool can be used, among the other things, to initialize the web a
 
 - `npx zuix wipe-content`
 
-This command will delete all data contained in the `pages/` folder, required to wipe out all DEMO
+This command will delete all data contained in the `content/` folder, required to wipe out all DEMO
 data after installation.
 
 ### Adding new pages
@@ -48,7 +48,7 @@ options.
 For example, to add a new post page in the `travel` section  :
 - `npx zuix add -s travel -n my-cruise-to-maldive`
 
-This will create a new post page named `my-cruise-to-maldive/index.md` inside the `pages/travel/` folder.
+This will create a new post page named `my-cruise-to-maldive/index.md` inside the `content/travel/` folder.
 
 So, the `-s` option is used to specify the section under which the page will be included, while the `-n` options is used to
 specify the name of the page.

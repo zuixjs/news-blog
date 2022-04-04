@@ -3,7 +3,7 @@
     {
       "icon": "search",
       "title": "Search",
-      "link": "/pages/search",
+      "link": "/content/search",
       "description": "Search this site"
     },
     {

@@ -1,0 +1,9 @@
+---
+title: Top Stories
+folder: top
+tags: sections
+order: 0
+permalink: content/top/index.json
+---
+{% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
+{% include 'pages-list.json.liquid' %}

@@ -1,0 +1,9 @@
+---
+title: World
+folder: world
+tags: sections
+order: 2
+permalink: content/world/index.json
+---
+{% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
+{% include 'pages-list.json.liquid' %}
