@@ -7,9 +7,8 @@ Suitable both for desktop and mobile.
 Based on [zuix.js Web Starter](https://zuixjs.github.io/zuix-web-starter/) and [zuix.js HTML-PWA](#), this web application
 is implemented as a static site with `markdown` and `liquid` templates using [11ty](https://11ty.dev) engine.
 
-## Live demo
 
-### https://zuixjs.github.io/news-blog/
+### --&gt;&gt;[ [Demo and Docs](https://zuixjs.github.io/news-blog/) ]&lt;&lt;--
 
 
 ## Prerequisites
@@ -59,7 +58,8 @@ For complete documentation see [zuix.js Web Starter](https://zuixjs.github.io/zu
 
 ## References
 
+- **Web Starter** https://zuixjs.github.io/zuix-web-starter/
+- **Web App** https://zuixjs.github.io/web-app/
 - **zuix.js** https://zuixjs.org
 - **zKit** https://zuixjs.github.io/zkit/
-- **zuix.js Web Starter** https://zuixjs.github.io/zuix-web-starter/
 - **11ty** https://11ty.dev
