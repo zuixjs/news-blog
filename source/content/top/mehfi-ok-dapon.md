@@ -8,9 +8,9 @@ icon: news
 order: 1
 title: "Mehfi ok dapon."
 description: "Ijle apetidiw dorri hooteep omimek roow zekpono fopkudrum dev zemne."
-imageCover: https://picsum.photos/seed/top022/960/640
-imagePreview: https://picsum.photos/seed/top022/640/560
-imagePreviewMini: https://picsum.photos/seed/top022/320/240
+coverImage: https://picsum.photos/seed/top022/960/640
+coverSmall: https://picsum.photos/seed/top022/640/560
+coverPreview: https://picsum.photos/seed/top022/320/240
 pubDate: 2021-12-03T00:34:09.410Z
 ---
 

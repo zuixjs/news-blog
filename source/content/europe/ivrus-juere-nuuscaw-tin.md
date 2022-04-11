@@ -9,9 +9,9 @@ order: 1
 title: "Ivrus juere nuuscaw tin."
 description: "Kopme modoric ehehe li hi zoj citwufned cupsirlo zuko cihufo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe020/960/640
-imagePreview: https://picsum.photos/seed/europe020/640/560
-imagePreviewMini: https://picsum.photos/seed/europe020/320/240
+coverImage: https://picsum.photos/seed/europe020/960/640
+coverSmall: https://picsum.photos/seed/europe020/640/560
+coverPreview: https://picsum.photos/seed/europe020/320/240
 pubDate: 2021-10-10T11:06:04.158Z
 ---
 

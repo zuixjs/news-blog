@@ -9,9 +9,9 @@ order: 1
 title: "Devpa ajekos dufeti reit."
 description: "Lakivpef sokefe zipmep zil sewraj wibanwev zanfik negco hevijojom ko."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel02/960/640
-imagePreview: https://picsum.photos/seed/travel02/640/560
-imagePreviewMini: https://picsum.photos/seed/travel02/320/240
+coverImage: https://picsum.photos/seed/travel02/960/640
+coverSmall: https://picsum.photos/seed/travel02/640/560
+coverPreview: https://picsum.photos/seed/travel02/320/240
 pubDate: 2021-12-24T03:48:55.082Z
 ---
 

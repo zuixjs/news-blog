@@ -9,9 +9,9 @@ order: 1
 title: "Uv nihfes oniogu vevvin jebabwe."
 description: "Sef hunih dujnob sepi udu jutrufro zetvalo nujof jomuc bas."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe09/960/640
-imagePreview: https://picsum.photos/seed/europe09/640/560
-imagePreviewMini: https://picsum.photos/seed/europe09/320/240
+coverImage: https://picsum.photos/seed/europe09/960/640
+coverSmall: https://picsum.photos/seed/europe09/640/560
+coverPreview: https://picsum.photos/seed/europe09/320/240
 pubDate: 2021-05-16T11:47:12.317Z
 ---
 

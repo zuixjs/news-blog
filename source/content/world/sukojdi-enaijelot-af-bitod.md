@@ -9,9 +9,9 @@ order: 1
 title: "Sukojdi enaijelot af bitod."
 description: "Tuomit tezi jizaz wir filril ire toipu nesi buwi pajij."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world07/960/640
-imagePreview: https://picsum.photos/seed/world07/640/560
-imagePreviewMini: https://picsum.photos/seed/world07/320/240
+coverImage: https://picsum.photos/seed/world07/960/640
+coverSmall: https://picsum.photos/seed/world07/640/560
+coverPreview: https://picsum.photos/seed/world07/320/240
 pubDate: 2021-09-28T20:14:53.551Z
 ---
 

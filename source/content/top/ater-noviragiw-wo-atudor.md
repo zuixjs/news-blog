@@ -9,9 +9,9 @@ order: 1
 title: "Ater noviragiw wo atudor."
 description: "Vige okpe ol din rubhohe cewo openujec tewajoki eka neti."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top09/960/640
-imagePreview: https://picsum.photos/seed/top09/640/560
-imagePreviewMini: https://picsum.photos/seed/top09/320/240
+coverImage: https://picsum.photos/seed/top09/960/640
+coverSmall: https://picsum.photos/seed/top09/640/560
+coverPreview: https://picsum.photos/seed/top09/320/240
 pubDate: 2021-06-23T03:51:54.642Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Avpa bedowno kasu fofgiihe."
 description: "Dudwe vorgis sut owu duf nozif bici horet pigmoko nedlijipo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world024/960/640
-imagePreview: https://picsum.photos/seed/world024/640/560
-imagePreviewMini: https://picsum.photos/seed/world024/320/240
+coverImage: https://picsum.photos/seed/world024/960/640
+coverSmall: https://picsum.photos/seed/world024/640/560
+coverPreview: https://picsum.photos/seed/world024/320/240
 pubDate: 2022-02-01T11:30:41.557Z
 ---
 

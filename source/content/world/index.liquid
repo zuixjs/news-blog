@@ -1,9 +1,9 @@
 ---
 title: World
-folder: world
 tags: sections
+group: world
 order: 2
 permalink: content/world/index.json
 ---
-{% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
+{% assign itemsList = collections[group] | sort: 'data.pubDate' | reverse -%}
 {% include 'pages-list.json.liquid' %}

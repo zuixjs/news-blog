@@ -16,7 +16,7 @@ module.exports = function(collection) {
       date: page.template.frontMatter.data.pubDate,
       title: page.template.frontMatter.data.title,
       description: page.template.frontMatter.data.description,
-      image: page.template.frontMatter.data.imagePreviewMini,
+      image: page.template.frontMatter.data.coverPreview,
       keywords: page.template.frontMatter.data.keywords
     });
   });

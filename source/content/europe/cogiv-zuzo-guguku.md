@@ -9,9 +9,9 @@ order: 1
 title: "Cogiv zuzo guguku."
 description: "Bavop ko ripaza ahdikbu orazoj toero je dewikake ehinaf batnelmo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe023/960/640
-imagePreview: https://picsum.photos/seed/europe023/640/560
-imagePreviewMini: https://picsum.photos/seed/europe023/320/240
+coverImage: https://picsum.photos/seed/europe023/960/640
+coverSmall: https://picsum.photos/seed/europe023/640/560
+coverPreview: https://picsum.photos/seed/europe023/320/240
 pubDate: 2021-04-22T19:09:59.134Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Bomzi idevigi wol emi."
 description: "Ron wor ijecoleg le avsun izbit zuod acudem zeami zeugu."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top03/960/640
-imagePreview: https://picsum.photos/seed/top03/640/560
-imagePreviewMini: https://picsum.photos/seed/top03/320/240
+coverImage: https://picsum.photos/seed/top03/960/640
+coverSmall: https://picsum.photos/seed/top03/640/560
+coverPreview: https://picsum.photos/seed/top03/320/240
 pubDate: 2021-12-19T21:35:45.845Z
 ---
 

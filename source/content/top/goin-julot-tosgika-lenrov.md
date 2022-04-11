@@ -9,9 +9,9 @@ order: 1
 title: "Goin julot tosgika lenrov."
 description: "Jujso botas sezzi pol omarihhi zewet novoje ajeta edbi reguru."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top06/960/640
-imagePreview: https://picsum.photos/seed/top06/640/560
-imagePreviewMini: https://picsum.photos/seed/top06/320/240
+coverImage: https://picsum.photos/seed/top06/960/640
+coverSmall: https://picsum.photos/seed/top06/640/560
+coverPreview: https://picsum.photos/seed/top06/320/240
 pubDate: 2021-03-18T07:41:10.913Z
 ---
 

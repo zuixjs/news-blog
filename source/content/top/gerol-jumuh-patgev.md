@@ -9,9 +9,9 @@ order: 1
 title: "Gerol jumuh patgev."
 description: "Imfe horo ubace ges jemijwo liseh oto raze izinokov hadileb."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top05/960/640
-imagePreview: https://picsum.photos/seed/top05/640/560
-imagePreviewMini: https://picsum.photos/seed/top05/320/240
+coverImage: https://picsum.photos/seed/top05/960/640
+coverSmall: https://picsum.photos/seed/top05/640/560
+coverPreview: https://picsum.photos/seed/top05/320/240
 pubDate: 2021-02-28T02:41:26.539Z
 ---
 

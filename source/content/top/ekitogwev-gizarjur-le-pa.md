@@ -9,9 +9,9 @@ order: 1
 title: "Ekitogwev gizarjur le pa."
 description: "Purroj ukehoin ziwtin govtif so one ogakef bukerav inefu melo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top011/960/640
-imagePreview: https://picsum.photos/seed/top011/640/560
-imagePreviewMini: https://picsum.photos/seed/top011/320/240
+coverImage: https://picsum.photos/seed/top011/960/640
+coverSmall: https://picsum.photos/seed/top011/640/560
+coverPreview: https://picsum.photos/seed/top011/320/240
 pubDate: 2021-03-19T06:05:12.520Z
 ---
 

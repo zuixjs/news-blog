@@ -9,9 +9,9 @@ order: 1
 title: "Os kujom poke tuobi."
 description: "Za awo ne al nuvet aleh hacfaj viki wola zer."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world014/960/640
-imagePreview: https://picsum.photos/seed/world014/640/560
-imagePreviewMini: https://picsum.photos/seed/world014/320/240
+coverImage: https://picsum.photos/seed/world014/960/640
+coverSmall: https://picsum.photos/seed/world014/640/560
+coverPreview: https://picsum.photos/seed/world014/320/240
 pubDate: 2021-02-01T15:15:34.401Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Riaf vegvo wakvag evoha."
 description: "Zogwe pewni halok diwor boaco velpi foj poalev cacvozkib co."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world03/960/640
-imagePreview: https://picsum.photos/seed/world03/640/560
-imagePreviewMini: https://picsum.photos/seed/world03/320/240
+coverImage: https://picsum.photos/seed/world03/960/640
+coverSmall: https://picsum.photos/seed/world03/640/560
+coverPreview: https://picsum.photos/seed/world03/320/240
 pubDate: 2021-09-24T16:55:55.819Z
 ---
 

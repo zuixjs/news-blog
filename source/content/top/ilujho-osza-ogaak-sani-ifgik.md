@@ -9,9 +9,9 @@ order: 1
 title: "Ilujho osza ogaak sani ifgik."
 description: "Vokoz utatirek asizir vo itoki ah midav wescut wawnaf fi."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top01/960/640
-imagePreview: https://picsum.photos/seed/top01/640/560
-imagePreviewMini: https://picsum.photos/seed/top01/320/240
+coverImage: https://picsum.photos/seed/top01/960/640
+coverSmall: https://picsum.photos/seed/top01/640/560
+coverPreview: https://picsum.photos/seed/top01/320/240
 pubDate: 2021-09-03T01:38:36.324Z
 ---
 

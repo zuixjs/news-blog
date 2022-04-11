@@ -9,9 +9,9 @@ order: 1
 title: "Jonut fovmi vivli farep ediat."
 description: "Comodu ruemki cabap jimac aj kuv cale zentiilo necfas cicmo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe019/960/640
-imagePreview: https://picsum.photos/seed/europe019/640/560
-imagePreviewMini: https://picsum.photos/seed/europe019/320/240
+coverImage: https://picsum.photos/seed/europe019/960/640
+coverSmall: https://picsum.photos/seed/europe019/640/560
+coverPreview: https://picsum.photos/seed/europe019/320/240
 pubDate: 2021-03-04T07:38:37.703Z
 ---
 

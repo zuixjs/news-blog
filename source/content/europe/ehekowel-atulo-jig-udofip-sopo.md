@@ -9,9 +9,9 @@ order: 1
 title: "Ehekowel atulo jig udofip sopoaho."
 description: "Ekoden vilip le le bop vazpimdot je homo sottufli vohara."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe027/960/640
-imagePreview: https://picsum.photos/seed/europe027/640/560
-imagePreviewMini: https://picsum.photos/seed/europe027/320/240
+coverImage: https://picsum.photos/seed/europe027/960/640
+coverSmall: https://picsum.photos/seed/europe027/640/560
+coverPreview: https://picsum.photos/seed/europe027/320/240
 pubDate: 2022-01-18T05:40:55.213Z
 ---
 

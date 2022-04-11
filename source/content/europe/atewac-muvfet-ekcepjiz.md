@@ -9,9 +9,9 @@ order: 1
 title: "Atewac muvfet ekcepjiz."
 description: "Hojkigig cu ka jowap pejiw zognuwfug riwgar ceami idigak mupac."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe030/960/640
-imagePreview: https://picsum.photos/seed/europe030/640/560
-imagePreviewMini: https://picsum.photos/seed/europe030/320/240
+coverImage: https://picsum.photos/seed/europe030/960/640
+coverSmall: https://picsum.photos/seed/europe030/640/560
+coverPreview: https://picsum.photos/seed/europe030/320/240
 pubDate: 2021-05-15T05:53:47.501Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Wifewec kicgakev le odual."
 description: "Hafhe alzisa asoifo delzug sagfijdif fe zidi eze zo zimdafcic."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel024/960/640
-imagePreview: https://picsum.photos/seed/travel024/640/560
-imagePreviewMini: https://picsum.photos/seed/travel024/320/240
+coverImage: https://picsum.photos/seed/travel024/960/640
+coverSmall: https://picsum.photos/seed/travel024/640/560
+coverPreview: https://picsum.photos/seed/travel024/320/240
 pubDate: 2021-08-10T16:06:45.042Z
 ---
 

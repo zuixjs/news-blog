@@ -9,9 +9,9 @@ order: 1
 title: "Foipziw wef heiw tepipcip."
 description: "Pevuce disigli biiw gamcuze tazizig bif diri da jesnotaw nin."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world030/960/640
-imagePreview: https://picsum.photos/seed/world030/640/560
-imagePreviewMini: https://picsum.photos/seed/world030/320/240
+coverImage: https://picsum.photos/seed/world030/960/640
+coverSmall: https://picsum.photos/seed/world030/640/560
+coverPreview: https://picsum.photos/seed/world030/320/240
 pubDate: 2022-01-25T22:22:12.234Z
 ---
 

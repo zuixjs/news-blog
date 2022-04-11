@@ -9,9 +9,9 @@ order: 1
 title: "Caonjim po wewic noteku."
 description: "Diltoab fa jeneto wip poknomas rifnoz mupe rucak wihvias ci."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel015/960/640
-imagePreview: https://picsum.photos/seed/travel015/640/560
-imagePreviewMini: https://picsum.photos/seed/travel015/320/240
+coverImage: https://picsum.photos/seed/travel015/960/640
+coverSmall: https://picsum.photos/seed/travel015/640/560
+coverPreview: https://picsum.photos/seed/travel015/320/240
 pubDate: 2022-03-22T18:16:34.778Z
 ---
 

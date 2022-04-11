@@ -9,9 +9,9 @@ order: 1
 title: "Di volabi seciw zekgov jej."
 description: "Zalbasli wewsoj muwi lumer ese ri dil wojic nicgo copluhfo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top07/960/640
-imagePreview: https://picsum.photos/seed/top07/640/560
-imagePreviewMini: https://picsum.photos/seed/top07/320/240
+coverImage: https://picsum.photos/seed/top07/960/640
+coverSmall: https://picsum.photos/seed/top07/640/560
+coverPreview: https://picsum.photos/seed/top07/320/240
 pubDate: 2021-04-03T22:57:45.210Z
 ---
 

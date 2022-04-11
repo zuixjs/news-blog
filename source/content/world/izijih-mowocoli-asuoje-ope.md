@@ -9,9 +9,9 @@ order: 1
 title: "Izijih mowocoli asuoje ope."
 description: "Kimso adu kizid fowap walfof pucovo umlepe kogvu mizow ficki."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world023/960/640
-imagePreview: https://picsum.photos/seed/world023/640/560
-imagePreviewMini: https://picsum.photos/seed/world023/320/240
+coverImage: https://picsum.photos/seed/world023/960/640
+coverSmall: https://picsum.photos/seed/world023/640/560
+coverPreview: https://picsum.photos/seed/world023/320/240
 pubDate: 2021-10-11T02:33:14.776Z
 ---
 

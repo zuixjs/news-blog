@@ -9,9 +9,9 @@ order: 1
 title: "Nu enisedihi lozi."
 description: "Asimi cugjo mi disuv aro emu wiipaewi lul peem pohe."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe029/960/640
-imagePreview: https://picsum.photos/seed/europe029/640/560
-imagePreviewMini: https://picsum.photos/seed/europe029/320/240
+coverImage: https://picsum.photos/seed/europe029/960/640
+coverSmall: https://picsum.photos/seed/europe029/640/560
+coverPreview: https://picsum.photos/seed/europe029/320/240
 pubDate: 2021-07-20T17:53:55.639Z
 ---
 

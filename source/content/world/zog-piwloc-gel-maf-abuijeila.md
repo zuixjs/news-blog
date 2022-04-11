@@ -9,9 +9,9 @@ order: 1
 title: "Zog piwloc gel maf abuijeila."
 description: "Su efod damdi re inenodij lotgo nohbit bosos ojodehse di."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world017/960/640
-imagePreview: https://picsum.photos/seed/world017/640/560
-imagePreviewMini: https://picsum.photos/seed/world017/320/240
+coverImage: https://picsum.photos/seed/world017/960/640
+coverSmall: https://picsum.photos/seed/world017/640/560
+coverPreview: https://picsum.photos/seed/world017/320/240
 pubDate: 2021-10-02T18:09:56.635Z
 ---
 

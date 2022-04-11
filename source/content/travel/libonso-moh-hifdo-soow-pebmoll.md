@@ -9,9 +9,9 @@ order: 1
 title: "Libonso moh hifdo soow pebmollim."
 description: "Vibi namcog ofuimi girugni vip akdohwe digjije lozod podse albof."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel09/960/640
-imagePreview: https://picsum.photos/seed/travel09/640/560
-imagePreviewMini: https://picsum.photos/seed/travel09/320/240
+coverImage: https://picsum.photos/seed/travel09/960/640
+coverSmall: https://picsum.photos/seed/travel09/640/560
+coverPreview: https://picsum.photos/seed/travel09/320/240
 pubDate: 2021-12-17T02:56:03.749Z
 ---
 

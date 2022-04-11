@@ -9,9 +9,9 @@ order: 1
 title: "Me niep koje duzdev."
 description: "Dowahi rilot kakewfol odcefji worfaped ver po motjedwi hus vipom."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world01/960/640
-imagePreview: https://picsum.photos/seed/world01/640/560
-imagePreviewMini: https://picsum.photos/seed/world01/320/240
+coverImage: https://picsum.photos/seed/world01/960/640
+coverSmall: https://picsum.photos/seed/world01/640/560
+coverPreview: https://picsum.photos/seed/world01/320/240
 pubDate: 2021-05-25T06:30:08.875Z
 ---
 

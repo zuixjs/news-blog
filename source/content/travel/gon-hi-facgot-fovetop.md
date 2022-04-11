@@ -9,9 +9,9 @@ order: 1
 title: "Gon hi facgot fovetop."
 description: "Fejmemso zoak lonaj viiwe vorvez vomfello zegwi su imijoheg mud."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel028/960/640
-imagePreview: https://picsum.photos/seed/travel028/640/560
-imagePreviewMini: https://picsum.photos/seed/travel028/320/240
+coverImage: https://picsum.photos/seed/travel028/960/640
+coverSmall: https://picsum.photos/seed/travel028/640/560
+coverPreview: https://picsum.photos/seed/travel028/320/240
 pubDate: 2022-01-31T06:49:18.589Z
 ---
 

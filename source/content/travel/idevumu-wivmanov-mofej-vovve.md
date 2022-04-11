@@ -9,9 +9,9 @@ order: 1
 title: "Idevumu wivmanov mofej vovve."
 description: "Rocdaj awoga cazdufa abofuav sijsu ladoppov ifi zin uk we."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel00/960/640
-imagePreview: https://picsum.photos/seed/travel00/640/560
-imagePreviewMini: https://picsum.photos/seed/travel00/320/240
+coverImage: https://picsum.photos/seed/travel00/960/640
+coverSmall: https://picsum.photos/seed/travel00/640/560
+coverPreview: https://picsum.photos/seed/travel00/320/240
 pubDate: 2021-07-12T02:25:00.102Z
 ---
 

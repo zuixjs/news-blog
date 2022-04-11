@@ -9,9 +9,9 @@ order: 1
 title: "Fekemuz lano leb sebin."
 description: "Va peuw we ra ku kordo virok vodina ma ohkuf."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top029/960/640
-imagePreview: https://picsum.photos/seed/top029/640/560
-imagePreviewMini: https://picsum.photos/seed/top029/320/240
+coverImage: https://picsum.photos/seed/top029/960/640
+coverSmall: https://picsum.photos/seed/top029/640/560
+coverPreview: https://picsum.photos/seed/top029/320/240
 pubDate: 2021-02-04T22:18:22.848Z
 ---
 

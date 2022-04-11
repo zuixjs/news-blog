@@ -9,9 +9,9 @@ order: 1
 title: "Jejjo utzo jozte ulanof."
 description: "Havoipe redcow cujig sihe wa ran wudto onoevo te car."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel027/960/640
-imagePreview: https://picsum.photos/seed/travel027/640/560
-imagePreviewMini: https://picsum.photos/seed/travel027/320/240
+coverImage: https://picsum.photos/seed/travel027/960/640
+coverSmall: https://picsum.photos/seed/travel027/640/560
+coverPreview: https://picsum.photos/seed/travel027/320/240
 pubDate: 2021-03-05T18:34:51.287Z
 ---
 

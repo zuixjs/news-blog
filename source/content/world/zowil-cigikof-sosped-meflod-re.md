@@ -9,9 +9,9 @@ order: 1
 title: "Zowil cigikof sosped meflod remoj."
 description: "Jekbo vebet roufves tocsi refci odeebo focekzip elo omekidip jowis."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world020/960/640
-imagePreview: https://picsum.photos/seed/world020/640/560
-imagePreviewMini: https://picsum.photos/seed/world020/320/240
+coverImage: https://picsum.photos/seed/world020/960/640
+coverSmall: https://picsum.photos/seed/world020/640/560
+coverPreview: https://picsum.photos/seed/world020/320/240
 pubDate: 2021-11-24T10:44:30.714Z
 ---
 

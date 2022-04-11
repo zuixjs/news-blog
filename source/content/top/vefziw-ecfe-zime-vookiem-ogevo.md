@@ -9,9 +9,9 @@ order: 1
 title: "Vefziw ecfe zime vookiem ogevo."
 description: "Wew gicco wowtoh ra pe roftu ok megep awpor ebeul."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top015/960/640
-imagePreview: https://picsum.photos/seed/top015/640/560
-imagePreviewMini: https://picsum.photos/seed/top015/320/240
+coverImage: https://picsum.photos/seed/top015/960/640
+coverSmall: https://picsum.photos/seed/top015/640/560
+coverPreview: https://picsum.photos/seed/top015/320/240
 pubDate: 2022-01-11T17:24:04.142Z
 ---
 

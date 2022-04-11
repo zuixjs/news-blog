@@ -9,9 +9,9 @@ order: 1
 title: "Soreghi johehho foari."
 description: "If epe cilaji rujgakseb zegwef soekewo hucu jeeh lojo ehi."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top030/960/640
-imagePreview: https://picsum.photos/seed/top030/640/560
-imagePreviewMini: https://picsum.photos/seed/top030/320/240
+coverImage: https://picsum.photos/seed/top030/960/640
+coverSmall: https://picsum.photos/seed/top030/640/560
+coverPreview: https://picsum.photos/seed/top030/320/240
 pubDate: 2022-03-18T08:41:44.241Z
 ---
 

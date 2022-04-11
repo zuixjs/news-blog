@@ -9,9 +9,9 @@ order: 1
 title: "Wued memfiflol akoh mofkid."
 description: "Rus figiwu fuvos epaze vueki hiknus je uwkonfi ze lema."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top018/960/640
-imagePreview: https://picsum.photos/seed/top018/640/560
-imagePreviewMini: https://picsum.photos/seed/top018/320/240
+coverImage: https://picsum.photos/seed/top018/960/640
+coverSmall: https://picsum.photos/seed/top018/640/560
+coverPreview: https://picsum.photos/seed/top018/320/240
 pubDate: 2021-04-12T19:00:51.096Z
 ---
 

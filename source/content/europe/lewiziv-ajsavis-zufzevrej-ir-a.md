@@ -9,9 +9,9 @@ order: 1
 title: "Lewiziv ajsavis zufzevrej ir akofi."
 description: "Pitdec tamzatwig voke tedkiake femi olcavge ittur os nerleoze duvase."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe04/960/640
-imagePreview: https://picsum.photos/seed/europe04/640/560
-imagePreviewMini: https://picsum.photos/seed/europe04/320/240
+coverImage: https://picsum.photos/seed/europe04/960/640
+coverSmall: https://picsum.photos/seed/europe04/640/560
+coverPreview: https://picsum.photos/seed/europe04/320/240
 pubDate: 2022-01-24T03:33:02.286Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Jebe noehede ihe edoc."
 description: "Egodin penatah tekupih cegkucki ic vir mehane pekni sa imeno."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel07/960/640
-imagePreview: https://picsum.photos/seed/travel07/640/560
-imagePreviewMini: https://picsum.photos/seed/travel07/320/240
+coverImage: https://picsum.photos/seed/travel07/960/640
+coverSmall: https://picsum.photos/seed/travel07/640/560
+coverPreview: https://picsum.photos/seed/travel07/320/240
 pubDate: 2021-09-03T07:34:58.909Z
 ---
 

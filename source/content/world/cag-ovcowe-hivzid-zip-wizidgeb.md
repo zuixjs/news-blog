@@ -9,9 +9,9 @@ order: 1
 title: "Cag ovcowe hivzid zip wizidgeb."
 description: "Lugo zocveta bi raddi sehofur esuaz befjobi docu heiso bo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world026/960/640
-imagePreview: https://picsum.photos/seed/world026/640/560
-imagePreviewMini: https://picsum.photos/seed/world026/320/240
+coverImage: https://picsum.photos/seed/world026/960/640
+coverSmall: https://picsum.photos/seed/world026/640/560
+coverPreview: https://picsum.photos/seed/world026/320/240
 pubDate: 2021-06-12T04:20:53.363Z
 ---
 

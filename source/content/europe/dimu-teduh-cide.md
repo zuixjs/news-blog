@@ -9,9 +9,9 @@ order: 1
 title: "Dimu teduh cide."
 description: "Sujev kisne nowcoj fo jomdor ew afje wis vewovi woced."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe024/960/640
-imagePreview: https://picsum.photos/seed/europe024/640/560
-imagePreviewMini: https://picsum.photos/seed/europe024/320/240
+coverImage: https://picsum.photos/seed/europe024/960/640
+coverSmall: https://picsum.photos/seed/europe024/640/560
+coverPreview: https://picsum.photos/seed/europe024/320/240
 pubDate: 2021-03-27T11:56:00.232Z
 ---
 

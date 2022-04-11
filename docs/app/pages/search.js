@@ -46,7 +46,7 @@ function SearchPage(cp) {
           date: r.doc.date,
           title: r.doc.title,
           description: r.doc.description,
-          imagePreviewMini: r.doc.image,
+          coverPreview: r.doc.image,
           link: '../' + r.ref.substring(1)
         };
       });

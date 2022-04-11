@@ -9,9 +9,9 @@ order: 1
 title: "Pafrokjib cij haklor zohto."
 description: "Pecku id wihfoj resati omgujit dope afgap velapa fatikoh sawga."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe08/960/640
-imagePreview: https://picsum.photos/seed/europe08/640/560
-imagePreviewMini: https://picsum.photos/seed/europe08/320/240
+coverImage: https://picsum.photos/seed/europe08/960/640
+coverSmall: https://picsum.photos/seed/europe08/640/560
+coverPreview: https://picsum.photos/seed/europe08/320/240
 pubDate: 2021-08-06T02:10:24.975Z
 ---
 

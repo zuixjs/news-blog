@@ -9,9 +9,9 @@ order: 1
 title: "Wif jogjo nurlus wodhip."
 description: "Mepfet rev cicgoco ojefor koepu utoaf giflorhi inemo reedepi lipim."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel04/960/640
-imagePreview: https://picsum.photos/seed/travel04/640/560
-imagePreviewMini: https://picsum.photos/seed/travel04/320/240
+coverImage: https://picsum.photos/seed/travel04/960/640
+coverSmall: https://picsum.photos/seed/travel04/640/560
+coverPreview: https://picsum.photos/seed/travel04/320/240
 pubDate: 2021-12-09T10:26:26.335Z
 ---
 

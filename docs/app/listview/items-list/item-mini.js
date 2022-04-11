@@ -7,7 +7,7 @@ function ListIteMini(cp) {
   function onCreate() {
     const item = cp.model();
     cp.field('container')
-        .css('background-image', 'url(' + item.imagePreviewMini+')')
+        .css('background-image', 'url(' + item.coverPreview+')')
         .on('click', function() {
           cp.trigger('item:click', item);
         });

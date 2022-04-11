@@ -9,9 +9,9 @@ order: 1
 title: "Fuwveh rowru bodcu beven."
 description: "Febos lis oraic hoscep ler dohog merofmag hood mewez anhiz."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel05/960/640
-imagePreview: https://picsum.photos/seed/travel05/640/560
-imagePreviewMini: https://picsum.photos/seed/travel05/320/240
+coverImage: https://picsum.photos/seed/travel05/960/640
+coverSmall: https://picsum.photos/seed/travel05/640/560
+coverPreview: https://picsum.photos/seed/travel05/320/240
 pubDate: 2021-06-29T16:52:16.308Z
 ---
 

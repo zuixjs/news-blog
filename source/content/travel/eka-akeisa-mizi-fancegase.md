@@ -9,9 +9,9 @@ order: 1
 title: "Eka akeisa mizi fancegase."
 description: "Wav hiwe lir sevce kusi ojpov de ril go samrel."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel011/960/640
-imagePreview: https://picsum.photos/seed/travel011/640/560
-imagePreviewMini: https://picsum.photos/seed/travel011/320/240
+coverImage: https://picsum.photos/seed/travel011/960/640
+coverSmall: https://picsum.photos/seed/travel011/640/560
+coverPreview: https://picsum.photos/seed/travel011/320/240
 pubDate: 2021-06-13T15:57:40.524Z
 ---
 

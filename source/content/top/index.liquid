@@ -1,9 +1,9 @@
 ---
 title: Top Stories
-folder: top
 tags: sections
+group: top
 order: 0
 permalink: content/top/index.json
 ---
-{% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
+{% assign itemsList = collections[group] | sort: 'data.pubDate' | reverse -%}
 {% include 'pages-list.json.liquid' %}

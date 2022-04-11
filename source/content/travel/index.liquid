@@ -1,9 +1,9 @@
 ---
 title: Travel
-folder: travel
 tags: sections
+group: travel
 order: 3
 permalink: content/travel/index.json
 ---
-{% assign itemsList = collections[folder] | sort: 'data.pubDate' | reverse -%}
+{% assign itemsList = collections[group] | sort: 'data.pubDate' | reverse -%}
 {% include 'pages-list.json.liquid' %}

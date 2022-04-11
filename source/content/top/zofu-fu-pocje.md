@@ -9,9 +9,9 @@ order: 1
 title: "Zofu fu pocje."
 description: "Realioko ilgik golci jukwoj pomhir kenego migow aveikoris covi ivriw."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top010/960/640
-imagePreview: https://picsum.photos/seed/top010/640/560
-imagePreviewMini: https://picsum.photos/seed/top010/320/240
+coverImage: https://picsum.photos/seed/top010/960/640
+coverSmall: https://picsum.photos/seed/top010/640/560
+coverPreview: https://picsum.photos/seed/top010/320/240
 pubDate: 2021-08-16T22:53:57.053Z
 ---
 

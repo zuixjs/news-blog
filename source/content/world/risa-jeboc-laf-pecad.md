@@ -9,9 +9,9 @@ order: 1
 title: "Risa jeboc laf pecad."
 description: "Boto zusibcut kelnidi fijjar mepzij orke did fi muataluh ofwintev."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world028/960/640
-imagePreview: https://picsum.photos/seed/world028/640/560
-imagePreviewMini: https://picsum.photos/seed/world028/320/240
+coverImage: https://picsum.photos/seed/world028/960/640
+coverSmall: https://picsum.photos/seed/world028/640/560
+coverPreview: https://picsum.photos/seed/world028/320/240
 pubDate: 2022-02-23T20:53:20.894Z
 ---
 

@@ -48,11 +48,16 @@ function MenuOverlay(cp) {
 
     // apply custom color to menu button
     const $view = cp.view();
-    if ($view.attr('data-o-button-color') != null) {
-      $view.css('background', $view.attr('data-o-button-color'));
+    const buttonColor = cp.options().buttonColor || $view.attr('data-o-button-color'); // eg. header
+    if (buttonColor != null) {
+      $view.find('.circle-button').css({background: buttonColor});
     }
-    if ($view.attr('data-o-icon-color') != null) {
-      $view.css('fill', $view.attr('data-o-icon-color'));
+    const iconColor = cp.options().iconColor || $view.attr('data-o-icon-color'); // eg. header
+    if (iconColor != null) {
+      $view.find('.circle-button i').css({
+        fill: iconColor,
+        color: iconColor
+      });
     }
 
     const scrollerName = $view.attr('data-o-scroller');
@@ -62,15 +67,27 @@ function MenuOverlay(cp) {
       scroller = zuix.$(window);
     }
     if (scroller != null) {
+      let beforeElement = cp.options().before || $view.attr('data-o-before'); // eg. footer
+      if (beforeElement) {
+        beforeElement = zuix.field(beforeElement).get();
+      }
+      let afterElement = cp.options().after || $view.attr('data-o-after'); // eg. header
+      if (afterElement) {
+        afterElement = zuix.field(afterElement).get();
+      }
       scroller.on('scroll', function(e) {
         const scrollTop = scroller.get() === window ? (document.documentElement.scrollTop || document.body.scrollTop) : scroller.get().scrollTop;
         if (menuButtonShowing) {
           if ((currentOffset - scrollTop) < -2) {
-            hideButton();
+            if (afterElement == null || (scrollTop > afterElement.offsetTop + afterElement.offsetHeight - 56)) {
+              setTimeout(hideButton, 100);
+            }
           }
         } else if (!menuButtonShowing) {
           if ((currentOffset - scrollTop) > 2) {
-            showButton();
+            if (beforeElement == null || (scrollTop + window.innerHeight < beforeElement.offsetTop + 56)) {
+              showButton();
+            }
           }
         }
         currentOffset = scrollTop;

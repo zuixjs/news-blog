@@ -9,9 +9,9 @@ order: 1
 title: "Su tawug azgeuc helaw."
 description: "Ver davtevhi bevwag wiwwur diju magikto fek mimlif gikcarco ha."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel023/960/640
-imagePreview: https://picsum.photos/seed/travel023/640/560
-imagePreviewMini: https://picsum.photos/seed/travel023/320/240
+coverImage: https://picsum.photos/seed/travel023/960/640
+coverSmall: https://picsum.photos/seed/travel023/640/560
+coverPreview: https://picsum.photos/seed/travel023/320/240
 pubDate: 2021-06-08T04:07:29.568Z
 ---
 

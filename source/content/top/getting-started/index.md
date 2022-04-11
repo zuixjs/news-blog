@@ -10,9 +10,9 @@ options: highlight
 title: Getting started with this template
 description: A brief overview of this template structure, content management and publishing.  
 author: Gene
-imageCover: https://picsum.photos/seed/top027/960/640
-imagePreview: https://picsum.photos/seed/top027/640/560
-imagePreviewMini: https://picsum.photos/seed/top027/320/240
+coverImage: https://picsum.photos/seed/top027/960/640
+coverSmall: https://picsum.photos/seed/top027/640/560
+coverPreview: https://picsum.photos/seed/top027/320/240
 pubDate: 2022-03-19T13:36:37.105Z
 ---
 

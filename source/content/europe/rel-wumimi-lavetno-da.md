@@ -9,9 +9,9 @@ order: 1
 title: "Rel wumimi lavetno da."
 description: "Tomos ci keci zottaf sorzap evedu ev mo jefer tiud."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe026/960/640
-imagePreview: https://picsum.photos/seed/europe026/640/560
-imagePreviewMini: https://picsum.photos/seed/europe026/320/240
+coverImage: https://picsum.photos/seed/europe026/960/640
+coverSmall: https://picsum.photos/seed/europe026/640/560
+coverPreview: https://picsum.photos/seed/europe026/320/240
 pubDate: 2021-07-26T19:02:51.223Z
 ---
 

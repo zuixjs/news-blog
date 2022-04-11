@@ -9,9 +9,9 @@ order: 1
 title: "Zihir lir tuhoj voko."
 description: "Odge erpog mukadetor olcifgej guv hiugode jej hipujom vo cogwihme."
 author: J. Doe
-imageCover: https://picsum.photos/seed/top013/960/640
-imagePreview: https://picsum.photos/seed/top013/640/560
-imagePreviewMini: https://picsum.photos/seed/top013/320/240
+coverImage: https://picsum.photos/seed/top013/960/640
+coverSmall: https://picsum.photos/seed/top013/640/560
+coverPreview: https://picsum.photos/seed/top013/320/240
 pubDate: 2022-01-09T09:42:14.294Z
 ---
 

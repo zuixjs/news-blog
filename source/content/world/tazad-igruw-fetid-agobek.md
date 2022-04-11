@@ -9,9 +9,9 @@ order: 1
 title: "Tazad igruw fetid agobek."
 description: "Belo nik adew zobtum vewe betiapu na honu jopi suc."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world021/960/640
-imagePreview: https://picsum.photos/seed/world021/640/560
-imagePreviewMini: https://picsum.photos/seed/world021/320/240
+coverImage: https://picsum.photos/seed/world021/960/640
+coverSmall: https://picsum.photos/seed/world021/640/560
+coverPreview: https://picsum.photos/seed/world021/320/240
 pubDate: 2021-04-24T22:07:09.417Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Mimlo wet cov ho."
 description: "Ra tonlikti ewilam agimovo tu re mi lapo meikupi mosedlo."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel08/960/640
-imagePreview: https://picsum.photos/seed/travel08/640/560
-imagePreviewMini: https://picsum.photos/seed/travel08/320/240
+coverImage: https://picsum.photos/seed/travel08/960/640
+coverSmall: https://picsum.photos/seed/travel08/640/560
+coverPreview: https://picsum.photos/seed/travel08/320/240
 pubDate: 2021-11-12T00:04:23.205Z
 ---
 

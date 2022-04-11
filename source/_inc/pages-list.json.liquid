@@ -4,9 +4,9 @@
     "icon": "{{ post.data.icon }}",
     "title": "{{ post.data.title }}",
     "description": "{{ post.data.description }}",
-    "imageCover": "{{ post.data.imageCover }}",
-    "imagePreview": "{{ post.data.imagePreview }}",
-    "imagePreviewMini": "{{ post.data.imagePreviewMini }}",
+    "coverImage": "{{ post.data.coverImage }}",
+    "coverSmall": "{{ post.data.coverSmall }}",
+    "coverPreview": "{{ post.data.coverPreview }}",
     "date": "{{ post.data.pubDate | date: 'yyyy-MM-DD HH:mm' }}",
     "link": "{{ post.url | url }}"
     }{% if post != itemsList.last %},{% endif %}

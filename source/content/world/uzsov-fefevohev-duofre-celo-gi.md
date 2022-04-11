@@ -9,9 +9,9 @@ order: 1
 title: "Uzsov fefevohev duofre celo givve."
 description: "Fawiaw kod comuwip weriko do edi loceg zihvev ohe todsisil."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world015/960/640
-imagePreview: https://picsum.photos/seed/world015/640/560
-imagePreviewMini: https://picsum.photos/seed/world015/320/240
+coverImage: https://picsum.photos/seed/world015/960/640
+coverSmall: https://picsum.photos/seed/world015/640/560
+coverPreview: https://picsum.photos/seed/world015/320/240
 pubDate: 2022-03-16T17:42:04.197Z
 ---
 

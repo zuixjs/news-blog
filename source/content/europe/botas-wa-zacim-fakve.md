@@ -9,9 +9,9 @@ order: 1
 title: "Botas wa zacim fakve."
 description: "Ne ti degav ifgo rewec juzow opwo wugvoju cihce gi."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe031/960/640
-imagePreview: https://picsum.photos/seed/europe031/640/560
-imagePreviewMini: https://picsum.photos/seed/europe031/320/240
+coverImage: https://picsum.photos/seed/europe031/960/640
+coverSmall: https://picsum.photos/seed/europe031/640/560
+coverPreview: https://picsum.photos/seed/europe031/320/240
 pubDate: 2021-03-04T00:13:14.218Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Zo in hitmefmag."
 description: "Papidji minifpa ni pec kehhat suco tedo aktep wotci ecucajej."
 author: J. Doe
-imageCover: https://picsum.photos/seed/travel01/960/640
-imagePreview: https://picsum.photos/seed/travel01/640/560
-imagePreviewMini: https://picsum.photos/seed/travel01/320/240
+coverImage: https://picsum.photos/seed/travel01/960/640
+coverSmall: https://picsum.photos/seed/travel01/640/560
+coverPreview: https://picsum.photos/seed/travel01/320/240
 pubDate: 2021-11-17T00:16:20.442Z
 ---
 

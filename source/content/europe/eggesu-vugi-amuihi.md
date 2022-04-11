@@ -9,9 +9,9 @@ order: 1
 title: "Eggesu vugi amuihi."
 description: "Lev jousued we of jikceh pe howat reftew siwne jatzagja."
 author: J. Doe
-imageCover: https://picsum.photos/seed/europe021/960/640
-imagePreview: https://picsum.photos/seed/europe021/640/560
-imagePreviewMini: https://picsum.photos/seed/europe021/320/240
+coverImage: https://picsum.photos/seed/europe021/960/640
+coverSmall: https://picsum.photos/seed/europe021/640/560
+coverPreview: https://picsum.photos/seed/europe021/320/240
 pubDate: 2022-02-05T04:46:01.200Z
 ---
 

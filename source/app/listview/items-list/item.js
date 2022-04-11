@@ -6,7 +6,7 @@ function ListItem(cp) {
 
   function onCreate() {
     cp.field('container')
-        .css('background-image', 'url(' + cp.model().imagePreview + ')')
+        .css('background-image', 'url(' + cp.model().coverSmall + ')')
         .on('click', function() {
           cp.trigger('item:click', cp.model());
         });

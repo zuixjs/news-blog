@@ -9,9 +9,9 @@ order: 1
 title: "Seuh mopotdof evja wocdu."
 description: "Siktev ref immerkos ugoso ve ogohed esa osaolfi ac nolfir."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world018/960/640
-imagePreview: https://picsum.photos/seed/world018/640/560
-imagePreviewMini: https://picsum.photos/seed/world018/320/240
+coverImage: https://picsum.photos/seed/world018/960/640
+coverSmall: https://picsum.photos/seed/world018/640/560
+coverPreview: https://picsum.photos/seed/world018/320/240
 pubDate: 2021-02-13T14:22:59.406Z
 ---
 

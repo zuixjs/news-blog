@@ -9,9 +9,9 @@ order: 1
 title: "Bokefko foha coza na."
 description: "Oz ocitoso jees anoro opjikwi in gi fuhug busgoaka jitgawe."
 author: J. Doe
-imageCover: https://picsum.photos/seed/world031/960/640
-imagePreview: https://picsum.photos/seed/world031/640/560
-imagePreviewMini: https://picsum.photos/seed/world031/320/240
+coverImage: https://picsum.photos/seed/world031/960/640
+coverSmall: https://picsum.photos/seed/world031/640/560
+coverPreview: https://picsum.photos/seed/world031/320/240
 pubDate: 2021-09-30T13:04:32.374Z
 ---
 
