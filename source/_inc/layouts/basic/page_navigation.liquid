@@ -8,7 +8,7 @@
     {% if prevPost %}
     <a href="{{ prevPost.url |  url }}" style="text-align: center">
         {% if prevPost.data.coverPreview -%}
-            <img src="{{ prevPost.data.coverPreview }}" class="navigation-image" width="128" height="72">
+            <img src="{{ prevPost.data.coverPreview }}" class="navigation-image" width="128">
         {% endif -%}
         <div class="navigation-title">{{ prevPost.data.title }}</div>
         <div layout="row center-center">
@@ -23,7 +23,7 @@
     {% if nextPost %}
     <a href="{{ nextPost.url |  url }}" style="text-align: center">
         {% if nextPost.data.coverPreview -%}
-            <img src="{{ nextPost.data.coverPreview }}" class="navigation-image" width="128" height="72">
+            <img src="{{ nextPost.data.coverPreview }}" class="navigation-image" width="128">
         {% endif -%}
         <div class="navigation-title">{{ nextPost.data.title }}</div>
         <div layout="row center-center">
@@ -39,12 +39,11 @@
 <style>
     .navigation-image {
         border-radius: 32px;
-        border-color: rgba(100,200,200,0.5);
+        border-color: rgba(200,200,200,0.5);
     }
     .navigation-title {
         margin: 8px;
         opacity: 0.6;
-        color: darkgreen;
         font-size: 80%;
         max-width: 200px;
         overflow: hidden;

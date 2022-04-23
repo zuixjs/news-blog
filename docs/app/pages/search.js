@@ -1,5 +1,5 @@
 function SearchPage(cp) {
-  let searchIndex = null;
+  const searchIndex = null;
   let resultsList = null;
   let noResultsMessage = null;
   let coverMessage = null;
@@ -20,53 +20,46 @@ function SearchPage(cp) {
     // TODO: ^^^ investigate this issue
 
     // download the search index
-    /** @type {elasticlunr.Index} searchIndex */
-    fetch('../search-index.json').then((response) =>
-      response.json().then((rawIndex) => {
-        searchIndex = elasticlunr.Index.load(rawIndex);
-        elasticlunr.clearStopWords(); // the word 'About' is still ignored
+    fetch('../search-index.json').then((indexResponse) =>
+      indexResponse.json().then((searchIndex) => {
+        fetch('../search-list.json').then((listResponse) =>
+          listResponse.json().then((searchList) => {
+            searchItems = searchList;
+            const index = Fuse.parseIndex(searchIndex);
+            searchEngine = new Fuse(searchList, options, index);
+          })
+        );
       })
     );
 
     // update results list on 'keyup'
     const searchInput = zuix.field('search-input');
-    searchInput.on('input', (e, v) => {
-      if (!resultsList) return;
-      coverMessage.addClass('hidden');
-      noResultsMessage.addClass('hidden');
+    searchInput.on('keyup search', (e, v) => {
+      if (!searchEngine) {
+        // TODO: should report issue
+        console.log('Search engine not initialized.');
+        return;
+      }
       const terms = searchInput.value();
-      const results = searchIndex.search(terms, {
-        bool: 'OR',
-        expand: true
-      }).map((r) => {
-        if (!r.doc) {
-          r.doc = searchIndex.documentStore.docs[r.ref];
-        }
-        return {
-          date: r.doc.date,
-          title: r.doc.title,
-          description: r.doc.description,
-          coverPreview: r.doc.image,
-          link: '../' + r.ref.substring(1)
-        };
-      });
+      const results = searchEngine.search(terms);
       resultsList.clear();
       if (results.length > 0) {
+        noResultsMessage.hide();
         resultsList.model({
           itemList: results,
           getItem: function(index, item) {
+            item = searchItems[item.refIndex];
+            item.coverPreview = item.image;
             return {
               itemId: index,
               componentId: 'listview/results-item',
               options: {
-                lazyLoad: true,
-                /* fixed height is required for best lazy-load and scroll performances */
-                height: '108px',
-                controller: zuix.controller(function(cp) {}),
+                controller: zuix.controller(function(cp){}),
+                className: 'item',
                 model: item,
                 on: {
                   'click': function() {
-                    openContentFrame(item.link);
+                    openContentFrame(item.url);
                   }
                 }
               }

@@ -5,6 +5,7 @@ elasticlunr: true
 {% include "head_open.liquid" %}
 <style>
     {% include "layouts/immersive/style.css" %}
+    {% include "./common/theme.css.liquid" %}
 </style>
 {% include "head_close.html" %}
 
@@ -32,7 +33,7 @@ Turn on JavaScript to access this site content.
 </body>
 
 <script>
-{% include "layouts/immersive/script.js" %}
+{% include "layouts/immersive/script.js.liquid" %}
 </script>
 
 {% include "html_close.html" %}

@@ -9,9 +9,9 @@ order: 1
 title: "Letopi sosekwuj am wa rorsow."
 description: "Li ekigomine opfawef zat cosi dofos saazi feup zowgok jibiw."
 author: J. Doe
-coverImage: https://picsum.photos/seed/top026/960/640
+coverImage: https://picsum.photos/seed/top026/960/600
 coverSmall: https://picsum.photos/seed/top026/640/560
-coverPreview: https://picsum.photos/seed/top026/320/240
+coverPreview: https://picsum.photos/seed/top026/320/200
 pubDate: 2022-03-10T15:53:55.852Z
 ---
 

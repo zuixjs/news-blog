@@ -10,9 +10,12 @@ h1 {
   left:0; bottom:8px; right: 0;
 }
 .summary {
-  color: white;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(40,40,40,0.65);
 }
+.summary .title {
+  font-weight: 500;
+}
+
 [self*="size-1of3"]  h1 {
   font-size: 120% !important;
 }

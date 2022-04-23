@@ -9,9 +9,9 @@ order: 1
 title: "Di gisaf pinsel zopopgoz."
 description: "Niikze sehmiv sesi wij mofic zihan nu efpa vuzogo hefdus."
 author: J. Doe
-coverImage: https://picsum.photos/seed/europe02/960/640
+coverImage: https://picsum.photos/seed/europe02/960/600
 coverSmall: https://picsum.photos/seed/europe02/640/560
-coverPreview: https://picsum.photos/seed/europe02/320/240
+coverPreview: https://picsum.photos/seed/europe02/320/200
 pubDate: 2022-01-16T18:45:47.969Z
 ---
 

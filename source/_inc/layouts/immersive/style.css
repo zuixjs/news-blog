@@ -15,8 +15,7 @@ body {
 
 a, a:visited, a:hover {
     font-weight: 700;
-    color: deeppink;
-    text-decoration: none;
+   text-decoration: none;
 }
 
 button:hover, button:active, a.button:hover, a.button:active {

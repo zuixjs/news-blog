@@ -3,7 +3,7 @@
 let pageIndicator;
 let pageButtons;
 
-//__zuix__debug = true;
+//window.__zuix__debug = true;
 zuix.lazyLoad(true, -window.innerWidth / 4);
 
 options = {
@@ -47,3 +47,18 @@ function closeContentFrame(loc) {
     loc && loc.replace('about:blank');
   });
 }
+
+{% include '../common/theme.js' %}
+
+{% if options contains 'ext-links' -%}
+function processExternalLinks(view) {
+  // Force opening of all non-local links in a new window
+  zuix.$(view).find('a[href*="://"]')
+      .attr('target', '_blank')
+      .attr('rel', 'noreferrer');
+}
+zuix.hook('view:process', function(view) {
+  processExternalLinks(view);
+});
+processExternalLinks(document);
+{% endif %}

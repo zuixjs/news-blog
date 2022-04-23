@@ -9,9 +9,9 @@ order: 1
 title: "Gu hinvom como."
 description: "Fuj tedew wotehdah deke pil ofe wi gosha ticej ted."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel06/960/640
+coverImage: https://picsum.photos/seed/travel06/960/600
 coverSmall: https://picsum.photos/seed/travel06/640/560
-coverPreview: https://picsum.photos/seed/travel06/320/240
+coverPreview: https://picsum.photos/seed/travel06/320/200
 pubDate: 2021-05-14T02:36:33.990Z
 ---
 

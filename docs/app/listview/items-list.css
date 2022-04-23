@@ -35,13 +35,13 @@
   position: relative;
   overflow: hidden;
   background-size: cover!important;
-  background: #f2f2f2 no-repeat center center;
+  background: #7f7f7f77 no-repeat center center;
 }
 .summary {
   width: 100%;
 }
 .options {
-  color: dimgrey;
+  opacity: 0.8;
 }
 .options span {
   font-size: 80%;

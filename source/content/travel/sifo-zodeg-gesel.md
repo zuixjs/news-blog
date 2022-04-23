@@ -9,9 +9,9 @@ order: 1
 title: "Sifo zodeg gesel."
 description: "Tecumi ojze za sohwo kukmug afeca kinpe vaggoj seppejoc jakvo."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel029/960/640
+coverImage: https://picsum.photos/seed/travel029/960/600
 coverSmall: https://picsum.photos/seed/travel029/640/560
-coverPreview: https://picsum.photos/seed/travel029/320/240
+coverPreview: https://picsum.photos/seed/travel029/320/200
 pubDate: 2021-11-25T04:55:05.720Z
 ---
 

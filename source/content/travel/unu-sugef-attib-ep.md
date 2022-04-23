@@ -9,9 +9,9 @@ order: 1
 title: "Unu sugef attib ep."
 description: "Keob sir aksam gowlo azodilvon lis apolul gawuze diwgepnol sapet."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel021/960/640
+coverImage: https://picsum.photos/seed/travel021/960/600
 coverSmall: https://picsum.photos/seed/travel021/640/560
-coverPreview: https://picsum.photos/seed/travel021/320/240
+coverPreview: https://picsum.photos/seed/travel021/320/200
 pubDate: 2021-03-19T03:20:27.281Z
 ---
 

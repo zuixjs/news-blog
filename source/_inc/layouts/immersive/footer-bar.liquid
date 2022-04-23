@@ -1,5 +1,5 @@
 {% wrapDom 'footer-bar' %}
-<div z-field="footer-bar" layout="row center-center">
+<footer z-field="footer-bar" layout="row center-center">
 
     {% assign link = '/home/' | url %}
     {% assign match = page.url | url | split:link %}
@@ -33,7 +33,7 @@
         <span>About</span>
     </a>
 
-</div>
+</footer>
 {% endwrapDom %}
 <style>
 {% wrapCss 'footer-bar' false %}

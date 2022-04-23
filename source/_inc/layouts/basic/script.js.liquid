@@ -1,3 +1,5 @@
+{% include '../common/theme.js' %}
+
 function closeContent() {
   if (window.parent.closeContentFrame) {
     window.parent.closeContentFrame(location);
@@ -21,7 +23,7 @@ function shareContent() {
   }
 }
 function printContent() {
-  window.print();
+  setTimeout(window.print, 750);
 }
 
 document.body.addEventListener('keyup', function(e) {

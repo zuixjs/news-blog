@@ -8,7 +8,7 @@
 body {
     min-height: 100vh;
     margin: 0;
-    font-size: 14px;
+    font-size: 1.0em;
     font-family: Helvetica, sans-serif;
     background: var(--background-color);
     overflow-x: hidden;
@@ -23,8 +23,8 @@ a {
 }
 
 p {
-    font-size: 150%;
-    line-height: 140%;
+    font-size: 120%;
+    line-height: 150%;
     font-family: serif;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -56,18 +56,18 @@ h1 {
 h2 {
     opacity: 0.8;
     font-size:160%;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 36px;
 }
 h3 {
     opacity: 0.6;
     font-size:140%;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 8px;
     margin-bottom: 8px;
 }
 h4 {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 h5 {
     opacity: 0.6;
@@ -169,7 +169,6 @@ button:hover, button:active {
 }
 .main-content {
     padding: 24px 8px 48px;
-    color:  black;
 }
 
 .title {
@@ -183,6 +182,7 @@ button:hover, button:active {
 }
 .image-cover {
     width: 100%;
+    aspect-ratio: 1.5;
     height: auto;
     max-width: 960px;
 }
@@ -195,3 +195,8 @@ button:hover, button:active {
     }
 }
 
+@media print {
+    [z-load*="/components/menu-overlay"] {
+        visibility: hidden;
+    }
+}

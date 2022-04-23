@@ -9,9 +9,9 @@ order: 1
 title: "Mu ikkize ko puv."
 description: "Kibpo ro puhpor ihkes zascohu jijge sed tu oc du."
 author: J. Doe
-coverImage: https://picsum.photos/seed/top02/960/640
+coverImage: https://picsum.photos/seed/top02/960/600
 coverSmall: https://picsum.photos/seed/top02/640/560
-coverPreview: https://picsum.photos/seed/top02/320/240
+coverPreview: https://picsum.photos/seed/top02/320/200
 pubDate: 2022-02-13T20:07:21.054Z
 ---
 

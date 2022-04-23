@@ -9,9 +9,9 @@ order: 1
 title: "Im bukwilec dihi."
 description: "Moadno vagvotze ojofob pu oforedur rude kep cobnezsov lihwu cewgudrom."
 author: J. Doe
-coverImage: https://picsum.photos/seed/top019/960/640
+coverImage: https://picsum.photos/seed/top019/960/600
 coverSmall: https://picsum.photos/seed/top019/640/560
-coverPreview: https://picsum.photos/seed/top019/320/240
+coverPreview: https://picsum.photos/seed/top019/320/200
 pubDate: 2021-10-02T20:13:50.087Z
 ---
 

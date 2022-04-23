@@ -9,9 +9,9 @@ order: 1
 title: "Ge cikgeehi anoledce kehfi pumevvi."
 description: "Wovhukiki de dafteh mosul pivew piv wudujom gahaso do efolemoh."
 author: J. Doe
-coverImage: https://picsum.photos/seed/top031/960/640
+coverImage: https://picsum.photos/seed/top031/960/600
 coverSmall: https://picsum.photos/seed/top031/640/560
-coverPreview: https://picsum.photos/seed/top031/320/240
+coverPreview: https://picsum.photos/seed/top031/320/200
 pubDate: 2021-07-01T16:38:21.080Z
 ---
 

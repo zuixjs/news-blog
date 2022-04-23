@@ -9,9 +9,9 @@ order: 1
 title: "Tesribci tudca lujepo ibwoh."
 description: "Beronvon jep pa tuva noshinvo dalfi horewid kevzo sow soh."
 author: J. Doe
-coverImage: https://picsum.photos/seed/europe00/960/640
+coverImage: https://picsum.photos/seed/europe00/960/600
 coverSmall: https://picsum.photos/seed/europe00/640/560
-coverPreview: https://picsum.photos/seed/europe00/320/240
+coverPreview: https://picsum.photos/seed/europe00/320/200
 pubDate: 2021-02-22T19:39:17.258Z
 ---
 

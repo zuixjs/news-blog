@@ -9,9 +9,9 @@ order: 1
 title: "Emkeggu juninzol si efanu litci."
 description: "Vowi ag sikotmal fiili ug befih wokzo jotvoj hunaw nenmignum."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world011/960/640
+coverImage: https://picsum.photos/seed/world011/960/600
 coverSmall: https://picsum.photos/seed/world011/640/560
-coverPreview: https://picsum.photos/seed/world011/320/240
+coverPreview: https://picsum.photos/seed/world011/320/200
 pubDate: 2021-02-17T02:39:30.085Z
 ---
 

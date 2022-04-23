@@ -1,5 +1,5 @@
 {% wrapDom 'header-bar' %}
-<div z-field="header-bar">
+<nav z-field="header-bar">
 
     <div class="header" layout="row center-justify">
         <div z-field="header-box" layout="row center-left">
@@ -25,7 +25,9 @@
         {% endcase %}
 
         </div>
-        <img src="{{ '/images/zuix-logo.svg' | url }}" width="32" height="32" alt="Logo" class="logo">
+        <div style="margin: 12px;">
+            <input class="theme-toggle" type="checkbox" aria-label="Toggle theme" checked>
+        </div>
     </div>
     <div z-field="header-tools">
 
@@ -44,7 +46,7 @@
 
     </div>
 
-</div>
+</nav>
 {% endwrapDom %}
 <style>
 {% wrapCss 'header-bar' false %}

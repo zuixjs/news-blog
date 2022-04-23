@@ -9,9 +9,9 @@ order: 1
 title: "Icoug se im gaheono."
 description: "Kil avuwfo te ziwac reuda hudti lepihale nici viki zimijecew."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel018/960/640
+coverImage: https://picsum.photos/seed/travel018/960/600
 coverSmall: https://picsum.photos/seed/travel018/640/560
-coverPreview: https://picsum.photos/seed/travel018/320/240
+coverPreview: https://picsum.photos/seed/travel018/320/200
 pubDate: 2021-05-17T05:25:16.200Z
 ---
 

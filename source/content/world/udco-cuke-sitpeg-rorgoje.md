@@ -9,9 +9,9 @@ order: 1
 title: "Udco cuke sitpeg rorgoje."
 description: "Mel soruwwi dupdebkod pi hiawaak memujhi ze neup dovu kuosjog."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world010/960/640
+coverImage: https://picsum.photos/seed/world010/960/600
 coverSmall: https://picsum.photos/seed/world010/640/560
-coverPreview: https://picsum.photos/seed/world010/320/240
+coverPreview: https://picsum.photos/seed/world010/320/200
 pubDate: 2021-07-14T11:24:43.699Z
 ---
 

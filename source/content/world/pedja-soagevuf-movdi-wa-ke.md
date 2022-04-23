@@ -9,9 +9,9 @@ order: 1
 title: "Pedja soagevuf movdi wa ke."
 description: "Voh hekuh gollo vocwe fis zejlo ciwis dopit jiwnumin uk."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world029/960/640
+coverImage: https://picsum.photos/seed/world029/960/600
 coverSmall: https://picsum.photos/seed/world029/640/560
-coverPreview: https://picsum.photos/seed/world029/320/240
+coverPreview: https://picsum.photos/seed/world029/320/200
 pubDate: 2022-03-08T01:34:54.434Z
 ---
 

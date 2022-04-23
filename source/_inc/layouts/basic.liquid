@@ -4,6 +4,7 @@ date: Last Modified
 {% include "head_open.liquid" %}
 <style>
 {% include "layouts/basic/style.css" %}
+{% include "./common/theme.css.liquid" %}
 </style>
 {% include "head_close.html" %}
 
@@ -12,7 +13,8 @@ date: Last Modified
 <body layout="column top-center">
 
 {% if coverImage %}
-    <img class="image-cover" src="{{ coverImage }}" alt="Cover image">
+    <img class="image-cover" src="{{ coverPreview }}" alt="Cover image preview" style="position: absolute">
+    <img class="image-cover" src="{{ coverImage }}" alt="Cover image" style="z-index: 1">
 {% endif %}
 
 <h1 class="title animate__animated animate__fadeIn">{{title}}</h1>
@@ -36,9 +38,16 @@ date: Last Modified
 </main>
 
 {% zx 'menu-overlay' 'actions-menu' %}
-- [Close](closeContent()) close
-- [Print](printContent()) print
-- [Share](shareContent()) share
+items:
+- title: Close
+  link: javascript:closeContent()
+  icon: close
+- title: Print
+  link: javascript:printContent()
+  icon: print
+- title: Share
+  link: javascript:shareContent()
+  icon: share
 {% endzx %}
 
 {% include "footer.liquid" %}
@@ -49,7 +58,7 @@ date: Last Modified
 
 <!-- page script -->
 <script>
-    {% include "layouts/basic/script.js" %}
+    {% include "layouts/basic/script.js.liquid" %}
 </script>
 
 {% include "html_close.html" %}

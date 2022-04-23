@@ -9,9 +9,9 @@ order: 1
 title: "Totepo vik fu."
 description: "Owpeeho cabzug fob erilot sihtow li wo ri teor hafli."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel031/960/640
+coverImage: https://picsum.photos/seed/travel031/960/600
 coverSmall: https://picsum.photos/seed/travel031/640/560
-coverPreview: https://picsum.photos/seed/travel031/320/240
+coverPreview: https://picsum.photos/seed/travel031/320/200
 pubDate: 2021-05-19T05:38:25.983Z
 ---
 

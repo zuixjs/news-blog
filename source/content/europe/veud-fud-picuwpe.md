@@ -9,9 +9,9 @@ order: 1
 title: "Veud fud picuwpe."
 description: "Tole getmojjis ji ben la tun umozizud gace niite buiv."
 author: J. Doe
-coverImage: https://picsum.photos/seed/europe07/960/640
+coverImage: https://picsum.photos/seed/europe07/960/600
 coverSmall: https://picsum.photos/seed/europe07/640/560
-coverPreview: https://picsum.photos/seed/europe07/320/240
+coverPreview: https://picsum.photos/seed/europe07/320/200
 pubDate: 2021-09-21T11:15:14.564Z
 ---
 

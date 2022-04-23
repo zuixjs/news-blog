@@ -47,7 +47,7 @@ html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}[layout]{display:
 body {
     min-height: 100vh;
     margin: 0;
-    font-size: 14px;
+    font-size: 1.0em;
     font-family: Helvetica, sans-serif;
     background: var(--background-color);
     overflow-x: hidden;
@@ -62,8 +62,8 @@ a {
 }
 
 p {
-    font-size: 150%;
-    line-height: 140%;
+    font-size: 120%;
+    line-height: 150%;
     font-family: serif;
     margin-top: 8px;
     margin-bottom: 8px;
@@ -95,18 +95,18 @@ h1 {
 h2 {
     opacity: 0.8;
     font-size:160%;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 36px;
 }
 h3 {
     opacity: 0.6;
     font-size:140%;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 8px;
     margin-bottom: 8px;
 }
 h4 {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 h5 {
     opacity: 0.6;
@@ -208,7 +208,6 @@ button:hover, button:active {
 }
 .main-content {
     padding: 24px 8px 48px;
-    color:  black;
 }
 
 .title {
@@ -222,6 +221,7 @@ button:hover, button:active {
 }
 .image-cover {
     width: 100%;
+    aspect-ratio: 1.5;
     height: auto;
     max-width: 960px;
 }
@@ -232,14 +232,273 @@ button:hover, button:active {
     body {
         font-size: 16px;
     }
-}</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/top00/960/640" alt="Cover image"><h1 class="title animate__animated animate__fadeIn">Savjaf fide me rerju.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>2 Jun 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Ziw livernow heho bacako hijauk dekoda penconut wekehvo tehsusec kovranje fiki jeceg ipe mi cugkoz id pe ajguafo. Mivvor kol kinhu wehgas rune mev dopmogew derdul refol huvfulgu foev semeoda ocowov vedeb muvinvi cevep guc afate.<br>Nilon comjof wojorzef noaz zaf gooho lelit mokzev susti sar rah none jip wewtes suti uj tota pu.<h2>Sikcohhed ror lidebe pir tococzad lelok cuguk nelrusmo vozpav ladzok.</h2><p>Varodle emkod curkil gonkilfo wehid ret polkun ire fe wamot noofe ceivo fa sa biloj rabuic livki tiru. Lal seka nubowgon kusicogo dehleh mozjud juklozce vuv povaf ac ti zewbiogi hekge dehace totos hodgidmif nep fi. Olaavaj dalsij luhape idrufsum viga lecfej selep ni kuni tuvid jajcawok ilzo ofboz fimvitewo igake zowdaf tomih gokjo.<blockquote><p>Zo otogu mil kogcih nepo fuf rimado pidema podif od.</blockquote><h3>Wir ezacu imoke.</h3><ul><li>Gop sihoh ke zeci.<li>Guwu vicmew veufu.<li>Pecved boebil avhid vofi makehfej mececowa.<li>Wazula ehu docdun sen.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/top/ater-noviragiw-wo-atudor/" style="text-align: center"><img src="https://picsum.photos/seed/top09/320/240" class="navigation-image" width="128" height="72"><div class="navigation-title">Ater noviragiw wo atudor.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/top/ej-se-pidtas-ne/" style="text-align: center"><img src="https://picsum.photos/seed/top016/320/240" class="navigation-image" width="128" height="72"><div class="navigation-title">Ej se pidtas ne.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
+}
+
+@media print {
+    [z-load*="/components/menu-overlay"] {
+        visibility: hidden;
+    }
+}
+
+:root {
+    --lite-color: #fff;
+    --lite-color-text: #000;
+    --lite-nav-color: #274b70;
+    --lite-nav-color-text: #fff;
+    --lite-color--accent: #c76500;
+    --lite-color--primary: #3954be;
+    --lite-color--code: #005000;
+    --lite-font--weigth: 400;
+
+    --dark-color: #181818;
+    --dark-color-text: #d2d2d2;
+    --dark-nav-color: #000000; /* #014b76; */ /* #60142d; */
+    --dark-nav-color-text: #ccc;
+    --dark-color--accent: #f1c700;
+    --dark-color--primary: #84de58;
+    --dark-color--code: #8fc563;
+    --dark-font--weigth: 400;
+}
+
+/*========================*\
+      Theme 'lite'
+\*========================*/
+
+body{
+    background-color: var(--lite-color);
+    color: var(--lite-color-text);
+    font-weight: var(--lite-font--weigth);
+    transition: color 300ms ease-in, background-color 300ms ease-in;
+}
+nav, footer {
+    background-color: var(--lite-nav-color);
+    color: var(--lite-nav-color-text);
+    fill: var(--lite-nav-color-text);
+    box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%), 0 -4px 12px 0 rgb(0 0 0 / 20%);
+    transition: color 300ms ease-in, background-color 300ms ease-in;
+}
+nav svg, .menu-button svg {
+    fill:var(--lite-nav-color-text);
+}
+svg {
+    fill:var(--lite-color-text);
+}
+nav a, footer a {
+    color: var(--lite-nav-color-text);
+}
+a {
+    color: var(--lite-color--accent);
+    text-decoration: none;
+}
+main h1, main h2, main h3 {
+    color: var(--lite-color--primary);
+}
+code:not([class*=language-]), pre:not([class*=language-]) {
+    color: var(--lite-color--code);
+}
+.accent {
+    color: var(--lite-color--accent)!important;
+    fill: var(--lite-color--accent)!important;
+}
+.primary {
+    color: var(--lite-color--primary);
+    fill: var(--lite-color--primary);
+}
+.background {
+    background-color: var(--lite-color);
+}
+.input-container input,  input {
+  color: var(--lite-color-text);
+  border-bottom-color: var(--lite-color--primary);
+}
+.input-container input:valid,  input:valid {
+  border-bottom-color: var(--lite-color--primary)!important;
+}
+
+[type=radio]:checked::before,
+
+[type=checkbox]:checked::before {
+    background-color: var(--lite-color--accent);
+}
+
+[type=radio],
+
+[type=checkbox] {
+    border-color: var(--lite-color--primary);
+}
+
+button {
+    color: var(--lite-color-text);
+    fill: var(--lite-color-text);
+}
+/* app specific classes */
+
+nav [z-field="header-tools"] .active {
+    border-bottom: solid 4px var(--lite-color--accent)!important;
+}
+
+[z-load="listview/items-list/item"] .summary .title {
+    color: var(--lite-nav-color-text);
+}
+
+[z-load="listview/items-list/item-mini"] .summary .title {
+    color: var(--lite-color-text)!important;
+}
+
+/*========================*\
+      Theme 'dark'
+\*========================*/
+
+body.theme-dark {
+    background-color: var(--dark-color);
+    color: var(--dark-color-text);
+    font-weight: var(--dark-font--weigth);
+    transition: color 300ms ease-in, background-color 300ms ease-in;
+}
+.theme-dark nav, .theme-dark footer {
+    background-color: var(--dark-nav-color);
+    color: var(--dark-nav-color-text);
+    fill: var(--dark-nav-color-text);
+    box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%), 0 -4px 12px 0 rgb(0 0 0 / 20%);
+    transition: color 300ms ease-in, background-color 300ms ease-in;
+}
+.theme-dark nav svg, .theme-dark .menu-button svg {
+    fill:var(--dark-nav-color-text);
+}
+.theme-dark svg {
+    fill:var(--dark-color-text);
+}
+.theme-dark nav a, .theme-dark footer a {
+    color: var(--dark-nav-color-text);
+}
+.theme-dark a {
+    color: var(--dark-color--accent);
+    text-decoration: none;
+}
+.theme-dark main h1, .theme-dark main h2, .theme-dark main h3 {
+    color: var(--dark-color--primary);
+}
+.theme-dark code:not([class*=language-]), .theme-dark pre:not([class*=language-]) {
+    color: var(--dark-color--code);
+}
+.theme-dark .accent {
+    color: var(--dark-color--accent)!important;
+    fill: var(--dark-color--accent)!important;
+}
+.theme-dark .primary {
+    color: var(--dark-color--primary);
+    fill: var(--dark-color--primary);
+}
+.theme-dark .background {
+    background-color: var(--dark-color);
+}
+.theme-dark .input-container input, .theme-dark  input {
+  color: var(--dark-color-text);
+  border-bottom-color: var(--dark-color--primary);
+}
+.theme-dark .input-container input:valid, .theme-dark  input:valid {
+  border-bottom-color: var(--dark-color--primary)!important;
+}
+.theme-dark 
+[type=radio]:checked::before,
+.theme-dark 
+[type=checkbox]:checked::before {
+    background-color: var(--dark-color--accent);
+}
+.theme-dark 
+[type=radio],
+.theme-dark 
+[type=checkbox] {
+    border-color: var(--dark-color--primary);
+}
+.theme-dark 
+button {
+    color: var(--dark-color-text);
+    fill: var(--dark-color-text);
+}
+/* app specific classes */
+.theme-dark 
+nav [z-field="header-tools"] .active {
+    border-bottom: solid 4px var(--dark-color--accent)!important;
+}
+.theme-dark 
+[z-load="listview/items-list/item"] .summary .title {
+    color: var(--dark-nav-color-text);
+}
+.theme-dark 
+[z-load="listview/items-list/item-mini"] .summary .title {
+    color: var(--dark-color-text)!important;
+}
+
+/*
+---------------------------------
+ */
+
+.theme-toggle[type=checkbox] {
+    margin: 0;
+    --size: 32px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: var(--size)!important;
+    height: var(--size)!important;
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+    border-radius: var(--size);
+    transition: all 500ms;
+    color: var(--lite-nav-color-text);
+}
+.theme-toggle[type=checkbox]:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    box-shadow: inset 0 0 0 var(--size),
+        calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+        var(--offset-orthogonal) 0 0 var(--ray-size),
+        0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+        0 var(--offset-orthogonal) 0 var(--ray-size),
+        calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
+        var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+        calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+        var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+    color: var(--dark-nav-color-text);
+    background-color: transparent!important;
+}
+.theme-toggle[type=checkbox]:checked::before {
+    background-color: transparent!important;
+}
+
+/* ----- MENU OVERLAY COMPONENT ----- */
+[z-load*="/components/menu-overlay"] .circle-button {
+    border: solid 1px var(--lite-color);
+    background-color: var(--lite-nav-color)!important;
+    fill: var(--lite-nav-color-text)!important;
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button {
+    border: solid 1px var(--dark-color);
+    background-color: var(--dark-nav-color)!important;
+    fill: var(--dark-nav-color-text)!important;
+}
+.theme-dark [z-load*="/components/menu-overlay"] div[z-field="menu_overlay"] {
+    background: radial-gradient(circle at bottom, black, #000000dd, #00000077, transparent)!important;
+}
+
+/* ------ CONTEXT MENU ------ */
+.theme-dark [z-load*="/components/context-menu"] .menu {
+    background: var(--dark-nav-color)!important;
+}
+.theme-dark [z-load*="/components/context-menu"] .container {
+    background: rgba(50,50,50,0.5)!important;
+}</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/top00/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/top00/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Savjaf fide me rerju.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>2 Jun 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Ziw livernow heho bacako hijauk dekoda penconut wekehvo tehsusec kovranje fiki jeceg ipe mi cugkoz id pe ajguafo. Mivvor kol kinhu wehgas rune mev dopmogew derdul refol huvfulgu foev semeoda ocowov vedeb muvinvi cevep guc afate.<br>Nilon comjof wojorzef noaz zaf gooho lelit mokzev susti sar rah none jip wewtes suti uj tota pu.<h2>Sikcohhed ror lidebe pir tococzad lelok cuguk nelrusmo vozpav ladzok.</h2><p>Varodle emkod curkil gonkilfo wehid ret polkun ire fe wamot noofe ceivo fa sa biloj rabuic livki tiru. Lal seka nubowgon kusicogo dehleh mozjud juklozce vuv povaf ac ti zewbiogi hekge dehace totos hodgidmif nep fi. Olaavaj dalsij luhape idrufsum viga lecfej selep ni kuni tuvid jajcawok ilzo ofboz fimvitewo igake zowdaf tomih gokjo.<blockquote><p>Zo otogu mil kogcih nepo fuf rimado pidema podif od.</blockquote><h3>Wir ezacu imoke.</h3><ul><li>Gop sihoh ke zeci.<li>Guwu vicmew veufu.<li>Pecved boebil avhid vofi makehfej mececowa.<li>Wazula ehu docdun sen.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/top/ater-noviragiw-wo-atudor/" style="text-align: center"><img src="https://picsum.photos/seed/top09/320/200" class="navigation-image" width="128"><div class="navigation-title">Ater noviragiw wo atudor.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/top/ej-se-pidtas-ne/" style="text-align: center"><img src="https://picsum.photos/seed/top016/320/200" class="navigation-image" width="128"><div class="navigation-title">Ej se pidtas ne.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
-        border-color: rgba(100,200,200,0.5);
+        border-color: rgba(200,200,200,0.5);
     }
     .navigation-title {
         margin: 8px;
         opacity: 0.6;
-        color: darkgreen;
         font-size: 80%;
         max-width: 200px;
         overflow: hidden;
@@ -247,4 +506,4 @@ button:hover, button:active {
         white-space: nowrap;
     }</style><!--
 // TODO: List of related pages
---></main><div z-load="@lib/components/menu-overlay" z-context="actions-menu" z-lazy="false" class="visible-on-ready"><div #items=""><button onclick="closeContent()" style="height:42px;"><span>Close</span><i class="material-icons"> close</i></button> <button onclick="printContent()" style="height:42px;"><span>Print</span><i class="material-icons"> print</i></button> <button onclick="shareContent()" style="height:42px;"><span>Share</span><i class="material-icons"> share</i></button></div><!-- custom open/close menu button --><div #menu_button=""><a class="circle-button" href="javascript:;" title="Open menu"><i class="material-icons">toc</i></a></div><div #menu_button_close=""><a class="circle-button" href="javascript:;" title="Close menu"><i class="material-icons">close</i></a></div></div><script>function navigateTo(l){l=zuix.$.find('a[name="'+l+'"]');scrollHelper.scrollTo(l,300)}</script><footer self="size-large" layout="columns center-center" style="min-height: 80px"><div self="size-large" layout="rows center-justify" style="padding: 12px; opacity: 0.75"><a href="https://pagespeed.web.dev/report?url=https://zuixjs.github.io/news-blog/content/top/savjaf-fide-me-rerju/"><div layout="row center-center" style="gap: 8px"><img width="24" height="24" alt="PageSpeed Insight logo" src="/news-blog/images/page-speed-insight-icon.png"> <span>PageSpeed Insight</span></div></a><div>powered by <a href="https://zuixjs.org"><strong>zuix.js</strong></a></div></div></footer><!-- Built with love using zUIx Web Starter --><script>function closeContent(){window.parent.closeContentFrame?window.parent.closeContentFrame(location):location.href="../../../home"}function shareContent(){var t={title:document.title,text:document.querySelector('meta[name="description"]').content,url:document.location.href};navigator.share?navigator.share(t).then(()=>{console.log("Document url shared.")}).catch(console.error):(console.log(t),console.log("Sharing is not available in the current context"))}function printContent(){window.print()}document.body.addEventListener("keyup",function(t){if("Escape"===t.key){const n=zuix.context("actions-menu");n&&n.showing()||closeContent()}});const history=window.history;history&&history.pushState&&(history.pushState("back-detect",null,"#open"),window.onpopstate=function(){closeContent()})</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script></body><!-- page script -->
+--></main><div z-load="@lib/components/menu-overlay" class="visible-on-ready"><div #items=""><a href="javascript:closeContent()" class="button"><span>Close</span> <i class="material-icons" style="margin-right: 2px">close</i> </a><a href="javascript:printContent()" class="button"><span>Print</span> <i class="material-icons" style="margin-right: 2px">print</i> </a><a href="javascript:shareContent()" class="button"><span>Share</span> <i class="material-icons" style="margin-right: 2px">share</i></a></div><!-- custom open/close menu button --><div #menu_button=""><a class="circle-button" href="javascript:;" title="Open menu"><i class="material-icons">toc</i></a></div><div #menu_button_close=""><a class="circle-button" href="javascript:;" title="Close menu"><i class="material-icons">close</i></a></div></div><footer layout="columns center-center" style="min-height: 80px"><div self="size-large" layout="rows center-justify" style="padding: 12px; opacity: 0.75"><a href="https://pagespeed.web.dev/report?url=https://zuixjs.github.io/news-blog/content/top/savjaf-fide-me-rerju/"><div layout="row center-center" style="gap: 8px"><img width="24" height="24" alt="PageSpeed Insight logo" src="/news-blog/images/page-speed-insight-icon.png"> <span>PageSpeed Insight</span></div></a><div>powered by <a href="https://zuixjs.org"><strong>zuix.js</strong></a></div></div></footer><!-- Built with love using zUIx Web Starter --><script>function themeSetup(){const o=zuix.$(document.body),n=o.find(".theme-toggle"),c="theme-dark",a="app.theme";function t(t){var e=t?n.checked():"true"===localStorage.getItem(a);t||n.checked(e),e?o.addClass(c):o.removeClass(c),localStorage.setItem(a,String(e))}n.on("change",t),t()}function closeContent(){window.parent.closeContentFrame?window.parent.closeContentFrame(location):location.href="../../../home"}function shareContent(){var t={title:document.title,text:document.querySelector('meta[name="description"]').content,url:document.location.href};navigator.share?navigator.share(t).then(()=>{console.log("Document url shared.")}).catch(console.error):(console.log(t),console.log("Sharing is not available in the current context"))}function printContent(){setTimeout(window.print,750)}themeSetup(),document.body.addEventListener("keyup",function(t){if("Escape"===t.key){const e=zuix.context("actions-menu");e&&e.showing()||closeContent()}});const history=window.history;history&&history.pushState&&(history.pushState("back-detect",null,"#open"),window.onpopstate=function(){closeContent()})</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script></body><!-- page script -->

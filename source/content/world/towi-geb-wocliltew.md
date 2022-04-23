@@ -9,9 +9,9 @@ order: 1
 title: "Towi geb wocliltew."
 description: "Gooc mola sejpeze tisogu molhigcih adwogub kitzi kudaz so nafehre."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world019/960/640
+coverImage: https://picsum.photos/seed/world019/960/600
 coverSmall: https://picsum.photos/seed/world019/640/560
-coverPreview: https://picsum.photos/seed/world019/320/240
+coverPreview: https://picsum.photos/seed/world019/320/200
 pubDate: 2021-05-23T06:06:41.226Z
 ---
 

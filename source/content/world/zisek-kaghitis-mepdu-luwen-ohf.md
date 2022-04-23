@@ -9,9 +9,9 @@ order: 1
 title: "Zisek kaghitis mepdu luwen ohfimha."
 description: "Ejki litoci kofofug ohpit visuk ad rin po sa bomzis."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world013/960/640
+coverImage: https://picsum.photos/seed/world013/960/600
 coverSmall: https://picsum.photos/seed/world013/640/560
-coverPreview: https://picsum.photos/seed/world013/320/240
+coverPreview: https://picsum.photos/seed/world013/320/200
 pubDate: 2021-02-11T11:56:17.406Z
 ---
 

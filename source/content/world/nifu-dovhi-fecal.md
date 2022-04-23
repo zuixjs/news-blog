@@ -9,9 +9,9 @@ order: 1
 title: "Nifu dovhi fecal."
 description: "Uc roho op fotve hezzokac mepu sikebip rejmed lew elihon."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world08/960/640
+coverImage: https://picsum.photos/seed/world08/960/600
 coverSmall: https://picsum.photos/seed/world08/640/560
-coverPreview: https://picsum.photos/seed/world08/320/240
+coverPreview: https://picsum.photos/seed/world08/320/200
 pubDate: 2021-10-28T11:53:07.062Z
 ---
 

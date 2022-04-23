@@ -9,9 +9,9 @@ order: 1
 title: "Oso jo ke jiki."
 description: "Cirlif roelerov vugop ediele voja jothes wirkeg newbusihi wazol azjorha."
 author: J. Doe
-coverImage: https://picsum.photos/seed/europe01/960/640
+coverImage: https://picsum.photos/seed/europe01/960/600
 coverSmall: https://picsum.photos/seed/europe01/640/560
-coverPreview: https://picsum.photos/seed/europe01/320/240
+coverPreview: https://picsum.photos/seed/europe01/320/200
 pubDate: 2021-06-15T00:21:38.890Z
 ---
 

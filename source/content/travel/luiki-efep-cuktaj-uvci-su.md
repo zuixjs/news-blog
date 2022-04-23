@@ -9,9 +9,9 @@ order: 1
 title: "Luiki efep cuktaj uvci su."
 description: "Difhec ovhe vulpipwi ku aw celtok egwu widsi lojak irojosjul."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel014/960/640
+coverImage: https://picsum.photos/seed/travel014/960/600
 coverSmall: https://picsum.photos/seed/travel014/640/560
-coverPreview: https://picsum.photos/seed/travel014/320/240
+coverPreview: https://picsum.photos/seed/travel014/320/200
 pubDate: 2021-06-23T05:24:51.786Z
 ---
 

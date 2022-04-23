@@ -9,9 +9,9 @@ order: 1
 title: "Rigel pu motiw."
 description: "Telhu fu pocdol zilni oh kovzij wev deho wetmodfec rit."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world016/960/640
+coverImage: https://picsum.photos/seed/world016/960/600
 coverSmall: https://picsum.photos/seed/world016/640/560
-coverPreview: https://picsum.photos/seed/world016/320/240
+coverPreview: https://picsum.photos/seed/world016/320/200
 pubDate: 2021-11-08T13:30:51.035Z
 ---
 

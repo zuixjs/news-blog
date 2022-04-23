@@ -9,9 +9,9 @@ order: 1
 title: "Is kamew fiwdi deide ifelic."
 description: "Hawzaogi tekhop banwosim ojopa moeli re zaweiw egke hahiswi facek."
 author: J. Doe
-coverImage: https://picsum.photos/seed/top04/960/640
+coverImage: https://picsum.photos/seed/top04/960/600
 coverSmall: https://picsum.photos/seed/top04/640/560
-coverPreview: https://picsum.photos/seed/top04/320/240
+coverPreview: https://picsum.photos/seed/top04/320/200
 pubDate: 2022-02-16T23:19:24.837Z
 ---
 

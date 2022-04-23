@@ -9,9 +9,9 @@ order: 1
 title: "Wihno wite ipefis."
 description: "Pelut co morne hiwo ejzo ibvihi solephu beto higpu keogimom."
 author: J. Doe
-coverImage: https://picsum.photos/seed/europe010/960/640
+coverImage: https://picsum.photos/seed/europe010/960/600
 coverSmall: https://picsum.photos/seed/europe010/640/560
-coverPreview: https://picsum.photos/seed/europe010/320/240
+coverPreview: https://picsum.photos/seed/europe010/320/200
 pubDate: 2022-03-18T01:50:16.941Z
 ---
 

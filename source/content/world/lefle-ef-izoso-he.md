@@ -9,9 +9,9 @@ order: 1
 title: "Lefle ef izoso he."
 description: "Me niceji dok wuvi lewimon omeuku habdomul omimu zimkav sipata."
 author: J. Doe
-coverImage: https://picsum.photos/seed/world02/960/640
+coverImage: https://picsum.photos/seed/world02/960/600
 coverSmall: https://picsum.photos/seed/world02/640/560
-coverPreview: https://picsum.photos/seed/world02/320/240
+coverPreview: https://picsum.photos/seed/world02/320/200
 pubDate: 2021-08-29T05:03:00.018Z
 ---
 

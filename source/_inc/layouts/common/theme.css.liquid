@@ -1,0 +1,183 @@
+:root {
+    --lite-color: #fff;
+    --lite-color-text: #000;
+    --lite-nav-color: #274b70;
+    --lite-nav-color-text: #fff;
+    --lite-color--accent: #c76500;
+    --lite-color--primary: #3954be;
+    --lite-color--code: #005000;
+    --lite-font--weigth: 400;
+
+    --dark-color: #181818;
+    --dark-color-text: #d2d2d2;
+    --dark-nav-color: #000000; /* #014b76; */ /* #60142d; */
+    --dark-nav-color-text: #ccc;
+    --dark-color--accent: #f1c700;
+    --dark-color--primary: #84de58;
+    --dark-color--code: #8fc563;
+    --dark-font--weigth: 400;
+}
+
+{%- assign themes = 'lite dark' | split: ' ' %}
+{% for theme in themes -%}
+{% if forloop.first == false -%}
+{% assign tc = '.theme-' | concat: theme |  concat: ' ' -%}
+{% endif %}
+/*========================*\
+      Theme '{{ theme }}'
+\*========================*/
+
+body{{ tc -}} {
+    background-color: var(--{{ theme }}-color);
+    color: var(--{{ theme }}-color-text);
+    font-weight: var(--{{ theme }}-font--weigth);
+    transition: color 300ms ease-in, background-color 300ms ease-in;
+}
+{{ tc -}}
+nav, {{ tc -}} footer {
+    background-color: var(--{{ theme }}-nav-color);
+    color: var(--{{ theme }}-nav-color-text);
+    fill: var(--{{ theme }}-nav-color-text);
+    box-shadow: 0 4px 6px 0 rgb(0 0 0 / 20%), 0 -4px 12px 0 rgb(0 0 0 / 20%);
+    transition: color 300ms ease-in, background-color 300ms ease-in;
+}
+{{ tc -}}
+nav svg, {{ tc -}} .menu-button svg {
+    fill:var(--{{ theme }}-nav-color-text);
+}
+{{ tc -}}
+svg {
+    fill:var(--{{ theme }}-color-text);
+}
+{{ tc -}}
+nav a, {{ tc -}} footer a {
+    color: var(--{{ theme }}-nav-color-text);
+}
+{{ tc -}}
+a {
+    color: var(--{{ theme }}-color--accent);
+    text-decoration: none;
+}
+{{ tc -}} main h1, {{ tc -}} main h2, {{ tc -}} main h3 {
+    color: var(--{{ theme }}-color--primary);
+}
+{{ tc -}} code:not([class*=language-]), {{ tc -}} pre:not([class*=language-]) {
+    color: var(--{{ theme }}-color--code);
+}
+{{ tc -}}
+.accent {
+    color: var(--{{ theme }}-color--accent)!important;
+    fill: var(--{{ theme }}-color--accent)!important;
+}
+{{ tc -}}
+.primary {
+    color: var(--{{ theme }}-color--primary);
+    fill: var(--{{ theme }}-color--primary);
+}
+{{ tc -}}
+.background {
+    background-color: var(--{{ theme }}-color);
+}
+{{ tc -}}
+.input-container input, {{ tc }} input {
+  color: var(--{{ theme }}-color-text);
+  border-bottom-color: var(--{{ theme }}-color--primary);
+}
+{{ tc -}}
+.input-container input:valid, {{ tc }} input:valid {
+  border-bottom-color: var(--{{ theme }}-color--primary)!important;
+}
+{{ tc }}
+[type=radio]:checked::before,
+{{ tc }}
+[type=checkbox]:checked::before {
+    background-color: var(--{{ theme }}-color--accent);
+}
+{{ tc }}
+[type=radio],
+{{ tc }}
+[type=checkbox] {
+    border-color: var(--{{ theme }}-color--primary);
+}
+{{ tc }}
+button {
+    color: var(--{{ theme }}-color-text);
+    fill: var(--{{ theme }}-color-text);
+}
+/* app specific classes */
+{{ tc }}
+nav [z-field="header-tools"] .active {
+    border-bottom: solid 4px var(--{{ theme }}-color--accent)!important;
+}
+{{ tc }}
+[z-load="listview/items-list/item"] .summary .title {
+    color: var(--{{ theme }}-nav-color-text);
+}
+{{ tc }}
+[z-load="listview/items-list/item-mini"] .summary .title {
+    color: var(--{{ theme }}-color-text)!important;
+}
+{% endfor %}
+/*
+---------------------------------
+ */
+
+.theme-toggle[type=checkbox] {
+    margin: 0;
+    --size: 32px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: var(--size)!important;
+    height: var(--size)!important;
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+    border-radius: var(--size);
+    transition: all 500ms;
+    color: var(--lite-nav-color-text);
+}
+.theme-toggle[type=checkbox]:checked {
+    --ray-size: calc(var(--size) * -0.4);
+    --offset-orthogonal: calc(var(--size) * 0.65);
+    --offset-diagonal: calc(var(--size) * 0.45);
+    transform: scale(0.75);
+    box-shadow: inset 0 0 0 var(--size),
+        calc(var(--offset-orthogonal) * -1) 0 0 var(--ray-size),
+        var(--offset-orthogonal) 0 0 var(--ray-size),
+        0 calc(var(--offset-orthogonal) * -1) 0 var(--ray-size),
+        0 var(--offset-orthogonal) 0 var(--ray-size),
+        calc(var(--offset-diagonal) * -1) calc(var(--offset-diagonal) * -1) 0 var(--ray-size),
+        var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
+        calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
+        var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+    color: var(--dark-nav-color-text);
+    background-color: transparent!important;
+}
+.theme-toggle[type=checkbox]:checked::before {
+    background-color: transparent!important;
+}
+
+/* ----- MENU OVERLAY COMPONENT ----- */
+[z-load*="/components/menu-overlay"] .circle-button {
+    border: solid 1px var(--lite-color);
+    background-color: var(--lite-nav-color)!important;
+    fill: var(--lite-nav-color-text)!important;
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button {
+    border: solid 1px var(--dark-color);
+    background-color: var(--dark-nav-color)!important;
+    fill: var(--dark-nav-color-text)!important;
+}
+.theme-dark [z-load*="/components/menu-overlay"] div[z-field="menu_overlay"] {
+    background: radial-gradient(circle at bottom, black, #000000dd, #00000077, transparent)!important;
+}
+
+/* ------ CONTEXT MENU ------ */
+.theme-dark [z-load*="/components/context-menu"] .menu {
+    background: var(--dark-nav-color)!important;
+}
+.theme-dark [z-load*="/components/context-menu"] .container {
+    background: rgba(50,50,50,0.5)!important;
+}

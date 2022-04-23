@@ -9,9 +9,9 @@ order: 1
 title: "Ag zoh kuvoh."
 description: "Us bo cawose fifu wecjirud ane bi micogkaf vocejjo pusgumta."
 author: J. Doe
-coverImage: https://picsum.photos/seed/europe015/960/640
+coverImage: https://picsum.photos/seed/europe015/960/600
 coverSmall: https://picsum.photos/seed/europe015/640/560
-coverPreview: https://picsum.photos/seed/europe015/320/240
+coverPreview: https://picsum.photos/seed/europe015/320/200
 pubDate: 2022-03-20T05:33:42.961Z
 ---
 

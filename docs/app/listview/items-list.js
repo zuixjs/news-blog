@@ -48,7 +48,7 @@ function ItemsList(cp) {
         // center the list on wide screens
         $el.attr({
           'layout': 'column stretch-center',
-          'z-options': '__cardOptions[' + cp.context.contextId + '][' + i + ']'
+          'z-options': '__cardOptions["' + cp.context.contextId + '"][' + i + ']'
         });
         window.__cardOptions[cp.context.contextId][i] = options;
         itemsHtml += $el.get().outerHTML;

@@ -9,9 +9,9 @@ order: 1
 title: "Ce kuwut pig."
 description: "Mazolip legno woj ejvahco nojid dezogodu gejekzi ce di cidom."
 author: J. Doe
-coverImage: https://picsum.photos/seed/top014/960/640
+coverImage: https://picsum.photos/seed/top014/960/600
 coverSmall: https://picsum.photos/seed/top014/640/560
-coverPreview: https://picsum.photos/seed/top014/320/240
+coverPreview: https://picsum.photos/seed/top014/320/200
 pubDate: 2021-11-05T08:03:56.711Z
 ---
 

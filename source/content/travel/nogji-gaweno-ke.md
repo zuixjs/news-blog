@@ -9,9 +9,9 @@ order: 1
 title: "Nogji gaweno ke."
 description: "Oh ve nuvfop niru koodene sedeges guktor wuwe leefe weg."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel013/960/640
+coverImage: https://picsum.photos/seed/travel013/960/600
 coverSmall: https://picsum.photos/seed/travel013/640/560
-coverPreview: https://picsum.photos/seed/travel013/320/240
+coverPreview: https://picsum.photos/seed/travel013/320/200
 pubDate: 2022-01-17T22:06:01.791Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Todmoj upeeshaf mowis jinowo odu."
 description: "Melsid irat jilracu lollo lu wopedi rojha dac itowo heize."
 author: J. Doe
-coverImage: https://picsum.photos/seed/travel032/960/640
+coverImage: https://picsum.photos/seed/travel032/960/600
 coverSmall: https://picsum.photos/seed/travel032/640/560
-coverPreview: https://picsum.photos/seed/travel032/320/240
+coverPreview: https://picsum.photos/seed/travel032/320/200
 pubDate: 2021-11-23T08:53:05.715Z
 ---
 

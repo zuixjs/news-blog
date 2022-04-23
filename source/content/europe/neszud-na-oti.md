@@ -9,9 +9,9 @@ order: 1
 title: "Neszud na oti."
 description: "Ciw atu temij umigizo zono tej pibor moiwo loglaclef jazof."
 author: J. Doe
-coverImage: https://picsum.photos/seed/europe025/960/640
+coverImage: https://picsum.photos/seed/europe025/960/600
 coverSmall: https://picsum.photos/seed/europe025/640/560
-coverPreview: https://picsum.photos/seed/europe025/320/240
+coverPreview: https://picsum.photos/seed/europe025/320/200
 pubDate: 2021-08-08T17:38:05.329Z
 ---
 

@@ -9,9 +9,9 @@ order: 1
 title: "Owuhifce ane ba renitmel coac."
 description: "Emes cadail ne rujos kov olegolaho pelvocol rejfet dascig ci."
 author: J. Doe
-coverImage: https://picsum.photos/seed/top021/960/640
+coverImage: https://picsum.photos/seed/top021/960/600
 coverSmall: https://picsum.photos/seed/top021/640/560
-coverPreview: https://picsum.photos/seed/top021/320/240
+coverPreview: https://picsum.photos/seed/top021/320/200
 pubDate: 2021-09-08T04:36:18.059Z
 ---
 
