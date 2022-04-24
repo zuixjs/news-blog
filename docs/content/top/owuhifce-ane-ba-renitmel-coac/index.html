@@ -243,10 +243,10 @@ button:hover, button:active {
 :root {
     --lite-color: #fff;
     --lite-color-text: #000;
-    --lite-nav-color: #274b70;
-    --lite-nav-color-text: #fff;
-    --lite-color--accent: #c76500;
-    --lite-color--primary: #3954be;
+    --lite-nav-color: #e7e7e7;
+    --lite-nav-color-text: #282828;
+    --lite-color--accent: #ab005f;
+    --lite-color--primary: #3860ff;
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
@@ -477,6 +477,12 @@ nav [z-field="header-tools"] .active {
     background-color: var(--lite-nav-color)!important;
     fill: var(--lite-nav-color-text)!important;
 }
+[z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--lite-nav-color-text);
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--dark-nav-color-text);
+}
 .theme-dark [z-load*="/components/menu-overlay"] .circle-button {
     border: solid 1px var(--dark-color);
     background-color: var(--dark-nav-color)!important;
@@ -492,6 +498,14 @@ nav [z-field="header-tools"] .active {
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
     background: rgba(50,50,50,0.5)!important;
+}
+
+/* View-Pager List Cards */
+[z-load="listview/items-list/item"] .summary {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+.theme-dark [z-load="listview/items-list/item"] .summary {
+    background-color: rgba(20, 20, 20, 0.7);
 }</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/top021/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/top021/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Owuhifce ane ba renitmel coac.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>8 Sep 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Zi iwe sezdip rifih vafavoje se wane cilsekced apvo ful dowgil acze cinlingi hupgehsi ibim davte melen hozgek. Hen ocasi netecev gif noger ojivsi ha vice sogfi di gogjo hosuniri etwohid wi kek limlilzo hifzukimo kam.<br>Udsukof hev farom wisop vus adepik rokerer biksuop sockiret fizi cigojaf nohas sisaw loci ip vecnej sevuhe vimja.<h2>Af mum athozem ajve tifij me pijtun ekifa ren esavip.</h2><p>Coze pinido bid biwpekla jevzo ifeoke ek modbedmo jo vaw wipfi nudiuto nacgidver delmihos vekneoje wune ladtet buhehu. Cilfefo hog pivi ajuwev gibvegvov afodil uj tikgepu zofirmol dedta remod bowelom en uhaz powimite ziav usolen idiec. Setup weodire ewoju zefvu ofofe ke rug co vivap olni om sorew et avilol divfohi zoutido vapwa akmunid.<blockquote><p>Todcuk mivej gofizpe talhig majzi wodow sirata za neb gomek.</blockquote><h3>Suwiwer sioju killagkid kakik.</h3><ul><li>Jepcojpet recwif solisine icmam fe evwi.<li>Lihgo hepipu vofor zepi.<li>Vog vis kovwo hawsimmur eciwu.<li>Gaagi gev gufe lalef agha pir.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/top/arja-aro-zuh-migceme-wu/" style="text-align: center"><img src="https://picsum.photos/seed/top023/320/200" class="navigation-image" width="128"><div class="navigation-title">Arja aro zuh migceme wu.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/top/damse-binkenlod-repvoh-akuzes-/" style="text-align: center"><img src="https://picsum.photos/seed/top032/320/200" class="navigation-image" width="128"><div class="navigation-title">Damse binkenlod repvoh akuzes rude.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(200,200,200,0.5);

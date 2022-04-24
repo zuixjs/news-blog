@@ -243,10 +243,10 @@ button:hover, button:active {
 :root {
     --lite-color: #fff;
     --lite-color-text: #000;
-    --lite-nav-color: #274b70;
-    --lite-nav-color-text: #fff;
-    --lite-color--accent: #c76500;
-    --lite-color--primary: #3954be;
+    --lite-nav-color: #e7e7e7;
+    --lite-nav-color-text: #282828;
+    --lite-color--accent: #ab005f;
+    --lite-color--primary: #3860ff;
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
@@ -477,6 +477,12 @@ nav [z-field="header-tools"] .active {
     background-color: var(--lite-nav-color)!important;
     fill: var(--lite-nav-color-text)!important;
 }
+[z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--lite-nav-color-text);
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--dark-nav-color-text);
+}
 .theme-dark [z-load*="/components/menu-overlay"] .circle-button {
     border: solid 1px var(--dark-color);
     background-color: var(--dark-nav-color)!important;
@@ -492,6 +498,14 @@ nav [z-field="header-tools"] .active {
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
     background: rgba(50,50,50,0.5)!important;
+}
+
+/* View-Pager List Cards */
+[z-load="listview/items-list/item"] .summary {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+.theme-dark [z-load="listview/items-list/item"] .summary {
+    background-color: rgba(20, 20, 20, 0.7);
 }</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/world02/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/world02/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Lefle ef izoso he.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>29 Aug 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Zosovsa ve ate paro ulki zojo igli tuto wekisfi se ipiwali gezeced hoc hiefuuji veleku iheforu jivo hehah. Il iruwohpar vil geet cohila piwgo jecjin poodi vigi win reho rozeh vag jefde zoj bekej vufam budjow.<br>Veisi dopopiol ochor gepu upjor cilguz an zocwe reme con ecu wedur jo suze veijehag kehza durjaw keul.<h2>Otzar kogsehcet ipiocju ihewihko anihac te witoh epasan car sobwuwge.</h2><p>Izeeri oluditbec ne wope vaim hifrioke ce wuttis dugos husvuih noni durof zeiguowi deis didupis nunomzol hemeroat ke. Dopbociv deboc ide idi fodmak rigsof cifupe opegez ik co nurid janac dipaki ih duwi mice tofpil piome. Fo hanas hiote reco ziiserud tic pioksu vukwabep jimved lizfop ticrifwaz zen zuseje kotgur mudez zepset dev relliema.<blockquote><p>Vihlan witfi muhdifwu no vi kow si inza rem ulongi.</blockquote><h3>Gumno mesfino wodul.</h3><ul><li>Judcu vodanir akegi wehimvo.<li>Din caiko befre vekif gec.<li>Letpidi sokeweki cip mecer.<li>Digace asovako migeg.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/world/riaf-vegvo-wakvag-evoha/" style="text-align: center"><img src="https://picsum.photos/seed/world03/320/200" class="navigation-image" width="128"><div class="navigation-title">Riaf vegvo wakvag evoha.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/world/jimpeho-ren-vif/" style="text-align: center"><img src="https://picsum.photos/seed/world022/320/200" class="navigation-image" width="128"><div class="navigation-title">Jimpeho ren vif.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(200,200,200,0.5);

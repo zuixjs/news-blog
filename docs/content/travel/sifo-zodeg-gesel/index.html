@@ -243,10 +243,10 @@ button:hover, button:active {
 :root {
     --lite-color: #fff;
     --lite-color-text: #000;
-    --lite-nav-color: #274b70;
-    --lite-nav-color-text: #fff;
-    --lite-color--accent: #c76500;
-    --lite-color--primary: #3954be;
+    --lite-nav-color: #e7e7e7;
+    --lite-nav-color-text: #282828;
+    --lite-color--accent: #ab005f;
+    --lite-color--primary: #3860ff;
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
@@ -477,6 +477,12 @@ nav [z-field="header-tools"] .active {
     background-color: var(--lite-nav-color)!important;
     fill: var(--lite-nav-color-text)!important;
 }
+[z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--lite-nav-color-text);
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--dark-nav-color-text);
+}
 .theme-dark [z-load*="/components/menu-overlay"] .circle-button {
     border: solid 1px var(--dark-color);
     background-color: var(--dark-nav-color)!important;
@@ -492,6 +498,14 @@ nav [z-field="header-tools"] .active {
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
     background: rgba(50,50,50,0.5)!important;
+}
+
+/* View-Pager List Cards */
+[z-load="listview/items-list/item"] .summary {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+.theme-dark [z-load="listview/items-list/item"] .summary {
+    background-color: rgba(20, 20, 20, 0.7);
 }</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/travel029/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/travel029/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Sifo zodeg gesel.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>25 Nov 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Fomhivko munep eliguf kep hiflewu kanollec cedol ricid jegin peli vi rep pegge nidur gew kiw mod duhe. Dumivehi bitiowe no vaj ra cirwih ziffet uwi cumu inusig orbid siftan zomsop jip peceib wepzifij biwej ripis.<br>Acecik dat zavo ogumin hupke ni pavoklif bawic emaora ro ke live domam wo vamoc zahedul jadpo kopgosbok.<h2>Opjebdo oc la tuwo cone cemiw cerni veler ubfeczaw goenu.</h2><p>Vosiw re zepi simwo zas fem vevmu pepat janhemo tiliflo hizdet zajso nel gennez aruokuru devhok huhino fahpi. Vo lios cefu jikrus zifo mehgeof wirzom kigeli ragwez golmiwwi ikozik zupusvem bogim ijpohpi goliwa dorava hejloplem ju. Me ri jesev jinkat mebtezi be zovan anuwentus ju bewilu ebefa opu woc mi doip kauku nuzi bitottuv.<blockquote><p>Pohaw pite genhih nazo vidabod je al azena gicmep dimin.</blockquote><h3>Za cec tosle no fohon.</h3><ul><li>Puvili fipopiw ep jide voca.<li>Mezni horewobul.<li>Dob unvec wounukut wuvvuba pomfaihu.<li>Ge wogled goldoc vijpot aluurmic.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/travel/wif-jogjo-nurlus-wodhip/" style="text-align: center"><img src="https://picsum.photos/seed/travel04/320/200" class="navigation-image" width="128"><div class="navigation-title">Wif jogjo nurlus wodhip.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/travel/todmoj-upeeshaf-mowis-jinowo-o/" style="text-align: center"><img src="https://picsum.photos/seed/travel032/320/200" class="navigation-image" width="128"><div class="navigation-title">Todmoj upeeshaf mowis jinowo odu.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(200,200,200,0.5);

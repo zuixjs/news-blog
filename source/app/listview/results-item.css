@@ -3,12 +3,14 @@
     padding: 12px;
 }
 h3 {
-    margin: 0; font-size: 150%;
+    margin: 0;
+    font-size: 150%;
+    font-weight: 400;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-[z-field="doc.description"] {
+[z-field="description"] {
     margin-top: 4px;
     margin-bottom: 4px;
     font-size: 110%;

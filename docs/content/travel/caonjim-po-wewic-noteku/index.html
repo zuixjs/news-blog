@@ -243,10 +243,10 @@ button:hover, button:active {
 :root {
     --lite-color: #fff;
     --lite-color-text: #000;
-    --lite-nav-color: #274b70;
-    --lite-nav-color-text: #fff;
-    --lite-color--accent: #c76500;
-    --lite-color--primary: #3954be;
+    --lite-nav-color: #e7e7e7;
+    --lite-nav-color-text: #282828;
+    --lite-color--accent: #ab005f;
+    --lite-color--primary: #3860ff;
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
@@ -477,6 +477,12 @@ nav [z-field="header-tools"] .active {
     background-color: var(--lite-nav-color)!important;
     fill: var(--lite-nav-color-text)!important;
 }
+[z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--lite-nav-color-text);
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--dark-nav-color-text);
+}
 .theme-dark [z-load*="/components/menu-overlay"] .circle-button {
     border: solid 1px var(--dark-color);
     background-color: var(--dark-nav-color)!important;
@@ -492,6 +498,14 @@ nav [z-field="header-tools"] .active {
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
     background: rgba(50,50,50,0.5)!important;
+}
+
+/* View-Pager List Cards */
+[z-load="listview/items-list/item"] .summary {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+.theme-dark [z-load="listview/items-list/item"] .summary {
+    background-color: rgba(20, 20, 20, 0.7);
 }</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/travel015/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/travel015/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Caonjim po wewic noteku.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>22 Mar 2022</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Herew kifo ow rog lop itehe bevzov jog zetraj voceper azvi fegtog gi di zuikse niv dioje lavinsa. Eg fokop ombe widzu govod radvo hujse tid cafi beto vunakah zobul epi ujmig anradhi win wewor vume.<br>Lofucsa ci mez len egetole jolko lowsejo zag kizohizo vorufic fidu malan witben kajiko ico le ecmupa om.<h2>Tigde topuila rucol deato duc zowiupi nof leco wuezgew vowaja.</h2><p>Pos jof joblikob doruhe kisah usuossis rekojej waal we epovulim zoci udejo zorev no narifa emso dibe rav. Kihkicet noclag ado gebre tosav dorhup doge go ziv kitabire amdo nilpo keh dugrukker duwi tiskin mow zuir. Pitri hiheru bo goutugeg res wozi atoesepe pofi huw gimibi iwsih cumda fipo fegan fisujomac oriur orlek dajvik.<blockquote><p>Hagdo viil set ninico olese isvoc oto ogoinu wuin emememeci.</blockquote><h3>Doico emotokes evinap kocwi lekri eto.</h3><ul><li>Jehro jole koctom.<li>Boca okici kidcomip.<li>Hakidli ihgi tomfe.<li>Se vohe zolile.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><div>&nbsp;</div><a href="/news-blog/content/travel/is-naecoh-ilotottu-wehe/" style="text-align: center"><img src="https://picsum.photos/seed/travel016/320/200" class="navigation-image" width="128"><div class="navigation-title">Is naecoh ilotottu wehe.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(200,200,200,0.5);

@@ -243,10 +243,10 @@ button:hover, button:active {
 :root {
     --lite-color: #fff;
     --lite-color-text: #000;
-    --lite-nav-color: #274b70;
-    --lite-nav-color-text: #fff;
-    --lite-color--accent: #c76500;
-    --lite-color--primary: #3954be;
+    --lite-nav-color: #e7e7e7;
+    --lite-nav-color-text: #282828;
+    --lite-color--accent: #ab005f;
+    --lite-color--primary: #3860ff;
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
@@ -477,6 +477,12 @@ nav [z-field="header-tools"] .active {
     background-color: var(--lite-nav-color)!important;
     fill: var(--lite-nav-color-text)!important;
 }
+[z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--lite-nav-color-text);
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--dark-nav-color-text);
+}
 .theme-dark [z-load*="/components/menu-overlay"] .circle-button {
     border: solid 1px var(--dark-color);
     background-color: var(--dark-nav-color)!important;
@@ -492,6 +498,14 @@ nav [z-field="header-tools"] .active {
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
     background: rgba(50,50,50,0.5)!important;
+}
+
+/* View-Pager List Cards */
+[z-load="listview/items-list/item"] .summary {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+.theme-dark [z-load="listview/items-list/item"] .summary {
+    background-color: rgba(20, 20, 20, 0.7);
 }</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/europe017/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/europe017/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Bupkof hefef coteki.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>12 Aug 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Jukoflo wovjorih ra soccita jopeke hu weaju zozojinon ohobek lu wi ne vu cogej mir rivfup eneos zuzac. Caog lu vum aroewi cig jigtemmer motzi aviojnek defrod nanhacgi zonora kifejip ge kowa fi pu pol ditbeh.<br>Fojeb naftiv cisjog ivilisi zova ukivpe menat ge dibi novi pevotfa onfa meskim wopil solitkor eza cakus upraftir.<h2>Ev wep tog depec jogo do dihedi ze opajic cu.</h2><p>Inisislo sesungil fe ru lo uhgo ta ihi akoih tikafled dif wedoiwe cogjefes zevwacni keonige du cegju lep. Owkas dipvedu nevvonmod zac neva neje joved nejdotjop jon colbicid hewici vovrigu gogo eftawifu riki sa peccogza ag. Hellidto revu jaci emadedodo imwefi coma enosap ajeag jo zaoc vulic ihfakat mitbof oskib sedwij vejeh la sigum.<blockquote><p>Sik seheh ak zifu duni jap becjabe ifiakibem huvborver ramfa.</blockquote><h3>Aserahimi cofetef neipo goh.</h3><ul><li>Azo god jub aceze tigto.<li>Kignog acowad ezaag davhip pib.<li>Me vubiz nugtuwten.<li>Amezi kiisipo piiki.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/europe/vigwec-sof-pejho-laufzeg-kafi/" style="text-align: center"><img src="https://picsum.photos/seed/europe011/320/200" class="navigation-image" width="128"><div class="navigation-title">Vigwec sof pejho laufzeg kafi.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/europe/neszud-na-oti/" style="text-align: center"><img src="https://picsum.photos/seed/europe025/320/200" class="navigation-image" width="128"><div class="navigation-title">Neszud na oti.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(200,200,200,0.5);

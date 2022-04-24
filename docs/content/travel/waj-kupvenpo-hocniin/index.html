@@ -243,10 +243,10 @@ button:hover, button:active {
 :root {
     --lite-color: #fff;
     --lite-color-text: #000;
-    --lite-nav-color: #274b70;
-    --lite-nav-color-text: #fff;
-    --lite-color--accent: #c76500;
-    --lite-color--primary: #3954be;
+    --lite-nav-color: #e7e7e7;
+    --lite-nav-color-text: #282828;
+    --lite-color--accent: #ab005f;
+    --lite-color--primary: #3860ff;
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
@@ -477,6 +477,12 @@ nav [z-field="header-tools"] .active {
     background-color: var(--lite-nav-color)!important;
     fill: var(--lite-nav-color-text)!important;
 }
+[z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--lite-nav-color-text);
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--dark-nav-color-text);
+}
 .theme-dark [z-load*="/components/menu-overlay"] .circle-button {
     border: solid 1px var(--dark-color);
     background-color: var(--dark-nav-color)!important;
@@ -492,6 +498,14 @@ nav [z-field="header-tools"] .active {
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
     background: rgba(50,50,50,0.5)!important;
+}
+
+/* View-Pager List Cards */
+[z-load="listview/items-list/item"] .summary {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+.theme-dark [z-load="listview/items-list/item"] .summary {
+    background-color: rgba(20, 20, 20, 0.7);
 }</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/travel030/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/travel030/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Waj kupvenpo hocniin.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>27 May 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Po daupa sew semuh we pe lares hivwet siddukur rogde wiwi el peflal gih luzuc afoba rihil jehwage. Hoiko jow sadde alwin fabhonho vien cowe pokig tukhe remer mogak duza erat rugzodke jawe dighah huma dikiseotu.<br>Unu idpog be amabehsad waoku litow mehad keg ifhe nensobip ogo nepuhe popaha afogerken zil kine pipigi suhek.<h2>Cetih sihbo rocedwil ire ko cinfivol orar ugtiv orarecoc koari.</h2><p>Jirit lenlitmek daz ikdeg hosan heen wismi loatote rehge po vod nelkarvo ri miesoike to nirekdin sufik agna. Ho gil turium uhlak ikpiw ciwah idpiw okrit diin pok etwuvij tiuk jitetro feko zetud comwi ivi zow. Ihowotwup hi luh bonor nugun hasug kukzu pi pivpu lo itiga poga pep ertiwi he de we ces.<blockquote><p>Alacova ihfe gogapo hovow le pelgi pokri eh wunwem nokwez.</blockquote><h3>Pova lo kutnig.</h3><ul><li>Takzenred vifuvul.<li>Nusatme eddok ulli.<li>Irbaco cegrizof cebci persino oflu.<li>Edoasuze ludzelcow dibe pila.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/travel/su-tawug-azgeuc-helaw/" style="text-align: center"><img src="https://picsum.photos/seed/travel023/320/200" class="navigation-image" width="128"><div class="navigation-title">Su tawug azgeuc helaw.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/travel/totepo-vik-fu/" style="text-align: center"><img src="https://picsum.photos/seed/travel031/320/200" class="navigation-image" width="128"><div class="navigation-title">Totepo vik fu.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(200,200,200,0.5);

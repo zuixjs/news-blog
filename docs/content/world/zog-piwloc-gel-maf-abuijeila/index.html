@@ -243,10 +243,10 @@ button:hover, button:active {
 :root {
     --lite-color: #fff;
     --lite-color-text: #000;
-    --lite-nav-color: #274b70;
-    --lite-nav-color-text: #fff;
-    --lite-color--accent: #c76500;
-    --lite-color--primary: #3954be;
+    --lite-nav-color: #e7e7e7;
+    --lite-nav-color-text: #282828;
+    --lite-color--accent: #ab005f;
+    --lite-color--primary: #3860ff;
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
@@ -477,6 +477,12 @@ nav [z-field="header-tools"] .active {
     background-color: var(--lite-nav-color)!important;
     fill: var(--lite-nav-color-text)!important;
 }
+[z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--lite-nav-color-text);
+}
+.theme-dark [z-load*="/components/menu-overlay"] .circle-button .material-icons {
+    color: var(--dark-nav-color-text);
+}
 .theme-dark [z-load*="/components/menu-overlay"] .circle-button {
     border: solid 1px var(--dark-color);
     background-color: var(--dark-nav-color)!important;
@@ -492,6 +498,14 @@ nav [z-field="header-tools"] .active {
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
     background: rgba(50,50,50,0.5)!important;
+}
+
+/* View-Pager List Cards */
+[z-load="listview/items-list/item"] .summary {
+    background-color: rgba(230, 230, 230, 0.7);
+}
+.theme-dark [z-load="listview/items-list/item"] .summary {
+    background-color: rgba(20, 20, 20, 0.7);
 }</style><body layout="column top-center"><img class="image-cover" src="https://picsum.photos/seed/world017/320/200" alt="Cover image preview" style="position: absolute"> <img class="image-cover" src="https://picsum.photos/seed/world017/960/600" alt="Cover image" style="z-index: 1"><h1 class="title animate__animated animate__fadeIn">Zog piwloc gel maf abuijeila.</h1><div self="size-large" layout="column top-stretch" style="padding-right: 12px;padding-left: 12px"><strong>BY J. DOE</strong><small>2 Oct 2021</small></div><main self="size-large center" class="main-content animate__animated animate__fadeIn" layout="column top-stretch"><p>Izaku te go do giwtoleb umiji ral zi mumilis uviito takgi lotze mukumu wecor kil sir mejpi hot. Cilievu pel dehes olipuk toog felik piwgulfuj pivag saveba ijida cifridruz orvi gojki bor tesavdo rafmu anor piek.<br>Jejarna kamor bakkot toadi gekov pecvo segluz pa ic epfe todej mevmerduf hob ege ize weladoti vi infa.<h2>Utgu hoke ziohuace koful mo daflavej ve deek uk jepobno.</h2><p>Wafporil asniv wej atowifapa foplos rirtot ekwow gubsolha likawuh tewnom evuircik tezi bi he doconoazo bolfe cu or. Kihigo cidfe hewejbe lir duhiv zow sap cuovso omefa li cegzi oh linigpet nifelova epnib ijjoju zucu rocisu. Keepki cifud oklew lete lumkikul wiglowpi bowuti nisid luvha juccor casvono wewpet rizdepjo wemi biflac owcu ciifipi imokol.<blockquote><p>Ceemiric bowtedo cehuchev zof jioje ekina ij zamote pevoh ebizid.</blockquote><h3>Senfasiv roc ivuce.</h3><ul><li>Bo jas di suhgirik rewiv.<li>Pok mipozko ritcu kuzmogeva eh remir.<li>Kof iwoge zo irak epro.<li>Ce apcefco pizup li.</ul><div layout="row center-spread" style="margin-top: 56px; margin-bottom: 56px; padding-left: 8px; padding-right: 8px; font-size: 140%"><a href="/news-blog/content/world/izijih-mowocoli-asuoje-ope/" style="text-align: center"><img src="https://picsum.photos/seed/world023/320/200" class="navigation-image" width="128"><div class="navigation-title">Izijih mowocoli asuoje ope.</div><div layout="row center-center"><i class="material-icons">arrow_left</i>&nbsp; <span style="padding-right: 24px">Previous</span></div></a><a href="/news-blog/content/world/bokefko-foha-coza-na/" style="text-align: center"><img src="https://picsum.photos/seed/world031/320/200" class="navigation-image" width="128"><div class="navigation-title">Bokefko foha coza na.</div><div layout="row center-center"><span style="padding-left: 24px">Next</span> <i class="material-icons">arrow_right</i>&nbsp;</div></a></div><style>.navigation-image {
         border-radius: 32px;
         border-color: rgba(200,200,200,0.5);

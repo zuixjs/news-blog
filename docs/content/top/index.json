@@ -1,13 +1,13 @@
 [
     {
     "icon": "news",
-    "title": "Getting started with this template",
+    "title": "Quick start guide",
     "description": "A brief overview of this template structure, content management and publishing.",
     "coverImage": "https://picsum.photos/seed/top027/960/600",
     "coverSmall": "https://picsum.photos/seed/top027/640/560",
     "coverPreview": "https://picsum.photos/seed/top027/320/200",
     "date": "2022-03-19 14:36",
-    "link": "/news-blog/content/top/getting-started/"
+    "link": "/news-blog/content/top/quick-start/"
     },
     {
     "icon": "news",

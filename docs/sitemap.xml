@@ -37,16 +37,6 @@
   </url>
 
   <url>
-    <loc>https://zuixjs.github.io/news-blog/about/</loc>
-    <lastmod>2022-03-19</lastmod>
-  </url>
-
-  <url>
-    <loc>https://zuixjs.github.io/news-blog/search/</loc>
-    <lastmod>2022-04-24</lastmod>
-  </url>
-
-  <url>
     <loc>https://zuixjs.github.io/news-blog/content/travel/gehu-jacnifge-vebed-lopef/</loc>
     <lastmod>2022-04-24</lastmod>
   </url>
@@ -88,11 +78,6 @@
 
   <url>
     <loc>https://zuixjs.github.io/news-blog/content/top/fekemuz-lano-leb-sebin/</loc>
-    <lastmod>2022-04-24</lastmod>
-  </url>
-
-  <url>
-    <loc>https://zuixjs.github.io/news-blog/content/top/getting-started/</loc>
     <lastmod>2022-04-24</lastmod>
   </url>
 
@@ -703,6 +688,21 @@
 
   <url>
     <loc>https://zuixjs.github.io/news-blog/content/travel/nogji-gaweno-ke/</loc>
+    <lastmod>2022-04-24</lastmod>
+  </url>
+
+  <url>
+    <loc>https://zuixjs.github.io/news-blog/search/</loc>
+    <lastmod>2022-04-24</lastmod>
+  </url>
+
+  <url>
+    <loc>https://zuixjs.github.io/news-blog/content/top/quick-start/</loc>
+    <lastmod>2022-04-24</lastmod>
+  </url>
+
+  <url>
+    <loc>https://zuixjs.github.io/news-blog/about/</loc>
     <lastmod>2022-04-24</lastmod>
   </url>
 

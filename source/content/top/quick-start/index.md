@@ -7,7 +7,7 @@ group: top
 icon: news
 order: 1
 options: highlight
-title: Getting started with this template
+title: Quick start guide
 description: A brief overview of this template structure, content management and publishing.  
 author: Gene
 coverImage: https://picsum.photos/seed/top027/960/600
@@ -16,14 +16,12 @@ coverPreview: https://picsum.photos/seed/top027/320/200
 pubDate: 2022-03-19T13:36:37.105Z
 ---
 
-## Getting started
-
 This template is based on `zuix-web-starer`. It is recommended to read its [documentation](https://zuixjs.github.io/zuix-web-starter)
-to get started using this template.
+to get started with *zuix.js* templates.
 
-## Creating a new project using this template
+## Creating a new project
 
-To create a new web-starter project using this template, enter the following command:
+To create a new starter project using this template (*news-blog*), enter the following command:
 
 ```shell
 npx zuix new my-webapp -t news-blog
@@ -60,9 +58,8 @@ Once started you can open the web browser and load the website using the access 
 ```
 
 The main project folder is the `./source` folder, where all website files are located. In particular, the `./source/content` folder,
-contains all website pages content that are implemented as text files using [**Markdown**](https://www.markdownguide.org/getting-started/) syntax,
-and that will contain just the main content of the page. All other structural and layout parts of the page will be compiled
-automatically by the development server.
+contains all pages' content, implemented as plaintext files using [**Markdown**](https://www.markdownguide.org/getting-started/) syntax.
+All other structural and page layout bits will be compiled automatically by the site generator.
 
 
 ## Managing content

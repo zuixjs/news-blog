@@ -39,4 +39,10 @@
 {% wrapCss 'footer-bar' false %}
 {% include './footer-bar.css' %}
 {% endwrapCss %}
+footer .active  {
+    color: var(--lite-color--accent);
+}
+.theme-dark footer .active {
+    color: var(--dark-color--accent)!important;
+}
 </style>

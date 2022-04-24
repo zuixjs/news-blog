@@ -9,9 +9,6 @@ h1 {
   padding: 4px;
   left:0; bottom:8px; right: 0;
 }
-.summary {
-  background-color: rgba(40,40,40,0.65);
-}
 .summary .title {
   font-weight: 500;
 }

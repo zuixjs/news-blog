@@ -45,6 +45,7 @@ function SearchPage(cp) {
       resultsList.clear();
       if (results.length > 0) {
         noResultsMessage.hide();
+        coverMessage.hide();
         resultsList.model({
           itemList: results,
           getItem: function(index, item) {
@@ -54,8 +55,8 @@ function SearchPage(cp) {
               itemId: index,
               componentId: 'listview/results-item',
               options: {
-                controller: zuix.controller(function(cp){}),
-                className: 'item',
+                controller: zuix.controller(function(cp) {}),
+                height: '108px',
                 model: item,
                 on: {
                   'click': function() {
