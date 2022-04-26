@@ -12,17 +12,17 @@
   </url>
 
   <url>
-    <loc>https://zuixjs.github.io/news-blog/home/</loc>
-    <lastmod>2022-04-26</lastmod>
-  </url>
-
-  <url>
     <loc>https://zuixjs.github.io/news-blog/search/</loc>
     <lastmod>2022-04-26</lastmod>
   </url>
 
   <url>
     <loc>https://zuixjs.github.io/news-blog/saved/</loc>
+    <lastmod>2022-04-26</lastmod>
+  </url>
+
+  <url>
+    <loc>https://zuixjs.github.io/news-blog/home/</loc>
     <lastmod>2022-04-26</lastmod>
   </url>
 

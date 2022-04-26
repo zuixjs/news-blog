@@ -57,6 +57,7 @@ function ItemsList(cp) {
         itemsHtml += $el.get().outerHTML;
       });
       list.html(itemsHtml);
+      zuix.componentize(list);
     }
   }
 

@@ -117,7 +117,7 @@ function zuixEditor(cp) {
           hideWaitingSpinner();
         },
         'success': function(e, ar) {
-          // TODO: ..
+          this.hide();
           actionResult = ar;
           cp.trigger('zuix:action:progress', actionResult);
         },
