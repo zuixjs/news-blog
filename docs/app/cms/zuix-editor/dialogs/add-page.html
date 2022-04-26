@@ -1,0 +1,42 @@
+<div class="dialog background">
+
+    <h2>Add page</h2>
+
+    <div layout="column top-left" class="dialog-content">
+
+        <label class="primary" for="sectionInput">Section</label>
+        <input #section-name type="text" placeholder="enter name" id="sectionInput" required>
+
+        <div #sections layout="rows center-left" class="sections"></div>
+
+        <label class="primary" for="pageName">Page</label>
+        <input #page-name type="text" placeholder="enter name" id="pageName" required>
+        <div #error-message></div>
+
+    </div>
+
+    <div layout="row center-spread" class="footer">
+        <button #cancel-btn class="button primary">Cancel</button>
+        <button @disable-if="!isValid()" self="center" #add-btn class="button primary">Confirm</button>
+    </div>
+
+</div>
+
+<!-- inline view templates used in this component -->
+
+<div z-view="_editor/section">
+    <div #name class="button primary"></div>
+</div>
+<style media="#_editor/section">
+:host {
+    cursor: pointer;
+    margin: 4px;
+}
+</style>
+
+<script type="jscript">
+  function isValid() {
+    return $sectionName.value().length > 0 &&
+      $pageName.value().length > 0;
+  }
+</script>

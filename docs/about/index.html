@@ -121,6 +121,103 @@ iframe[z-field=content-frame] {
     background: white;
 }
 
+    /* forms */
+
+.button {
+    cursor: pointer;
+    display: flex;
+    padding: 6px;
+    height: 48px;
+    margin: 6px;
+    align-items: center;
+    border-radius: 6px;
+    background-color: #bbbbbb15;
+    box-shadow: 0 1px 4px 0 #00000055;
+    transition-property: background-color, box-shadow;
+    transition: 0.1s ease-in-out;
+}
+.button:hover {
+    background-color: #bbbbbb1a;
+    box-shadow: 0 3px 8px 0 #00000055;
+}
+.theme-dark .button:hover {
+    box-shadow: 0 0 6px 2px var(--dark-color-text);
+}
+.button:active {
+    background-color: #bbbbbb26;
+    box-shadow: 0 0 2px 0 #00000055;
+}
+.button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: 0 0 0 0 #00000055;
+}
+
+/* from https://codepen.io/nikstech/pen/xmMxpr */
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+.input-container label {
+    position:absolute;
+    top: 12px;
+    left: 0;
+    pointer-event: none!important;
+    transition: all 0.15s ease-in-out;
+}
+.input-container input, input:not([type="checkbox"]):not([type="radio"]) {
+    z-index: 1;
+    border:0;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid;
+    padding: 8px 0 5px 0;
+}
+.input-container input:focus, input:focus:not([type="checkbox"]):not([type="radio"]) {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #bd0505;
+}
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+    top: -14px;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+
+[type=radio],
+[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    border: solid 1px;
+}
+[type=radio],
+[type=checkbox] {
+    width: 22px!important;
+    height: 18px;
+    margin-left: 6px;
+    margin-right: 6px;
+    position: relative;
+    border: solid 1px;
+    border-radius: 2px;
+}
+[type=radio]:checked::before,
+[type=checkbox]:checked::before {
+    content: "";
+    width: 12px;
+    height: 10px;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+}
+[type=radio],
+[type=radio]:checked::before{
+    border-radius: 100%;
+}
+
     :root {
     --lite-color: #fff;
     --lite-color-text: #000;
@@ -131,9 +228,9 @@ iframe[z-field=content-frame] {
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
-    --dark-color: #181818;
+    --dark-color: #141418;
     --dark-color-text: #d2d2d2;
-    --dark-nav-color: #000000; /* #014b76; */ /* #60142d; */
+    --dark-nav-color: #1a273b; /* #014b76; */ /* #60142d; */
     --dark-nav-color-text: #ccc;
     --dark-color--accent: #f1c700;
     --dark-color--primary: #84de58;
@@ -378,17 +475,19 @@ nav [z-field="header-tools"] .active {
     background: var(--dark-nav-color)!important;
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
-    background: rgba(50,50,50,0.5)!important;
+    background: rgba(0,0,0,0.65)!important;
 }
 
 /* View-Pager List Cards */
 [z-load="listview/items-list/item"] .summary {
     background-color: rgba(230, 230, 230, 0.7);
+    transition: background-color 0.3s ease-in-out;
 }
 .theme-dark [z-load="listview/items-list/item"] .summary {
     background-color: rgba(20, 20, 20, 0.7);
+    transition: background-color 0.3s ease-in-out;
 }</style><body><noscript>Turn on JavaScript to access this site content.</noscript><!-- The header bars (for each page) --><nav z-field="header-bar" z-component="fragment" header-bar=""><div class="header" layout="row center-justify" header-bar=""><div z-field="header-box" layout="row center-left" header-bar=""><div class="title" layout="row center-left" header-bar="">About</div></div><div style="margin: 12px;" header-bar=""><input class="theme-toggle" type="checkbox" aria-label="Toggle theme" checked header-bar=""></div></div><div z-field="header-tools" header-bar=""></div></nav><style>[z-component][header-bar] {
-    position: fixed;    top:0;    left:0;    right:0;    height:auto;    border-bottom: solid 1px rgba(0,0,0,0.25);    box-shadow: 0 5px 2px -2px rgba(0,0,0,0.25);    z-index: 2!important;}
+    position: fixed;    top:0;    left:0;    right:0;    height:auto;    border-bottom: solid 1px rgba(0,0,0,0.1);    box-shadow: 0 0 8px -1px rgba(0,0,0,0.5);    z-index: 2!important;}
 
 [z-component][header-bar]
 .header {
@@ -432,7 +531,7 @@ nav [z-field="header-tools"] .active {
 
 [z-component][header-bar]
 .search-box input {
-    width: 100%;    font-size: 130%;    font-family: inherit;    line-height: inherit;    color: #2e3750;    min-width: 12em;}
+    background-color: var(--lite-color);    width: 100%;    font-size: 130%;    font-family: inherit;    line-height: inherit;    color: #2e3750;    min-width: 12em;    transition: background-color 0.3s ease-in-out;}
 
 [z-component][header-bar]
 .search-box .input {
@@ -464,23 +563,31 @@ nav [z-field="header-tools"] .active {
 
 [z-component][header-bar]
 .search-box ::placeholder {
-    color: #cbd0d5;}</style><main z-field="pages" layout="column stretch-stretch"><section class="page-scroll" layout="column center-center"><div self="size-small center-center" class="animate__animated animate__fadeIn animate__faster" style="padding-top: 56px; padding-left: 12px;padding-right: 12px; line-height: 150%"><p>This template is based on <a href="https://github.com/zuixjs/zuix-web-starter">zuix-web-starter</a> and on the static <a href="https://github.com/zuixjs/zuix-html-pwa">HTML-PWA</a> template.</p><a href="https://github.com/zuixjs/news-blog" layout="row center-center" style="gap: 8px"><img src="../images/github-mark.png" width="33" height="33" style="padding:1px; border-radius: 32px; background: white"><div>source code</div></a><h2>Other resources</h2><ul><li><a href="https://zuixjs.github.io/zkit">zKit</a><br>Collection of components for modern web.<li><a href="https://zuixjs.org">zuix.js</a><br>zuix.js presentation and documentation site.<li><a href="https://11ty.dev">11ty.dev</a><br>Static site generator that powers <em>zuix-web-starter</em>.</ul></div></section></main><!-- the pop-up context menu --><div z-load="@lib/components/context-menu" class="visible-on-ready" z-field="item-options-menu" z-lazy="false"><div #menu=""><button #open-btn="" layout="row center-left"><i class="material-icons">file_open</i> <span>Open</span></button> <button #bookmark-add-btn="" layout="row center-left"><i class="material-icons">bookmark_add</i> <span>Save for later</span></button> <button #bookmark-remove-btn="" layout="row center-left"><i class="material-icons accent">bookmark_remove</i> <span>Remove from saved</span></button> <button #share-btn="" layout="row center-left"><i class="material-icons">share</i> <span>Share</span></button> <button layout="row center-left" disabled><i class="material-icons">not_interested</i> <span>Hide items from this source</span></button> <button layout="row center-left" disabled><i class="material-icons">thumb_up</i> <span>More like this</span></button> <button layout="row center-left" disabled><i class="material-icons">thumb_down</i> <span>Less like this</span></button></div></div><!-- The footer with page select buttons --><footer z-field="footer-bar" layout="row center-center" z-component="fragment" footer-bar=""><a href="/news-blog/home/" layout="column center-center" class="button" footer-bar=""><i class="material-icons" footer-bar="">home</i> <span footer-bar="">Home</span> </a><a href="/news-blog/search/" layout="column center-center" class="button" footer-bar=""><i class="material-icons" footer-bar="">search</i> <span footer-bar="">Search</span> </a><a href="/news-blog/saved/" layout="column center-center" z-field="saved-button" class="button" footer-bar=""><i class="material-icons" footer-bar="">bookmarks</i> <span footer-bar="">Saved</span> </a><a href="/news-blog/about/" layout="column center-center" class="button active" footer-bar=""><i class="material-icons" footer-bar="">info</i> <span footer-bar="">About</span></a></footer><style>[z-component][footer-bar] {
-    position: fixed;    left:0; bottom:0; right: 0;    height: 56px;    border-top: solid 1px rgba(0,0,0,0.25);    box-shadow: 0 -5px 2px -2px rgba(0,0,0,0.25);    text-align: center;    overflow: hidden;}
+    color: #cbd0d5;}
+
+.theme-dark [header-bar] .search-box input {
+    background-color: var(--dark-color);
+    color: var(--dark-color-text);
+}
+.theme-dark [header-bar] .search-box input::placeholder {
+    opacity: 0.5;
+}</style><main z-field="pages" layout="column stretch-stretch"><section class="page-scroll" layout="column center-center"><div self="size-small center-center" class="animate__animated animate__fadeIn animate__faster" style="padding-top: 56px; padding-left: 12px;padding-right: 12px; line-height: 150%"><p>This template is based on <a href="https://github.com/zuixjs/zuix-web-starter">zuix-web-starter</a> and on the static <a href="https://github.com/zuixjs/zuix-html-pwa">HTML-PWA</a> template.</p><a href="https://github.com/zuixjs/news-blog" layout="row center-center" style="gap: 8px"><img src="../images/github-mark.png" width="33" height="33" style="padding:1px; border-radius: 32px; background: white"><div>source code</div></a><h2>Other resources</h2><ul><li><a href="https://zuixjs.github.io/zkit">zKit</a><br>Collection of components for modern web.<li><a href="https://zuixjs.org">zuix.js</a><br>zuix.js presentation and documentation site.<li><a href="https://11ty.dev">11ty.dev</a><br>Static site generator that powers <em>zuix-web-starter</em>.</ul></div></section></main><!-- the pop-up context menu --><div z-load="@lib/components/context-menu" class="visible-on-ready" z-field="item-options-menu" z-lazy="false"><div #menu=""><button #open-btn="" layout="row center-left"><i class="material-icons">file_open</i> <span>Open</span></button> <button #bookmark-add-btn="" layout="row center-left"><i class="material-icons">bookmark_add</i> <span>Save for later</span></button> <button #bookmark-remove-btn="" layout="row center-left"><i class="material-icons accent">bookmark_remove</i> <span>Remove from saved</span></button> <button #share-btn="" layout="row center-left"><i class="material-icons">share</i> <span>Share</span></button> <button layout="row center-left" disabled><i class="material-icons">not_interested</i> <span>Hide items from this source</span></button> <button layout="row center-left" disabled><i class="material-icons">thumb_up</i> <span>More like this</span></button> <button layout="row center-left" disabled><i class="material-icons">thumb_down</i> <span>Less like this</span></button></div></div><!-- The footer with page select buttons --><footer z-field="footer-bar" layout="row center-center" z-component="fragment" footer-bar=""><a href="/news-blog/home/" layout="column center-center" class="bar-button" footer-bar=""><i class="material-icons" footer-bar="">home</i> <span footer-bar="">Home</span> </a><a href="/news-blog/search/" layout="column center-center" class="bar-button" footer-bar=""><i class="material-icons" footer-bar="">search</i> <span footer-bar="">Search</span> </a><a href="/news-blog/saved/" layout="column center-center" z-field="saved-button" class="bar-button" footer-bar=""><i class="material-icons" footer-bar="">bookmarks</i> <span footer-bar="">Saved</span> </a><a href="/news-blog/about/" layout="column center-center" class="bar-button active" footer-bar=""><i class="material-icons" footer-bar="">info</i> <span footer-bar="">About</span></a></footer><style>[z-component][footer-bar] {
+    position: fixed;    left:0; bottom:0; right: 0;    height: 56px;    border-top: solid 1px rgba(0,0,0,0.1);    box-shadow: 0 0 8px -1px rgba(0,0,0,0.5);    text-align: center;    overflow: hidden;}
 
 [z-component][footer-bar]
-a.button {
+a.bar-button {
     font-weight: 400;    width: 56px;    max-height: 56px;    margin-left: 8px;    margin-right: 8px;    background: transparent;    border: none;    border-radius: 8px;    text-align: center;    transition: color 0.5s ease-in-out;}
 
 [z-component][footer-bar]
-a.button:focus {
+a.bar-button:focus {
 outline:0;}
 
 [z-component][footer-bar]
-a.button i {
+a.bar-button i {
     opacity: 0.7;    font-size: 24px !important;    padding: 2px;}
 
 [z-component][footer-bar]
-a.button span {
+a.bar-button span {
     opacity: 0.7;    font-size: 12px;}
 
 [z-component][footer-bar]
@@ -500,4 +607,4 @@ footer .active  {
 }
 .theme-dark footer .active {
     color: var(--dark-color--accent)!important;
-}</style><!-- Built with love using zUIx Web Starter --><script>let pageIndicator,pageButtons;function syncPageIndicator(e){pageButtons&&(pageButtons.eq(e.out).removeClass("active"),pageButtons.eq(e.in).addClass("active")),pageIndicator&&pageIndicator.page(e.in)}function openContentFrame(e){const t=zuix.field("content-frame");t.get().src=e,t.animateCss("slideInRight",{duration:"500ms"},function(){t.get().focus()}).removeClass("hidden")}function closeContentFrame(e){const t=zuix.field("content-frame");t.animateCss("slideOutRight",{duration:"300ms"},()=>{t.addClass("hidden"),e&&e.replace("about:blank")})}function themeSetup(){const n=zuix.$(document.body),a=n.find(".theme-toggle"),o="theme-dark",i="app.theme";function e(e){var t=e?a.checked():"true"===localStorage.getItem(i);e||a.checked(t),t?n.addClass(o):n.removeClass(o),localStorage.setItem(i,String(t))}a.on("change",e),e()}zuix.lazyLoad(!0,-window.innerWidth/4),options={pageIndicator:{contextId:"page-indicator",enablePaging:!0,startGap:40,ready:function(e){pageIndicator=e,0<(pageButtons=pageIndicator.$.find("div")).length()&&pageButtons.each(function(t,e,n){n.on("click",function(e){viewPager&&viewPager.page(t)})})}}},themeSetup()</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script>
+}</style><!-- Built with love using zUIx Web Starter --><script>let pageIndicator,pageButtons;function syncPageIndicator(e){pageButtons&&(pageButtons.eq(e.out).removeClass("active"),pageButtons.eq(e.in).addClass("active")),pageIndicator&&pageIndicator.page(e.in)}function themeSetup(){const a=zuix.$(document.body),n=a.find(".theme-toggle"),o="theme-dark",i="app.theme";function e(e){var t=e?n.checked():"true"===localStorage.getItem(i);e||n.checked(t),t?a.addClass(o):a.removeClass(o),localStorage.setItem(i,String(t))}n.on("change",e),e()}zuix.lazyLoad(!0,-window.innerWidth/4),options={pageIndicator:{contextId:"page-indicator",enablePaging:!0,startGap:40,ready:function(e){pageIndicator=e,0<(pageButtons=pageIndicator.$.find("div")).length()&&pageButtons.each(function(t,e,a){a.on("click",function(e){viewPager&&viewPager.page(t)})})}}},themeSetup()</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script>

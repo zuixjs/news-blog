@@ -1,8 +1,10 @@
 function SearchPage(cp) {
-  const searchIndex = null;
   let resultsList = null;
+  let searchInput = null;
   let noResultsMessage = null;
   let coverMessage = null;
+  let searchItems;
+  let searchEngine;
 
   this.create = onCreate;
 
@@ -20,6 +22,20 @@ function SearchPage(cp) {
     // TODO: ^^^ investigate this issue
 
     // download the search index
+    loadIndex();
+
+    // update results list on 'keyup'
+    searchInput = zuix.field('search-input');
+    searchInput.on('input search', (e, v) => {
+      resultsList.$.get().offsetParent.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      search();
+    });
+    cp.expose({search, loadIndex});
+  }
+  function loadIndex(callback) {
     fetch('../search-index.json').then((indexResponse) =>
       indexResponse.json().then((searchIndex) => {
         fetch('../search-list.json').then((listResponse) =>
@@ -27,56 +43,56 @@ function SearchPage(cp) {
             searchItems = searchList;
             const index = Fuse.parseIndex(searchIndex);
             searchEngine = new Fuse(searchList, options, index);
+            if (callback) {
+              callback(searchItems, searchEngine);
+            }
           })
         );
       })
     );
-
-    // update results list on 'keyup'
-    const searchInput = zuix.field('search-input');
-    searchInput.on('keyup search', (e, v) => {
-      if (!searchEngine) {
-        // TODO: should report issue
-        console.log('Search engine not initialized.');
-        return;
-      }
-      const terms = searchInput.value();
-      const results = searchEngine.search(terms);
-      resultsList.clear();
-      if (results.length > 0) {
-        noResultsMessage.hide();
-        coverMessage.hide();
-        resultsList.model({
-          itemList: results,
-          getItem: function(index, item) {
-            item = searchItems[item.refIndex];
-            item.coverPreview = item.image;
-            return {
-              itemId: index,
-              componentId: 'listview/results-item',
-              options: {
-                controller: zuix.controller(function(cp) {}),
-                height: '108px',
-                model: item,
-                on: {
-                  'click': function() {
-                    openContentFrame(item.url);
-                  }
+  }
+  function search() {
+    if (!searchEngine) {
+      // TODO: should report issue
+      console.log('Search engine not initialized.');
+      return;
+    }
+    noResultsMessage.addClass('hidden');
+    coverMessage.addClass('hidden');
+    resultsList.clear();
+    const terms = searchInput.value();
+    const results = searchEngine.search(terms);
+    if (results.length > 0) {
+      resultsList.model({
+        itemList: results,
+        getItem: function(index, item) {
+          item = searchItems[item.refIndex];
+          item.coverPreview = item.image;
+          return {
+            itemId: index,
+            componentId: 'listview/results-item',
+            options: {
+              controller: zuix.controller(function(cp) {}),
+              height: '108px',
+              model: item,
+              on: {
+                'click': function() {
+                  openContentFrame(item.url);
                 }
               }
-            };
-          }
-        });
-      } else if (terms.length > 0) {
-        setTimeout(function() {
-          noResultsMessage.removeClass('hidden');
-        });
-      } else {
-        setTimeout(function() {
-          coverMessage.removeClass('hidden');
-        });
-      }
-    });
+            }
+          };
+        }
+      });
+    } else if (terms.length > 0) {
+      setTimeout(function() {
+        noResultsMessage.removeClass('hidden');
+      });
+    } else {
+      setTimeout(function() {
+        coverMessage.removeClass('hidden');
+      });
+    }
   }
 }
 

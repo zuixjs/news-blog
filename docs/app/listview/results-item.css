@@ -24,4 +24,5 @@ small {
 img {
     margin-left: 12px;
     border-radius: 12px;
+    aspect-ratio: 1.6;
 }
