@@ -10,7 +10,7 @@ title: "Ownuk adiwusir dijipup fuinu."
 description: "Duva rilmuce men ziznospih ma natti torki ej erceb anre."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel026/960/600
-coverSmall: https://picsum.photos/seed/travel026/640/560
+coverSmall: https://picsum.photos/seed/travel026/640/400
 coverPreview: https://picsum.photos/seed/travel026/320/200
 pubDate: 2022-03-09T22:36:21.580Z
 ---

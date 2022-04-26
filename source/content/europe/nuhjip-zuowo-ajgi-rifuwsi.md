@@ -10,7 +10,7 @@ title: "Nuhjip zuowo ajgi rifuwsi."
 description: "Kij loswozva megaw cifun zasun cav lepja tuwda lepsiris uk."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe018/960/600
-coverSmall: https://picsum.photos/seed/europe018/640/560
+coverSmall: https://picsum.photos/seed/europe018/640/400
 coverPreview: https://picsum.photos/seed/europe018/320/200
 pubDate: 2021-04-08T10:43:36.697Z
 ---

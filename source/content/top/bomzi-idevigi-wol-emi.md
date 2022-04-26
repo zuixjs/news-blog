@@ -10,7 +10,7 @@ title: "Bomzi idevigi wol emi."
 description: "Ron wor ijecoleg le avsun izbit zuod acudem zeami zeugu."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top03/960/600
-coverSmall: https://picsum.photos/seed/top03/640/560
+coverSmall: https://picsum.photos/seed/top03/640/400
 coverPreview: https://picsum.photos/seed/top03/320/200
 pubDate: 2021-12-19T21:35:45.845Z
 ---

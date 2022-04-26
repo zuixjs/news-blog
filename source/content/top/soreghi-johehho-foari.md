@@ -10,7 +10,7 @@ title: "Soreghi johehho foari."
 description: "If epe cilaji rujgakseb zegwef soekewo hucu jeeh lojo ehi."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top030/960/600
-coverSmall: https://picsum.photos/seed/top030/640/560
+coverSmall: https://picsum.photos/seed/top030/640/400
 coverPreview: https://picsum.photos/seed/top030/320/200
 pubDate: 2022-03-18T08:41:44.241Z
 ---

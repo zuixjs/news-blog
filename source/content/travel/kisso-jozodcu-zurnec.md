@@ -10,7 +10,7 @@ title: "Kisso jozodcu zurnec."
 description: "Deh ed vafmonfo vo anode cezire vesne ilini ephemila zino."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel025/960/600
-coverSmall: https://picsum.photos/seed/travel025/640/560
+coverSmall: https://picsum.photos/seed/travel025/640/400
 coverPreview: https://picsum.photos/seed/travel025/320/200
 pubDate: 2021-09-04T16:39:49.466Z
 ---

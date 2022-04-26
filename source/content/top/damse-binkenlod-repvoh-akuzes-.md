@@ -10,7 +10,7 @@ title: "Damse binkenlod repvoh akuzes rude."
 description: "Asa tehuhof cud nocede reci lomgetnul icogow hijvinzet vuzup dukuf."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top032/960/600
-coverSmall: https://picsum.photos/seed/top032/640/560
+coverSmall: https://picsum.photos/seed/top032/640/400
 coverPreview: https://picsum.photos/seed/top032/320/200
 pubDate: 2021-09-07T00:13:04.921Z
 ---

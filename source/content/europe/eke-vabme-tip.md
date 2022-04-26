@@ -10,7 +10,7 @@ title: "Eke vabme tip."
 description: "Rah laheji waj al let je ciej poke petnod magdap."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe05/960/600
-coverSmall: https://picsum.photos/seed/europe05/640/560
+coverSmall: https://picsum.photos/seed/europe05/640/400
 coverPreview: https://picsum.photos/seed/europe05/320/200
 pubDate: 2021-03-29T07:17:37.865Z
 ---

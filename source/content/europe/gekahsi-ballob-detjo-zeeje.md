@@ -10,7 +10,7 @@ title: "Gekahsi ballob detjo zeeje."
 description: "Te vulpirfu vihak wu uchedi cabo hafopher fewi rijolpo fufduszi."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe014/960/600
-coverSmall: https://picsum.photos/seed/europe014/640/560
+coverSmall: https://picsum.photos/seed/europe014/640/400
 coverPreview: https://picsum.photos/seed/europe014/320/200
 pubDate: 2021-07-01T03:11:54.501Z
 ---

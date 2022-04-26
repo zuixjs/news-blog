@@ -10,7 +10,7 @@ title: "Jimpeho ren vif."
 description: "Vonricpek lo sukmunso gaepa paziuho gorazkuk jelipu rofu sekpi be."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world022/960/600
-coverSmall: https://picsum.photos/seed/world022/640/560
+coverSmall: https://picsum.photos/seed/world022/640/400
 coverPreview: https://picsum.photos/seed/world022/320/200
 pubDate: 2021-08-07T15:09:03.101Z
 ---

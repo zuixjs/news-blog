@@ -10,7 +10,7 @@ title: "Ga reti gevuku otvomep."
 description: "Egfi zidun kopi kurki unmaiso avci vojiji wigol lam kan."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel017/960/600
-coverSmall: https://picsum.photos/seed/travel017/640/560
+coverSmall: https://picsum.photos/seed/travel017/640/400
 coverPreview: https://picsum.photos/seed/travel017/320/200
 pubDate: 2021-09-02T21:21:16.942Z
 ---

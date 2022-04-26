@@ -10,7 +10,7 @@ title: "Fuwveh rowru bodcu beven."
 description: "Febos lis oraic hoscep ler dohog merofmag hood mewez anhiz."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel05/960/600
-coverSmall: https://picsum.photos/seed/travel05/640/560
+coverSmall: https://picsum.photos/seed/travel05/640/400
 coverPreview: https://picsum.photos/seed/travel05/320/200
 pubDate: 2021-06-29T16:52:16.308Z
 ---

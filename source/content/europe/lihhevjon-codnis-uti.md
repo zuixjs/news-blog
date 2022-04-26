@@ -10,7 +10,7 @@ title: "Lihhevjon codnis uti."
 description: "Wigoddat repaidi borlo goaru raiko hipzif sikic enze nikof dabhi."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe03/960/600
-coverSmall: https://picsum.photos/seed/europe03/640/560
+coverSmall: https://picsum.photos/seed/europe03/640/400
 coverPreview: https://picsum.photos/seed/europe03/320/200
 pubDate: 2021-07-07T08:06:10.274Z
 ---

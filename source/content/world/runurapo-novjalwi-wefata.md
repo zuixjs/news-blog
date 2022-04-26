@@ -10,7 +10,7 @@ title: "Runurapo novjalwi wefata."
 description: "Fosen du zigov howaba gup gidim rel zezu hoci ogoade."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world032/960/600
-coverSmall: https://picsum.photos/seed/world032/640/560
+coverSmall: https://picsum.photos/seed/world032/640/400
 coverPreview: https://picsum.photos/seed/world032/320/200
 pubDate: 2021-11-19T01:21:32.456Z
 ---

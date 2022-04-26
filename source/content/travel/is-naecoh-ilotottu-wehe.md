@@ -10,7 +10,7 @@ title: "Is naecoh ilotottu wehe."
 description: "Ohisozlod cizosu ni mi wumi si misod bomasu apvudir wad."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel016/960/600
-coverSmall: https://picsum.photos/seed/travel016/640/560
+coverSmall: https://picsum.photos/seed/travel016/640/400
 coverPreview: https://picsum.photos/seed/travel016/320/200
 pubDate: 2022-03-21T05:16:53.946Z
 ---

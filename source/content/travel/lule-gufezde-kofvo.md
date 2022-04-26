@@ -10,7 +10,7 @@ title: "Lule gufezde kofvo."
 description: "Vi doari cev suj vajnoof gukid zire bokeiv virpaj ojijesoh."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel012/960/600
-coverSmall: https://picsum.photos/seed/travel012/640/560
+coverSmall: https://picsum.photos/seed/travel012/640/400
 coverPreview: https://picsum.photos/seed/travel012/320/200
 pubDate: 2021-09-14T17:29:00.572Z
 ---

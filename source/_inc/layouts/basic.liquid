@@ -14,8 +14,10 @@ date: Last Modified
 <body layout="column stretch-center">
 
 {% if coverImage %}
-    <img class="image-cover" src="{{ coverPreview }}" alt="Cover image preview" style="position: absolute">
-    <img class="image-cover" src="{{ coverImage }}" alt="Cover image" style="z-index: 1">
+    <div self="size-large" style="position: relative;width: 100%;;display: block">
+        <img class="image-cover" src="{{ coverPreview }}" alt="Cover image preview" style="position: absolute;display: block">
+        <img class="image-cover" src="{{ coverImage }}" alt="Cover image" style="position: relative;display: block; z-index: 1">
+    </div>
 {% endif %}
 
 <h1 class="title animate__animated animate__fadeIn">{{title}}</h1>

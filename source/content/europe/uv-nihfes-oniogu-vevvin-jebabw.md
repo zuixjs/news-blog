@@ -10,7 +10,7 @@ title: "Uv nihfes oniogu vevvin jebabwe."
 description: "Sef hunih dujnob sepi udu jutrufro zetvalo nujof jomuc bas."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe09/960/600
-coverSmall: https://picsum.photos/seed/europe09/640/560
+coverSmall: https://picsum.photos/seed/europe09/640/400
 coverPreview: https://picsum.photos/seed/europe09/320/200
 pubDate: 2021-05-16T11:47:12.317Z
 ---

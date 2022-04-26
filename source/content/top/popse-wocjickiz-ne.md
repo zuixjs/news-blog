@@ -10,7 +10,7 @@ title: "Popse wocjickiz ne."
 description: "Wilihe imsojhu pozda galoh wekripuko zeezoge sahgus non eglof conon."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top08/960/600
-coverSmall: https://picsum.photos/seed/top08/640/560
+coverSmall: https://picsum.photos/seed/top08/640/400
 coverPreview: https://picsum.photos/seed/top08/320/200
 pubDate: 2021-12-10T07:12:12.277Z
 ---

@@ -10,7 +10,7 @@ title: "Hisosozel mojnun dom hipek coas."
 description: "Sehu godijiv tik fo ri udwunho ol bonparza we octahug."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel022/960/600
-coverSmall: https://picsum.photos/seed/travel022/640/560
+coverSmall: https://picsum.photos/seed/travel022/640/400
 coverPreview: https://picsum.photos/seed/travel022/320/200
 pubDate: 2021-05-07T15:28:21.549Z
 ---

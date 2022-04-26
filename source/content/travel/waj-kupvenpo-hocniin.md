@@ -10,7 +10,7 @@ title: "Waj kupvenpo hocniin."
 description: "Pella cebes docoik riitteb dilabi oweja gowiszov re zit mah."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel030/960/600
-coverSmall: https://picsum.photos/seed/travel030/640/560
+coverSmall: https://picsum.photos/seed/travel030/640/400
 coverPreview: https://picsum.photos/seed/travel030/320/200
 pubDate: 2021-05-27T09:34:21.862Z
 ---

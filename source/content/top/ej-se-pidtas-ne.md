@@ -8,9 +8,9 @@ icon: news
 order: 1
 title: "Ej se pidtas ne."
 description: "Iwa ore dejle lujore joduk hice soddozo wurawid pez zefajhiz."
-author: J. Doe
+author: J. Doez
 coverImage: https://picsum.photos/seed/top016/960/600
-coverSmall: https://picsum.photos/seed/top016/640/560
+coverSmall: https://picsum.photos/seed/top016/640/400
 coverPreview: https://picsum.photos/seed/top016/320/200
 pubDate: 2021-05-19T23:07:52.535Z
 ---

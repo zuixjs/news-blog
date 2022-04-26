@@ -10,7 +10,7 @@ title: "Totepo vik fu."
 description: "Owpeeho cabzug fob erilot sihtow li wo ri teor hafli."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel031/960/600
-coverSmall: https://picsum.photos/seed/travel031/640/560
+coverSmall: https://picsum.photos/seed/travel031/640/400
 coverPreview: https://picsum.photos/seed/travel031/320/200
 pubDate: 2021-05-19T05:38:25.983Z
 ---

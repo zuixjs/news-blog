@@ -10,7 +10,7 @@ title: "Lobas cozezoh zoshi otwej utdesmo."
 description: "Cafcorfen sezolan rif jatis zonib mewpeni rirupuapi tiajije diro vimes."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe016/960/600
-coverSmall: https://picsum.photos/seed/europe016/640/560
+coverSmall: https://picsum.photos/seed/europe016/640/400
 coverPreview: https://picsum.photos/seed/europe016/320/200
 pubDate: 2021-02-13T00:31:16.828Z
 ---

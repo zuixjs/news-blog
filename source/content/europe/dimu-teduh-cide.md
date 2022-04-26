@@ -10,7 +10,7 @@ title: "Dimu teduh cide."
 description: "Sujev kisne nowcoj fo jomdor ew afje wis vewovi woced."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe024/960/600
-coverSmall: https://picsum.photos/seed/europe024/640/560
+coverSmall: https://picsum.photos/seed/europe024/640/400
 coverPreview: https://picsum.photos/seed/europe024/320/200
 pubDate: 2021-03-27T11:56:00.232Z
 ---

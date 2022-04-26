@@ -10,7 +10,7 @@ title: "Gehjel ifiwifo peome hecava."
 description: "Ji anicima utnohkez cihza nalow cizecril do mi ga oji."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world09/960/600
-coverSmall: https://picsum.photos/seed/world09/640/560
+coverSmall: https://picsum.photos/seed/world09/640/400
 coverPreview: https://picsum.photos/seed/world09/320/200
 pubDate: 2021-02-24T04:42:53.741Z
 ---

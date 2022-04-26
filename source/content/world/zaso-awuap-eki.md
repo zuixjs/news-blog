@@ -10,7 +10,7 @@ title: "Zaso awuap eki."
 description: "Donhekjo ham ugasobis gitopu fu rool moefbi are finehli zib."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world027/960/600
-coverSmall: https://picsum.photos/seed/world027/640/560
+coverSmall: https://picsum.photos/seed/world027/640/400
 coverPreview: https://picsum.photos/seed/world027/320/200
 pubDate: 2021-02-27T20:36:07.638Z
 ---

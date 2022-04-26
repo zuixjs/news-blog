@@ -10,7 +10,7 @@ title: "Wifewec kicgakev le odual."
 description: "Hafhe alzisa asoifo delzug sagfijdif fe zidi eze zo zimdafcic."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel024/960/600
-coverSmall: https://picsum.photos/seed/travel024/640/560
+coverSmall: https://picsum.photos/seed/travel024/640/400
 coverPreview: https://picsum.photos/seed/travel024/320/200
 pubDate: 2021-08-10T16:06:45.042Z
 ---

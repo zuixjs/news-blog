@@ -167,8 +167,7 @@ ul.list li {
 }
 .image-cover {
     width: 100%;
-    aspect-ratio: 1.5;
-    height: auto;
+    aspect-ratio: 1.6;
     max-width: 960px;
 }
 

@@ -10,7 +10,7 @@ title: "Alvedpi re jeej."
 description: "Jikohki cogur favfu comet oriimo tatek hapaad kedacfi cu avjo."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe06/960/600
-coverSmall: https://picsum.photos/seed/europe06/640/560
+coverSmall: https://picsum.photos/seed/europe06/640/400
 coverPreview: https://picsum.photos/seed/europe06/320/200
 pubDate: 2021-04-11T09:30:15.686Z
 ---

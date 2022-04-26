@@ -10,7 +10,7 @@ title: "Vefziw ecfe zime vookiem ogevo."
 description: "Wew gicco wowtoh ra pe roftu ok megep awpor ebeul."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top015/960/600
-coverSmall: https://picsum.photos/seed/top015/640/560
+coverSmall: https://picsum.photos/seed/top015/640/400
 coverPreview: https://picsum.photos/seed/top015/320/200
 pubDate: 2022-01-11T17:24:04.142Z
 ---

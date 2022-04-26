@@ -10,7 +10,7 @@ title: "Goin julot tosgika lenrov."
 description: "Jujso botas sezzi pol omarihhi zewet novoje ajeta edbi reguru."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top06/960/600
-coverSmall: https://picsum.photos/seed/top06/640/560
+coverSmall: https://picsum.photos/seed/top06/640/400
 coverPreview: https://picsum.photos/seed/top06/320/200
 pubDate: 2021-03-18T07:41:10.913Z
 ---

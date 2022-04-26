@@ -10,7 +10,7 @@ title: "Gehu jacnifge vebed lopef."
 description: "Pojok zoan rujhip guazo hokpe dudu jiic noeru kikja kokziw."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel03/960/600
-coverSmall: https://picsum.photos/seed/travel03/640/560
+coverSmall: https://picsum.photos/seed/travel03/640/400
 coverPreview: https://picsum.photos/seed/travel03/320/200
 pubDate: 2021-09-04T07:23:36.637Z
 ---

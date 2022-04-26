@@ -10,7 +10,7 @@ title: "Jebe noehede ihe edoc."
 description: "Egodin penatah tekupih cegkucki ic vir mehane pekni sa imeno."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel07/960/600
-coverSmall: https://picsum.photos/seed/travel07/640/560
+coverSmall: https://picsum.photos/seed/travel07/640/400
 coverPreview: https://picsum.photos/seed/travel07/320/200
 pubDate: 2021-09-03T07:34:58.909Z
 ---

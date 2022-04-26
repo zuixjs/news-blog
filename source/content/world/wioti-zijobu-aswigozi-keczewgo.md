@@ -10,7 +10,7 @@ title: "Wioti zijobu aswigozi keczewgoj."
 description: "Giho zite zoik ge li pahdap fob vecvi uktid fonpil."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world00/960/600
-coverSmall: https://picsum.photos/seed/world00/640/560
+coverSmall: https://picsum.photos/seed/world00/640/400
 coverPreview: https://picsum.photos/seed/world00/320/200
 pubDate: 2021-10-13T06:06:20.189Z
 ---

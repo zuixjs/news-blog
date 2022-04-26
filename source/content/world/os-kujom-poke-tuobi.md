@@ -10,7 +10,7 @@ title: "Os kujom poke tuobi."
 description: "Za awo ne al nuvet aleh hacfaj viki wola zer."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world014/960/600
-coverSmall: https://picsum.photos/seed/world014/640/560
+coverSmall: https://picsum.photos/seed/world014/640/400
 coverPreview: https://picsum.photos/seed/world014/320/200
 pubDate: 2021-02-01T15:15:34.401Z
 ---

@@ -10,7 +10,7 @@ title: "Sowzo ijeva kiruri muckivle."
 description: "Siziw ri se lipror meb fomocu goveski fokofwol jonhucvo botuw."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel019/960/600
-coverSmall: https://picsum.photos/seed/travel019/640/560
+coverSmall: https://picsum.photos/seed/travel019/640/400
 coverPreview: https://picsum.photos/seed/travel019/320/200
 pubDate: 2021-04-28T10:51:47.330Z
 ---

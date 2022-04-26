@@ -10,7 +10,7 @@ title: "Uzsov fefevohev duofre celo givve."
 description: "Fawiaw kod comuwip weriko do edi loceg zihvev ohe todsisil."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world015/960/600
-coverSmall: https://picsum.photos/seed/world015/640/560
+coverSmall: https://picsum.photos/seed/world015/640/400
 coverPreview: https://picsum.photos/seed/world015/320/200
 pubDate: 2022-03-16T17:42:04.197Z
 ---

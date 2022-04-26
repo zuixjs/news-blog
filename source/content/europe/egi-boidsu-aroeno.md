@@ -10,7 +10,7 @@ title: "Egi boidsu aroeno."
 description: "Tomem tinuesi wili am hobogze duro celdev reh al get."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe028/960/600
-coverSmall: https://picsum.photos/seed/europe028/640/560
+coverSmall: https://picsum.photos/seed/europe028/640/400
 coverPreview: https://picsum.photos/seed/europe028/320/200
 pubDate: 2021-08-19T03:17:43.335Z
 ---

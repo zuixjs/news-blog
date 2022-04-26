@@ -10,7 +10,7 @@ title: "Iwi tu enowoj vizid tar."
 description: "Jenketli jihigi erimuh vakitlid pinif ajooci bamzob rojji inpu kat."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top024/960/600
-coverSmall: https://picsum.photos/seed/top024/640/560
+coverSmall: https://picsum.photos/seed/top024/640/400
 coverPreview: https://picsum.photos/seed/top024/320/200
 pubDate: 2021-10-19T05:58:33.420Z
 ---

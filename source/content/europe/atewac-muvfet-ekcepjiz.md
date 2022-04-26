@@ -10,7 +10,7 @@ title: "Atewac muvfet ekcepjiz."
 description: "Hojkigig cu ka jowap pejiw zognuwfug riwgar ceami idigak mupac."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe030/960/600
-coverSmall: https://picsum.photos/seed/europe030/640/560
+coverSmall: https://picsum.photos/seed/europe030/640/400
 coverPreview: https://picsum.photos/seed/europe030/320/200
 pubDate: 2021-05-15T05:53:47.501Z
 ---

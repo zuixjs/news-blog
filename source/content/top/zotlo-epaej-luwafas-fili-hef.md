@@ -10,7 +10,7 @@ title: "Zotlo epaej luwafas fili hef."
 description: "Afefuwme pezur cospe zuco tis tevni hem taem fapfeszib fizcitmo."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top028/960/600
-coverSmall: https://picsum.photos/seed/top028/640/560
+coverSmall: https://picsum.photos/seed/top028/640/400
 coverPreview: https://picsum.photos/seed/top028/320/200
 pubDate: 2022-02-04T10:30:41.845Z
 ---

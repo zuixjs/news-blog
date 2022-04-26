@@ -21,7 +21,6 @@
   position: relative;
   max-width: 640px;
   min-height: 300px;
-  aspect-ratio: 1.2;
   padding: 12px 12px 24px;
 }
 .card i {

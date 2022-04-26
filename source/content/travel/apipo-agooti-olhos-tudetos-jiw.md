@@ -10,7 +10,7 @@ title: "Apipo agooti olhos tudetos jiwapi."
 description: "Ikikne cohe jegiwkuh timjo piwim ki sog tujte hinud sapciru."
 author: J. Doe
 coverImage: https://picsum.photos/seed/travel020/960/600
-coverSmall: https://picsum.photos/seed/travel020/640/560
+coverSmall: https://picsum.photos/seed/travel020/640/400
 coverPreview: https://picsum.photos/seed/travel020/320/200
 pubDate: 2021-09-01T20:01:04.445Z
 ---

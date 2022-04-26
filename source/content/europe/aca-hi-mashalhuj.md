@@ -10,7 +10,7 @@ title: "Aca hi mashalhuj."
 description: "Gujofo feohuva fitec zorsit ugewehjil objow buj aba zaho igcotezo."
 author: J. Doe
 coverImage: https://picsum.photos/seed/europe013/960/600
-coverSmall: https://picsum.photos/seed/europe013/640/560
+coverSmall: https://picsum.photos/seed/europe013/640/400
 coverPreview: https://picsum.photos/seed/europe013/320/200
 pubDate: 2021-12-18T20:59:02.671Z
 ---

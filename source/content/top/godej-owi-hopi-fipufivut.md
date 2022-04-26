@@ -10,7 +10,7 @@ title: "Godej owi hopi fipufivut."
 description: "Inoro omuti gek kiwdumup sapil tiz sogov ni cuco teule."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top025/960/600
-coverSmall: https://picsum.photos/seed/top025/640/560
+coverSmall: https://picsum.photos/seed/top025/640/400
 coverPreview: https://picsum.photos/seed/top025/320/200
 pubDate: 2021-11-27T04:44:08.797Z
 ---

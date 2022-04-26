@@ -10,7 +10,7 @@ title: "Ogkico jehjon pacaco dodmen."
 description: "Zim keove lomdedufi otapu ojetohjo ipos jop rek mofte rudivum."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world025/960/600
-coverSmall: https://picsum.photos/seed/world025/640/560
+coverSmall: https://picsum.photos/seed/world025/640/400
 coverPreview: https://picsum.photos/seed/world025/320/200
 pubDate: 2021-07-08T04:11:28.453Z
 ---

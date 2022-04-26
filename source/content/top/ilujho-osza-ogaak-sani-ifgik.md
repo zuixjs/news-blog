@@ -10,7 +10,7 @@ title: "Ilujho osza ogaak sani ifgik."
 description: "Vokoz utatirek asizir vo itoki ah midav wescut wawnaf fi."
 author: J. Doe
 coverImage: https://picsum.photos/seed/top01/960/600
-coverSmall: https://picsum.photos/seed/top01/640/560
+coverSmall: https://picsum.photos/seed/top01/640/400
 coverPreview: https://picsum.photos/seed/top01/320/200
 pubDate: 2021-09-03T01:38:36.324Z
 ---

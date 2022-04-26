@@ -10,7 +10,7 @@ title: "Pe poso meturuko favlu."
 description: "Kepi tiw okboj oseci ik cer gozgo ecsoap moeki masoja."
 author: J. Doe
 coverImage: https://picsum.photos/seed/world05/960/600
-coverSmall: https://picsum.photos/seed/world05/640/560
+coverSmall: https://picsum.photos/seed/world05/640/400
 coverPreview: https://picsum.photos/seed/world05/320/200
 pubDate: 2022-03-02T09:37:42.658Z
 ---
