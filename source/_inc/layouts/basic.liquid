@@ -4,13 +4,14 @@ date: Last Modified
 {% include "head_open.liquid" %}
 <style>
 {% include "layouts/basic/style.css" %}
+{% include "./common/forms.css" %}
 {% include "./common/theme.css.liquid" %}
 </style>
 {% include "head_close.html" %}
 
 {% if headerButtonIcon == null %}{% assign headerButtonIcon = 'menu' %}{% endif %}
 
-<body layout="column top-center">
+<body layout="column stretch-center">
 
 {% if coverImage %}
     <img class="image-cover" src="{{ coverPreview }}" alt="Cover image preview" style="position: absolute">
@@ -48,6 +49,9 @@ items:
 - title: Share
   link: javascript:shareContent()
   icon: share
+options:
+- name: position
+  value: center
 {% endzx %}
 
 {% include "footer.liquid" %}
@@ -60,5 +64,16 @@ items:
 <script>
     {% include "layouts/basic/script.js.liquid" %}
 </script>
+
+
+<!-- zuix-editor data -->
+{% if app.environment == 'default' or app.environment == 'development' -%}
+<script>
+    var zuixEditor = {
+        data: {{ eleventyComputed._data | json }}
+    }
+</script>
+{%- endif %}
+
 
 {% include "html_close.html" %}

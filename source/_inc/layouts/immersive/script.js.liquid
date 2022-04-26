@@ -33,32 +33,8 @@ function syncPageIndicator(page) {
   if (pageIndicator) pageIndicator.page(page.in);
 }
 
-function openContentFrame(url) {
-  const contentFrame = zuix.field('content-frame');
-  contentFrame.get().src = url;
-  contentFrame.animateCss('slideInRight', {duration: '500ms'}, function() {
-    contentFrame.get().focus();
-  }).removeClass('hidden');
-}
-function closeContentFrame(loc) {
-  const contentFrame = zuix.field('content-frame');
-  contentFrame.animateCss('slideOutRight', {duration: '300ms'}, ()=> {
-    contentFrame.addClass('hidden');
-    loc && loc.replace('about:blank');
-  });
-}
-
 {% include '../common/theme.js' %}
 
 {% if options contains 'ext-links' -%}
-function processExternalLinks(view) {
-  // Force opening of all non-local links in a new window
-  zuix.$(view).find('a[href*="://"]')
-      .attr('target', '_blank')
-      .attr('rel', 'noreferrer');
-}
-zuix.hook('view:process', function(view) {
-  processExternalLinks(view);
-});
-processExternalLinks(document);
+{% include '../common/external-links.js.liquid'  %}
 {% endif %}

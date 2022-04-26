@@ -30,5 +30,25 @@ keywords:
 
 </section>
 
-<!-- iframe for displaying pages -->
-<iframe z-field="content-frame" class="hidden"></iframe>
+{% include '../_inc/content-frame.liquid' %}
+
+{% if zuixEditor -%}
+<script>
+zuix.context('zuix-editor', function(ed) {
+    ed.mode({hidden: true});
+    ed.on({
+        'zuix:action:progress': function(e, ar) {
+            if (ar.action === 'delete-page') {
+                closeContentFrame(contentFrame.get().contentWindow.location);
+            }
+        },
+        'zuix:action:result': function(e, ar) {
+            refresh();
+        }
+    });
+});
+function refresh() {
+    // TODO: not implemented
+}
+</script>
+{% endif -%}

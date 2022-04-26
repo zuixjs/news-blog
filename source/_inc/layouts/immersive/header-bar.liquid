@@ -11,7 +11,7 @@
             <div layout="row center-center" style="padding-left: 32px">
                 <div class="search-box">
                 <span class="input">
-                    <input z-field="search-input" type="search" placeholder="Enter search terms">
+                    <input z-field="search-input" type="search" autofocus placeholder="Enter search terms">
                     <span></span>
                 </span>
                 </div>
@@ -52,4 +52,11 @@
 {% wrapCss 'header-bar' false %}
 {% include './header-bar.css' %}
 {% endwrapCss %}
+.theme-dark [header-bar] .search-box input {
+    background-color: var(--dark-color);
+    color: var(--dark-color-text);
+}
+.theme-dark [header-bar] .search-box input::placeholder {
+    opacity: 0.5;
+}
 </style>

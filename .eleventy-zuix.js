@@ -161,10 +161,13 @@ function setupSocketApi(browserSync) {
             // delete folder too
             fs.rmSync(path.resolve(data.page.inputPath, '..'), { recursive: true, force: true });
             fs.rmSync(path.resolve(data.page.outputPath, '..'), { recursive: true, force: true });
+          } else {
+            // delete single file
+            fs.rmSync(data.page.inputPath);
           }
           const redirectUrl = path.resolve(data.page.url, '..');
           ioEmit('zuix:deletePage:done', redirectUrl);
-//          forceRebuild(); // <--- TODO: this is a patch to the fact sometimes 11ty doesn't rebuild
+          forceRebuild();
         } catch (e) {
           ioEmit('zuix:deletePage:error', e);
         }
@@ -187,6 +190,10 @@ function setupSocketApi(browserSync) {
         } else if (data.ctrl) {
           handlePromise(generate('controller', [data.name]));
         }
+      });
+      socket.on('zuix:buildAll', (request) => {
+        cmsLog('zuix:buildAll');
+        forceRebuild(200);
       });
     });
     // Errors notifying

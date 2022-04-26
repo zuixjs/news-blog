@@ -1,0 +1,391 @@
+---
+eleventyExcludeFromCollections: true
+---
+<html>
+<head>
+    <link rel="preload" as="style" href="{{ '/css/fla/flex-layout-attribute.min.css' | url }}"/>
+    <link rel="stylesheet" href="{{ '/css/fla/flex-layout-attribute.min.css' | url }}"/>
+
+    <link rel="stylesheet" href="{{ '/js/codemirror/codemirror.css' | url }}">
+    <link rel="stylesheet" href="{{ '/js/codemirror/ayu-dark.css' | url }}">
+    <script src="{{ '/js/codemirror/codemirror.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/overlay.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/htmlmixed.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/css.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/xml.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/javascript.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/markdown.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/gfm.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/yaml.js' | url }}"></script>
+    <script src="{{ '/js/codemirror/yaml-frontmatter.js' | url }}"></script>
+
+    <!-- zuix.js https://github.com/zuixjs/zuix -->
+    <link rel="preload" as="script" href="{{ '/js/zuix/zuix.min.js' | url }}">
+    <link rel="preload" as="script" href="{{ '/config.js' | url }}">
+    <script src="{{ '/js/zuix/zuix.min.js' | url }}"></script>
+    <script src="{{ '/config.js' | url }}"></script>
+
+    <style>
+        {% include "layouts/common/theme.css.liquid" %}
+    </style>
+
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        a {
+            cursor: pointer;
+        }
+        a:hover:not(.not-modified), a:hover:not(.not-modified) svg {
+            color: deeppink!important;
+            fill: deeppink!important;
+        }
+
+        [\#toolbar] {
+            height: 48px;
+            max-height: 64px;
+            gap: 6px
+        }
+
+        [\#preview-panel] {
+            transition-property: width, max-width;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        .closed {
+            width: 0;
+        }
+        .not-modified {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .dialog-container  {
+            position: fixed;
+            left: 0; top: 0;
+            bottom: 0; right: 0;
+            background-color: rgba(127, 127, 127, 0.25);
+            z-index: 10000;
+            width: 100vw;
+            height: 100vh;
+        }
+        .dialog {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid;
+            min-width: 360px;
+            max-height: 480px;
+            overflow-y: auto;
+            box-shadow: 0 1px 12px 3px #44444488;
+            background: #fff;
+        }
+        .dialog h2 {
+            margin-top: 0;
+        }
+        .dialog .content {
+            width: auto;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        @keyframes blinking {
+            0% {
+                opacity: 1.0;
+            }
+            75% {
+                opacity: 0.2;
+            }
+        }
+        .busy {
+            animation: blinking 0.3s infinite;
+        }
+    </style>
+</head>
+<body layout="row stretch-stretch">
+
+<div class="editor-panel" layout="column stretch-stretch">
+
+    <div #toolbar z-load="default" layout="row center-justify">
+
+        <a #close-btn title="Close editor">
+            <svg height="48px" viewBox="0 0 24 24" width="48px">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+            </svg>
+        </a>
+        <a #save-btn title="Save content"
+           @on:click="saveContent()"
+           @get="isClean() as clean"
+           @set="clean ? $this.addClass('not-modified') : $this.removeClass('not-modified')"
+           @if="pendingSaveResponse" @then="$this.addClass('busy')" @else="$this.removeClass('busy')">
+            <svg height="48px" viewBox="0 0 24 24" width="48px">
+                <path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm2 16H5V5h11.17L19 7.83V19zm-7-7c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zM6 6h9v4H6z"/>
+            </svg>
+        </a>
+        <div #file-path self="size-x1" layout="row center-center">
+        </div>
+        <a #dark-mode-btn title="Dark mode"
+           @set="isSettingOn(settings.darkMode) ? $this.hide() : $this.show()" @active>
+            <svg height="48px" viewBox="0 0 20 20" width="48px">
+                <rect fill="none" height="20" width="20"/><path d="M8.04,4.86C7.88,5.39,7.8,5.94,7.8,6.5c0,3.14,2.56,5.7,5.7,5.7c0.56,0,1.11-0.08,1.64-0.24c-0.79,2.07-2.8,3.54-5.14,3.54 c-3.03,0-5.5-2.47-5.5-5.5C4.5,7.66,5.97,5.65,8.04,4.86z M10,3c-3.87,0-7,3.13-7,7s3.13,7,7,7s7-3.13,7-7 c0-0.36-0.03-0.72-0.08-1.06C16.16,10,14.91,10.7,13.5,10.7c-2.32,0-4.2-1.88-4.2-4.2c0-1.41,0.7-2.66,1.76-3.42 C10.72,3.03,10.36,3,10,3L10,3z"/>
+            </svg>
+        </a>
+        <a #dark-mode-btn title="Light mode"
+           @set="isSettingOn(settings.darkMode) ? $this.show() : $this.hide()" @active>
+            <svg height="48px" viewBox="0 0 20 20" width="48px">
+                <rect fill="none" height="20" width="20"/><path d="M10,7.5c1.38,0,2.5,1.12,2.5,2.5s-1.12,2.5-2.5,2.5S7.5,11.38,7.5,10S8.62,7.5,10,7.5z M10,6c-2.21,0-4,1.79-4,4s1.79,4,4,4 s4-1.79,4-4S12.21,6,10,6L10,6z M3.75,10.75c0.41,0,0.75-0.34,0.75-0.75c0-0.41-0.34-0.75-0.75-0.75h-2C1.34,9.25,1,9.59,1,10 s0.34,0.75,0.75,0.75H3.75z M18.25,10.75c0.41,0,0.75-0.34,0.75-0.75c0-0.41-0.34-0.75-0.75-0.75h-2c-0.41,0-0.75,0.34-0.75,0.75 s0.34,0.75,0.75,0.75H18.25z M9.25,3.75C9.25,4.16,9.59,4.5,10,4.5c0.41,0,0.75-0.34,0.75-0.75v-2C10.75,1.34,10.41,1,10,1 S9.25,1.34,9.25,1.75V3.75z M13.89,5.05c-0.29,0.29-0.29,0.77,0,1.06s0.77,0.29,1.06,0l1.06-1.06c0.29-0.29,0.29-0.77,0-1.06 c-0.29-0.29-0.77-0.29-1.06,0L13.89,5.05z M3.99,14.95c-0.29,0.29-0.29,0.77,0,1.06s0.77,0.29,1.06,0l1.06-1.06 c0.29-0.29,0.29-0.77,0-1.06c-0.29-0.29-0.77-0.29-1.06,0L3.99,14.95z M5.05,6.11c0.29,0.29,0.77,0.29,1.06,0s0.29-0.77,0-1.06 L5.05,3.99c-0.29-0.29-0.77-0.29-1.06,0s-0.29,0.77,0,1.06L5.05,6.11z M14.95,16.01c0.29,0.29,0.77,0.29,1.06,0s0.29-0.77,0-1.06 l-1.06-1.06c-0.29-0.29-0.77-0.29-1.06,0c-0.29,0.29-0.29,0.77,0,1.06L14.95,16.01z M9.25,18.25C9.25,18.66,9.59,19,10,19 c0.41,0,0.75-0.34,0.75-0.75v-2c0-0.41-0.34-0.75-0.75-0.75s-0.75,0.34-0.75,0.75V18.25z"/>
+            </svg>
+        </a>
+        <a #preview-toggle-btn title="Toggle preview">
+            <svg height="48px" viewBox="0 0 24 24" width="48px">
+                <g>
+                    <rect fill="none" height="24" width="24"/>
+                    <path d="M19,3H5C3.89,3,3,3.9,3,5v14c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.11,3,19,3z M19,19H5V7h14V19z M12,10.5 c1.84,0,3.48,0.96,4.34,2.5c-0.86,1.54-2.5,2.5-4.34,2.5S8.52,14.54,7.66,13C8.52,11.46,10.16,10.5,12,10.5 M12,9 c-2.73,0-5.06,1.66-6,4c0.94,2.34,3.27,4,6,4s5.06-1.66,6-4C17.06,10.66,14.73,9,12,9L12,9z M12,14.5c-0.83,0-1.5-0.67-1.5-1.5 s0.67-1.5,1.5-1.5s1.5,0.67,1.5,1.5S12.83,14.5,12,14.5z"/>
+                </g>
+            </svg>
+        </a>
+        <a #swap-btn title="Swap views"
+           @set="isSettingOn(settings.togglePreview) ? $this.hide() : $this.show()" @active>
+            <svg height="48px" viewBox="0 0 24 24" width="48px">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/>
+            </svg>
+        </a>
+
+    </div>
+
+    <textarea id="code" name="code" style="width: 100%; height: 100%"></textarea>
+
+</div>
+
+<div #preview-panel self="size-1of2">
+
+    <iframe id="preview" style="width: 100%; height: 100%"></iframe>
+
+</div>
+
+<div #dialog z-load="default" class="dialog-container" layout="column center-center">
+
+    <div class="dialog">
+        <h2>Error</h2>
+        <pre #message class="dialog-content"></pre>
+        <div layout="row center-center">
+            <a class="button" @on:click="context.$.hide()">
+                Close
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+  const previewFrame = document.querySelector('iframe');
+  let zuixEditor = null;
+  let browserSync = null;
+  let originalContent = '';
+  let pendingSaveResponse = false;
+  let savePostponeTimeout = null;
+  let currentContentPath = '';
+  const dialog = zuix.field('dialog').hide();
+
+  editor = CodeMirror.fromTextArea(
+    document.getElementById('code'),
+    {
+      mode: 'yaml-frontmatter',
+      lineNumbers: true,
+      autoCloseTags: true,
+      lineWrapping: true,
+      //theme: 'ayu-dark',
+      extraKeys: {
+        'Ctrl-S': function() {
+          saveContent();
+        }
+      }
+    }
+  );
+
+  const settings = {
+    swapLayout: 'editor.swapLayout',
+    togglePreview: 'editor.togglePreview',
+    darkMode: 'editor.darkMode'
+  }
+  const darkTheme = 'cm-s-ayu-dark';
+  loadSettings();
+
+  zuix.field('swap-btn').on('click', function() {
+    swapLayout();
+  });
+  zuix.field('preview-toggle-btn').on('click', function() {
+    togglePreview();
+  });
+  zuix.field('dark-mode-btn').on('click', function() {
+    darkMode();
+  });
+
+  // load current page in the preview panel
+  document.querySelector('#preview').src = location.hash.substring(1);
+
+  waitObject(function() {
+    return window['___browserSync___'] && zuixEditor;
+  }, function() {
+    browserSync = window['___browserSync___'];
+    // setup IO events handlers
+    browserSync.socket.on('zuix:loadContent:done', function(response) {
+      // TODO: should ask before replacing content for subsequent requests
+      if (originalContent !== response.content && savePostponeTimeout == null && !pendingSaveResponse) {
+        originalContent = response.content;
+        editor.setValue(response.content);
+        editor.markClean();
+        editor.clearHistory();
+      }
+    });
+    browserSync.socket.on('zuix:addPage:done', function(redirectUrl) {
+      // TODO: ...
+    });
+    browserSync.socket.on('zuix:deletePage:done', function(redirectUrl) {
+      // TODO: ...
+    });
+    browserSync.socket.on('zuix:build:done', function() {
+      browserSync.socket.disconnect();
+      if (parent.refresh) {
+          parent.refresh();
+      }
+    });
+    browserSync.socket.on('zuix:eleventy:error', function(err) {
+      pendingSaveResponse = false;
+      console.log(err);
+      dialog.field('message')
+        .html(err.message);
+      dialog.show();
+    });
+    browserSync.socket.on('disconnect', function(reason) {
+      if (reason !== 'io client disconnect') {
+        console.log('DISCONNECTED', reason);
+      }
+    });
+    loadContent();
+  });
+
+  document.querySelector('iframe').onload = function() {
+    zuixEditor = null;
+    waitObject(function() {
+      return previewFrame.contentWindow.zuixEditor;
+    }, function(zed) {
+      zuixEditor = zed;
+      if (parent.setEditorData) {
+          zuixEditor.data.host = previewFrame.contentWindow;
+          parent.setEditorData(zuixEditor.data, true);
+      }
+      document.location.hash = previewFrame.contentWindow.location.pathname;
+      if (browserSync) {
+        if (browserSync.socket.connected) {
+          loadContent();
+        } else {
+          browserSync.socket.once('connect', function() {
+            pendingSaveResponse = false;
+            loadContent();
+          });
+          browserSync.socket.connect();
+        }
+      }
+    });
+  };
+
+
+  function loadContent() {
+    const request = {path: zuixEditor.data.page.inputPath};
+    currentContentPath = request.path;
+    zuix.field('file-path').html(currentContentPath);
+    zuix.field('close-btn').get().href = previewFrame.contentWindow.location.href;
+    if (browserSync && browserSync.socket.connected) {
+      browserSync.socket.emit('zuix:loadContent', request);
+    } else {
+      // TODO: report error
+    }
+  }
+  function saveContent() {
+    clearTimeout(savePostponeTimeout);
+    savePostponeTimeout = null;
+    if (browserSync && !isClean() && !pendingSaveResponse) {
+      if (browserSync.socket.connected) {
+        const content = editor.getValue();
+        const request = {path: zuixEditor.data.page.inputPath, content};
+        browserSync.socket.emit('zuix:saveContent', request);
+        originalContent = content;
+        pendingSaveResponse = true;
+      } else {
+        // TODO: report connection error
+        console.log('NOT CONNECTED!');
+      }
+    } else if (!isClean()) {
+      savePostponeTimeout = setTimeout(saveContent, 100);
+    }
+  }
+  function isClean() {
+    return originalContent === editor.getValue();
+  }
+
+
+  function loadSettings() {
+    if (isSettingOn(settings.swapLayout)) swapLayout();
+    if (isSettingOn(settings.togglePreview)) togglePreview();
+    if (isSettingOn(settings.darkMode)) darkMode();
+  }
+  function isSettingOn(key) {
+    return localStorage.getItem(key) === 'true';
+  }
+
+  function swapLayout() {
+    const doc = zuix.$(document.body);
+    const toolbar = zuix.field('toolbar');
+    if (doc.css('flex-direction') !== '') {
+      doc.css('flex-direction', '');
+      toolbar.css('flex-direction', '');
+      localStorage.setItem(settings.swapLayout, 'false');
+    } else {
+      doc.css('flex-direction', 'row-reverse');
+      toolbar.css('flex-direction', 'row-reverse');
+      localStorage.setItem(settings.swapLayout, 'true');
+    }
+  }
+  function togglePreview() {
+    const previewPanel = zuix.field('preview-panel');
+    if (previewPanel.hasClass('closed')) {
+      previewPanel.removeClass('closed');
+      localStorage.setItem(settings.togglePreview, 'false');
+    } else {
+      previewPanel.addClass('closed');
+      localStorage.setItem(settings.togglePreview, 'true');
+    }
+  }
+  function darkMode() {
+    const cm = zuix.$.find('.CodeMirror');
+    if (cm.hasClass(darkTheme)) {
+      cm.removeClass(darkTheme);
+      localStorage.setItem(settings.darkMode, 'false');
+    } else {
+      cm.addClass(darkTheme);
+      localStorage.setItem(settings.darkMode, 'true');
+    }
+  }
+
+
+  function waitObject(objectInstance, callback) {
+    if (!objectInstance()) {
+      setTimeout(function() {
+        waitObject(objectInstance, callback);
+      }, 100);
+    } else {
+      callback(objectInstance());
+    }
+  }
+</script>
+
+</body>
+</html>

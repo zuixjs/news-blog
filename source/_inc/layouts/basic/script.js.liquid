@@ -1,10 +1,11 @@
-{% include '../common/theme.js' %}
-
 function closeContent() {
+  if (window.parent.location.pathname === '/editor/') {
+    return;
+  }
   if (window.parent.closeContentFrame) {
     window.parent.closeContentFrame(location);
-  } else {
-    location.href = '../../../home';
+  } else if(parent.top.location.pathname !== '/editor/') {
+    location.href = '../../../home/#{{ group | slugify }}';
   }
 }
 function shareContent() {
@@ -42,3 +43,9 @@ if (history && history.pushState) {
     closeContent();
   };
 }
+
+{% include '../common/theme.js' %}
+
+{% if options contains 'ext-links' -%}
+{% include '../common/external-links.js.liquid'  %}
+{% endif %}

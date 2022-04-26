@@ -8,9 +8,9 @@
     --lite-color--code: #005000;
     --lite-font--weigth: 400;
 
-    --dark-color: #181818;
+    --dark-color: #141418;
     --dark-color-text: #d2d2d2;
-    --dark-nav-color: #000000; /* #014b76; */ /* #60142d; */
+    --dark-nav-color: #1a273b; /* #014b76; */ /* #60142d; */
     --dark-nav-color-text: #ccc;
     --dark-color--accent: #f1c700;
     --dark-color--primary: #84de58;
@@ -185,13 +185,15 @@ nav [z-field="header-tools"] .active {
     background: var(--dark-nav-color)!important;
 }
 .theme-dark [z-load*="/components/context-menu"] .container {
-    background: rgba(50,50,50,0.5)!important;
+    background: rgba(0,0,0,0.65)!important;
 }
 
 /* View-Pager List Cards */
 [z-load="listview/items-list/item"] .summary {
     background-color: rgba(230, 230, 230, 0.7);
+    transition: background-color 0.3s ease-in-out;
 }
 .theme-dark [z-load="listview/items-list/item"] .summary {
     background-color: rgba(20, 20, 20, 0.7);
+    transition: background-color 0.3s ease-in-out;
 }

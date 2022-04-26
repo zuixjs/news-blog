@@ -16,7 +16,7 @@ keywords:
 ---
 
 <section class="page-scroll" layout="column top-center"
-         ctrl z-load="pages/search" z-lazy="scroll">
+         ctrl z-load="pages/search" z-context="search-page" z-lazy="scroll">
 
     <div #cover class="message" self="size-x1 stretch-stretch" layout="column center-center">
         <div class="animate__animated animate__pulse animate__faster" layout="row center-center">
@@ -38,8 +38,31 @@ keywords:
 
 </section>
 
-<!-- iframe for displaying pages -->
-<iframe z-field="content-frame" class="hidden"></iframe>
-
 <!-- Fuse JS -->
 <script src="{{ '/js/fuse/fuse.min.js' | url }}" defer async></script>
+
+{% include '../_inc/content-frame.liquid' %}
+
+{% if zuixEditor -%}
+<script>
+zuix.context('zuix-editor', function(ed) {
+    ed.mode({hidden: true});
+    ed.on({
+        'zuix:action:progress': function(e, ar) {
+            if (ar.action === 'delete-page') {
+                closeContentFrame(contentFrame.get().contentWindow.location);
+            }
+        },
+        'zuix:action:result': function(e, ar) {
+            refresh();
+        }
+    });
+});
+function refresh() {
+    const searchPage = zuix.context('search-page');
+    searchPage.loadIndex(function() {
+        searchPage.search();
+    });
+}
+</script>
+{% endif -%}

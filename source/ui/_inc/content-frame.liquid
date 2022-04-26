@@ -1,0 +1,105 @@
+<!-- iframe for displaying pages -->
+<iframe z-field="content-frame" class="hidden"></iframe>
+
+{% assign zuixEditor = app.environment == 'default' or app.environment == 'development' %}
+{% if zuixEditor -%}
+    <div z-load="cms/zuix-editor" z-context="zuix-editor" z-lazy="false" class="visible-on-ready">
+        <div #sections>
+            {% for s in collections.sections %}
+                <div>
+                    <div #name>{{ s.data.group }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+        let currentEditorMode = null;
+        let homeSections = [];
+        {% for s in collections.sections %}
+        homeSections['{{ s.data.group }}'] = {
+            section: '{{ s.data.group }}',
+            title: '{{ s.data.title }}',
+            page: {
+                url: '{{ s.url }}',
+                filePathStem: '{{ s.filePathStem }}',
+                inputPath: '{{ s.inputPath }}',
+                outputPath: '{{ s.outputPath }}'
+            }
+        };
+        {% endfor %}
+        var zuixEditor = null;
+        zuix.context('zuix-editor', function(ctx) {
+            zuixEditor = ctx
+            zuixEditor.data = {{ eleventyComputed._data | json }};
+        });
+        function setEditorData(pageData, hideEdit) {
+            zuix.context('zuix-editor', function(ed) {
+                if (!pageData) {
+                    ed.mode({
+                        editPage: false,
+                        deletePage: false,
+                        addPage: true,
+                        addComponent: true,
+                        rebuildAll: true
+                    });
+                } else if (pageData.section) {
+                    // section / group
+                    ed.mode({
+                        editPage: false,
+                        deletePage: true,
+                        addPage: true,
+                        addComponent: true,
+                        rebuildAll: true,
+                        data: pageData
+                    });
+                } else {
+                    // single page
+                    ed.mode({
+                        editPage: !hideEdit,
+                        deletePage: true,
+                        addPage: false,
+                        addComponent: false,
+                        rebuildAll: false,
+                        data: pageData
+                    });
+                }
+            });
+        }
+    </script>
+{%- endif %}
+
+<script>
+    const contentFrame = zuix.field('content-frame');
+    function openContentFrame(url) {
+        contentFrame.get().src = url;
+        contentFrame.animateCss('slideInRight', {duration: '300ms'}, function() {
+            contentFrame.get().focus();
+        }).removeClass('hidden');
+        {%- if zuixEditor %}
+        currentEditorMode = zuixEditor.mode();
+        ___browserSync___.socket.disconnect();
+        {%- endif %}
+    }
+    function closeContentFrame(loc) {
+        contentFrame.animateCss('slideOutRight', {duration: '300ms'}, ()=> {
+            contentFrame.addClass('hidden');
+            loc && loc.replace('about:blank');
+        });
+        {%- if zuixEditor %}
+        zuixEditor.mode(currentEditorMode);
+        ___browserSync___.socket.connect();
+        {%- endif %}
+    }
+
+    {%- if zuixEditor %}
+    contentFrame.get().onload = function() {
+        // Update zuix-editor menu available options
+        const cw = contentFrame.get().contentWindow;
+        if (cw.zuixEditor) {
+            cw.zuixEditor.data.host = cw;
+            setEditorData(cw.zuixEditor.data);
+        }
+    }
+    {%- endif %}
+
+</script>

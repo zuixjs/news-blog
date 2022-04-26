@@ -7,6 +7,9 @@ function ItemsList(cp) {
 
   function onCreate() {
     const url = cp.options().section;
+    cp.expose('reload', function(callback) {
+      fetchList(url, callback);
+    });
     fetchList(url);
   }
 
@@ -58,12 +61,15 @@ function ItemsList(cp) {
   }
 
   // Download RSS feed
-  function fetchList(jsonUrl) {
+  function fetchList(jsonUrl, callback) {
     zuix.$.ajax({
       url: jsonUrl,
       success: function(res) {
         itemsList = JSON.parse(res);
         refreshList();
+        if (callback) {
+          callback(itemsList);
+        }
       },
       error: function(err) {
         // TODO: handle error

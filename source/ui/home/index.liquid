@@ -19,13 +19,14 @@ keywords:
 
     <div ctrl z-load="@lib/controllers/view-pager"
          z-options="home.viewPager"
+         z-context="view-pager"
          class="feed-pager"
          draggable="false">
 
         {% assign sectionList = collections.sections | sort: 'data.order' -%}
         {%- for section in sectionList -%}
             <article ctrl z-load="@lib/controllers/header-auto-hide"
-                     z-options="home.autoHidingBars"
+                     z-options="home.autoHidingBars" z-field="{{ section.data.group }}"
                      class="content" layout="column top-stretch">
 
                 <div z-load="listview/items-list" #items-list
@@ -39,57 +40,146 @@ keywords:
 
 </section>
 
-<!-- iframe for displaying pages -->
-<iframe z-field="content-frame" class="hidden"></iframe>
+{% include '../_inc/content-frame.liquid' %}
+
 <script>
-let viewPager;
+    let viewPager;
+    let editMode;
+    let currentPage;
+    let currentPageName;
 
-home = {
+    home = {
 
-    viewPager: {
-        lazyLoad: false,
-        enablePaging: true,
-        //startGap: 40,
-        on: {
-            'page:change': function(e, page) {
-                syncPageIndicator(page);
-                // show header/footer
-                if (viewPager) {
-                    const currentPage = viewPager.get(page.in);
-                    if (currentPage) {
-                        // load the 'header-auto-hide' component that is loaded on each page
-                        zuix.context(currentPage, (headerAutoHide) => {
-                            headerAutoHide.show && headerAutoHide.show();
-                        });
+        viewPager: {
+            lazyLoad: false,
+            enablePaging: true,
+            //startGap: 40,
+            on: {
+                'page:change': function (e, page) {
+                    syncPageIndicator(page);
+                    // show header/footer
+                    if (viewPager) {
+                        currentPage = viewPager.get(page.in);
+                        if (currentPage) {
+                            currentPageName = currentPage.attr('z-field');
+                            document.location.hash = '#' + currentPageName;
+                            // load the 'header-auto-hide' component that is loaded on each page
+                            zuix.context(currentPage, (headerAutoHide) => {
+                                headerAutoHide.show && headerAutoHide.show();
+                            });
+                        }
                     }
                 }
+            },
+            ready: function () {
+                viewPager = this;
+                currentPageName = document.location.hash.substring(1);
+                if (currentPageName.length === 0 && viewPager.get(0)) {
+                    currentPageName = viewPager.get(0).attr('z-field');
+                }
+                setCurrentPage(currentPageName);
+                setTimeout(function() {
+                    zuix.componentize();
+                }, 500);
             }
         },
-        ready: function() {
-            viewPager = this;
-        }
-    },
 
-    autoHidingBars: {
-        header: 'header-bar',
-        footer: 'footer-bar',
-        height: 56,
-        on: {
-            'page:scroll': function(e, data) {
-                zuix.componentize();
-            },
-            'scroll:ready': function(e, scroll) {
-                // lazy-load cards background cover
-                const itemsList = scroll.$.find('div').get();
-                zuix.context(itemsList, function(ctx) {
-                    scroll.watch('.cover-wrapper', function(el, data) {
-                        //console.log(el, data);
+        autoHidingBars: {
+            header: 'header-bar',
+            footer: 'footer-bar',
+            height: 56,
+            on: {
+                'page:scroll': function (e, data) {
+                    zuix.componentize();
+                },
+                'scroll:ready': function (e, scroll) {
+                    // lazy-load cards background cover
+                    const itemsList = scroll.$.find('div').get();
+                    zuix.context(itemsList, function (ctx) {
+                        scroll.watch('.cover-wrapper', function (el, data) {
+                            //console.log(el, data);
+                        });
+                        scroll.check();
                     });
-                    scroll.check();
-                });
+                }
             }
         }
+
     }
 
-}
+    window.onhashchange = function (e, b) {
+        if (document.location.hash.length > 1) {
+            setCurrentPage(document.location.hash.substring(1));
+        }
+    }
+    function setCurrentPage(pageName) {
+        zuix.context('view-pager', function (viewPager) {
+            const pageIndex = viewPager.$
+                .field(pageName)
+                .index();
+            viewPager.page(pageIndex);
+        });
+        {%- if zuixEditor -%}
+        setEditorData(homeSections[pageName]);
+        {%- endif -%}
+    }
+
+    {% if zuixEditor -%}
+    zuix.context('zuix-editor', function(ed) {
+        ed.on({
+            'zuix:action:progress': function(e, ar) {
+                if (ar.action === 'delete-page' && !ar.data.section) {
+                    closeContentFrame(contentFrame.get().contentWindow.location);
+                }
+            },
+            'zuix:action:result': function(e, ar) {
+                if (ar) {
+                    switch(ar.action) {
+                        case 'add-page':
+                            if (!homeSections[ar.section]) {
+                                document.location.replace(document.location.pathname + '?' + new Date().getTime() + '#' + ar.section);
+                            } else {
+                                document.location.hash = ar.section;
+                                refresh(true);
+                            }
+                            break;
+                        case 'delete-page':
+                            if (ar.data.section) { // whole section
+                                document.location.replace(document.location.pathname + '?' + new Date().getTime());
+                            } else { // single page
+                                refresh();
+                            }
+                            break;
+                    }
+                } else {
+                    refresh();
+                }
+            }
+        });
+    });
+    function refresh(scrollTop) {
+        const listElement = zuix.field('items-list', currentPage, currentPage);
+        const headerAutoHide = zuix.context(currentPage);
+        if (headerAutoHide) {
+            // show header/footer bars
+            headerAutoHide.show();
+        }
+        const listContext = zuix.context(listElement);
+        if (listContext && listContext.reload) {
+            listContext.reload((list) => {
+                zuix.componentize(listElement);
+                setTimeout(function () {
+                    ___browserSync___.socket.connect();
+                    if (scrollTop) {
+                        listElement.get().offsetParent.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 500); // TODO: maybe decrease delay
+            });
+        }
+    }
+    {% endif -%}
+
 </script>
