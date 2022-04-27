@@ -26,6 +26,7 @@ eleventyExcludeFromCollections: true
     <script src="{{ '/config.js' | url }}"></script>
 
     <style>
+        {% include "layouts/common/forms.css" %}
         {% include "layouts/common/theme.css.liquid" %}
     </style>
 
@@ -272,6 +273,9 @@ eleventyExcludeFromCollections: true
     loadContent();
   });
 
+  const connect = function() {
+    browserSync.socket.connect();
+  };
   document.querySelector('iframe').onload = function() {
     zuixEditor = null;
     waitObject(function() {
@@ -291,7 +295,7 @@ eleventyExcludeFromCollections: true
             pendingSaveResponse = false;
             loadContent();
           });
-          browserSync.socket.connect();
+          setTimeout(connect, 500);
         }
       }
     });

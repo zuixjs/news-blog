@@ -2,12 +2,17 @@
 <iframe z-field="content-frame" class="hidden"></iframe>
 
 <script>
+    {%- if zuixEditor %}
+    let currentEditorMode = null;
+    {%- endif %}
     const contentFrame = zuix.field('content-frame');
     function openContentFrame(url) {
+        setTimeout(function() {
+            contentFrame.animateCss('slideInRight', {duration: '300ms'}, function() {
+                contentFrame.get().focus();
+            }).removeClass('hidden');
+        }, 200);
         contentFrame.get().src = url;
-        contentFrame.animateCss('slideInRight', {duration: '300ms'}, function() {
-            contentFrame.get().focus();
-        }).removeClass('hidden');
 
         {%- if zuixEditor %}
         currentEditorMode = zuixEditor.mode();

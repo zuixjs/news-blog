@@ -40,7 +40,7 @@ keywords:
 
 </section>
 
-{% include '../_inc/zuix-editor.liquid' %}
+{% include 'layouts/common/zuix-editor.liquid' %}
 {% include '../_inc/content-frame.liquid' %}
 
 <script>
@@ -118,11 +118,12 @@ keywords:
             viewPager.page(pageIndex);
         });
         {%- if zuixEditor -%}
-        setEditorData(homeSections[pageName]);
+        setEditorData(contentSections[pageName]);
         {%- endif -%}
     }
 
     {% if zuixEditor -%}
+    // zuix-editor events handling
     zuix.context('zuix-editor', function(ed) {
         ed.on({
             'zuix:action:progress': function(e, ar) {
@@ -134,7 +135,7 @@ keywords:
                 if (ar) {
                     switch(ar.action) {
                         case 'add-page':
-                            if (!homeSections[ar.section]) {
+                            if (!contentSections[ar.section]) {
                                 document.location.replace(document.location.pathname + '?' + new Date().getTime() + '#' + ar.section);
                             } else {
                                 document.location.hash = ar.section;
