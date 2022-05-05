@@ -33,6 +33,7 @@
 
         {% if header == "home" %}
         <div ctrl z-load="@lib/controllers/view-pager"
+             z-context="page-indicator"
              z-options="options.pageIndicator"
              class="topics visible-on-ready">
 {% assign sectionList = collections.sections | sort: 'data.order' %}

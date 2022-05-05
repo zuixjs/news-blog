@@ -10,56 +10,57 @@
         </div>
     </div>
     <script>
-        let contentSections = [];
-        {% for s in collections.sections %}
-        contentSections['{{ s.data.group }}'] = {
-            section: '{{ s.data.group }}',
-            title: '{{ s.data.title }}',
-            page: {
-                url: '{{ s.url }}',
-                filePathStem: '{{ s.filePathStem }}',
-                inputPath: '{{ s.inputPath }}',
-                outputPath: '{{ s.outputPath }}'
-            }
-        };
-        {% endfor %}
-        var zuixEditor = null;
-        zuix.context('zuix-editor', function(ctx) {
-            zuixEditor = ctx
-            zuixEditor.data = {{ eleventyComputed._data | json }};
-        });
-        function setEditorData(pageData, hideEdit) {
-            zuix.context('zuix-editor', function(ed) {
-                if (!pageData) {
-                    ed.mode({
-                        editPage: false,
-                        deletePage: false,
-                        addPage: true,
-                        addComponent: true,
-                        rebuildAll: true
-                    });
-                } else if (pageData.section) {
-                    // section / group
-                    ed.mode({
-                        editPage: false,
-                        deletePage: true,
-                        addPage: true,
-                        addComponent: true,
-                        rebuildAll: true,
-                        data: pageData
-                    });
-                } else {
-                    // single page
-                    ed.mode({
-                        editPage: !hideEdit,
-                        deletePage: true,
-                        addPage: false,
-                        addComponent: false,
-                        rebuildAll: false,
-                        data: pageData
-                    });
-                }
-            });
+      let contentSections = [];
+      {% for s in collections.sections %}
+      contentSections['{{ s.data.group }}'] = {
+        section: '{{ s.data.group }}',
+        title: '{{ s.data.title }}',
+        page: {
+          url: '{{ s.url }}',
+          filePathStem: '{{ s.filePathStem }}',
+          inputPath: '{{ s.inputPath }}',
+          outputPath: '{{ s.outputPath }}'
         }
+      };
+      {% endfor %}
+      var zuixEditor = null;
+      zuix.context('zuix-editor', function(ctx) {
+        zuixEditor = ctx
+        zuixEditor.data = {{ eleventyComputed._data | json }};
+      });
+      function setEditorData(pageData, hideEdit) {
+        zuix.context('zuix-editor', function(ed) {
+          if (!pageData) {
+            ed.mode({
+              editPage: false,
+              deletePage: false,
+              addPage: true,
+              addComponent: true,
+              rebuildAll: true
+            });
+          } else if (pageData.section) {
+            // section / group
+            ed.mode({
+              editPage: false,
+              deletePage: true,
+              addPage: true,
+              addComponent: true,
+              rebuildAll: true,
+              data: pageData
+            });
+          } else {
+            // single page
+            pageData.section = pageData.group;
+            ed.mode({
+              editPage: !hideEdit,
+              deletePage: true,
+              addPage: false,
+              addComponent: false,
+              rebuildAll: false,
+              data: pageData
+            });
+          }
+        });
+      }
     </script>
 {%- endif %}

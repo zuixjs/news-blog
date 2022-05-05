@@ -57,6 +57,7 @@
     },
     "app": {
       "title": "News Blog",
+      "language": "en",
       "baseUrl": "/news-blog/",
       "resourcePath": "/news-blog/app/",
       "libraryPath": {

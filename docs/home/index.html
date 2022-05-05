@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="A news blog template inspired by G.News"><meta name="keywords" content="bloglifestyle"><meta name="viewport" content="width=device-width,initial-scale=1"><title>News Blog</title><link rel="author" href="humans.txt"><!-- Disable tap highlight on IE --><meta name="msapplication-tap-highlight" content="no"><!-- Progressive Web App --><meta name="theme-color" content="white"><link rel="manifest" href="/news-blog/manifest.json"><!-- Add to homescreen for Chrome on Android --><meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/news-blog/images/icons/desktop/android-chrome-192x192.png"><link rel="icon" sizes="512x512" href="/news-blog/images/icons/desktop/android-chrome-512x512.png"><!-- Add to homescreen for Safari on iOS --><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="apple-mobile-web-app-title" content="A zUIx website"><link rel="apple-touch-icon-precomposed" href="/news-blog/images/icons/desktop/apple-touch-icon.png"><link rel="mask-icon" href="/news-blog/images/icons/desktop/safari-pinned-tab.svg" color="#5bbad5"><!-- Tile color for Windows --><meta name="msapplication-TileImage" content="/news-blog/images/icons/desktop/mstile-150x150.png"><meta name="msapplication-TileColor" content="#ffc40d"><!-- Place favicon.ico in the root directory --><link rel="icon" type="image/png" sizes="32x32" href="/news-blog/images/icons/desktop/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/news-blog/images/icons/desktop/favicon-16x16.png"><!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones --><!--
+<!DOCTYPE html><html lang="en"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="A news blog template inspired by G.News"><meta name="keywords" content="bloglifestyle"><meta name="viewport" content="width=device-width,initial-scale=1"><title>News Blog</title><link rel="author" href="humans.txt"><link rel="alternate" type="application/rss+xml" title="RSS Feed for News Blog" href="/news-blog/feed/rss.xml"><!-- Disable tap highlight on IE --><meta name="msapplication-tap-highlight" content="no"><!-- Progressive Web App --><meta name="theme-color" content="white"><link rel="manifest" href="/news-blog/manifest.json"><!-- Add to homescreen for Chrome on Android --><meta name="mobile-web-app-capable" content="yes"><link rel="icon" sizes="192x192" href="/news-blog/images/icons/desktop/android-chrome-192x192.png"><link rel="icon" sizes="512x512" href="/news-blog/images/icons/desktop/android-chrome-512x512.png"><!-- Add to homescreen for Safari on iOS --><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="apple-mobile-web-app-title" content="A zUIx website"><link rel="apple-touch-icon-precomposed" href="/news-blog/images/icons/desktop/apple-touch-icon.png"><link rel="mask-icon" href="/news-blog/images/icons/desktop/safari-pinned-tab.svg" color="#5bbad5"><!-- Tile color for Windows --><meta name="msapplication-TileImage" content="/news-blog/images/icons/desktop/mstile-150x150.png"><meta name="msapplication-TileColor" content="#ffc40d"><!-- Place favicon.ico in the root directory --><link rel="icon" type="image/png" sizes="32x32" href="/news-blog/images/icons/desktop/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/news-blog/images/icons/desktop/favicon-16x16.png"><!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones --><!--
     <link rel="canonical" href="https://www.example.com/">
     --><style z-ref="/news-blog/css/fla/flex-layout-attribute.min.css">/**
  * Flex layout attribute
@@ -133,8 +133,6 @@ iframe[z-field=content-frame] {
     border-radius: 6px;
     background-color: #bbbbbb15;
     box-shadow: 0 1px 4px 0 #00000055;
-    transition-property: background-color, box-shadow;
-    transition: 0.1s ease-in-out;
 }
 .button:hover {
     background-color: #bbbbbb1a;
@@ -153,20 +151,17 @@ iframe[z-field=content-frame] {
     box-shadow: 0 0 0 0 #00000055;
 }
 
-/* from https://codepen.io/nikstech/pen/xmMxpr */
-
 .input-container {
     position: relative;
     margin-bottom: 25px;
 }
 .input-container label {
     position:absolute;
-    top: 12px;
+    top: 8px;
     left: 0;
-    pointer-event: none!important;
     transition: all 0.15s ease-in-out;
 }
-.input-container input, input:not([type="checkbox"]):not([type="radio"]) {
+.input-container input, input:not([type="checkbox"]):not([type="radio"]):not(.mdl-textfield__input) {
     z-index: 1;
     border:0;
     width: 100%;
@@ -482,7 +477,7 @@ nav [z-field="header-tools"] .active {
 .theme-dark [z-load="listview/items-list/item"] .summary {
     background-color: rgba(20, 20, 20, 0.7);
     transition: background-color 0.3s ease-in-out;
-}</style><body><noscript>Turn on JavaScript to access this site content.</noscript><!-- The header bars (for each page) --><nav z-field="header-bar" z-component="fragment" header-bar=""><div class="header" layout="row center-justify" header-bar=""><div z-field="header-box" layout="row center-left" header-bar=""><div class="title" layout="row center-left" header-bar="">News Blog</div></div><div style="margin: 12px;" header-bar=""><input class="theme-toggle" type="checkbox" aria-label="Toggle theme" checked header-bar=""></div></div><div z-field="header-tools" header-bar=""><div ctrl="" z-load="@lib/controllers/view-pager" z-options="options.pageIndicator" class="topics visible-on-ready"><div data-section="" data-order="0" header-bar="">Top Stories</div><div data-section="" data-order="1" header-bar="">Europe</div><div data-section="" data-order="2" header-bar="">World</div><div data-section="" data-order="3" header-bar="">Travel</div></div></div></nav><style>[z-component][header-bar] {
+}</style><body><noscript>Turn on JavaScript to access this site content.</noscript><!-- The header bars (for each page) --><nav z-field="header-bar" z-component="fragment" header-bar=""><div class="header" layout="row center-justify" header-bar=""><div z-field="header-box" layout="row center-left" header-bar=""><div class="title" layout="row center-left" header-bar="">News Blog</div></div><div style="margin: 12px;" header-bar=""><input class="theme-toggle" type="checkbox" aria-label="Toggle theme" checked header-bar=""></div></div><div z-field="header-tools" header-bar=""><div ctrl="" z-load="@lib/controllers/view-pager" z-context="page-indicator" z-options="options.pageIndicator" class="topics visible-on-ready"><div data-section="" data-order="0" header-bar="">Top Stories</div><div data-section="" data-order="1" header-bar="">Europe</div><div data-section="" data-order="2" header-bar="">World</div><div data-section="" data-order="3" header-bar="">Travel</div></div></div></nav><style>[z-component][header-bar] {
     position: fixed;    top:0;    left:0;    right:0;    height:auto;    border-bottom: solid 1px rgba(0,0,0,0.1);    box-shadow: 0 0 8px -1px rgba(0,0,0,0.5);    z-index: 2!important;}
 
 [z-component][header-bar]
@@ -603,4 +598,4 @@ footer .active  {
 }
 .theme-dark footer .active {
     color: var(--dark-color--accent)!important;
-}</style><!-- Built with love using zUIx Web Starter --><script>let pageIndicator,pageButtons;function syncPageIndicator(e){pageButtons&&(pageButtons.eq(e.out).removeClass("active"),pageButtons.eq(e.in).addClass("active")),pageIndicator&&pageIndicator.page(e.in)}function themeSetup(){const a=zuix.$(document.body),n=a.find(".theme-toggle"),o="theme-dark",i="app.theme",e={transition:"color 300ms ease-in, background-color 300ms ease-in"};function t(e){var t=e?n.checked():"true"===localStorage.getItem(i);e||n.checked(t),t?a.addClass(o):a.removeClass(o),localStorage.setItem(i,String(t))}setTimeout(function(){a.css(e),a.find("header").css(e),a.find("nav").css(e),a.find("footer").css(e)},100),n.on("change",t),t()}zuix.lazyLoad(!0,-window.innerWidth/4),options={pageIndicator:{contextId:"page-indicator",enablePaging:!0,startGap:40,ready:function(e){pageIndicator=e,0<(pageButtons=pageIndicator.$.find("div")).length()&&pageButtons.each(function(t,e,a){a.on("click",function(e){viewPager&&viewPager.page(t)})})}}},themeSetup()</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script>
+}</style><!-- Built with love using zUIx Web Starter --><script>function syncPageIndicator(t){zuix.context("page-indicator",function(e){const n=e.$.find("div");n.eq(t.out).removeClass("active"),n.eq(t.in).addClass("active"),e.page(t.in)})}function themeSetup(){const t=zuix.$(document.body),i=t.find(".theme-toggle"),a="theme-dark",o="app.theme",e={transition:"color 300ms ease-in, background-color 300ms ease-in"};function n(e){var n=e?i.checked():"true"===localStorage.getItem(o);e||i.checked(n),n?t.addClass(a):t.removeClass(a),localStorage.setItem(o,String(n))}setTimeout(function(){t.css(e),t.find("header").css(e),t.find("nav").css(e),t.find("footer").css(e)},100),i.on("change",n),n()}zuix.lazyLoad(!0,-window.innerWidth/4),options={pageIndicator:{enablePaging:!0,startGap:40,ready:function(e){const n=e.$.find("div");0<n.length()&&n.each(function(n,e,t){t.on("click",function(e){viewPager&&viewPager.page(n)})})}}},themeSetup()</script><!-- zUIx.js inline resources bundle --><script src="index.bundle.js"></script><!-- zUIx.js inline resources bundle --><script src="index.bundle.ext.js"></script>

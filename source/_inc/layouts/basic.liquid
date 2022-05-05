@@ -17,6 +17,13 @@ date: Last Modified
     <div self="size-large" style="position: relative;width: 100%;;display: block">
         <img class="image-cover" src="{{ coverPreview }}" alt="Cover image preview" style="position: absolute;display: block">
         <img class="image-cover" src="{{ coverImage }}" alt="Cover image" style="position: relative;display: block; z-index: 1">
+        <a class="icon-button background" aria-label="Back" href="javascript:closeContent()" style="width: 48px;height:48px;position:absolute;top:6px;left:6px;z-index:1;opacity: 0.65;border-radius: 48px">
+            <!-- put your logo here -->
+            <svg height="48px" viewBox="0 0 24 24" width="48px">
+                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+            </svg>
+        </a>
     </div>
 {% endif %}
 
@@ -42,9 +49,6 @@ date: Last Modified
 
 {% zx 'menu-overlay' 'actions-menu' %}
 items:
-- title: Close
-  link: javascript:closeContent()
-  icon: close
 - title: Print
   link: javascript:printContent()
   icon: print

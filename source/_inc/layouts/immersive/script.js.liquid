@@ -1,19 +1,14 @@
 /* global zuix */
 
-let pageIndicator;
-let pageButtons;
-
 //window.__zuix__debug = true;
 zuix.lazyLoad(true, -window.innerWidth / 4);
 
 options = {
   pageIndicator: {
-    contextId: 'page-indicator',
     enablePaging: true,
     startGap: 40,
-    ready: function(ctx) {
-      pageIndicator = ctx;
-      pageButtons = pageIndicator.$.find('div');
+    ready: function(pageIndicator) {
+      const pageButtons = pageIndicator.$.find('div');
       if (pageButtons.length() > 0) {
         pageButtons.each(function(i, el, $el) {
           $el.on('click', function(e) {
@@ -26,11 +21,12 @@ options = {
 };
 
 function syncPageIndicator(page) {
-  if (pageButtons) {
+  zuix.context('page-indicator', function(pageIndicator) {
+    const pageButtons = pageIndicator.$.find('div');
     pageButtons.eq(page.out).removeClass('active');
     pageButtons.eq(page.in).addClass('active');
-  }
-  if (pageIndicator) pageIndicator.page(page.in);
+    pageIndicator.page(page.in);
+  });
 }
 
 {% include '../common/theme.js' %}

@@ -3,6 +3,7 @@
   zuix.store('config', {
     "title": "News Blog",
     "baseUrl": "/news-blog/",
+    "language": "en",
     "resourcePath": "/news-blog/app/",
     "libraryPath": {
       "@lib": "/news-blog/lib/1.1/",

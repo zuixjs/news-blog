@@ -127,7 +127,7 @@ keywords:
     zuix.context('zuix-editor', function(ed) {
         ed.on({
             'zuix:action:progress': function(e, ar) {
-                if (ar.action === 'delete-page' && !ar.data.section) {
+                if (ar.action === 'delete-page' && (!ar.data.tags || ar.data.tags.indexOf('sections') === -1)) {
                     closeContentFrame(contentFrame.get().contentWindow.location);
                 }
             },
@@ -143,7 +143,7 @@ keywords:
                             }
                             break;
                         case 'delete-page':
-                            if (ar.data.section) { // whole section
+                            if (!ar.data.tags || ar.data.tags.indexOf('sections') !== -1) { // whole section
                                 document.location.replace(document.location.pathname + '?' + new Date().getTime());
                             } else { // single page
                                 refresh();
