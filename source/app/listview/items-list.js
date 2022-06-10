@@ -63,19 +63,17 @@ function ItemsList(cp) {
 
   // Download RSS feed
   function fetchList(jsonUrl, callback) {
-    zuix.$.ajax({
-      url: jsonUrl,
-      success: function(res) {
-        itemsList = JSON.parse(res);
-        refreshList();
-        if (callback) {
-          callback(itemsList);
-        }
-      },
-      error: function(err) {
-        // TODO: handle error
-      }
-    });
+    fetch(jsonUrl)
+        .then((response) => response.json())
+        .then((list) => {
+          itemsList = list;
+          refreshList();
+          if (callback) {
+            callback(itemsList);
+          }
+        }).catch((e) => {
+          // TODO: handle error
+        });
   }
 }
 
