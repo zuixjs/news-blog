@@ -75,39 +75,47 @@ zuix.controller(function(cp) {
       if ((listMode === MODE_FULL) ||
                 (listMode === MODE_PAGED && i >= startItem && i < startItem+itemsPerPage) ||
                 (listMode === MODE_INCREMENTAL && i < startItem+itemsPerPage)) {
-        if (typeof listItems[id] === 'undefined') {
-          const container = zuix.createComponent(dataItem.componentId, dataItem.options).container();
+        if (!listItems[id]) {
+          const container = zuix.$(document.createElement('div'));
+          container.attr('z-lazy', 'true');
+          zuix.loadComponent(container, dataItem.componentId, 'view', dataItem.options);
           // use a responsive CSS class if provided
           if (dataItem.options.className != null) {
             // this class should set the min-height property
-            container.classList.add(dataItem.options.className);
+            container.addClass(dataItem.options.className);
           } else {
             // set a temporary height for the container (for lazy load to work properly)
-            container.style['min-height'] = dataItem.options.height || '48px';
+            container.css({minHeight: dataItem.options.height || '48px'});
           }
           // register a callback to know when the component is actually loaded
-          const listener = function(itemIndex, el) {
-            const l = function() {
-              el.removeEventListener('component:ready', l);
+          const setupListener = function(itemIndex, el) {
+            const componentReady = function() {
               // trigger status update event
               statusInfo.items.loaded++;
-              triggerStatus();
               // if all components have been loaded, then trigger 'complete' event
               if (itemIndex === modelList.length - 1) {
                 cp.trigger('complete');
+              } else if (itemIndex + 1 === (statusInfo.page.current + 1) * itemsPerPage) {
+                if (listMode === MODE_INCREMENTAL) {
+                  setPage(statusInfo.page.current + 1);
+                }
               }
             };
-            container.addEventListener('component:ready', l);
-          }(i, container);
+            el.one({'component:loaded': componentReady});
+          };
+          setupListener(i, container);
           // keep track of already allocated items
-          listItems[id] = container;
+          listItems[id] = container.get();
           // add item container to the list-view, the component will be lazy-loaded later as needed
-          cp.view().insert(i-startItem, listItems[id]);
+          cp.view().insert(startItem + i, listItems[id]);
         } else if (!dataItem.options.static) {
           // update existing item model's data
           // TODO: should check if the data in the model has changed before calling this
           // TODO: should also call the `model` method in the `zuix.context` callback
-          zuix.context(listItems[id]).model(dataItem.options.model);
+          const ctx = zuix.context(listItems[id]);
+          if (ctx) {
+            ctx.model(dataItem.options.model);
+          }
         }
       }
 

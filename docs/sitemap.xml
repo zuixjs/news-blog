@@ -10,10 +10,6 @@
     <lastmod>2022-04-24</lastmod>
   </url>
   <url>
-    <loc>https://zuixjs.github.io/news-blog/search/</loc>
-    <lastmod>2022-04-27</lastmod>
-  </url>
-  <url>
     <loc>https://zuixjs.github.io/news-blog/saved/</loc>
     <lastmod>2022-04-27</lastmod>
   </url>
@@ -552,5 +548,9 @@
   <url>
     <loc>https://zuixjs.github.io/news-blog/content/europe/index.json</loc>
     <lastmod>2022-05-12</lastmod>
+  </url>
+  <url>
+    <loc>https://zuixjs.github.io/news-blog/search/</loc>
+    <lastmod>2022-06-12</lastmod>
   </url>
 </urlset>
