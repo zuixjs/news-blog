@@ -25,8 +25,9 @@ keywords:
 
         {% assign sectionList = collections.sections | sort: 'data.order' -%}
         {%- for section in sectionList -%}
-            <article ctrl z-load="@lib/controllers/header-auto-hide"
-                     z-options="home.autoHidingBars" z-field="{{ section.data.group }}"
+            <article ctrl z-load="controllers/header-auto-hide"
+                     z-options="home.autoHidingBars"
+                     z-field="{{ section.data.group }}"
                      class="content" layout="column top-stretch">
 
                 <div z-load="listview/items-list" #items-list
@@ -53,7 +54,7 @@ keywords:
 
         viewPager: {
             lazyLoad: false,
-            enablePaging: true,
+            paging: true,
             //startGap: 40,
             on: {
                 'page:change': function (e, page) {

@@ -31,17 +31,17 @@ function SavedPage(cp) {
   function refreshList(bookmarks) {
     if (!listView) return;
     listView.clear();
-    listView.model({
-      itemList: bookmarks,
-      getItem: function(index, item) {
+    listView.model(bookmarks);
+    listView.config({
+      adapter: (index, item) => {
         return {
           itemId: index,
           componentId: 'listview/results-item',
+          type: 'view',
           options: {
             lazyLoad: true,
             /* fixed height is required for best lazy-load and scroll performances */
             height: '108px',
-            controller: zuix.controller(function(cp) {}),
             model: item,
             on: {
               'click': function() {

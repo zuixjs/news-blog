@@ -63,16 +63,16 @@ function SearchPage(cp) {
     const terms = searchInput.value();
     const results = searchEngine.search(terms);
     if (results.length > 0) {
-      resultsList.model({
-        itemList: results,
-        getItem: function(index, item) {
+      resultsList.model(results);
+      resultsList.config({
+        adapter: (index, item) => {
           item = searchItems[item.refIndex];
           item.coverPreview = item.image;
           return {
             itemId: index,
             componentId: 'listview/results-item',
+            type: 'view',
             options: {
-              controller: zuix.controller(function(cp) {}),
               height: '108px',
               model: item,
               on: {

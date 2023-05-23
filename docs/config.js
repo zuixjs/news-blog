@@ -6,7 +6,7 @@
     "language": "en",
     "resourcePath": "/news-blog/app/",
     "libraryPath": {
-      "@lib": "/news-blog/lib/1.1/",
+      "@lib": "https://zuixjs.github.io/zkit/lib/1.2/",
       "@hgui": "https://genielabs.github.io/homegenie-web-ui/app/",
       "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
     },
@@ -14,7 +14,7 @@
       "baseUrl": "/news-blog/",
       "resourcePath": "/news-blog/app/",
       "libraryPath": {
-        "@lib": "/news-blog/lib/1.1/",
+        "@lib": "http://zuixjs.github.io/zkit/lib/1.2/",
         "@hgui": "https://genielabs.github.io/homegenie-web-ui/app/",
         "@cdnjs": "https://cdnjs.cloudflare.com/ajax/libs/"
       }
