@@ -5,6 +5,7 @@ function SearchPage(cp) {
   let coverMessage = null;
   let searchItems;
   let searchEngine;
+  let searchTimeout;
 
   this.create = onCreate;
 
@@ -13,13 +14,9 @@ function SearchPage(cp) {
     noResultsMessage = cp.field('no-results');
 
     // get reference to the list view component
-    setTimeout(() => {
-      zuix.context('results-list', function(list) {
-        resultsList = list;
-      });
+    zuix.context('results-list', function(list) {
+      resultsList = list;
     });
-    // ^^^ not sure why it's not working without the setTimeout
-    // TODO: ^^^ investigate this issue
 
     // download the search index
     loadIndex();
@@ -31,7 +28,10 @@ function SearchPage(cp) {
         top: 0,
         behavior: 'smooth'
       });
-      search();
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        resultsList.clear(() => search());
+      }, 100);
     });
     cp.expose({search, loadIndex});
   }
@@ -59,7 +59,6 @@ function SearchPage(cp) {
     }
     noResultsMessage.addClass('hidden');
     coverMessage.addClass('hidden');
-    resultsList.clear();
     const terms = searchInput.value();
     const results = searchEngine.search(terms);
     if (results.length > 0) {
