@@ -7,49 +7,13 @@
     <description></description>
     <language>en</language>
     <copyright></copyright>
-    <lastBuildDate>Thu, 06 Jul 2023 16:36:05 +0200</lastBuildDate>
-    <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
+    <lastBuildDate>Sat, 26 Oct 2024 13:21:34 +0200</lastBuildDate>
+    <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
     <image>
         <title>News Blog</title>
         <url>https://zuixjs.github.io/news-blog/images/icons/icon-152x152.png</url>
         <link>https://zuixjs.github.io/news-blog</link>
     </image>
-    <item>
-        <title>Landing Page</title>
-        <link>https://zuixjs.github.io/news-blog/</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/</guid>
-        <description>A brand new *zuix.js* project!</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/" rel="self" />
-        <dc:creator></dc:creator>
-    </item>
-    <item>
-        <title>About</title>
-        <link>https://zuixjs.github.io/news-blog/about/</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/about/</guid>
-        <description>A news blog template inspired by G.News</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/about/" rel="self" />
-        <dc:creator></dc:creator>
-    </item>
-    <item>
-        <title></title>
-        <link>https://zuixjs.github.io/news-blog/ui/_inc/content-frame/</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/ui/_inc/content-frame/</guid>
-        <description></description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/ui/_inc/content-frame/" rel="self" />
-        <dc:creator></dc:creator>
-    </item>
-    <item>
-        <title>Saved bookmarks</title>
-        <link>https://zuixjs.github.io/news-blog/saved/</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/saved/</guid>
-        <description>A news blog template inspired by G.News</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/saved/" rel="self" />
-        <dc:creator></dc:creator>
-    </item>
     <item>
         <title>Aca hi mashalhuj.</title>
         <link>https://zuixjs.github.io/news-blog/content/europe/aca-hi-mashalhuj/</link>
@@ -257,6 +221,15 @@
                        url="https://zuixjs.github.io/news-blog/content/europe/hum-nub-naje-wa/https://picsum.photos/seed/europe022/320/200" />
         <media:credit></media:credit>
         <media:description></media:description>
+    </item>
+    <item>
+        <title>Europe</title>
+        <link>https://zuixjs.github.io/news-blog/content/europe/index.json</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/europe/index.json</guid>
+        <description>No description provided.</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/content/europe/index.json" rel="self" />
+        <dc:creator></dc:creator>
     </item>
     <item>
         <title>Ivrus juere nuuscaw tin.</title>
@@ -649,6 +622,15 @@
         <media:description></media:description>
     </item>
     <item>
+        <title>Top Stories</title>
+        <link>https://zuixjs.github.io/news-blog/content/top/index.json</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/top/index.json</guid>
+        <description>No description provided.</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/content/top/index.json" rel="self" />
+        <dc:creator></dc:creator>
+    </item>
+    <item>
         <title>Is kamew fiwdi deide ifelic.</title>
         <link>https://zuixjs.github.io/news-blog/content/top/is-kamew-fiwdi-deide-ifelic/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/top/is-kamew-fiwdi-deide-ifelic/</guid>
@@ -749,6 +731,19 @@
         <dc:creator>J. Doe</dc:creator><!-- TODO: resolve cover image url either local or on a different site -->
         <media:content medium="image" width="300" height="125"
                        url="https://zuixjs.github.io/news-blog/content/top/popse-wocjickiz-ne/https://picsum.photos/seed/top08/320/200" />
+        <media:credit></media:credit>
+        <media:description></media:description>
+    </item>
+    <item>
+        <title>Quick start guide</title>
+        <link>https://zuixjs.github.io/news-blog/content/top/quick-start/</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/top/quick-start/</guid>
+        <description>A brief overview of this template structure, content management and publishing.</description>
+        <pubDate>Sat, 19 Mar 2022 14:36:37 +0100</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/content/top/quick-start/" rel="self" />
+        <dc:creator>Gene</dc:creator><!-- TODO: resolve cover image url either local or on a different site -->
+        <media:content medium="image" width="300" height="125"
+                       url="https://zuixjs.github.io/news-blog/content/top/quick-start/https://picsum.photos/seed/top027/320/200" />
         <media:credit></media:credit>
         <media:description></media:description>
     </item>
@@ -1024,6 +1019,15 @@
                        url="https://zuixjs.github.io/news-blog/content/travel/idevumu-wivmanov-mofej-vovve/https://picsum.photos/seed/travel00/320/200" />
         <media:credit></media:credit>
         <media:description></media:description>
+    </item>
+    <item>
+        <title>Travel</title>
+        <link>https://zuixjs.github.io/news-blog/content/travel/index.json</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/travel/index.json</guid>
+        <description>No description provided.</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/content/travel/index.json" rel="self" />
+        <dc:creator></dc:creator>
     </item>
     <item>
         <title>Is naecoh ilotottu wehe.</title>
@@ -1377,6 +1381,15 @@
         <media:description></media:description>
     </item>
     <item>
+        <title>World</title>
+        <link>https://zuixjs.github.io/news-blog/content/world/index.json</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/world/index.json</guid>
+        <description>No description provided.</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/content/world/index.json" rel="self" />
+        <dc:creator></dc:creator>
+    </item>
+    <item>
         <title>Izijih mowocoli asuoje ope.</title>
         <link>https://zuixjs.github.io/news-blog/content/world/izijih-mowocoli-asuoje-ope/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/world/izijih-mowocoli-asuoje-ope/</guid>
@@ -1715,39 +1728,30 @@
         <media:description></media:description>
     </item>
     <item>
-        <title>Travel</title>
-        <link>https://zuixjs.github.io/news-blog/content/travel/index.json</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/travel/index.json</guid>
-        <description>No description provided.</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/content/travel/index.json" rel="self" />
+        <title>About</title>
+        <link>https://zuixjs.github.io/news-blog/about/</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/about/</guid>
+        <description>A news blog template inspired by G.News</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/about/" rel="self" />
         <dc:creator></dc:creator>
     </item>
     <item>
-        <title>World</title>
-        <link>https://zuixjs.github.io/news-blog/content/world/index.json</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/world/index.json</guid>
-        <description>No description provided.</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/content/world/index.json" rel="self" />
+        <title>Saved bookmarks</title>
+        <link>https://zuixjs.github.io/news-blog/saved/</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/saved/</guid>
+        <description>A news blog template inspired by G.News</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/saved/" rel="self" />
         <dc:creator></dc:creator>
     </item>
     <item>
-        <title>Top Stories</title>
-        <link>https://zuixjs.github.io/news-blog/content/top/index.json</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/top/index.json</guid>
-        <description>No description provided.</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/content/top/index.json" rel="self" />
-        <dc:creator></dc:creator>
-    </item>
-    <item>
-        <title>Europe</title>
-        <link>https://zuixjs.github.io/news-blog/content/europe/index.json</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/europe/index.json</guid>
-        <description>No description provided.</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/content/europe/index.json" rel="self" />
+        <title>Search</title>
+        <link>https://zuixjs.github.io/news-blog/search/</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/search/</guid>
+        <description>A news blog template inspired by G.News</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/search/" rel="self" />
         <dc:creator></dc:creator>
     </item>
     <item>
@@ -1755,30 +1759,26 @@
         <link>https://zuixjs.github.io/news-blog/home/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/home/</guid>
         <description>A news blog template inspired by G.News</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/home/" rel="self" />
         <dc:creator></dc:creator>
     </item>
     <item>
-        <title>Quick start guide</title>
-        <link>https://zuixjs.github.io/news-blog/content/top/quick-start/</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/top/quick-start/</guid>
-        <description>A brief overview of this template structure, content management and publishing.</description>
-        <pubDate>Sat, 19 Mar 2022 14:36:37 +0100</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/content/top/quick-start/" rel="self" />
-        <dc:creator>Gene</dc:creator><!-- TODO: resolve cover image url either local or on a different site -->
-        <media:content medium="image" width="300" height="125"
-                       url="https://zuixjs.github.io/news-blog/content/top/quick-start/https://picsum.photos/seed/top027/320/200" />
-        <media:credit></media:credit>
-        <media:description></media:description>
+        <title></title>
+        <link>https://zuixjs.github.io/news-blog/ui/_inc/content-frame/</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/ui/_inc/content-frame/</guid>
+        <description></description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/ui/_inc/content-frame/" rel="self" />
+        <dc:creator></dc:creator>
     </item>
     <item>
-        <title>Search</title>
-        <link>https://zuixjs.github.io/news-blog/search/</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/search/</guid>
-        <description>A news blog template inspired by G.News</description>
-        <pubDate>Thu, 06 Jul 2023 16:36:05 +0200</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/search/" rel="self" />
+        <title>Landing Page</title>
+        <link>https://zuixjs.github.io/news-blog/</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/</guid>
+        <description>A brand new *zuix.js* project!</description>
+        <pubDate>Sat, 26 Oct 2024 13:21:34 +0200</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/" rel="self" />
         <dc:creator></dc:creator>
     </item>
 </channel>

@@ -8,7 +8,7 @@
 body {
     min-height: 100vh;
     margin: 0;
-    font-size: 1.0em;
+    font-size: 14pt;
     font-family: Helvetica, sans-serif;
     background: var(--background-color);
     overflow-x: hidden;
