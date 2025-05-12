@@ -226,10 +226,6 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://zuixjs.github.io/news-blog/content/top/quick-start/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://zuixjs.github.io/news-blog/content/top/savjaf-fide-me-rerju/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
@@ -552,5 +548,9 @@
   <url>
     <loc>https://zuixjs.github.io/news-blog/</loc>
     <lastmod>2024-01-12</lastmod>
+  </url>
+  <url>
+    <loc>https://zuixjs.github.io/news-blog/content/top/quick-start/</loc>
+    <lastmod>2025-05-12</lastmod>
   </url>
 </urlset>
