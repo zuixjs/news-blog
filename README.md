@@ -5,8 +5,8 @@ Implemented as Progressive Web App, with background service worker and other opt
 Suitable both for desktop and mobile.
 
 Based on [zuix.js Web Starter](https://zuixjs.github.io/zuix-web-starter/) and [zuix.js HTML-PWA](#), this web application
-is implemented as a static site with `markdown` and `liquid` templates using [11ty](https://11ty.dev) engine.
-
+is implemented as a static site with `markdown` and `liquid` templates using [11ty](https://11ty.dev) engine.  
+Requires **Node.js 20**.
 
 ### --&gt;&gt;[ [Demo and Docs](https://zuixjs.github.io/news-blog/) ]&lt;&lt;--
 

@@ -88,12 +88,12 @@ function handleExitSignal(signal) {
 
   if (copyFilesWatcher) {
     promises.push(
-        copyFilesWatcher.close()
+      copyFilesWatcher.close()
     );
   }
   if (allFilesWatcher) {
     promises.push(
-        allFilesWatcher.close()
+      allFilesWatcher.close()
     );
   }
 
@@ -184,7 +184,7 @@ function startWatcher(eleventyConfig, browserSync) {
         njk.render(file, { pkg, app: zuixConfig.app }, function(err, res) {
           if (err != null) {
             console.error(
-                chalk.red.bold(err)
+              chalk.red.bold(err)
             );
           } else {
             fs.writeFile(outputFile, res, function() {
@@ -235,7 +235,7 @@ function setupSocketApi(browserSync) {
         cmsLog('zuix:saveContent', request.path);
         fs.writeFile(request.path, request.content, () => {
           ioEmit('zuix:saveContent:done', {path: request.path});
-          forceRebuild(2000); // <--- TODO: this is a patch to the fact sometimes 11ty doesn't rebuild
+          //forceRebuild(2000); // <--- TODO: this is a patch to the fact sometimes 11ty doesn't rebuild
         });
       });
       socket.on('zuix:addPage', (data) => {
@@ -243,7 +243,7 @@ function setupSocketApi(browserSync) {
         addPage(data).then(() => {
           const redirectUrl = zuixConfig.app.baseUrl + contentFolder + '/' + data.section + '/';
           ioEmit('zuix:addPage:done', redirectUrl);
-          forceRebuild(2000); // <--- TODO: this is a patch to the fact sometimes 11ty doesn't rebuild
+          //forceRebuild(2000); // <--- TODO: this is a patch to the fact sometimes 11ty doesn't rebuild
         }).catch((err) => {
           ioEmit('zuix:addPage:error', err.message);
         });
@@ -273,9 +273,9 @@ function setupSocketApi(browserSync) {
             generateTemplate(res);
             ioEmit('zuix:addComponent:done', res);
           })
-              .catch((err) => {
-                ioEmit('zuix:addComponent:error', err.message);
-              });
+            .catch((err) => {
+              ioEmit('zuix:addComponent:error', err.message);
+            });
         };
         if (data.view && data.ctrl) {
           handlePromise(generate('component', [data.name]));
@@ -309,8 +309,8 @@ function setupSocketApi(browserSync) {
     capcon.startCapture(process.stderr, {}, function (stderr) {
       if (stderr && stderr.replace) {
         stderr = stderr
-            .replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '')
-            .replace(/ *\([^)]*\) */g, '').replace(/ +$/, '');
+          .replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '')
+          .replace(/ *\([^)]*\) */g, '').replace(/ +$/, '');
         if (stderr.indexOf('\n[11ty] ') !== -1) {
           errorObject.debug = true;
         } else if (stderr.startsWith('[11ty]')) {
@@ -344,7 +344,7 @@ function cmsLog(...args) {
 function forceRebuild(delay) {
   clearTimeout(forceRebuildTimeout);
   forceRebuildTimeout = setTimeout(() => {
-    touch('.eleventy.js');
+    touch('.eleventy.lock');
   }, delay);
 }
 function touch(filename) {
@@ -368,6 +368,7 @@ function initEleventyZuix(eleventyConfig) {
   zuixConfig.app.environment = process.env.NODE_ENV || 'default';
   eleventyConfig.addGlobalData("app", zuixConfig.app);
   eleventyConfig.addWatchTarget('./templates/tags/');
+  eleventyConfig.addWatchTarget('./.eleventy.lock');
   // Add zUIx transform
   eleventyConfig.addTransform('zuix-js', function(content) {
     const inputPath = this.inputPath;
@@ -391,16 +392,20 @@ function initEleventyZuix(eleventyConfig) {
     // changedFiles is an array of files that changed
     // to trigger the watch/serve build
     changedFiles.length = 0;
-    const baseFolder = path.resolve(zuixConfig.build.input);
-    const dataFolder = path.join(baseFolder, zuixConfig.build.dataFolder);
-    const includesFolder = path.join(baseFolder, zuixConfig.build.includesFolder);
-    const templateChanged = cf.find(f => path.resolve(f).startsWith(includesFolder));
-    const dataChanged = cf.find(f => path.resolve(f).startsWith(dataFolder));
-    if (templateChanged || dataChanged) {
-      rebuildAll = true;
-      return;
-    }
+//    const baseFolder = path.resolve(zuixConfig.build.input);
+//    const dataFolder = path.join(baseFolder, zuixConfig.build.dataFolder);
+//    const includesFolder = path.join(baseFolder, zuixConfig.build.includesFolder);
+//    const templateChanged = cf.find(f => path.resolve(f).startsWith(includesFolder));
+//    const dataChanged = cf.find(f => path.resolve(f).startsWith(dataFolder));
+//    if (templateChanged || dataChanged) {
+//TODO: this was causing multiple rebuilds/loop
+//      rebuildAll = true;
+//      return;
+//    }
     changedFiles.push(...cf);
+  });
+  eleventyConfig.on("eleventy.before", () => {
+    wrappedCssIds = [];
   });
   eleventyConfig.on('eleventy.after', async function({ dir, results, runMode, outputMode }) {
     if (postProcessFiles.length > 0) {
@@ -485,7 +490,7 @@ function postProcessRecursiveSync( source, target ) {
           njk.render(path.resolve(curSource), {pkg, app: zuixConfig.app}, function(err, res) {
             if (err != null) {
               console.error(
-                  chalk.red.bold(err)
+                chalk.red.bold(err)
               );
             } else {
               // fs.readFileSync(curSource)
@@ -584,13 +589,48 @@ function configure(eleventyConfig) {
   // TODO: maybe scan folder and add automatically
   const filtersPath = path.resolve(sourceFolder, '_filters');
   eleventyConfig.addFilter(
-      'search',
-      require(path.join(filtersPath, 'searchFilter'))
+    'search',
+    require(path.join(filtersPath, 'searchFilter'))
   );
   eleventyConfig.addFilter(
-      'date',
-      (date, format) => moment(date).format(format || 'YYYY-MM-DD')
+    'date',
+    (date, format) => moment(date).format(format || 'YYYY-MM-DD')
   );
+
+  /**
+   * Filter to transform a relative URL into an absolute URL.
+   * Checks if the URL is already absolute before doing anything.
+   * @param {string} url - The URL to process (e.g., /images/cover.jpg).
+   * @param {string} baseUrl - The base URL of the site (e.g., https://www.yoursite.com).
+   */
+  eleventyConfig.addFilter("toAbsoluteUrl", (url, baseUrl) => {
+    // If the url is not a string or is empty, do nothing.
+    if (typeof url !== 'string' || url.trim() === '') {
+      return '';
+    }
+    try {
+      // new URL() handles everything: if the url is already absolute, it leaves it as is.
+      // If it's relative, it combines it with the baseUrl.
+      return new URL(url, baseUrl).href;
+    } catch (e) {
+      //console.error(`Could not create an absolute URL for: ${url}`, e);
+      return url;
+    }
+  });
+
+  /**
+   * Filter to extract the first <img> tag from HTML content.
+   * @param {string} content - The HTML content of the page/post.
+   */
+  eleventyConfig.addFilter("extractFirstImage", (content) => {
+    if (!content) {
+      return '';
+    }
+    // Search for the first occurrence of <img src="..."
+    const match = content.match(/<img\s+[^>]*?src="([^"]+)"[^>]*?>/);
+    // If a match is found, return the src value (the first captured group).
+    return match ? match[1] : '';
+  });
 
   /*
   || Add shortcodes
@@ -646,10 +686,10 @@ function addPage(args) {
     const pageName = path.basename(outputFile);
     const pageTitle = classNameFromHyphens(pageName);
     console.log(
-        chalk.cyanBright('*') + ' Generating',
-        chalk.yellow.bold(template),
-        '→',
-        outputFile
+      chalk.cyanBright('*') + ' Generating',
+      chalk.yellow.bold(template),
+      '→',
+      outputFile
     );
     let extension = '.liquid';
     let componentTemplate = `${pageTemplatesPath}${template}${extension}`;
@@ -695,7 +735,7 @@ function addPage(args) {
             if (!fs.existsSync(sectionFile)) {
               addPage({layout: 'section', name: args.section, frontMatter: [
                   `group: ${args.section}`,
-                  `title: ${classNameFromHyphens(args.section)}`,
+                  `title: ${classNameFromHyphens(args.section)}`
                 ]}).then(resolve).catch(reject);
             } else {
 //              forceRebuild(3000);
@@ -708,14 +748,14 @@ function addPage(args) {
       } else {
         const errorMessage = `"${args.name}" already exists.`;
         console.error(
-            chalk.red.bold(errorMessage)
+          chalk.red.bold(errorMessage)
         );
         reject(new Error(errorMessage));
       }
     } else {
       const errorMessage = 'Invalid page template: ' + componentTemplate;
       console.error(
-          chalk.red.bold(errorMessage)
+        chalk.red.bold(errorMessage)
       );
       reject(new Error(errorMessage));
     }

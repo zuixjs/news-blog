@@ -7,8 +7,8 @@
     <description></description>
     <language>en</language>
     <copyright></copyright>
-    <lastBuildDate>Mon, 12 May 2025 19:08:58 +0200</lastBuildDate>
-    <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+    <lastBuildDate>Mon, 06 Apr 2026 11:50:17 +0200</lastBuildDate>
+    <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
     <image>
         <title>News Blog</title>
         <url>https://zuixjs.github.io/news-blog/images/icons/icon-152x152.png</url>
@@ -227,7 +227,7 @@
         <link>https://zuixjs.github.io/news-blog/content/europe/index.json</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/europe/index.json</guid>
         <description>No description provided.</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/content/europe/index.json" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -626,7 +626,7 @@
         <link>https://zuixjs.github.io/news-blog/content/top/index.json</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/top/index.json</guid>
         <description>No description provided.</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/content/top/index.json" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -852,19 +852,6 @@
         <media:description></media:description>
     </item>
     <item>
-        <title>Caonjim po wewic noteku.</title>
-        <link>https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/</link>
-        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/</guid>
-        <description>Diltoab fa jeneto wip poknomas rifnoz mupe rucak wihvias ci.</description>
-        <pubDate>Tue, 22 Mar 2022 19:16:34 +0100</pubDate>
-        <atom:link href="https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/" rel="self" />
-        <dc:creator>J. Doe</dc:creator><!-- TODO: resolve cover image url either local or on a different site -->
-        <media:content medium="image" width="300" height="125"
-                       url="https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/https://picsum.photos/seed/travel015/320/200" />
-        <media:credit></media:credit>
-        <media:description></media:description>
-    </item>
-    <item>
         <title>Devpa ajekos dufeti reit.</title>
         <link>https://zuixjs.github.io/news-blog/content/travel/devpa-ajekos-dufeti-reit/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/travel/devpa-ajekos-dufeti-reit/</guid>
@@ -1012,7 +999,7 @@
         <link>https://zuixjs.github.io/news-blog/content/travel/index.json</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/travel/index.json</guid>
         <description>No description provided.</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/content/travel/index.json" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1372,7 +1359,7 @@
         <link>https://zuixjs.github.io/news-blog/content/world/index.json</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/world/index.json</guid>
         <description>No description provided.</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/content/world/index.json" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1719,7 +1706,7 @@
         <link>https://zuixjs.github.io/news-blog/about/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/about/</guid>
         <description>A news blog template inspired by G.News</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/about/" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1728,7 +1715,7 @@
         <link>https://zuixjs.github.io/news-blog/saved/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/saved/</guid>
         <description>A news blog template inspired by G.News</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/saved/" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1737,7 +1724,7 @@
         <link>https://zuixjs.github.io/news-blog/search/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/search/</guid>
         <description>A news blog template inspired by G.News</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/search/" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1746,7 +1733,7 @@
         <link>https://zuixjs.github.io/news-blog/home/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/home/</guid>
         <description>A news blog template inspired by G.News</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/home/" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1755,7 +1742,7 @@
         <link>https://zuixjs.github.io/news-blog/ui/_inc/content-frame/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/ui/_inc/content-frame/</guid>
         <description></description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/ui/_inc/content-frame/" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1764,7 +1751,7 @@
         <link>https://zuixjs.github.io/news-blog/</link>
         <guid isPermaLink="true">https://zuixjs.github.io/news-blog/</guid>
         <description>A brand new *zuix.js* project!</description>
-        <pubDate>Mon, 12 May 2025 19:08:58 +0200</pubDate>
+        <pubDate>Mon, 06 Apr 2026 11:50:17 +0200</pubDate>
         <atom:link href="https://zuixjs.github.io/news-blog/" rel="self" />
         <dc:creator></dc:creator>
     </item>
@@ -1778,6 +1765,19 @@
         <dc:creator>Gene</dc:creator><!-- TODO: resolve cover image url either local or on a different site -->
         <media:content medium="image" width="300" height="125"
                        url="https://zuixjs.github.io/news-blog/content/top/quick-start/https://picsum.photos/seed/top027/320/200" />
+        <media:credit></media:credit>
+        <media:description></media:description>
+    </item>
+    <item>
+        <title>Caonjim po wewic noteku.</title>
+        <link>https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/</link>
+        <guid isPermaLink="true">https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/</guid>
+        <description>Diltoab fa jeneto wip poknomas rifnoz mupe rucak wihvias ci.</description>
+        <pubDate>Tue, 22 Mar 2022 19:16:34 +0100</pubDate>
+        <atom:link href="https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/" rel="self" />
+        <dc:creator>J. Doe</dc:creator><!-- TODO: resolve cover image url either local or on a different site -->
+        <media:content medium="image" width="300" height="125"
+                       url="https://zuixjs.github.io/news-blog/content/travel/caonjim-po-wewic-noteku/https://picsum.photos/seed/travel015/320/200" />
         <media:credit></media:credit>
         <media:description></media:description>
     </item>
